@@ -10,7 +10,7 @@
   "editor.renderFinalNewline": "on",
   "editor.rulers": [120],
   "editor.tabSize": 2,
-  "eslint.validate": ["astro"],
+  "eslint.validate": ["js", "ts", "mjs", "astro"],
   "files.exclude": {
     "node_modules": true
   },
