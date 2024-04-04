@@ -1,4 +1,12 @@
 {
-  "recommendations": ["astro-build.astro-vscode"],
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
+    "cipchk.cssrem",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "mrmlnc.vscode-scss"
+  ],
   "unwantedRecommendations": []
 }
