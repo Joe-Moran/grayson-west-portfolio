@@ -14,14 +14,18 @@ const pages = [
   <nav class="nav-list">
     {
       pages.map(page =>
-        (<a
-            href={page.path}
-            class={page.path == currentPath ? 'active': ''}
-            aria-current={page.path == currentPath ? 'path': ''}
-          >
-          {page.title}
-          </a>
+      {
+          const isCurrent = page.path == currentPath
+          return (
+            <a
+              href={page.path}
+              class={isCurrent ? 'active': ''}
+              aria-current={isCurrent ? 'page' : null}
+            >
+              {page.title}
+            </a>
           )
+        }
       )}
 
   </nav>
