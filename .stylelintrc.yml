@@ -3,5 +3,8 @@ extends:
   - 'stylelint-config-recess-order'
   - 'stylelint-config-standard-scss'
   - 'stylelint-config-astro'
-  - 'stylelint-config-recommended-vue'
-  - 'stylelint-config-recommended-vue/scss'
+ignoreFiles:
+  - '**/*.js'
+  - '**/*.ts'
+  - '**/*.yml'
+  - '**/*.yaml'

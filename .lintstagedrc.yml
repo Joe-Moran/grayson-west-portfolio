@@ -1,3 +1,3 @@
-"*.{js,jsx,vue,html}":
-  - "npm run lint --fix"
-  - "git add"
+'*.{js,jsx,mjs,ts,astro,html}':
+  - 'npm run lint -- --fix'
+  - 'npm run stylelint -- --fix'

@@ -24,6 +24,13 @@ pnpm-debug.log*
 /blob-report/
 /playwright/.cache/
 
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
 # pre-commit
 .pre-commit-config.yaml
 
