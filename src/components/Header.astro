@@ -1,0 +1,71 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/
+const pages = [
+  {path: 'how-i-think', title: 'How I Think'},
+  {path: 'the-work', title: 'The Work'},
+  {path: 'my-story', title: 'My Story'},
+  {path: 'my-ethos', title: 'My Ethos'},
+  {path: 'contact', title: 'Let\'s Chat'},
+  ]
+---
+
+<header><a class="logo" href="/">GGW</a>
+  <nav class="nav-list">
+    {
+      pages.map(page =>
+        (<a
+            href={page.path}
+            class={page.path == currentPath ? 'active': ''}
+            aria-current={page.path == currentPath ? 'path': ''}
+          >
+          {page.title}
+          </a>
+          )
+      )}
+
+  </nav>
+</header>
+
+
+<style>
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  a.logo {
+    flex: 1;
+		padding: 10px;
+		font-size: 3.75rem;
+		font-weight: 900;
+		color: var(--color-logo);
+    text-decoration: none;
+	}
+
+  .nav-list {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    padding: 0 32px;
+
+    a {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--color-nav);
+      text-decoration-color: transparent;
+      text-transform: uppercase;
+      transition: 250ms ease-in all;
+
+      &:hover, &:focus-visible {
+        text-decoration-color: inherit;
+      }
+
+      &.active {
+        color: var(--color-nav-current);
+      }
+    }
+  }
+</style>
