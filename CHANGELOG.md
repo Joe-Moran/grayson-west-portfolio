@@ -1,0 +1,13 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## 0.0.1 (2024-04-04)
+
+
+### Features
+
+* create header with stubbed pages 7a28e82
+* display new UI on site load 454308f
+* stub hero section of site c3c8784
+* stub values marquee c487e05
