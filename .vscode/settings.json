@@ -20,5 +20,8 @@
 
   "prettier.useEditorConfig": true,
   "testing.automaticallyOpenPeekView": "never",
-  "cssCustomProperties.files": ["../src/styles"]
+  "cssCustomProperties.files": ["../src/styles"],
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  }
 }
