@@ -5,4 +5,13 @@ const personality = defineCollection({
   schema: z.object({ icon: z.string(), text: z.string() }),
 });
 
-export { personality };
+const writing = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    previewImage: z.string(),
+  }),
+});
+
+export { personality, writing };

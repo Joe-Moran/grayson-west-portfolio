@@ -1,0 +1,60 @@
+---
+import { type ContentCollectionKey, type CollectionEntry } from 'astro:content';
+import Card from './Card.astro';
+
+type ChildPage = CollectionEntry<ContentCollectionKey>;
+
+interface Props {
+  title: string;
+  children: ChildPage[];
+  path: string;
+}
+
+const { title, children, path } = Astro.props;
+---
+
+<div class='page-preview-header'>
+  <h2 class='page-title'>{title}</h2>
+  <a class='page-link' href={path}>View All</a>
+</div>
+<div class='page-content-preview'>
+  {
+    children.map((child) => (
+      <Card title={child.data.title} bodyText={child.data.summary} linkPath={child.data.path} />
+    ))
+  }
+</div>
+
+<style>
+  .page-preview-header {
+    display: flex;
+    gap: 22px;
+    align-items: flex-end;
+  }
+
+  h2 {
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-heading);
+    text-transform: uppercase;
+  }
+
+  .page-link {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .page-content-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    > * {
+      flex: 1;
+      max-height: 350px;
+    }
+  }
+</style>

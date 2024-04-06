@@ -1,0 +1,106 @@
+---
+interface Props {
+  title: string;
+  bodyText: string;
+  linkPath: string;
+}
+
+const { title, bodyText, linkPath } = Astro.props;
+---
+
+<article class='card'>
+  <h1 class='card-title'>{title}</h1>
+  <p class='card-body'>{bodyText}</p>
+  <a href={linkPath}>Learn more</a>
+</article>
+
+<style>
+  .card-title {
+    width: fit-content;
+    padding: 10px;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 1;
+    color: white;
+    text-transform: uppercase;
+    background: var(--color-background-heading);
+  }
+
+  a {
+    align-self: flex-end;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      content: ''; /* 1 */
+    }
+  }
+
+  .card-body {
+    --line-height: 1.5rem;
+    --max-lines: 8;
+
+    position: relative;
+    max-height: calc(var(--line-height) * var(--max-lines));
+    padding: 16px;
+    overflow: hidden;
+    font-size: 1.25rem;
+    line-height: var(--line-height);
+    color: white;
+    background: var(--color-background);
+
+    &::before {
+      position: absolute;
+      inset-block-end: 0; /* "bottom" */
+      inset-inline-end: 0; /* "right" */
+      padding: 16px;
+      content: '...';
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 1rem;
+      content: '';
+      background: var(--color-background);
+    }
+  }
+
+  .card-body,
+  a {
+    opacity: 0;
+    transition: 250ms ease-in-out;
+  }
+
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: black;
+    background: white;
+
+    &:focus-within {
+      outline: 2px solid red;
+    }
+
+    &:hover {
+      .card-body {
+        opacity: 0.95;
+      }
+
+      a {
+        opacity: 1;
+      }
+    }
+  }
+</style>

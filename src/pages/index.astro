@@ -1,21 +1,36 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
-import Values from "../components/Values.astro";
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Values from '../components/Values.astro';
+import { getCollection } from 'astro:content';
+import PagePreview from '../components/PagePreview.astro';
+const writingCollection = await getCollection('writing');
+// const {Content} = await entry.render();
 ---
 
 <Layout>
   <main>
-    <Hero></Hero>
-    <Values/>
+    <Hero />
+    <Values />
+    <div class='page-previews'>
+      <PagePreview path='' title='test' children={writingCollection} />
+    </div>
   </main>
 </Layout>
 
 <style>
-
-
   main {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
     padding: 16px;
     color: white;
+  }
+
+  .page-previews {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-top: 42px;
   }
 </style>
