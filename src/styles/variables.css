@@ -1,12 +1,12 @@
 :root {
   --orange: #ffc052;
-  --color-background: #13151a;
-  --color-heading: #e8aa3e;
+  --color-background: #281f2c;
+  --color-heading: var(--orange);
   --color-background-heading: #b54b44;
   --color-nav-current: #b54b44;
   --color-text-secondary: #b54b44;
-  --color-nav: #e8aa3e;
-  --color-logo: #e8aa3e;
-  --color-text-h1: #e8aa3e;
-  --color-border: #e8aa3e;
+  --color-nav: var(--orange);
+  --color-logo: var(--orange);
+  --color-text-h1: var(--orange);
+  --color-border: var(--orange);
 }
