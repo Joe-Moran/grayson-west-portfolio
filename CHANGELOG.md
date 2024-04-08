@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.9](///compare/v0.0.8...v0.0.9) (2024-04-08)
+
+
+### Bug Fixes
+
+* remove deprecated section 1eb65a1
+* **styling:** completely remove old "orange" color f9f3e0b
+
 ## [0.0.8](///compare/v0.0.7...v0.0.8) (2024-04-08)
 
 
