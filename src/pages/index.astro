@@ -1,11 +1,12 @@
 ---
+import '../styles/index.css';
+
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Values from '../components/Values.astro';
 import { getCollection } from 'astro:content';
 import PagePreview from '../components/PagePreview.astro';
 const writingCollection = await getCollection('writing');
-// const {Content} = await entry.render();
 ---
 
 <Layout>

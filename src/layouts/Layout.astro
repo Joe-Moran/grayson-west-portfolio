@@ -1,47 +1,43 @@
 ---
-import '../styles/variables.css'
-import '../styles/overrides.css'
-import Header from '../components/Header.astro'
+import Header from '../components/Header.astro';
 interface Props {
-	title?: string;
+  title?: string;
 }
 
-const siteTitle = "Grayson Gail West"
+const siteTitle = 'Grayson Gail West';
 const { title } = Astro.props;
-const titleFormatted = title ? `${title} | ${siteTitle}` : siteTitle
+const titleFormatted = title ? `${title} | ${siteTitle}` : siteTitle;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{titleFormatted}</title>
-	</head>
-	<Header/>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{titleFormatted}</title>
+  </head>
+  <Header />
 
-	<body>
-			<slot/>
-	</body>
+  <body>
+    <slot />
+  </body>
+
+  <style>
+    html {
+      background: #13151a;
+      background-size: 224px;
+    }
+
+    header {
+      position: sticky;
+      height: 100px;
+    }
+
+    body {
+      background: var(--color-background);
+    }
+  </style>
 </html>
-<style>
-
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-
-	header {
-		position: sticky;
-		height: 100px;
-	}
-
-	body {
-		background: var(--color-background);
-	}
-
-</style>

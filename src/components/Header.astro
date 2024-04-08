@@ -3,53 +3,50 @@
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/
 const pages = [
-  {path: 'how-i-think', title: 'How I Think'},
-  {path: 'the-work', title: 'The Work'},
-  {path: 'my-story', title: 'My Story'},
-  {path: 'my-ethos', title: 'My Ethos'},
-  {path: 'contact', title: 'Let\'s Chat'},
-  ]
+  { path: 'how-i-think', title: 'How I Think' },
+  { path: 'the-work', title: 'The Work' },
+  { path: 'my-story', title: 'My Story' },
+  { path: 'my-ethos', title: 'My Ethos' },
+  { path: 'contact', title: "Let's Chat" },
+];
 ---
 
-
-<header><a class="logo" href="/">GGW</a>
-  <nav class="nav-list">
+<header
+  ><a class='logo' href='/'>GGW</a>
+  <nav class='nav-list'>
     {
-      pages.map(page =>
-      {
-          const isCurrent = page.path == currentPath
-          return (
-            <a
-              href={page.path}
-              class={isCurrent ? 'active': ''}
-              aria-current={isCurrent ? 'page' : null}
-            >
-              {page.title}
-            </a>
-          )
-        }
-      )}
-
+      pages.map((page) => {
+        const isCurrent = page.path == currentPath;
+        return (
+          <a
+            href={page.path}
+            class={isCurrent ? 'active' : ''}
+            aria-current={isCurrent ? 'page' : null}
+          >
+            {page.title}
+          </a>
+        );
+      })
+    }
   </nav>
 </header>
-
 
 <style>
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
   }
 
   a.logo {
     flex: 1;
-		padding: 10px;
-		font-size: 3.75rem;
-		font-weight: 900;
-		color: var(--color-logo);
+    padding: 10px;
+    font-size: 3.75rem;
+    font-style: italic;
+    font-weight: 900;
+    color: var(--orange);
     text-decoration: none;
-	}
+  }
 
   .nav-list {
     display: flex;
@@ -59,13 +56,14 @@ const pages = [
 
     a {
       font-size: 1.5rem;
-      font-weight: 900;
+      font-weight: 700;
       color: var(--color-nav);
       text-decoration-color: transparent;
       text-transform: uppercase;
       transition: 250ms ease-in all;
 
-      &:hover, &:focus-visible {
+      &:hover,
+      &:focus-visible {
         text-decoration-color: inherit;
       }
 
