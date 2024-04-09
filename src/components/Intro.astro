@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  greeting: string;
+}
+
+const { title, greeting } = Astro.props;
+---
+
+<div class='intro'>
+  <h2>{title}</h2>
+  <div class='big-content'>
+    <p class='greeting'>{greeting}</p>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .big-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    :not(.greeting) {
+      font-size: 1.375rem;
+      line-height: 1.5;
+      color: var(--orange);
+    }
+
+    > * {
+      flex: 1;
+    }
+  }
+
+  h2 {
+    font-size: 50px;
+    font-weight: 800;
+  }
+
+  .greeting {
+    font-size: 2.8125rem;
+    line-height: 1.5;
+  }
+</style>
