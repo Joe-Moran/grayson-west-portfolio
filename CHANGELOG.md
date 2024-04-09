@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.13](///compare/v0.0.12...v0.0.13) (2024-04-09)
+
+
+### Bug Fixes
+
+* add missing content for intro f49b87f
+
 ## [0.0.12](///compare/v0.0.11...v0.0.12) (2024-04-09)
 
 
