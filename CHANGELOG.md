@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.12](///compare/v0.0.11...v0.0.12) (2024-04-09)
+
+
+### Bug Fixes
+
+* add missing Intro component cc016fe
+
 ## [0.0.11](///compare/v0.0.10...v0.0.11) (2024-04-09)
 
 
