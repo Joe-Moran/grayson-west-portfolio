@@ -34,18 +34,21 @@ const { title, bodyText, linkPath, descriptors } = Astro.props;
     font-style: italic;
     font-weight: 900;
     line-height: 1;
-    color: white;
+    color: var(--white);
     text-transform: uppercase;
     background: var(--color-background-heading);
   }
 
-  a {
+  .learn-more-link {
     align-self: flex-end;
+    padding: 10px;
     font-size: 1.25rem;
+    font-style: italic;
     font-weight: 800;
-    color: var(--color-text-secondary);
+    color: var(--white);
     text-decoration: none;
     text-transform: uppercase;
+    background: var(--color-background-heading);
 
     &::before {
       position: absolute;
@@ -64,7 +67,7 @@ const { title, bodyText, linkPath, descriptors } = Astro.props;
     overflow: hidden;
     font-size: 1.25rem;
     line-height: var(--line-height);
-    color: white;
+    color: var(--white);
     background: var(--color-background);
 
     &::before {

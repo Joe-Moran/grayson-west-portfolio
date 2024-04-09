@@ -57,8 +57,16 @@ const { title, children, path, previewStyle } = Astro.props;
   .page-link {
     font-size: 1.25rem;
     font-weight: 800;
-    color: white;
+    color: var(--white);
+    text-decoration: underline;
+    text-decoration-color: transparent;
     text-transform: uppercase;
+    transition: 250ms ease-in-out all;
+
+    &:hover,
+    &:focus {
+      text-decoration-color: inherit;
+    }
   }
 
   .page-content-preview {
