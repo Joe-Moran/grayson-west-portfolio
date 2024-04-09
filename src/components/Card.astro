@@ -2,16 +2,28 @@
 interface Props {
   title: string;
   bodyText: string;
+  descriptors: string[];
   linkPath: string;
 }
 
-const { title, bodyText, linkPath } = Astro.props;
+const { title, bodyText, linkPath, descriptors } = Astro.props;
 ---
 
 <article class='card'>
   <h1 class='card-title'>{title}</h1>
   <p class='card-body'>{bodyText}</p>
-  <a href={linkPath}>Learn more</a>
+  {
+    descriptors.length ? (
+      <ul class='descriptors'>
+        {descriptors.map((descriptor) => (
+          <li>{descriptor}</li>
+        ))}
+      </ul>
+    ) : (
+      ''
+    )
+  }
+  <a href={linkPath} class='learn-more-link'>Learn more</a>
 </article>
 
 <style>
@@ -75,9 +87,33 @@ const { title, bodyText, linkPath } = Astro.props;
   }
 
   .card-body,
-  a {
+  .learn-more-link {
     opacity: 0;
     transition: 250ms ease-in-out;
+  }
+
+  .descriptors {
+    position: absolute;
+    right: 0;
+    right: 15px;
+    bottom: 20px;
+    left: 15px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--white);
+    text-transform: uppercase;
+    list-style: none;
+    background: var(--color-background-heading);
+    opacity: 1;
+    transition: all 150ms ease-in-out;
+
+    li:not(:first-of-type) {
+      list-style-position: inside;
+      list-style-type: disc;
+    }
   }
 
   .card {
@@ -87,18 +123,34 @@ const { title, bodyText, linkPath } = Astro.props;
     justify-content: space-between;
     padding: 20px;
     color: black;
-    background: white;
+    background: var(--white);
 
     &:focus-within {
       outline: 2px solid red;
-    }
 
-    &:hover {
       .card-body {
         opacity: 0.95;
       }
 
-      a {
+      .learn-more-link {
+        opacity: 1;
+      }
+
+      .descriptors {
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      .descriptors {
+        opacity: 0;
+      }
+
+      .card-body {
+        opacity: 0.95;
+      }
+
+      .learn-more-link {
         opacity: 1;
       }
     }

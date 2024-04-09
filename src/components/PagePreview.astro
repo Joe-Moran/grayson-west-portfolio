@@ -8,28 +8,42 @@ interface Props {
   title: string;
   children: ChildPage[];
   path: string;
+  previewStyle: 'panel' | 'square';
 }
 
-const { title, children, path } = Astro.props;
+const { title, children, path, previewStyle } = Astro.props;
 ---
 
-<div class='page-preview-header'>
-  <h2 class='page-title'>{title}</h2>
-  <a class='page-link' href={path}>View All</a>
+<div class='page-preview'>
+  <div class='page-preview-header'>
+    <h2 class='page-title'>{title}</h2>
+    <a class='page-link' href={path}>View All</a>
+  </div>
+  <div class:list={['page-content-preview', previewStyle]}>
+    {
+      children.map((child) => (
+        <Card
+          class:list={[previewStyle]}
+          title={child.data.title}
+          bodyText={child.data.summary}
+          linkPath={child.data.path}
+          descriptors={child.data.platforms ?? []}
+        />
+      ))
+    }
+  </div>
 </div>
-<div class='page-content-preview'>
-  {
-    children.map((child) => (
-      <Card title={child.data.title} bodyText={child.data.summary} linkPath={child.data.path} />
-    ))
-  }
-</div>
-
 <style>
+  .page-preview {
+    --preview-flex-gap: 22px;
+    --card-height: 350px;
+  }
+
   .page-preview-header {
     display: flex;
-    gap: 22px;
+    gap: var(--preview-flex-gap);
     align-items: flex-end;
+    margin-bottom: 16px;
   }
 
   h2 {
@@ -53,8 +67,19 @@ const { title, children, path } = Astro.props;
     gap: 12px;
 
     > * {
-      flex: 1;
-      max-height: 350px;
+      height: var(--card-height);
+    }
+
+    &.square {
+      > * {
+        flex: 1 1 var(--card-height);
+      }
+    }
+
+    &.panel {
+      > * {
+        flex: 1 1 calc(50% - (var(--preview-flex-gap) * 3));
+      }
     }
   }
 </style>
