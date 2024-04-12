@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.18](///compare/v0.0.17...v0.0.18) (2024-04-12)
+
+
+### Bug Fixes
+
+* adjust responsiveness of header a4e1131
+
 ## [0.0.17](///compare/v0.0.16...v0.0.17) (2024-04-12)
 
 
