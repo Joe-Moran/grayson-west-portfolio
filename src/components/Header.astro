@@ -11,7 +11,7 @@ const pages = [
 ];
 ---
 
-<header
+<header class='header'
   ><a class='logo' href='/'>GGW</a>
   <nav class='nav-list'>
     {
@@ -32,10 +32,11 @@ const pages = [
 </header>
 
 <style>
-  header {
+  .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
   }
 
   a.logo {
