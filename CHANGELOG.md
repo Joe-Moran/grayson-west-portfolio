@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.17](///compare/v0.0.16...v0.0.17) (2024-04-12)
+
+
+### Bug Fixes
+
+* restrict hero width to size of viewport b2a1287
+
 ## [0.0.16](///compare/v0.0.15...v0.0.16) (2024-04-12)
 
 
