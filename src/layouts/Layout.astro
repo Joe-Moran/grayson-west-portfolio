@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 interface Props {
   title?: string;
 }
@@ -20,10 +21,11 @@ import '../styles/index.css';
     <meta name='generator' content={Astro.generator} />
     <title>{titleFormatted}</title>
   </head>
-  <Header />
 
   <body>
+    <Header />
     <slot />
+    <Footer />
   </body>
 
   <style>

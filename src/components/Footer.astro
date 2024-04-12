@@ -1,0 +1,68 @@
+---
+import threadsLogo from '../assets/threads-logo.svg';
+import linkedInLogo from '../assets/linkedin-logo.svg';
+---
+
+<footer class='footer'>
+  <!-- turn into reusable component: "Site Logo"? -->
+  <div class='main-content'>
+    <span class='site-name'>Grayson Gail West</span>
+    <a href='mailto:graysongwest@pm.com'>graysongwest@pm.com</a>
+  </div>
+
+  <nav class='footer-nav' aria-label='footer links'>
+    <a href='aerorake.com'>aerorake.com</a>
+    <a href='https://www.linkedin.com/in/graysongwest/'
+      ><img alt='LinkedIn' src={linkedInLogo.src} /></a
+    >
+    <a href='https://www.threads.net/@patternflux'><img alt='Threads' src={threadsLogo.src} /></a>
+  </nav>
+</footer>
+
+<style>
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 38px 29px;
+    color: var(--color-logo);
+    background: var(--color-background-heading);
+
+    .main-content {
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      gap: 36px;
+      align-items: center;
+    }
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+  }
+
+  .site-name {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  a {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: inherit;
+    text-decoration-color: transparent;
+    transition: 250ms ease-in-out text-decoration-color;
+
+    &:hover,
+    &:focus {
+      text-decoration-color: inherit;
+    }
+  }
+</style>
