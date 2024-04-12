@@ -11,19 +11,25 @@ const { title, bodyText, linkPath, descriptors } = Astro.props;
 
 <article class='card'>
   <h1 class='card-title'>{title}</h1>
-  <p class='card-body'>{bodyText}</p>
-  {
-    descriptors.length ? (
-      <ul class='descriptors'>
-        {descriptors.map((descriptor) => (
-          <li>{descriptor}</li>
-        ))}
-      </ul>
-    ) : (
-      ''
-    )
-  }
-  <a href={linkPath} class='learn-more-link'>Learn more</a>
+  <div class='card-body'>
+    <div class='card-rollover'>
+      <p>{bodyText}</p>
+    </div>
+    {
+      descriptors.length ? (
+        <ul class='descriptors'>
+          {descriptors.map((descriptor) => (
+            <li>{descriptor}</li>
+          ))}
+        </ul>
+      ) : (
+        ''
+      )
+    }
+  </div>
+  <div class='card-footer'>
+    <a href={linkPath} class='learn-more-link'>Learn more</a>
+  </div>
 </article>
 
 <style>
@@ -57,57 +63,40 @@ const { title, bodyText, linkPath, descriptors } = Astro.props;
     }
   }
 
-  .card-body {
-    --line-height: 1.5rem;
-    --max-lines: 8;
+  .card-rollover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
 
-    position: relative;
-    max-height: calc(var(--line-height) * var(--max-lines));
-    padding: 16px;
-    overflow: hidden;
-    font-size: 1.25rem;
-    line-height: var(--line-height);
-    color: var(--white);
-    background: var(--color-background);
-
-    &::before {
-      position: absolute;
-      inset-block-end: 0; /* "bottom" */
-      inset-inline-end: 0; /* "right" */
+    p {
       padding: 16px;
-      content: '...';
-    }
-
-    &::after {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 1rem;
-      content: '';
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 0.99;
+      color: var(--white);
       background: var(--color-background);
     }
   }
 
-  .card-body,
+  .card-rollover,
   .learn-more-link {
     opacity: 0;
     transition: 250ms ease-in-out;
   }
 
+  /* TODO: make entire body of card its own container, then have hidden content in separate container from default displayed content */
   .descriptors {
-    position: absolute;
-    right: 0;
-    right: 15px;
-    bottom: 20px;
-    left: 15px;
     display: flex;
     gap: 10px;
-    padding: 10px;
+    margin: 0;
     font-size: 1.25rem;
     font-weight: 800;
     color: var(--white);
     text-transform: uppercase;
+    white-space: nowrap;
     list-style: none;
     background: var(--color-background-heading);
     opacity: 1;
@@ -117,6 +106,19 @@ const { title, bodyText, linkPath, descriptors } = Astro.props;
       list-style-position: inside;
       list-style-type: disc;
     }
+  }
+
+  .card-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 
   .card {
@@ -131,7 +133,7 @@ const { title, bodyText, linkPath, descriptors } = Astro.props;
     &:focus-within {
       outline: 2px solid red;
 
-      .card-body {
+      .card-rollover {
         opacity: 0.95;
       }
 
@@ -149,7 +151,7 @@ const { title, bodyText, linkPath, descriptors } = Astro.props;
         opacity: 0;
       }
 
-      .card-body {
+      .card-rollover {
         opacity: 0.95;
       }
 

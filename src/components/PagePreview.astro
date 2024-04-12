@@ -75,12 +75,12 @@ const { title, children, path, previewStyle } = Astro.props;
     gap: 12px;
 
     > * {
-      height: var(--card-height);
+      min-height: var(--card-height);
     }
 
     &.square {
       > * {
-        flex: 1 1 var(--card-height);
+        flex: 1 0;
       }
     }
 
