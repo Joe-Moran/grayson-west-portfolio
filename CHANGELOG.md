@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.16](///compare/v0.0.15...v0.0.16) (2024-04-12)
+
+
+### Features
+
+* create footer and add to layout component 8d4e4ec
+
 ## [0.0.15](///compare/v0.0.14...v0.0.15) (2024-04-12)
 
 ## [0.0.14](///compare/v0.0.13...v0.0.14) (2024-04-09)
