@@ -3,8 +3,9 @@ import threadsLogo from '../assets/threads-logo.svg';
 import linkedInLogo from '../assets/linkedin-logo.svg';
 ---
 
+<!-- TODO: make content (links, vector art, etc) dynamic for future changes -->
 <footer class='footer'>
-  <!-- turn into reusable component: "Site Logo"? -->
+  <!-- TODO: turn into reusable component: "Site Logo"? -->
   <div class='main-content'>
     <span class='site-name'>Grayson Gail West</span>
     <a href='mailto:graysongwest@pm.com'>graysongwest@pm.com</a>
@@ -23,7 +24,7 @@ import linkedInLogo from '../assets/linkedin-logo.svg';
   .footer {
     display: flex;
     flex-wrap: wrap;
-    gap: 36px;
+    gap: 12px;
     align-items: center;
     justify-content: space-between;
     padding: 38px 29px;
@@ -34,8 +35,8 @@ import linkedInLogo from '../assets/linkedin-logo.svg';
       display: flex;
       flex: 1;
       flex-wrap: wrap;
-      gap: 36px;
       align-items: center;
+      white-space: nowrap;
     }
   }
 
@@ -46,7 +47,8 @@ import linkedInLogo from '../assets/linkedin-logo.svg';
   }
 
   .site-name {
-    font-size: 2.5rem;
+    margin-right: 36px;
+    font-size: clamp(1.5rem, 7vw, 2.5rem);
     font-style: italic;
     font-weight: 900;
     line-height: 1;
@@ -54,7 +56,7 @@ import linkedInLogo from '../assets/linkedin-logo.svg';
   }
 
   a {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 4vw, 1.25rem);
     font-weight: 700;
     color: inherit;
     text-decoration-color: transparent;
