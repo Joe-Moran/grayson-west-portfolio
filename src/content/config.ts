@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content';
 
 const personality = defineCollection({
   type: 'content',
-  schema: z.object({ icon: z.string(), text: z.string() }),
+  schema: z.object({ assets: z.string().array(), traits: z.string().array() }),
 });
 
 const writing = defineCollection({
@@ -34,5 +34,13 @@ const intro = defineCollection({
     highlight: z.string(),
   }),
 });
+
+// const footer = defineCollection({
+//   type: 'content',
+//   schema: z.object({
+//     email: z.string(),
+//     links: z.object({}),
+//   }),
+// });
 
 export { personality, writing, portfolio, intro };

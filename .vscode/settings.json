@@ -15,7 +15,7 @@
     "node_modules": true
   },
   "stylelint.packageManager": "npm",
-  "stylelint.validate": ["vue", "scss", "astro", "css"],
+  "stylelint.validate": ["scss", "astro", "css"],
   "typescript.tsdk": "node_modules/typescript/lib",
 
   "prettier.useEditorConfig": true,

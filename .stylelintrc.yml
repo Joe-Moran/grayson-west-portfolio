@@ -6,5 +6,7 @@ extends:
 ignoreFiles:
   - '**/*.js'
   - '**/*.ts'
+  - '**/*.jsx'
+  - '**/*.mjs'
   - '**/*.yml'
   - '**/*.yaml'

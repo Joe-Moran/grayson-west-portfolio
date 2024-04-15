@@ -1,37 +1,46 @@
 ---
-import { getCollection } from "astro:content"
-const allTraits = await getCollection('personality');
+import { getEntry } from 'astro:content';
+const allTraits = await getEntry('personality', 'traits');
+import Marquee from './Marquee.jsx';
 ---
 
-<div class="my-personality">
-  <ul class="personality-traits">
-    {allTraits.map((trait) => (<li>{trait.data.text}</li>))}
-  </ul>
-
-
+<div class='my-personality'>
+  <Marquee client:only='react' className='personality-traits'>
+    {
+      allTraits.data.traits.map((trait: string, index: number) => (
+        <>
+          <span class='trait'>{trait}</span>
+          <img class='trait-asset' src={allTraits.data.assets[index]} />
+        </>
+      ))
+    }
+  </Marquee>
 </div>
 
 <style>
-.my-personality {
-  padding: 18px 32px;
-  border-top: 3px solid var(--color-border);
-  border-bottom: 3px solid var(--color-border);
-}
+  .my-personality {
+    padding: 18px 32px;
+    border-top: 3px solid var(--color-border);
+    border-bottom: 3px solid var(--color-border);
+  }
 
-.personality-traits {
-  padding: 0;
-  margin: 0;
-  font-size: 1.25rem;
-  font-style: italic;
-  font-weight: 900;
-  color: var(--color-text-secondary);
-  text-transform: uppercase;
-  list-style: none;
-  animation: loop 30s linear infinite;
-}
+  .trait {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+  }
 
-@keyframes loop {
-    0% {transform: translateX(0%);}
-    100% {transform: translateX(-50%);}
-}
+  .trait-asset {
+    height: 36px;
+  }
+</style>
+
+<style is:global>
+  /* Child component selection requires global styling to apply */
+  .personality-traits .rfm-child {
+    display: flex;
+    gap: 39px;
+    align-items: center;
+  }
 </style>

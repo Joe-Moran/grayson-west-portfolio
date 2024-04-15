@@ -3,11 +3,11 @@ env:
   es6: true
   node: true
 rules:
-  'import/prefer-default-export': 0
-  'import/no-extraneous-dependencies': 0
-  'import/no-unresolved': [2, { ignore: ['astro:content'] }]
+  'react/jsx-uses-react': 'error'
+  'react/jsx-uses-vars': 'error'
+parserOptions:
+  sourceType: 'module'
 extends:
   - 'eslint:recommended'
-  - 'plugin:import/recommended'
-  - 'plugin:import/typescript'
+  - 'plugin:react/jsx-runtime'
   - 'plugin:astro/recommended'
