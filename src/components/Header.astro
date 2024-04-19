@@ -1,9 +1,12 @@
 ---
+import type { WebPage } from '../types/Page.mts';
+import SiteHeader from './SiteHeader.tsx';
+
 // TODO: responsive hiding of nav items
 // TODO: skip link
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/
-const pages = [
+const pages: WebPage[] = [
   { path: 'how-i-think', title: 'How I Think' },
   { path: 'the-work', title: 'The Work' },
   { path: 'my-story', title: 'My Story' },
@@ -13,30 +16,15 @@ const pages = [
 
 <header class='header'
   ><a class='logo' href='/'>GGW</a>
-  <nav class='nav-list'>
-    {
-      pages.map((page) => {
-        const isCurrent = page.path == currentPath;
-        return (
-          <a
-            href={page.path}
-            class={isCurrent ? 'active' : ''}
-            aria-current={isCurrent ? 'page' : null}
-          >
-            {page.title}
-          </a>
-        );
-      })
-    }
-  </nav>
+  <SiteHeader navItems={pages} currentPath={currentPath} client:only='react' />
 </header>
 
 <style>
   .header {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow: hidden;
   }
 
   a.logo {
@@ -49,30 +37,5 @@ const pages = [
     color: var(--orange);
     text-decoration: none;
   }
-
-  .nav-list {
-    display: flex;
-    flex: 3;
-    justify-content: space-between;
-    padding: 0 32px;
-
-    a {
-      padding: 8px;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--color-nav);
-      text-decoration-color: transparent;
-      text-transform: uppercase;
-      transition: 250ms ease-in all;
-
-      &:hover,
-      &:focus-visible {
-        text-decoration-color: inherit;
-      }
-
-      &.active {
-        background: var(--color-nav-current);
-      }
-    }
-  }
 </style>
+../types/Page.mjs

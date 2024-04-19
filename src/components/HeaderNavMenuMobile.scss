@@ -1,0 +1,27 @@
+.nav-drawer {
+  position: absolute;
+  inset: 100% 0 -100vh;
+  background: var(--color-background);
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.nav-drawer-button {
+  position: relative;
+  z-index: 100;
+  margin: 20px;
+  background: none;
+  border: none;
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
