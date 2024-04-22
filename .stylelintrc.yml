@@ -10,3 +10,4 @@ ignoreFiles:
   - '**/*.mjs'
   - '**/*.yml'
   - '**/*.yaml'
+  - '.storybook/**/*'
