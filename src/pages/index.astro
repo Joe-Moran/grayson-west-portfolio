@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
 import Values from '../components/Values.astro';
 import { getCollection, getEntry } from 'astro:content';
 import PagePreview from '../components/PagePreview.astro';
@@ -11,18 +10,15 @@ const introEntry = await getEntry('intro', 'paragraph');
 const { Content } = await introEntry.render();
 ---
 
-<Layout>
-  <main>
-    <Hero />
-    <Intro title={introEntry.data.title} greeting={introEntry.data.greeting}>
-      <Content />
-    </Intro>
-    <Values />
-    <div class='page-previews'>
-      <PagePreview path='' title='test' children={writingCollection} previewStyle='panel' />
-      <PagePreview path='' title='The Work' children={portfolioCollection} previewStyle='square' />
-    </div>
-  </main>
+<Layout title='Grayson Gail West'>
+  <Intro title={introEntry.data.title} greeting={introEntry.data.greeting}>
+    <Content />
+  </Intro>
+  <Values />
+  <div class='page-previews'>
+    <PagePreview path='' title='test' children={writingCollection} previewStyle='panel' />
+    <PagePreview path='' title='The Work' children={portfolioCollection} previewStyle='square' />
+  </div>
 </Layout>
 
 <style>

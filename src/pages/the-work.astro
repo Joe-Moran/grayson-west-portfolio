@@ -1,9 +1,65 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import Card from '../components/Card.astro';
+const portfolioCollection = await getCollection('portfolio');
+const pages = portfolioCollection.map((item) => ({ title: item.data.title, path: '/' }));
 ---
 
-<Layout title="The Work">
-  <main>
-
-  </main>
+<Layout title='The Work' subPages={pages}>
+  <div class:list={['the-work', `grid-rows-${portfolioCollection.length}`]}>
+    {
+      portfolioCollection.map((item) => (
+        <Card
+          title={item.data.title}
+          bodyText={item.data.bodyText}
+          linkPath={item.data.link}
+          classes={[
+            `cols-${item.data.preview.grid.columns}`,
+            `rows-${item.data.preview.grid.rows}`,
+          ]}
+        />
+      ))
+    }
+  </div>
 </Layout>
+
+<style>
+  .the-work {
+    --grid-layout-gap: 10px;
+    --grid-column-count: 3;
+    --grid-item-min-width: 300px;
+
+    /**
+   * Calculated values.
+   */
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+    --grid-item-max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr)
+    );
+    grid-gap: var(--grid-layout-gap);
+  }
+
+  /* TODO use scss function here */
+
+  .cols-1 {
+    grid-column: span 1;
+  }
+
+  .cols-2 {
+    grid-column: span 2;
+  }
+
+  .rows-1 {
+    grid-row: span 1;
+  }
+
+  .rows-2 {
+    grid-row: span 2;
+  }
+</style>

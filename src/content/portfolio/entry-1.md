@@ -1,8 +1,12 @@
 ---
 title: Entry
 summary: Here is something about this thing. How cool!
-screenshot:
-screenshot-background:
+preview:
+  grid:
+    rows: 1
+    columns: 1
+screenshot: ''
+screenshot-background: ''
 platforms:
   - iOS
   - Android

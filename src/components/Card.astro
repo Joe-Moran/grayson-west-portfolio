@@ -2,14 +2,15 @@
 interface Props {
   title: string;
   bodyText: string;
-  descriptors: string[];
+  descriptors?: string[];
   linkPath: string;
+  classes?: string[];
 }
 
-const { title, bodyText, linkPath, descriptors } = Astro.props;
+const { title, bodyText, linkPath, descriptors = [], classes = [], ...rest } = Astro.props;
 ---
 
-<article class='card'>
+<article class:list={['card', ...classes]} {...rest}>
   <h1 class='card-title'>{title}</h1>
   <div class='card-body'>
     <div class='card-rollover'>

@@ -20,6 +20,10 @@ const portfolio = defineCollection({
     // FIXME: reuse these attributes for all written content. Use composition over inheritence?
     title: z.string(),
     summary: z.string(),
+    preview: z.object({
+      enable: z.boolean(),
+      grid: z.object({ rows: z.number(), columns: z.number() }),
+    }),
     screenshot: z.string(),
     'screenshot-background': z.string(),
     platforms: z.string().array().nonempty(),

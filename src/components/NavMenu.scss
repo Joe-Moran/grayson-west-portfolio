@@ -1,0 +1,19 @@
+.nav-menu {
+  position: relative;
+  z-index: 1;
+
+  button {
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    background: var(--color-background);
+    border: none;
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
+  nav {
+    position: absolute;
+  }
+}

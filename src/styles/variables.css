@@ -1,11 +1,12 @@
 :root {
-  --white: #f5f5f5;
+  --white: rgb(245 245 245);
   --orange: #ffc052;
+  --red: #b54b44;
   --color-background: #281f2c;
   --color-heading: var(--orange);
-  --color-background-heading: #b54b44;
-  --color-nav-current: #b54b44;
-  --color-text-secondary: #b54b44;
+  --color-background-heading: var(--red);
+  --color-nav-current: var(--red);
+  --color-text-secondary: var(--red);
   --color-nav: var(--orange);
   --color-logo: var(--orange);
   --color-text-h1: var(--orange);

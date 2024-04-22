@@ -3,7 +3,7 @@ title: Entry
 summary: Here is something about this thing. How cool!
 preview:
   grid:
-    rows: 2
+    rows: 1
     columns: 2
 screenshot:
 screenshot-background:
