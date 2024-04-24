@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.24](///compare/v0.0.23...v0.0.24) (2024-04-24)
+
+
+### Features
+
+* create content entry pages; lay out content previews b01e050
+
+
+### Bug Fixes
+
+* use the actual paths needed for links 6a7a6ff
+
 ## [0.0.23](///compare/v0.0.22...v0.0.23) (2024-04-22)
 
 
