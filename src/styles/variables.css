@@ -4,7 +4,7 @@
   --red: #b54b44;
   --color-background: #281f2c;
   --color-heading: var(--orange);
-  --color-background-heading: var(--red);
+  --color-heading-background: var(--red);
   --color-nav-current: var(--red);
   --color-text-secondary: var(--red);
   --color-nav: var(--orange);
