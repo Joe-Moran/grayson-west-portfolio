@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "lint": "eslint --ext .js,.astro,.ts src",
+    "lint:staged": "eslint",
     "stylelint": "stylelint '**/*.{astro,css}'",
+    "stylelint:staged": "stylelint",
     "test": "vitest",
     "start": "astro dev",
     "build": "astro check && astro build",
