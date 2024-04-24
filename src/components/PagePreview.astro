@@ -26,7 +26,7 @@ const { title, children, path, previewStyle } = Astro.props;
           class:list={[previewStyle]}
           title={child.data.title}
           bodyText={child.data.summary}
-          linkPath={child.data.path}
+          linkPath={`${path}/${child.slug}`}
           descriptors={child.data.platforms ?? []}
         />
       ))
