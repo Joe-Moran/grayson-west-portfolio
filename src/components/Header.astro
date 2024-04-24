@@ -6,10 +6,10 @@ import SiteHeader from './SiteHeader.tsx';
 const pages: WebPage[] = [
   { path: 'how-i-think', title: 'How I Think' },
   { path: 'the-work', title: 'The Work' },
-  { path: 'my-story', title: 'My Story' },
   { path: 'contact', title: "Let's Chat" },
 ];
 
+// TODO: how can I make this reusable? I tried putting in its own .ts file but it didn't work
 const currentPath = getCurrentPath();
 
 function getCurrentPath() {
