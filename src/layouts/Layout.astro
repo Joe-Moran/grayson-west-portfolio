@@ -29,8 +29,8 @@ import Hero from '../components/Hero.astro';
     <Header />
     <main>
       <Hero title={title} pages={subPages} />
+      <slot />
     </main>
-    <slot />
     <Footer />
   </body>
 
@@ -48,6 +48,14 @@ import Hero from '../components/Hero.astro';
     body {
       margin: 0;
       background: var(--color-background);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 42px;
+      padding: 16px;
+      color: var(--white);
     }
   </style>
 </html>

@@ -16,20 +16,22 @@ const { Content } = await introEntry.render();
   </Intro>
   <Values />
   <div class='page-previews'>
-    <PagePreview path='' title='test' children={writingCollection} previewStyle='panel' />
-    <PagePreview path='' title='The Work' children={portfolioCollection} previewStyle='square' />
+    <PagePreview
+      path='how-i-think'
+      title='How I think'
+      children={writingCollection}
+      previewStyle='panel'
+    />
+    <PagePreview
+      path='the-work'
+      title='The Work'
+      children={portfolioCollection}
+      previewStyle='square'
+    />
   </div>
 </Layout>
 
 <style>
-  main {
-    display: flex;
-    flex-direction: column;
-    gap: 42px;
-    padding: 16px;
-    color: var(--white);
-  }
-
   .page-previews {
     display: flex;
     flex-direction: column;
