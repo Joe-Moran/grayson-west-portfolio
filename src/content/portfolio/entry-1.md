@@ -5,8 +5,10 @@ preview:
   grid:
     rows: 1
     columns: 1
-screenshot: ''
-screenshot-background: ''
+screenshot:
+  image: ''
+  altText: ''
+screenshotBackground:
 platforms:
   - iOS
   - Android

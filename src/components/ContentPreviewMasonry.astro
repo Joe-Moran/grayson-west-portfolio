@@ -1,0 +1,64 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Card from './Card.astro';
+
+interface Props {
+  basePath: string;
+  collection: CollectionEntry<'portfolio' | 'writing'>[];
+}
+
+const { collection, basePath } = Astro.props;
+---
+
+<div class:list={['content-preview-masonry', `grid-rows-${collection.length}`]}>
+  {
+    collection.map((item) => (
+      <Card
+        title={item.data.title}
+        bodyText={item.data.bodyText}
+        linkPath={`${basePath}/${item.slug}`}
+        classes={[`cols-${item.data.preview.grid.columns}`, `rows-${item.data.preview.grid.rows}`]}
+      />
+    ))
+  }
+</div>
+
+<style>
+  .content-preview-masonry {
+    --grid-layout-gap: 10px;
+    --grid-column-count: 3;
+    --grid-item-min-width: 300px;
+
+    /**
+   * Calculated values.
+   */
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+    --grid-item-max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr)
+    );
+    grid-gap: var(--grid-layout-gap);
+  }
+
+  /* TODO use scss function here */
+
+  .cols-1 {
+    grid-column: span 1;
+  }
+
+  .cols-2 {
+    grid-column: span 2;
+  }
+
+  .rows-1 {
+    grid-row: span 1;
+  }
+
+  .rows-2 {
+    grid-row: span 2;
+  }
+</style>

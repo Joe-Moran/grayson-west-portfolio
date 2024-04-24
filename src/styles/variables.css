@@ -1,6 +1,7 @@
 :root {
   --white: rgb(245 245 245);
   --orange: #ffc052;
+  --blue: #347ab9;
   --red: #b54b44;
   --color-background: #281f2c;
   --color-heading: var(--orange);
@@ -11,4 +12,6 @@
   --color-logo: var(--orange);
   --color-text-h1: var(--orange);
   --color-border: var(--orange);
+  --color-post-background: var(--blue);
+  --color-post-text: var(--white);
 }

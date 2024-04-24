@@ -6,11 +6,19 @@ preview:
     rows: 2
     columns: 1
 screenshot:
-screenshot-background:
+  image: ''
+  altText: ''
+screenshotBackground:
 platforms:
   - iOS
   - Android
   - web
 ---
 
-##
+## Title
+
+This is some content!
+
+### Test 3 4
+
+Here is some more content that I think you might really enjoy

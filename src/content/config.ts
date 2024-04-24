@@ -5,11 +5,17 @@ const personality = defineCollection({
   schema: z.object({ assets: z.string().array(), traits: z.string().array() }),
 });
 
+const preview = z.object({
+  enable: z.boolean(),
+  grid: z.object({ rows: z.number(), columns: z.number() }),
+});
+
 const writing = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
     summary: z.string(),
+    preview,
     previewImage: z.string(),
   }),
 });
@@ -20,12 +26,9 @@ const portfolio = defineCollection({
     // FIXME: reuse these attributes for all written content. Use composition over inheritence?
     title: z.string(),
     summary: z.string(),
-    preview: z.object({
-      enable: z.boolean(),
-      grid: z.object({ rows: z.number(), columns: z.number() }),
-    }),
-    screenshot: z.string(),
-    'screenshot-background': z.string(),
+    preview,
+    screenshot: z.object({ image: z.string(), altText: z.string() }),
+    screenshotBackground: z.string(),
     platforms: z.string().array().nonempty(),
   }),
 });

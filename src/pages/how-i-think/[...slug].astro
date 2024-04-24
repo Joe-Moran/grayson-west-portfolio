@@ -1,0 +1,24 @@
+---
+import { getEntry, getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const { slug } = Astro.params;
+if (slug === undefined) {
+  throw new Error('Slug is required');
+}
+const entry = await getEntry('writing', slug);
+if (entry === undefined) {
+  return Astro.redirect('/404');
+}
+const { Content } = await entry.render();
+
+const writingCollection = await getCollection('writing');
+const pages = writingCollection.map((item) => ({
+  title: item.data.title,
+  path: `/how-i-think/${item.slug}`,
+}));
+---
+
+<Layout title={entry.data.title} subPages={pages}>
+  <Content />
+</Layout>

@@ -6,7 +6,9 @@ preview:
     rows: 1
     columns: 2
 screenshot:
-screenshot-background:
+  image: ''
+  altText: ''
+screenshotBackground:
 platforms:
   - iOS
   - Android

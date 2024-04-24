@@ -1,9 +1,22 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
+const writingCollection = await getCollection('writing');
+const pages = writingCollection.map((item) => ({
+  title: item.data.title,
+  path: `how-i-think/${item.slug}`,
+}));
+
+const currentPath = getCurrentPath();
+
+function getCurrentPath() {
+  const pathname = new URL(Astro.request.url).pathname;
+  const currentPath = pathname.slice(1); // remove the first "/
+  return currentPath;
+}
 ---
 
-<Layout title="How I Think">
-  <main>
-
-  </main>
+<Layout title='How I Think' subPages={pages}>
+  <ContentPreviewMasonry basePath={currentPath} collection={writingCollection} />
 </Layout>
