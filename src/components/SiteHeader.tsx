@@ -1,6 +1,13 @@
 import { useLayoutEffect, useMemo, useState } from 'react';
 import HeaderNavMenu from './HeaderNavMenu.tsx';
 
+export default function SiteHeader({ navItems, currentPath }) {
+  const mobileBreakpoinkt = 768;
+  const [width] = useWindowSize();
+  const isMobile = useMemo(() => width < mobileBreakpoinkt, [width]);
+  return <HeaderNavMenu isMobile={isMobile} navItems={navItems} currentPath={currentPath} />;
+}
+
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
@@ -13,11 +20,3 @@ function useWindowSize() {
   }, []);
   return size;
 }
-function SiteHeader({ navItems, currentPath }) {
-  const mobileBreakpoinkt = 768;
-  const [width] = useWindowSize();
-  const isMobile = useMemo(() => width < mobileBreakpoinkt, [width]);
-  return <HeaderNavMenu isMobile={isMobile} navItems={navItems} currentPath={currentPath} />;
-}
-
-export default SiteHeader;

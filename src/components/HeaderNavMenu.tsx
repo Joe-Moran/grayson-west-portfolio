@@ -4,13 +4,7 @@ import HeaderNavMenuDesktop from './HeaderNavMenuDesktop';
 import HeaderNavMenuMobile from './HeaderNavMenuMobile';
 import './HeaderNavMenu.scss';
 
-type HeaderNavMenuProps = {
-  navItems: WebPage[];
-  currentPath: string;
-  isMobile: boolean;
-};
-
-function HeaderNavMenu(props: HeaderNavMenuProps) {
+export default function HeaderNavMenu(props: HeaderNavMenuProps) {
   const NavListItems = props.navItems.map(toListItemNavLink(props.currentPath));
   return props.isMobile ? (
     <HeaderNavMenuMobile>{NavListItems}</HeaderNavMenuMobile>
@@ -29,4 +23,8 @@ const toListItemNavLink = (currentPath: string) => (item: WebPage, index: number
   );
 };
 
-export default HeaderNavMenu;
+type HeaderNavMenuProps = {
+  navItems: WebPage[];
+  currentPath: string;
+  isMobile: boolean;
+};

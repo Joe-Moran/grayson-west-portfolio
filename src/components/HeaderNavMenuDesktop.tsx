@@ -1,6 +1,6 @@
 import './HeaderNavMenu.scss';
 
-const HeaderNavMenuDesktop = ({ children }) => {
+export default function HeaderNavMenuDesktop({ children }) {
   return (
     <div className='nav-container'>
       <nav>
@@ -8,6 +8,4 @@ const HeaderNavMenuDesktop = ({ children }) => {
       </nav>
     </div>
   );
-};
-
-export default HeaderNavMenuDesktop;
+}
