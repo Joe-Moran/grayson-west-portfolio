@@ -1,6 +1,7 @@
 ---
 import { getEntry, getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import PostPageLayout from '../../layouts/PostPageLayout.astro';
 
 const { slug } = Astro.params;
 if (slug === undefined) {
@@ -13,56 +14,16 @@ if (entry === undefined) {
 const { Content } = await entry.render();
 
 const portfolioCollection = await getCollection('portfolio');
-const pages = portfolioCollection.map((item) => ({ title: item.data.title, path: '/' }));
+const pages = portfolioCollection.map((item) => ({
+  title: item.data.title,
+  path: `/the-work/${item.slug}`,
+}));
 ---
 
 <Layout title={entry.data.title} subPages={pages}>
-  <div class='page'>
-    <div class='content-container'>
-      <Content />
-    </div>
-    <div class='image-container'>
-      <img src={entry.data.screenshot} alt={entry.data.screenshotAltText} />
-      <img src={entry.data.screenshotBackground} alt='' />
-    </div>
-  </div>
+  <PostPageLayout>
+    <Content slot='content' />
+    <img src={entry.data.screenshot} alt={entry.data.screenshotAltText} slot='images' />
+    <img src={entry.data.screenshotBackground} alt='' slot='images' />
+  </PostPageLayout>
 </Layout>
-
-<style>
-  .page {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-
-    > * {
-      flex: 1;
-    }
-  }
-
-  .content-container {
-    padding: 16px;
-    color: var(--color-post-text);
-    background: var(--color-post-background);
-
-    h2 {
-      font-size: 2.5rem;
-      font-style: italic;
-      font-weight: 900;
-      line-height: 1;
-      text-transform: uppercase;
-    }
-
-    h3 {
-      font-size: 1.5625rem;
-      font-weight: 600;
-      line-height: 1;
-    }
-
-    p {
-      font-family: 'Source Serif 4', serif;
-      font-size: 1.125rem;
-      font-weight: 400;
-      line-height: 1.11;
-    }
-  }
-</style>

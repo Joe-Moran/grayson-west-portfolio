@@ -1,6 +1,7 @@
 ---
 import { getEntry, getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import PostPageLayout from '../../layouts/PostPageLayout.astro';
 
 const { slug } = Astro.params;
 if (slug === undefined) {
@@ -20,5 +21,8 @@ const pages = writingCollection.map((item) => ({
 ---
 
 <Layout title={entry.data.title} subPages={pages}>
-  <Content />
-</Layout>
+  <PostPageLayout>
+    <Content slot='content' />
+    <img src={entry.data.previewImage} alt='' slot='images' />
+  </PostPageLayout></Layout
+>
