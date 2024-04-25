@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.25](///compare/v0.0.24...v0.0.25) (2024-04-25)
+
+
+### Features
+
+* filter posts on home page by featured flag 59dc6b5
+
 ## [0.0.24](///compare/v0.0.23...v0.0.24) (2024-04-24)
 
 
