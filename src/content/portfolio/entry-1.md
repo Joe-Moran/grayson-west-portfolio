@@ -1,6 +1,7 @@
 ---
 title: Entry
 summary: Here is something about this thing. How cool!
+featured: true
 preview:
   grid:
     rows: 1

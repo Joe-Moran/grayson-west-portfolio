@@ -10,12 +10,17 @@ const preview = z.object({
   grid: z.object({ rows: z.number(), columns: z.number() }),
 });
 
+const content = z.object({
+  title: z.string(),
+  summary: z.string(),
+  featured: z.boolean(),
+  preview,
+});
+
 const writing = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string(),
-    summary: z.string(),
-    preview,
+    content,
     previewImage: z.string(),
   }),
 });
@@ -23,10 +28,7 @@ const writing = defineCollection({
 const portfolio = defineCollection({
   type: 'content',
   schema: z.object({
-    // FIXME: reuse these attributes for all written content. Use composition over inheritence?
-    title: z.string(),
-    summary: z.string(),
-    preview,
+    content,
     screenshot: z.object({ image: z.string(), altText: z.string() }),
     screenshotBackground: z.string(),
     platforms: z.string().array().nonempty(),
@@ -41,6 +43,8 @@ const intro = defineCollection({
     highlight: z.string(),
   }),
 });
+
+// TODO: implement this for more customizable footer content
 
 // const footer = defineCollection({
 //   type: 'content',
