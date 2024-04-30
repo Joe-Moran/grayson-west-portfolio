@@ -1,9 +1,9 @@
 ---
-import { type ContentCollectionKey, type CollectionEntry } from 'astro:content';
+import { type CollectionEntry } from 'astro:content';
 import Card from './Card.astro';
 import { Picture, Image } from 'astro:assets';
 
-type ChildPage = CollectionEntry<ContentCollectionKey>;
+type ChildPage = CollectionEntry<'portfolio' | 'writing'>;
 
 interface Props {
   title: string;
@@ -28,11 +28,11 @@ const { title, children, path, previewStyle } = Astro.props;
           title={child.data.title}
           bodyText={child.data.summary}
           linkPath={`${path}/${child.slug}`}
-          descriptors={child.data.platforms ?? []}
+          descriptors={'platforms' in child.data ? child.data.platforms : []}
+          backgroundImage={child.data.background}
         >
-          <Picture src={child.data.background} alt='' inferSize={false} />
-          {child.data.icon && <Image src={child.data.icon} alt='' class='icon' />}
-          {child.data.screenshot && (
+          {'icon' in child.data && <Image src={child.data.icon} alt='' class='icon' slot='icon' />}
+          {'screenshot' in child.data && (
             <Picture
               slot='body'
               src={child.data.screenshot.image}

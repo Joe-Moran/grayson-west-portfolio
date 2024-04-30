@@ -1,18 +1,31 @@
 ---
+import BackgroundImage from './BackgroundImage.astro';
+import { Picture } from 'astro:assets';
+
 interface Props {
   title: string;
   bodyText: string;
   descriptors?: string[];
   linkPath: string;
   classes?: string[];
+  backgroundImage: typeof Picture.prototype;
 }
 
-const { title, bodyText, linkPath, descriptors = [], classes = [], ...rest } = Astro.props;
+const {
+  title,
+  bodyText,
+  linkPath,
+  backgroundImage,
+  descriptors = [],
+  classes = [],
+  ...rest
+} = Astro.props;
 ---
 
 <article class:list={['card', ...classes]} {...rest}>
-  <div class='image-container'>
-    <slot />
+  <BackgroundImage image={backgroundImage} alt='' />
+  <div class='icon-container'>
+    <slot name='icon' />
   </div>
   <div class='card-container'>
     <h3 class='card-title'>{title}</h3>
@@ -43,7 +56,7 @@ const { title, bodyText, linkPath, descriptors = [], classes = [], ...rest } = A
 </article>
 
 <style>
-  .image-container {
+  .icon-container {
     position: absolute;
     inset: 0;
     display: flex;

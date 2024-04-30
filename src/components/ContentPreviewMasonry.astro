@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import Card from './Card.astro';
 import { Picture, Image } from 'astro:assets';
+import CardMasonry from './CardMasonry.astro';
 
 interface Props {
   basePath: string;
@@ -14,23 +14,25 @@ const { collection, basePath } = Astro.props;
 <div class:list={['content-preview-masonry', `grid-rows-${collection.length}`]}>
   {
     collection.map((item) => (
-      <Card
+      <CardMasonry
         title={item.data.title}
         bodyText={item.data.summary}
         linkPath={`${basePath}/${item.slug}`}
-        classes={[`cols-${item.data.preview.grid.columns}`, `rows-${item.data.preview.grid.rows}`]}
+        backgroundImage={item.data.background}
+        columns={item.data.preview.grid.columns}
+        rows={item.data.preview.grid.rows}
       >
-        <Picture src={item.data.background} alt='' inferSize={false} />
-        {item.data.icon && <Image src={item.data.icon} alt='' class='icon' />}
-        {item.data.screenshot && (
+        {/* TODO: refactor this nonsense since it's copied across multiple components */}
+
+        {'icon' in item.data && <Image src={item.data.icon} alt='' class='icon' slot='icon' />}
+        {'screenshot' in item.data && (
           <Picture
-            slot='body'
             src={item.data.screenshot.image}
             alt={item.data.screenshot.altText}
             class='screenshot'
           />
-        )}{' '}
-      </Card>
+        )}
+      </CardMasonry>
     ))
   }
 </div>
@@ -59,15 +61,5 @@ const { collection, basePath } = Astro.props;
       minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr)
     );
     grid-gap: var(--grid-layout-gap);
-  }
-
-  @for $gridSpanCount from 1 through 12 {
-    .rows-#{$gridSpanCount} {
-      grid-row: span $gridSpanCount;
-    }
-
-    .cols-#{$gridSpanCount} {
-      grid-column: span $gridSpanCount;
-    }
   }
 </style>
