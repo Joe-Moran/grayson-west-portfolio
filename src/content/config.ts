@@ -1,7 +1,7 @@
 import { defineCollection, z } from 'astro:content';
 
 const personality = defineCollection({
-  type: 'content',
+  type: 'data',
   schema: z.object({ assets: z.string().array(), traits: z.string().array() }),
 });
 
