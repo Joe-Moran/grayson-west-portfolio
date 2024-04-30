@@ -12,7 +12,9 @@ const { Content } = await introEntry.render();
 
 <Layout title='Grayson Gail West'>
   <Intro title={introEntry.data.title} greeting={introEntry.data.greeting}>
-    <Content />
+    <div class='intro-content'>
+      <Content />
+    </div>
   </Intro>
   <Values />
   <div class='page-previews'>
