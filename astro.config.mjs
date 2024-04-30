@@ -7,5 +7,13 @@ import react from '@astrojs/react';
 export default defineConfig({
   integrations: [react()],
   output: 'server',
-  adapter: cloudflare(),
+  vite: {
+    ssr: {
+      external: ['node:buffer'],
+    },
+    build: {
+      minify: false,
+    },
+  },
+  adapter: cloudflare({ imageService: 'compile' }),
 });
