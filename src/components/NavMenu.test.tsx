@@ -17,7 +17,7 @@ it('Does not render nav menu list on mount', () => {
 
 it('Renders nav menu list on click of activator button', () => {
   renderNavMenu();
-  fireEvent.click(screen.getByRole('button', { name: 'Howdy' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Expand navigation menu' }));
   expect(screen.getByRole('navigation')).toBeInTheDocument();
 });
 
