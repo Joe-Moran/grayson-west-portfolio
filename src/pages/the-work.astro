@@ -5,7 +5,7 @@ import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
 const portfolioCollection = await getCollection('portfolio');
 const pages = portfolioCollection.map((item) => ({
   title: item.data.title,
-  path: `/the-work/${item.data.slug}`,
+  path: `/the-work/${item.slug}`,
 }));
 
 const currentPath = getCurrentPath();
