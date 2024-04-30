@@ -23,8 +23,6 @@ const pages = writingCollection.map((item) => ({
 ---
 
 <Layout title={entry.data.title} subPages={pages}>
-  <Values />
-
   <PostPageLayout>
     <Content slot='content' />
     <BackgroundImage image={entry.data.background} alt='' />

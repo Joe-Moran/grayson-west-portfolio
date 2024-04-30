@@ -3,7 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import type { WebPage } from '../types/Page.mts';
 interface Props {
-  title?: string;
+  title: string;
   subPages?: WebPage[];
 }
 
@@ -12,6 +12,7 @@ const { title, subPages } = Astro.props;
 const titleFormatted = title ? `${title} | ${siteTitle}` : siteTitle;
 import '../styles/index.css';
 import Hero from '../components/Hero.astro';
+import Values from '../components/Values.astro';
 ---
 
 <!doctype html>
@@ -29,6 +30,9 @@ import Hero from '../components/Hero.astro';
     <Header />
     <main>
       <Hero title={title} pages={subPages} />
+      <slot name='intro' />
+      <Values />
+
       <slot />
     </main>
     <Footer />

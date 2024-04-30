@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Values from '../components/Values.astro';
 import { getCollection, getEntry } from 'astro:content';
 import PagePreview from '../components/PagePreview.astro';
 import Intro from '../components/Intro.astro';
@@ -11,12 +10,13 @@ const { Content } = await introEntry.render();
 ---
 
 <Layout title='Grayson Gail West'>
-  <Intro title={introEntry.data.title} greeting={introEntry.data.greeting}>
-    <div class='intro-content'>
-      <Content />
-    </div>
-  </Intro>
-  <Values />
+  <div class='intro-container' slot='intro'>
+    <Intro title={introEntry.data.title} greeting={introEntry.data.greeting}>
+      <div class='intro-content'>
+        <Content />
+      </div>
+    </Intro>
+  </div>
   <div class='page-previews'>
     <PagePreview
       path='how-i-think'
