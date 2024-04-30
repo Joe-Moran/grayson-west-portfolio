@@ -17,41 +17,44 @@ const { title, greeting } = Astro.props;
 
 <style>
   .intro {
+    --flex-element-padding: clamp(10px, 1vw, 40px);
+
+    font-size: clamp(0.5rem, 2vw, 1rem);
     color: var(--white);
 
     p {
       margin: 0;
     }
-  }
 
-  .big-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 26px;
-    align-items: flex-start;
+    .big-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+      align-items: flex-start;
 
-    .greeting {
-      min-width: 20ch;
-      font-size: 2.8125rem;
-      line-height: 1;
+      .greeting {
+        min-width: 15ch;
+        font-size: 2.8125em;
+        line-height: 1;
+      }
+
+      :not(.greeting) {
+        min-width: 20ch;
+        font-size: 1.375em;
+        line-height: 1.2;
+        color: var(--orange);
+      }
+
+      > * {
+        flex: 1;
+        padding: var(--flex-element-padding);
+      }
     }
 
-    :not(.greeting) {
-      min-width: 25ch;
-      font-size: 1.375rem;
-      line-height: 1;
-      color: var(--orange);
+    h2 {
+      padding: var(--flex-element-padding);
+      font-size: 3.125em;
+      font-weight: 800;
     }
-
-    > * {
-      flex: 1;
-      padding: 0 40px;
-    }
-  }
-
-  h2 {
-    padding: 0 40px;
-    font-size: 3.125rem;
-    font-weight: 800;
   }
 </style>

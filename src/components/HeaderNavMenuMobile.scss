@@ -1,6 +1,14 @@
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .nav-drawer {
   position: absolute;
   inset: 100% 0 -100vh;
+  z-index: 3;
+  padding: 0 16px;
+  text-align: right;
   background: var(--color-background);
 
   ul {

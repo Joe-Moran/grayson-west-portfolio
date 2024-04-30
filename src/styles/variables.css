@@ -14,4 +14,5 @@
   --color-border: var(--orange);
   --color-post-background: var(--blue);
   --color-post-text: var(--white);
+  --mobile-breakpoint: 768px;
 }

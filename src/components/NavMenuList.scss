@@ -1,28 +1,31 @@
 .nav-menu-list {
   ul {
-    padding: 0;
+    padding: 24px 6px 30px 13px;
     margin: 0;
   }
 
   li {
-    padding: 8px 16px;
     margin: 0;
     list-style: none;
+  }
+
+  a {
+    display: block;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    text-decoration: none;
+    white-space: nowrap;
     transition: 175ms ease-in-out all;
 
-    &:has([aria-current='page']) {
+    &[aria-current='page'] {
       background: var(--color-nav-current);
     }
 
     &:hover {
       background-color: #f5f5f520;
     }
-  }
-
-  a {
-    font-weight: 600;
-    color: var(--color-nav);
-    text-decoration: none;
   }
 
   background: var(--color-background);

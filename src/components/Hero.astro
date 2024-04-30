@@ -40,28 +40,32 @@ function getCurrentPath() {
   .hero {
     display: flex;
     min-height: 400px;
-    padding: 25px;
+    padding: clamp(12px, 4vw, 25px);
     background: gray;
   }
 
   .heading-container {
+    position: relative;
+    z-index: 2;
     display: flex;
     align-self: flex-end;
 
     button {
       display: flex;
       align-items: flex-end;
+      justify-content: center;
       height: 100%;
       padding: 13px 0;
     }
   }
 
   .heading {
-    width: fit-content;
+    flex: 10;
     padding: 20px;
-    font-size: 3.75rem;
+    font-size: clamp(2rem, 10vw, 3.75rem);
     font-style: italic;
     font-weight: 900;
+    line-height: 1;
     color: var(--orange);
     text-transform: uppercase;
     background: var(--color-heading-background);

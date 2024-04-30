@@ -1,7 +1,12 @@
+.nav-container {
+  flex: 1;
+}
+
 .nav-list {
   display: flex;
-  flex: 3;
-  justify-content: space-between;
+  container-type: normal;
+  gap: clamp(10px, 3.4cqw, 50px);
+  justify-content: flex-end;
   padding: 0 32px;
   list-style: none;
 }
