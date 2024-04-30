@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
+import Values from '../components/Values.astro';
 const portfolioCollection = await getCollection('portfolio');
 const pages = portfolioCollection.map((item) => ({
   title: item.data.title,
@@ -18,5 +19,8 @@ function getCurrentPath() {
 ---
 
 <Layout title='The Work' subPages={pages}>
+  <!-- TODO: add Values to Layout component; allow for an intro slot for the index page. -->
+  <Values />
+
   <ContentPreviewMasonry basePath={currentPath} collection={portfolioCollection} />
 </Layout>

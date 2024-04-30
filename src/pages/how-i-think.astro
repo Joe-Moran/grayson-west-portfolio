@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
+import Values from '../components/Values.astro';
 const writingCollection = await getCollection('writing');
 const pages = writingCollection.map((item) => ({
   title: item.data.title,
@@ -18,5 +19,7 @@ function getCurrentPath() {
 ---
 
 <Layout title='How I Think' subPages={pages}>
+  <Values />
+
   <ContentPreviewMasonry basePath={currentPath} collection={writingCollection} />
 </Layout>
