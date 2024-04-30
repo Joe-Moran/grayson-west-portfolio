@@ -11,10 +11,22 @@ const { title, bodyText, linkPath, descriptors = [], classes = [], ...rest } = A
 ---
 
 <article class:list={['card', ...classes]} {...rest}>
-  <h1 class='card-title'>{title}</h1>
-  <div class='card-body'>
-    <div class='card-rollover'>
-      <p>{bodyText}</p>
+  <div class='image-container'>
+    <slot />
+  </div>
+  <div class='card-container'>
+    <h3 class='card-title'>{title}</h3>
+    <div class='card-body'>
+      <!-- TODO: refactor this into its own component. Used across the site. -->
+      <div class='body-image-container'>
+        <slot name='body' />
+      </div>
+      <div class='card-rollover'>
+        <Fragment set:html={bodyText} />
+      </div>
+    </div>
+    <div class='card-footer'>
+      <a href={linkPath} class='learn-more-link'>Learn more</a>
     </div>
     {
       descriptors.length ? (
@@ -28,12 +40,32 @@ const { title, bodyText, linkPath, descriptors = [], classes = [], ...rest } = A
       )
     }
   </div>
-  <div class='card-footer'>
-    <a href={linkPath} class='learn-more-link'>Learn more</a>
-  </div>
 </article>
 
 <style>
+  .image-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    picture {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
   .card-title {
     width: fit-content;
     padding: 10px;
@@ -60,26 +92,21 @@ const { title, bodyText, linkPath, descriptors = [], classes = [], ...rest } = A
     &::before {
       position: absolute;
       inset: 0;
-      content: ''; /* 1 */
+      z-index: 2;
+      content: '';
     }
   }
 
   .card-rollover {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
     height: 100%;
-
-    p {
-      padding: 16px;
-      font-family: 'Source Serif 4', serif;
-      font-size: 1.25rem;
-      font-weight: 400;
-      line-height: 0.99;
-      color: var(--white);
-      background: var(--color-background);
-    }
+    padding: 16px;
+    margin: 14px 0;
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--white);
+    background: var(--color-background);
   }
 
   .card-rollover,
@@ -89,6 +116,10 @@ const { title, bodyText, linkPath, descriptors = [], classes = [], ...rest } = A
   }
 
   ul.descriptors {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: flex;
     gap: 10px;
     padding: 0 16px;
@@ -117,16 +148,36 @@ const { title, bodyText, linkPath, descriptors = [], classes = [], ...rest } = A
   }
 
   .card-footer {
+    z-index: 2;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
   }
 
-  .card {
+  .body-image-container {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+
+    picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  .card-container {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .card {
+    position: relative;
     padding: 20px;
     color: black;
     background: var(--white);
@@ -143,6 +194,7 @@ const { title, bodyText, linkPath, descriptors = [], classes = [], ...rest } = A
       }
 
       .descriptors {
+        z-index: -1;
         opacity: 0;
       }
     }

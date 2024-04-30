@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import Card from './Card.astro';
+import { Picture, Image } from 'astro:assets';
 
 interface Props {
   basePath: string;
@@ -15,15 +16,31 @@ const { collection, basePath } = Astro.props;
     collection.map((item) => (
       <Card
         title={item.data.title}
-        bodyText={item.data.bodyText}
+        bodyText={item.data.summary}
         linkPath={`${basePath}/${item.slug}`}
         classes={[`cols-${item.data.preview.grid.columns}`, `rows-${item.data.preview.grid.rows}`]}
-      />
+      >
+        <Picture src={item.data.background} alt='' inferSize={false} />
+        {item.data.icon && <Image src={item.data.icon} alt='' class='icon' />}
+        {item.data.screenshot && (
+          <Picture
+            slot='body'
+            src={item.data.screenshot.image}
+            alt={item.data.screenshot.altText}
+            class='screenshot'
+          />
+        )}{' '}
+      </Card>
     ))
   }
 </div>
 
 <style>
+  .icon {
+    position: relative;
+    height: 30%;
+  }
+
   .content-preview-masonry {
     --grid-layout-gap: 10px;
     --grid-column-count: 3;
@@ -54,11 +71,43 @@ const { collection, basePath } = Astro.props;
     grid-column: span 2;
   }
 
+  .cols-3 {
+    grid-column: span 3;
+  }
+
+  .cols-4 {
+    grid-column: span 4;
+  }
+
+  .cols-5 {
+    grid-column: span 5;
+  }
+
+  .cols-6 {
+    grid-column: span 6;
+  }
+
   .rows-1 {
     grid-row: span 1;
   }
 
   .rows-2 {
     grid-row: span 2;
+  }
+
+  .rows-3 {
+    grid-row: span 3;
+  }
+
+  .rows-4 {
+    grid-row: span 4;
+  }
+
+  .rows-5 {
+    grid-row: span 5;
+  }
+
+  .rows-6 {
+    grid-row: span 6;
   }
 </style>

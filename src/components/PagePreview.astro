@@ -1,6 +1,7 @@
 ---
 import { type ContentCollectionKey, type CollectionEntry } from 'astro:content';
 import Card from './Card.astro';
+import { Picture, Image } from 'astro:assets';
 
 type ChildPage = CollectionEntry<ContentCollectionKey>;
 
@@ -28,12 +29,28 @@ const { title, children, path, previewStyle } = Astro.props;
           bodyText={child.data.summary}
           linkPath={`${path}/${child.slug}`}
           descriptors={child.data.platforms ?? []}
-        />
+        >
+          <Picture src={child.data.background} alt='' inferSize={false} />
+          {child.data.icon && <Image src={child.data.icon} alt='' class='icon' />}
+          {child.data.screenshot && (
+            <Picture
+              slot='body'
+              src={child.data.screenshot.image}
+              alt={child.data.screenshot.altText}
+              class='screenshot'
+            />
+          )}
+        </Card>
       ))
     }
   </div>
 </div>
 <style>
+  .icon {
+    position: relative;
+    height: 30%;
+  }
+
   .page-preview {
     --preview-flex-gap: 22px;
     --card-height: 350px;
@@ -46,7 +63,7 @@ const { title, children, path, previewStyle } = Astro.props;
     margin-bottom: 16px;
   }
 
-  h2 {
+  h2.page-title {
     font-size: 3.75rem;
     font-weight: 800;
     line-height: 1;
@@ -61,6 +78,7 @@ const { title, children, path, previewStyle } = Astro.props;
     text-decoration: underline;
     text-decoration-color: transparent;
     text-transform: uppercase;
+    white-space: nowrap;
     transition: 250ms ease-in-out all;
 
     &:hover,
