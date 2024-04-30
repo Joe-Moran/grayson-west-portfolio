@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.26](///compare/v0.0.25...v0.0.26) (2024-04-30)
+
+
+### Features
+
+* add Values component to all pages a575a7f
+* finalize dynamic pages layout and content schema c67e9f6
+* support background images in cards c0a58b5
+
+
+### Bug Fixes
+
+* new query for unit test bdb6228
+* properly match current path 6f1232f
+* resolve type errors 9f92232
+* set ecmaVersion for eslint b301b8c
+* typos 55bfe42
+
 ## [0.0.25](///compare/v0.0.24...v0.0.25) (2024-04-25)
 
 
