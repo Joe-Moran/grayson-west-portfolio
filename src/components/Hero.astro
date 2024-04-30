@@ -15,8 +15,7 @@ function formatAsElementId(title: string) {
 
 function getCurrentPath() {
   const pathname = new URL(Astro.request.url).pathname;
-  const currentPath = pathname.slice(1); // remove the first "/
-  return currentPath;
+  return pathname;
 }
 ---
 
