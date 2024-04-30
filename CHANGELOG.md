@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.29](///compare/v0.0.28...v0.0.29) (2024-04-30)
+
+
+### Bug Fixes
+
+* use proper slug property 6a8a6c0
+
 ## [0.0.28](///compare/v0.0.27...v0.0.28) (2024-04-30)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "grayson-west",
   "type": "module",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "scripts": {
     "dev": "astro dev",
     "lint": "eslint --ext .js,.astro,.ts src",
