@@ -13,7 +13,7 @@ export default function NavMenu({
   elementId: string;
   currentPath: string;
 }) {
-  const self = useRef(null);
+  const self = useRef<HTMLDivElement>(null);
   const [isActive, setIsActive] = useState(false);
 
   const keyUpListener = (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -23,7 +23,7 @@ export default function NavMenu({
   };
 
   const blurListener = (event: React.FocusEvent<HTMLButtonElement>) => {
-    const isSelfOrChildInFocus = self.current.contains(event.relatedTarget as Node);
+    const isSelfOrChildInFocus = self.current?.contains(event.relatedTarget as Node);
     if (!isSelfOrChildInFocus) {
       setIsActive(false);
     }
