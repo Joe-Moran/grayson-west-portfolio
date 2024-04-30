@@ -12,13 +12,17 @@ export default function NavMenuList({ pages, elementId, currentPath }: NavMenuLi
 }
 
 function NavMenuListItems({ pages, currentPath }: Omit<NavMenuListProps, 'elementId'>) {
-  return pages.map((page, index) => (
-    <li key={index}>
-      <a href={page.path} aria-current={page.path === currentPath ? 'page' : null}>
-        {page.title}
-      </a>
-    </li>
-  ));
+  return pages.map((page, index) => {
+    const attributes: { 'aria-current': 'page' } | {} =
+      page.path === currentPath ? { 'aria-current': 'page' } : {};
+    return (
+      <li key={index}>
+        <a href={page.path} {...attributes}>
+          {page.title}
+        </a>
+      </li>
+    );
+  });
 }
 
 interface NavMenuListProps {
