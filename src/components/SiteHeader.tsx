@@ -2,9 +2,9 @@ import { useLayoutEffect, useMemo, useState } from 'react';
 import HeaderNavMenu from './HeaderNavMenu.tsx';
 
 export default function SiteHeader({ navItems, currentPath }) {
-  const mobileBreakpoinkt = 768;
+  const mobileBreakpoint = 768;
   const [width] = useWindowSize();
-  const isMobile = useMemo(() => width < mobileBreakpoinkt, [width]);
+  const isMobile = useMemo(() => width < mobileBreakpoint, [width]);
   return <HeaderNavMenu isMobile={isMobile} navItems={navItems} currentPath={currentPath} />;
 }
 
