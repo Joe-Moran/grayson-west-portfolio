@@ -26,7 +26,6 @@ const writingCollection = defineCollection({
         message: 'Cover image must be at least 1080 pixels wide!',
       }),
       icon: image(),
-      previewImage: z.string(),
     }),
 });
 

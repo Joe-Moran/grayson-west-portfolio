@@ -6,7 +6,6 @@ preview:
   grid:
     rows: 2
     columns: 1
-previewImage: ''
 featured: true
 background: '../../assets/content/Group 1.jpg'
 icon: '../../assets/vector-art/ai-driven-world 1.svg'
