@@ -35,7 +35,7 @@ const { collection, basePath } = Astro.props;
   }
 </div>
 
-<style>
+<style lang='scss'>
   .icon {
     position: relative;
     height: 30%;
@@ -61,53 +61,13 @@ const { collection, basePath } = Astro.props;
     grid-gap: var(--grid-layout-gap);
   }
 
-  /* TODO use scss function here */
+  @for $gridSpanCount from 1 through 12 {
+    .rows-#{$gridSpanCount} {
+      grid-row: span $gridSpanCount;
+    }
 
-  .cols-1 {
-    grid-column: span 1;
-  }
-
-  .cols-2 {
-    grid-column: span 2;
-  }
-
-  .cols-3 {
-    grid-column: span 3;
-  }
-
-  .cols-4 {
-    grid-column: span 4;
-  }
-
-  .cols-5 {
-    grid-column: span 5;
-  }
-
-  .cols-6 {
-    grid-column: span 6;
-  }
-
-  .rows-1 {
-    grid-row: span 1;
-  }
-
-  .rows-2 {
-    grid-row: span 2;
-  }
-
-  .rows-3 {
-    grid-row: span 3;
-  }
-
-  .rows-4 {
-    grid-row: span 4;
-  }
-
-  .rows-5 {
-    grid-row: span 5;
-  }
-
-  .rows-6 {
-    grid-row: span 6;
+    .cols-#{$gridSpanCount} {
+      grid-column: span $gridSpanCount;
+    }
   }
 </style>
