@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.30](///compare/v0.0.29...v0.0.30) (2024-04-30)
+
+
+### Bug Fixes
+
+* update pre-commit hook to run second command ce60466
+* use required types for link elements 3ad7a61
+
 ## [0.0.29](///compare/v0.0.28...v0.0.29) (2024-04-30)
 
 
