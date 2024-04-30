@@ -10,29 +10,37 @@ const preview = z.object({
   grid: z.object({ rows: z.number(), columns: z.number() }),
 });
 
-const content = z.object({
+const content = {
   title: z.string(),
   summary: z.string(),
   featured: z.boolean(),
   preview,
-});
+};
 
-const writing = defineCollection({
+const writingCollection = defineCollection({
   type: 'content',
-  schema: z.object({
-    content,
-    previewImage: z.string(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      ...content,
+      background: image().refine((img) => img.width >= 1080, {
+        message: 'Cover image must be at least 1080 pixels wide!',
+      }),
+      icon: image(),
+      previewImage: z.string(),
+    }),
 });
 
 const portfolio = defineCollection({
   type: 'content',
-  schema: z.object({
-    content,
-    screenshot: z.object({ image: z.string(), altText: z.string() }),
-    screenshotBackground: z.string(),
-    platforms: z.string().array().nonempty(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      ...content,
+      background: image().refine((img) => img.width >= 1080, {
+        message: 'Cover image must be at least 1080 pixels wide!',
+      }),
+      screenshot: z.object({ image: image(), altText: z.string() }),
+      platforms: z.string().array().nonempty(),
+    }),
 });
 
 // TODO: is this the best approach for making the intro easily editable?
@@ -40,7 +48,7 @@ const intro = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    highlight: z.string(),
+    greeting: z.string(),
   }),
 });
 
@@ -54,4 +62,4 @@ const intro = defineCollection({
 //   }),
 // });
 
-export { personality, writing, portfolio, intro };
+export const collections = { personality, writing: writingCollection, portfolio, intro };

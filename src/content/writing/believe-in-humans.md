@@ -2,10 +2,14 @@
 title: I Believe In Humans
 summary: Believing in boundless human potential, derived from personal experiences, is my driving force. I learned about nurturing potential from my mother, a theater director. Her passion for fostering talent and unlocking latent creativity profoundly impacted me. My time as a competitive cyclist in Europe reinforced the power of collective effort over individual triumph. I'm fascinated by human curiosity, problem-solving abilities, imagination, and above all, passion. As a leader, my mission is not only acknowledging these qualities but also nurturing growth, guided by lessons learned from my mentors. Now, I aim to pay it forward.
 preview:
+  enable: true
   grid:
     rows: 2
     columns: 1
+previewImage: ''
 featured: true
+background: '../../assets/content/Group 1.jpg'
+icon: '../../assets/vector-art/ai-driven-world 1.svg'
 ---
 
 Humans are capable of achieving more than they think possible. This belief comes from my own life experiences, things I've seen and learned, and my unshakeable faith in what humans are capable of—being curious, driven, and having endless potential. People can achieve amazing things when a space is created for them to tap into their talents and passions freely.

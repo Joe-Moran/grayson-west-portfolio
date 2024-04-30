@@ -2,7 +2,8 @@
 import { getEntry, getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import PostPageLayout from '../../layouts/PostPageLayout.astro';
-
+import { Picture } from 'astro:assets';
+import Values from '../../components/Values.astro';
 const { slug } = Astro.params;
 if (slug === undefined) {
   throw new Error('Slug is required');
@@ -21,9 +22,60 @@ const pages = portfolioCollection.map((item) => ({
 ---
 
 <Layout title={entry.data.title} subPages={pages}>
+  <Values />
+
   <PostPageLayout>
     <Content slot='content' />
-    <img src={entry.data.screenshot} alt={entry.data.screenshotAltText} slot='images' />
-    <img src={entry.data.screenshotBackground} alt='' slot='images' />
+    <div class='images'>
+      <div class='image-container'>
+        <Picture src={entry.data.background} alt='' inferSize={false} />
+      </div>
+      <div class='body-image-container'>
+        {
+          entry.data.screenshot && (
+            <Picture
+              src={entry.data.screenshot.image}
+              alt={entry.data.screenshot.altText}
+              class='screenshot'
+            />
+          )
+        }
+      </div>
+    </div>
   </PostPageLayout>
 </Layout>
+
+<style>
+  .images {
+    position: relative;
+    overflow-y: auto;
+  }
+
+  .body-image-container {
+    position: relative;
+
+    picture img {
+      max-width: 100%;
+      height: 400px;
+      object-fit: contain;
+      object-position: top;
+    }
+  }
+
+  .image-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    picture,
+    picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+</style>
