@@ -1,7 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { Picture, Image } from 'astro:assets';
-import CardMasonry from './CardMasonry.astro';
+
+import ContentPortfolioCard from './ContentPortfolioCard.astro';
+import ContentWritingCard from './ContentWritingCard.astro';
 
 interface Props {
   basePath: string;
@@ -9,31 +10,40 @@ interface Props {
 }
 
 const { collection, basePath } = Astro.props;
+
+function highestRowCount(collection: CollectionEntry<'portfolio' | 'writing'>[]): number {
+  return collection.reduce((previous, current) => {
+    const currentRowCount = current.data.preview.grid.rows;
+    return currentRowCount > previous ? currentRowCount : previous;
+  }, 0);
+}
+
+function buildClasses(item: CollectionEntry<'portfolio' | 'writing'>): string[] {
+  return [`cols-${item.data.preview.grid.columns}`, `rows-${item.data.preview.grid.rows}`];
+}
+
+function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
+  return `${basePath}/${item.slug}`;
+}
 ---
 
-<div class:list={['content-preview-masonry', `grid-rows-${collection.length}`]}>
+<div class:list={['content-preview-masonry', `grid-rows-${highestRowCount(collection)}`]}>
   {
-    collection.map((item) => (
-      <CardMasonry
-        title={item.data.title}
-        bodyText={item.data.summary}
-        linkPath={`${basePath}/${item.slug}`}
-        backgroundImage={item.data.background}
-        columns={item.data.preview.grid.columns}
-        rows={item.data.preview.grid.rows}
-      >
-        {/* TODO: refactor this nonsense since it's copied across multiple components */}
-
-        {'icon' in item.data && <Image src={item.data.icon} alt='' class='icon' slot='icon' />}
-        {'screenshot' in item.data && (
-          <Picture
-            src={item.data.screenshot.image}
-            alt={item.data.screenshot.altText}
-            class='screenshot'
-          />
-        )}
-      </CardMasonry>
-    ))
+    collection.map((item) => {
+      return 'screenshot' in item.data ? (
+        <ContentPortfolioCard
+          linkPath={buildLinkPath(item)}
+          content={item as CollectionEntry<'portfolio'>}
+          classes={buildClasses(item)}
+        />
+      ) : (
+        <ContentWritingCard
+          linkPath={buildLinkPath(item)}
+          content={item as CollectionEntry<'writing'>}
+          classes={buildClasses(item)}
+        />
+      );
+    })
   }
 </div>
 
@@ -61,5 +71,15 @@ const { collection, basePath } = Astro.props;
       minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr)
     );
     grid-gap: var(--grid-layout-gap);
+  }
+
+  @for $gridSpanCount from 1 through 12 {
+    .rows-#{$gridSpanCount} {
+      grid-row: span $gridSpanCount;
+    }
+
+    .cols-#{$gridSpanCount} {
+      grid-column: span $gridSpanCount;
+    }
   }
 </style>

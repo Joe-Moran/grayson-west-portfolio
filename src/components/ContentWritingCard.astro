@@ -1,0 +1,30 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Card from './Card.astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+  classes?: string[];
+  content: CollectionEntry<'writing'>;
+  linkPath: string;
+}
+
+const { classes, content, linkPath }: Props = Astro.props;
+---
+
+<Card
+  classes={classes}
+  title={content.data.title}
+  bodyText={content.data.summary}
+  linkPath={linkPath}
+  backgroundImage={content.data.background}
+>
+  <Image src={content.data.icon} alt='' class='icon' slot='icon' />
+</Card>
+
+<style>
+  .icon {
+    position: relative;
+    height: 30%;
+  }
+</style>

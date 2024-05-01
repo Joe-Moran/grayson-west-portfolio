@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry } from 'astro:content';
-import Card from './Card.astro';
-import { Picture, Image } from 'astro:assets';
+import ContentPortfolioCard from './ContentPortfolioCard.astro';
+import ContentWritingCard from './ContentWritingCard.astro';
 
 type ChildPage = CollectionEntry<'portfolio' | 'writing'>;
 
@@ -13,6 +13,10 @@ interface Props {
 }
 
 const { title, children, path, previewStyle } = Astro.props;
+
+function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
+  return `${path}/${item.slug}`;
+}
 ---
 
 <div class='page-preview'>
@@ -22,35 +26,23 @@ const { title, children, path, previewStyle } = Astro.props;
   </div>
   <div class:list={['page-content-preview', previewStyle]}>
     {
-      children.map((child) => (
-        <Card
-          class:list={[previewStyle]}
-          title={child.data.title}
-          bodyText={child.data.summary}
-          linkPath={`${path}/${child.slug}`}
-          descriptors={'platforms' in child.data ? child.data.platforms : []}
-          backgroundImage={child.data.background}
-        >
-          {'icon' in child.data && <Image src={child.data.icon} alt='' class='icon' slot='icon' />}
-          {'screenshot' in child.data && (
-            <Picture
-              slot='body'
-              src={child.data.screenshot.image}
-              alt={child.data.screenshot.altText}
-              class='screenshot'
-            />
-          )}
-        </Card>
-      ))
+      children.map((child) => {
+        return 'screenshot' in child.data ? (
+          <ContentPortfolioCard
+            linkPath={buildLinkPath(child)}
+            content={child as CollectionEntry<'portfolio'>}
+          />
+        ) : (
+          <ContentWritingCard
+            linkPath={buildLinkPath(child)}
+            content={child as CollectionEntry<'writing'>}
+          />
+        );
+      })
     }
   </div>
 </div>
 <style>
-  .icon {
-    position: relative;
-    height: 30%;
-  }
-
   .page-preview {
     --preview-flex-gap: 22px;
     --card-height: 350px;

@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Card from './Card.astro';
+import { Picture } from 'astro:assets';
+
+interface Props {
+  classes?: string[];
+  content: CollectionEntry<'portfolio'>;
+  linkPath: string;
+}
+
+const { classes, content, linkPath } = Astro.props;
+---
+
+<Card
+  classes={classes}
+  title={content.data.title}
+  bodyText={content.data.summary}
+  linkPath={linkPath}
+  descriptors={content.data.platforms}
+  backgroundImage={content.data.background}
+>
+  <Picture
+    slot='body'
+    src={content.data.screenshot.image}
+    alt={content.data.screenshot.altText}
+    class='screenshot'
+  />
+</Card>
