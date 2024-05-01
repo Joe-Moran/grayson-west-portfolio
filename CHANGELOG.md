@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.31](///compare/v0.0.30...v0.0.31) (2024-05-01)
+
+
+### Bug Fixes
+
+* load jpeg fallback when webp is not supported 4155d6d
+
 ## [0.0.30](///compare/v0.0.29...v0.0.30) (2024-04-30)
 
 
