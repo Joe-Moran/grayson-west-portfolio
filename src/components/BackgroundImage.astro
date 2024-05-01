@@ -9,7 +9,7 @@ const { image, alt } = Astro.props;
 ---
 
 <div class='image-container'>
-  <Picture src={image} alt={alt} />
+  <Picture src={image} alt={alt} formats={['webp', 'jpeg']} />
 </div>
 
 <style>
