@@ -15,5 +15,5 @@ export default defineConfig({
       minify: false,
     },
   },
-  adapter: cloudflare({ imageService: 'compile' }),
+  adapter: cloudflare({ imageService: 'cloudflare' }),
 });
