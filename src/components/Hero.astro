@@ -1,6 +1,8 @@
 ---
 import type { WebPage } from '../types/Page.mts';
+import BackgroundImage from './BackgroundImage.astro';
 import NavMenu from './NavMenu.tsx';
+import hero from '../assets/hero.jpg';
 
 interface Props {
   pages?: WebPage[];
@@ -20,6 +22,8 @@ function getCurrentPath() {
 ---
 
 <div class='hero'>
+  <BackgroundImage image={hero} alt='' class:list={['image']} />
+
   <div class='heading-container'>
     <h1 class='heading'>{title}</h1>
     {
@@ -37,8 +41,9 @@ function getCurrentPath() {
 
 <style>
   .hero {
+    position: relative;
     display: flex;
-    min-height: 400px;
+    min-height: 279px;
     padding: clamp(12px, 4vw, 25px);
     background: gray;
   }
