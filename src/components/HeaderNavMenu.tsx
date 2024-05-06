@@ -18,7 +18,7 @@ const toListItemNavLink = (currentPath: string) => (item: WebPage, index: number
 
   return (
     <li key={index}>
-      <HeaderNavMenuNavLink path={`/${item.path}`} title={item.title} isCurrent={isCurrent} />
+      <HeaderNavMenuNavLink path={`${item.path}`} title={item.title} isCurrent={isCurrent} />
     </li>
   );
 };

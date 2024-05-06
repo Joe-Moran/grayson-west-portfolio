@@ -1,12 +1,14 @@
 ---
 import type { WebPage } from '../types/Page.mts';
 import SiteHeader from './SiteHeader.tsx';
+import { getEntry } from 'astro:content';
+const footerContent = await getEntry('footer', 'footer');
 // TODO: skip link
 
 const pages: WebPage[] = [
-  { path: 'how-i-think', title: 'How I Think' },
-  { path: 'the-work', title: 'The Work' },
-  { path: 'contact', title: "Let's Chat" },
+  { path: '/how-i-think', title: 'How I Think' },
+  { path: '/the-work', title: 'The Work' },
+  { path: `mailto:${footerContent.data.email}`, title: "Let's Chat" },
 ];
 
 // TODO: how can I make this reusable? I tried putting in its own .ts file but it didn't work
