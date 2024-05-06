@@ -13,6 +13,8 @@ const titleFormatted = title === siteTitle ? siteTitle : `${title} | ${siteTitle
 import '../styles/index.css';
 import Hero from '../components/Hero.astro';
 import Values from '../components/Values.astro';
+
+const mainLandmarkId = 'main-content';
 ---
 
 <!doctype html>
@@ -27,8 +29,8 @@ import Values from '../components/Values.astro';
   </head>
 
   <body>
-    <Header />
-    <main>
+    <Header mainLandmarkId={mainLandmarkId} />
+    <main id={mainLandmarkId}>
       <Hero title={title} pages={subPages} />
       <slot name='intro' />
       <Values />

@@ -2,8 +2,12 @@
 import type { WebPage } from '../types/Page.mts';
 import SiteHeader from './SiteHeader.tsx';
 import { getEntry } from 'astro:content';
+interface Props {
+  mainLandmarkId: string;
+}
+
+const { mainLandmarkId }: Props = Astro.props;
 const footerContent = await getEntry('footer', 'footer');
-// TODO: skip link
 
 const pages: WebPage[] = [
   { path: '/how-i-think', title: 'How I Think' },
@@ -21,12 +25,25 @@ function getCurrentPath() {
 }
 ---
 
-<header class='header'
-  ><a class='logo' href='/'>GGW</a>
+<header class='header'>
+  <a href={`#${mainLandmarkId}`} class='skip-link'>Skip to main content</a>
+  <a class='logo' href='/'>GGW</a>
   <SiteHeader navItems={pages} currentPath={currentPath} client:only='react' />
 </header>
 
 <style>
+  .skip-link {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
   .header {
     position: relative;
     display: flex;

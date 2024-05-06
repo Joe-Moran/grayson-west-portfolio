@@ -35,7 +35,7 @@ export default function NavMenu({
         onClick={() => setIsActive(!isActive)}
         aria-expanded={isActive}
         aria-controls={elementId}
-        aria-label='Expand navigation menu'
+        aria-label='Select subpage'
         onBlur={(event) => blurListener(event)}
       >
         <img src={Arrow.src} alt='' />
