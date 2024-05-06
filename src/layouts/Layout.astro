@@ -9,7 +9,7 @@ interface Props {
 
 const siteTitle = 'Grayson Gail West';
 const { title, subPages } = Astro.props;
-const titleFormatted = title ? `${title} | ${siteTitle}` : siteTitle;
+const titleFormatted = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
 import '../styles/index.css';
 import Hero from '../components/Hero.astro';
 import Values from '../components/Values.astro';
