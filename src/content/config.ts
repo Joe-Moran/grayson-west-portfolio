@@ -51,14 +51,20 @@ const intro = defineCollection({
   }),
 });
 
-// TODO: implement this for more customizable footer content
+const footer = defineCollection({
+  type: 'data',
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      email: z.string(),
+      links: z
+        .object({
+          title: z.string(),
+          url: z.string(),
+          image: image().optional(),
+        })
+        .array(),
+    }),
+});
 
-// const footer = defineCollection({
-//   type: 'content',
-//   schema: z.object({
-//     email: z.string(),
-//     links: z.object({}),
-//   }),
-// });
-
-export const collections = { personality, writing: writingCollection, portfolio, intro };
+export const collections = { personality, writing: writingCollection, portfolio, intro, footer };

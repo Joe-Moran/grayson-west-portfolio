@@ -1,22 +1,28 @@
 ---
-import threadsLogo from '../assets/threads-logo.svg';
-import linkedInLogo from '../assets/linkedin-logo.svg';
+import { getEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+const content = await getEntry('footer', 'footer');
 ---
 
-<!-- TODO: make content (links, vector art, etc) dynamic for future changes -->
 <footer class='footer'>
   <!-- TODO: turn into reusable component: "Site Logo"? -->
   <div class='main-content'>
-    <span class='site-name'>Grayson Gail West</span>
-    <a href='mailto:graysongwest@pm.com'>graysongwest@pm.com</a>
+    <span class='site-name'>{content.data.title}</span>
+    <a href={`mailto:${content.data.email}`}>{content.data.email}</a>
   </div>
 
   <nav class='footer-nav' aria-label='footer links'>
-    <a href='aerorake.com'>aerorake.com</a>
-    <a href='https://www.linkedin.com/in/graysongwest/'
-      ><img alt='LinkedIn' src={linkedInLogo.src} /></a
-    >
-    <a href='https://www.threads.net/@patternflux'><img alt='Threads' src={threadsLogo.src} /></a>
+    {
+      content.data.links.map((link) => (
+        <a href={link.url}>
+          {link.image != undefined ? (
+            <Image src={link.image} alt={link.title} format='svg' />
+          ) : (
+            link.title
+          )}
+        </a>
+      ))
+    }
   </nav>
 </footer>
 
