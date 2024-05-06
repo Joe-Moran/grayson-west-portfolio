@@ -31,8 +31,6 @@ platforms:
 
 Hearsee Mobility is a non-profit organization that has developed an assistive navigational tool to help visually impaired individuals easily navigate indoor spaces. Most indoor spaces in America lack digital navigation aids for the visually impaired, but Hearsee's solution utilizes RFID tags and a web app to create navigatable indoor routes. This system is read by specialized white cane hardware and a mobile app, allowing users to receive information from RFID tags placed around a building through their cane, which is connected to the app. The web application enables the uploading of building floor plans and the placement of digital tags, as well as facilitating the placement of RFID tags and an indoor navigation network. Hearsee's innovative solution has the potential to significantly increase accessibility in indoor spaces, transforming the lives and experiences of visually impaired individuals.
 
-![A phone](../../content/Hearsee 1 1.png)
-
 ## Task
 
 I was brought onto the project to take charge of a web application project's product design, UX design, and overall design strategy. The project made some progress on mobile applications for Android and iOS, but the development of the web application had stalled. My role was to lead the design and product strategy for the web application, which was a crucial part of the project that had yet to gain traction.
