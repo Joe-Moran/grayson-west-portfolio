@@ -14,8 +14,8 @@ preview:
   enable: true
   grid:
     enable: true
-    rows: 1
-    columns: 2
+    rows: 4
+    columns: 5
 screenshot:
   image: '../../assets/content/Hearsee 1 1.png'
   altText: 'A picture'
@@ -30,6 +30,8 @@ platforms:
 ## Situation
 
 Hearsee Mobility is a non-profit organization that has developed an assistive navigational tool to help visually impaired individuals easily navigate indoor spaces. Most indoor spaces in America lack digital navigation aids for the visually impaired, but Hearsee's solution utilizes RFID tags and a web app to create navigatable indoor routes. This system is read by specialized white cane hardware and a mobile app, allowing users to receive information from RFID tags placed around a building through their cane, which is connected to the app. The web application enables the uploading of building floor plans and the placement of digital tags, as well as facilitating the placement of RFID tags and an indoor navigation network. Hearsee's innovative solution has the potential to significantly increase accessibility in indoor spaces, transforming the lives and experiences of visually impaired individuals.
+
+![A phone](../../content/Hearsee 1 1.png)
 
 ## Task
 
