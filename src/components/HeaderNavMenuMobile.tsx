@@ -10,7 +10,7 @@ export default function HeaderNavMenuMobile({ children }) {
         <img src='/hamburger.svg' alt='Open navigation drawer' />
       </button>
       {isOpen && (
-        <nav className='nav-drawer'>
+        <nav className='nav-drawer' aria-label='Main site navigation'>
           <ul>{children}</ul>
         </nav>
       )}

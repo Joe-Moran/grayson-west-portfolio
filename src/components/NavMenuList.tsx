@@ -3,7 +3,7 @@ import './NavMenuList.scss';
 
 export default function NavMenuList({ pages, elementId, currentPath }: NavMenuListProps) {
   return (
-    <nav className='nav-menu-list' id={elementId}>
+    <nav className='nav-menu-list' id={elementId} aria-label={`Subpages`}>
       <ul>
         <NavMenuListItems pages={pages} currentPath={currentPath} />
       </ul>
