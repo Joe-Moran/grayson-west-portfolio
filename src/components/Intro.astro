@@ -19,7 +19,6 @@ const { title, greeting } = Astro.props;
   .intro {
     --flex-element-padding: clamp(10px, 1vw, 40px);
 
-    font-size: clamp(0.5rem, 2vw, 1rem);
     color: var(--white);
 
     p {
@@ -29,32 +28,31 @@ const { title, greeting } = Astro.props;
     .big-content {
       display: flex;
       flex-wrap: wrap;
-      gap: 26px;
+      gap: 1px;
       align-items: flex-start;
 
       .greeting {
-        min-width: 15ch;
-        font-size: 2.8125em;
-        line-height: 1;
+        font-size: 1.5rem;
+        line-height: 1.3;
       }
 
       :not(.greeting) {
-        min-width: 20ch;
-        font-size: 1.375em;
+        font-size: 1rem;
         line-height: 1.2;
         color: var(--orange);
       }
 
       > * {
-        flex: 1;
+        flex: 1 0 24ch;
         padding: var(--flex-element-padding);
       }
     }
 
     h2 {
-      padding: var(--flex-element-padding);
-      font-size: 3.125em;
+      padding: 0 var(--flex-element-padding);
+      font-size: 1.5rem;
       font-weight: 800;
+      text-transform: uppercase;
     }
   }
 </style>
