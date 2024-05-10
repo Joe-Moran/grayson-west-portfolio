@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry } from 'astro:content';
-import ContentPortfolioCard from './ContentPortfolioCard.astro';
-import ContentWritingCard from './ContentWritingCard.astro';
+import CardContentPortfolio from './CardContentPortfolio.astro';
+import CardContentWriting from './CardContentWriting.astro';
 
 type ChildPage = CollectionEntry<'portfolio' | 'writing'>;
 
@@ -28,12 +28,12 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
     {
       children.map((child) => {
         return 'screenshot' in child.data ? (
-          <ContentPortfolioCard
+          <CardContentPortfolio
             linkPath={buildLinkPath(child)}
             content={child as CollectionEntry<'portfolio'>}
           />
         ) : (
-          <ContentWritingCard
+          <CardContentWriting
             linkPath={buildLinkPath(child)}
             content={child as CollectionEntry<'writing'>}
           />

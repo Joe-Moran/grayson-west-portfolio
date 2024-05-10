@@ -1,8 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 
-import ContentPortfolioCard from './ContentPortfolioCard.astro';
-import ContentWritingCard from './ContentWritingCard.astro';
+import CardContentPortfolio from './CardContentPortfolio.astro';
+import CardContentWriting from './CardContentWriting.astro';
 
 interface Props {
   basePath: string;
@@ -31,13 +31,13 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
   {
     collection.map((item) => {
       return 'screenshot' in item.data ? (
-        <ContentPortfolioCard
+        <CardContentPortfolio
           linkPath={buildLinkPath(item)}
           content={item as CollectionEntry<'portfolio'>}
           classes={buildClasses(item)}
         />
       ) : (
-        <ContentWritingCard
+        <CardContentWriting
           linkPath={buildLinkPath(item)}
           content={item as CollectionEntry<'writing'>}
           classes={buildClasses(item)}
