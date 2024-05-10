@@ -19,7 +19,7 @@ preview:
 screenshot:
   image: '../../assets/content/Hearsee 1 1.png'
   altText: 'A picture'
-background: '../../assets/content/organicbuildingscoloralt 1.jpeg'
+background: '../../assets/content/organicbuildingscoloralt.jpeg'
 platforms:
   - iOS
   - Android
