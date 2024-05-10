@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.40](///compare/v0.0.39...v0.0.40) (2024-05-10)
+
+
+### Bug Fixes
+
+* remove space in image name 84867b5
+
 ## [0.0.39](///compare/v0.0.38...v0.0.39) (2024-05-10)
 
 
