@@ -7,7 +7,7 @@ preview:
     rows: 2
     columns: 1
 featured: true
-background: '../../assets/content/Group 1.jpeg'
+background: '../../assets/content/Group1.jpeg'
 icon: '../../assets/vector-art/ai-driven-world 1.svg'
 ---
 
