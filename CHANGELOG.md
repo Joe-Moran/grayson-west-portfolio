@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.36](///compare/v0.0.35...v0.0.36) (2024-05-10)
+
+
+### Bug Fixes
+
+* reformat image file to fix cloudflare issues 4bd253b
+
 ## [0.0.35](///compare/v0.0.34...v0.0.35) (2024-05-10)
 
 ## [0.0.34](///compare/v0.0.33...v0.0.34) (2024-05-06)
