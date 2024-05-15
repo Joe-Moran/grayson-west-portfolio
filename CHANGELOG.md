@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.41](///compare/v0.0.40...v0.0.41) (2024-05-15)
+
+
+### Features
+
+* remove hero + values from layout 44a42b1
+
+
+### Bug Fixes
+
+* styling and aria for current page in header nav e7c6328
+
 ## [0.0.40](///compare/v0.0.39...v0.0.40) (2024-05-10)
 
 
