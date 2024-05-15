@@ -7,16 +7,11 @@ const pages = portfolioCollection.map((item) => ({
   title: item.data.title,
   path: `/the-work/${item.slug}`,
 }));
-
-const currentPath = getCurrentPath();
-
-function getCurrentPath() {
-  const pathname = new URL(Astro.request.url).pathname;
-  const currentPath = pathname.slice(1); // remove the first "/
-  return currentPath;
-}
 ---
 
 <Layout title='The Work' subPages={pages}>
-  <ContentPreviewMasonry basePath={currentPath} collection={portfolioCollection} />
+  <ContentPreviewMasonry
+    basePath={new URL(Astro.request.url).pathname}
+    collection={portfolioCollection}
+  />
 </Layout>

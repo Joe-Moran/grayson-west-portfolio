@@ -14,11 +14,6 @@ const { pages = [], title } = Astro.props;
 function formatAsElementId(title: string) {
   return title.toLowerCase().replace(/\s/g, '-');
 }
-
-function getCurrentPath() {
-  const pathname = new URL(Astro.request.url).pathname;
-  return pathname;
-}
 ---
 
 <div class='hero'>
@@ -31,7 +26,7 @@ function getCurrentPath() {
         <NavMenu
           pages={pages}
           elementId={formatAsElementId(title)}
-          currentPath={getCurrentPath()}
+          currentPath={new URL(Astro.request.url).pathname}
           client:only='react'
         />
       ) : null

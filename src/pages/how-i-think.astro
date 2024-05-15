@@ -7,16 +7,11 @@ const pages = writingCollection.map((item) => ({
   title: item.data.title,
   path: `how-i-think/${item.slug}`,
 }));
-
-const currentPath = getCurrentPath();
-
-function getCurrentPath() {
-  const pathname = new URL(Astro.request.url).pathname;
-  const currentPath = pathname.slice(1); // remove the first "/
-  return currentPath;
-}
 ---
 
 <Layout title='How I Think' subPages={pages}>
-  <ContentPreviewMasonry basePath={currentPath} collection={writingCollection} />
+  <ContentPreviewMasonry
+    basePath={new URL(Astro.request.url).pathname}
+    collection={writingCollection}
+  />
 </Layout>
