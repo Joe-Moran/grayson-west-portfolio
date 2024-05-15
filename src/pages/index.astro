@@ -2,21 +2,28 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection, getEntry } from 'astro:content';
 import PagePreview from '../components/PagePreview.astro';
+import Hero from '../components/Hero.astro';
+import Values from '../components/Values.astro';
 import Intro from '../components/Intro.astro';
 const writingCollection = await getCollection('writing', ({ data }) => !!data.featured);
 const portfolioCollection = await getCollection('portfolio', ({ data }) => !!data.featured);
 const introEntry = await getEntry('intro', 'paragraph');
 const { Content } = await introEntry.render();
+const title = 'Grayson Gail West';
 ---
 
 <Layout title='Grayson Gail West'>
-  <div class='intro-container' slot='intro'>
+  <Hero title={title} />
+
+  <div class='intro-container'>
     <Intro title={introEntry.data.title} greeting={introEntry.data.greeting}>
       <div class='intro-content'>
         <Content />
       </div>
     </Intro>
   </div>
+  <Values />
+
   <div class='page-previews'>
     <PagePreview
       path='how-i-think'
