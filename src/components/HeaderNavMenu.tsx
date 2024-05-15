@@ -14,7 +14,7 @@ export default function HeaderNavMenu(props: HeaderNavMenuProps) {
 }
 
 const toListItemNavLink = (currentPath: string) => (item: WebPage, index: number) => {
-  const isCurrent = item.path == currentPath;
+  const isCurrent = currentPath.includes(item.path);
 
   return (
     <li key={index}>
