@@ -22,7 +22,7 @@ const pages = portfolioCollection.map((item) => ({
 ---
 
 <Layout title={entry.data.title} subPages={pages}>
-  <PostPageLayout>
+  <PostPageLayout title={entry.data.title} pages={pages}>
     <Content slot='content' />
     <div class='images'>
       <BackgroundImage image={entry.data.background} alt='' />

@@ -1,0 +1,59 @@
+---
+import type { WebPage } from '../types/Page.mts';
+import NavMenu from './NavMenu.tsx';
+
+interface Props {
+  pages?: WebPage[];
+  title: string;
+}
+
+const { pages = [], title } = Astro.props;
+
+function formatAsElementId(title: string) {
+  return title.toLowerCase().replace(/\s/g, '-');
+}
+---
+
+<div class='heading-container'>
+  <h1 class='heading'>{title}</h1>
+  {
+    pages.length ? (
+      <NavMenu
+        pages={pages}
+        elementId={formatAsElementId(title)}
+        currentPath={new URL(Astro.request.url).pathname}
+        client:only='react'
+      />
+    ) : null
+  }
+</div>
+
+<style>
+  .heading-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 5px;
+
+    button {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 100%;
+      padding: 13px 0;
+      border: 3px solid;
+    }
+  }
+
+  .heading {
+    flex: 10;
+    padding: 20px;
+    font-size: clamp(1.4rem, 10vw, 2.25rem);
+    font-style: italic;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--orange);
+    text-transform: uppercase;
+    background: var(--color-heading-background);
+  }
+</style>

@@ -1,19 +1,12 @@
 ---
-import type { WebPage } from '../types/Page.mts';
 import BackgroundImage from './BackgroundImage.astro';
-import NavMenu from './NavMenu.tsx';
 import hero from '../assets/hero.jpeg';
 
 interface Props {
-  pages?: WebPage[];
   title: string;
 }
 
-const { pages = [], title } = Astro.props;
-
-function formatAsElementId(title: string) {
-  return title.toLowerCase().replace(/\s/g, '-');
-}
+const { title } = Astro.props;
 ---
 
 <div class='hero'>
@@ -21,16 +14,6 @@ function formatAsElementId(title: string) {
 
   <div class='heading-container'>
     <h1 class='heading'>{title}</h1>
-    {
-      pages.length ? (
-        <NavMenu
-          pages={pages}
-          elementId={formatAsElementId(title)}
-          currentPath={new URL(Astro.request.url).pathname}
-          client:only='react'
-        />
-      ) : null
-    }
   </div>
 </div>
 
@@ -48,14 +31,6 @@ function formatAsElementId(title: string) {
     z-index: 2;
     display: flex;
     align-self: flex-end;
-
-    button {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      height: 100%;
-      padding: 13px 0;
-    }
   }
 
   .heading {

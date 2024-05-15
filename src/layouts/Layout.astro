@@ -34,7 +34,7 @@ const mainLandmarkId = 'main-content';
     <Footer />
   </body>
 
-  <style>
+  <style is:global>
     html {
       background: #13151a;
       background-size: 224px;
@@ -46,6 +46,10 @@ const mainLandmarkId = 'main-content';
     }
 
     body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
       margin: 0;
       background: var(--color-background);
     }
