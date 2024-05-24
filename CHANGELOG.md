@@ -2,13 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## [0.0.42](///compare/v0.0.41...v0.0.42) (2024-05-15)
-
-
-### Features
-
-* set active state for header nav even when on subpages cb76205
-
 ## [0.0.41](///compare/v0.0.40...v0.0.41) (2024-05-15)
 
 
