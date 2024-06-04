@@ -22,6 +22,25 @@ const {
 } = Astro.props;
 ---
 
+<script>
+  positionDescriptors();
+  window.addEventListener('resize', () => positionDescriptors());
+
+  function positionDescriptors() {
+    const descriptorLists = document.querySelectorAll('div.descriptors ul');
+
+    [...descriptorLists].forEach((list) => {
+      const listItems = list.querySelectorAll('li');
+      const positionOfFirstListItem = listItems[0].getBoundingClientRect().left;
+
+      [...listItems].forEach((listItem) => {
+        listItem.style['list-style-type'] =
+          listItem.getBoundingClientRect().left == positionOfFirstListItem ? 'none' : 'disc';
+      });
+    });
+  }
+</script>
+
 <article class:list={['card', ...classes]} {...rest}>
   <BackgroundImage image={backgroundImage} alt='' />
   <div class='icon-container'>
@@ -134,7 +153,9 @@ const {
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    padding: 6px;
     font-size: 1.125rem;
     font-weight: 800;
     color: var(--white);
@@ -146,14 +167,16 @@ const {
 
     ul {
       display: flex;
-      gap: 10px;
+      flex-wrap: wrap;
+      column-gap: 10px;
+      padding: 0;
       margin: 0;
+      line-height: 1;
       list-style: none;
     }
 
-    li:not(:first-of-type) {
+    li {
       list-style-position: inside;
-      list-style-type: disc;
     }
   }
 
