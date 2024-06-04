@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.44](///compare/v0.0.42...v0.0.44) (2024-06-04)
+
+
+### Bug Fixes
+
+* default to webp for images 7685cb9
+
 ## [0.0.41](///compare/v0.0.40...v0.0.41) (2024-05-15)
 
 
