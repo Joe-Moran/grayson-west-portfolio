@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.52](///compare/v0.0.51...v0.0.52) (2024-06-21)
+
+
+### Bug Fixes
+
+* size embedded md images bfba92e
+
 ## [0.0.51](///compare/v0.0.50...v0.0.51) (2024-06-21)
 
 ## [0.0.50](///compare/v0.0.49...v0.0.50) (2024-06-21)
