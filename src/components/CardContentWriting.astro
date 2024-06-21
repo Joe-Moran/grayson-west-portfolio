@@ -19,7 +19,7 @@ const { classes, content, linkPath }: Props = Astro.props;
   linkPath={linkPath}
   backgroundImage={content.data.background}
 >
-  <Image src={content.data.icon} alt='' class='icon' slot='icon' />
+  {content.data.icon && <Image src={content.data.icon} alt='' class='icon' slot='icon' />}
 </Card>
 
 <style>

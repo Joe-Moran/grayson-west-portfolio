@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.46](///compare/v0.0.45...v0.0.46) (2024-06-21)
+
+
+### Features
+
+* make icons optional for content 621806a
+
 ## [0.0.45](///compare/v0.0.44...v0.0.45) (2024-06-04)
 
 
