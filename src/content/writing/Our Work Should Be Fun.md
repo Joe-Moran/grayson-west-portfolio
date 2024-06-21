@@ -7,7 +7,7 @@ preview:
     rows: 2
     columns: 1
 featured: true
-background: 'src/assets/content/backgrounds/1.jpg'
+background: '../../assets/content/backgrounds/1.jpg'
 icon: ''
 ---
 
