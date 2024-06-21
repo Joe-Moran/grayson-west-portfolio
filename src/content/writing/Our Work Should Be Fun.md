@@ -7,8 +7,8 @@ preview:
     rows: 2
     columns: 1
 featured: true
-background: '../../assets/content/Group1.jpeg'
-icon: '../../assets/vector-art/ai-driven-world 1.svg'
+background: '../../assets/content/2.jpeg'
+icon: ''
 ---
 
 As a designer leader, I want to be part of teams and create teams where our shared work is engaging, aspirational, and, most importantly, fun. We should derive joy and satisfaction from our work, which we dedicate such a significant portion of our lives; I champion the idea that each of us should utilize our time at work as a platform to express our passion, leverage our creativity to make a fantastic product and be the person we aspire to be.
