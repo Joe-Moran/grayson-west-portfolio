@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.48](///compare/v0.0.47...v0.0.48) (2024-06-21)
+
+
+### Bug Fixes
+
+* update asset path 9a1d6bf
+
 ## [0.0.47](///compare/v0.0.45...v0.0.47) (2024-06-21)
 
 
