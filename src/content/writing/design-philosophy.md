@@ -1,6 +1,15 @@
-## Summary
-In order to create a successful digital product, it's crucial to prioritize the needs and behaviors of the users and of the business. A well-designed digital product should be the result of a collaborative effort that allows for swift iteration and continuous improvement. Design decisions should be backed by data, be measurable, and solve the stated problem. By putting the needs of the users first, we can create digital products that not only meet but exceed their expectations and deliver tremendous value to all stakeholders.
 ---
+title: Design Philosophy
+summary: In order to create a successful digital product, it's crucial to prioritize the needs and behaviors of the users and of the business. A well-designed digital product should be the result of a collaborative effort that allows for swift iteration and continuous improvement. Design decisions should be backed by data, be measurable, and solve the stated problem. By putting the needs of the users first, we can create digital products that not only meet but exceed their expectations and deliver tremendous value to all stakeholders.
+preview: # The content for preview cards
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
+featured: true # Whether this post should be featured on the home page
+background: '../../assets/content/backgrounds/4.jpg' # The background image used for preview cards
+---
+
 Digital product design should be deeply rooted in the finesse of fine art and underpinned by the rigors of 2D and 3D design principles. Designers should aim to mix a melding of art, craft, science, and design into a process that places value on empathy, definition, swift iteration, and shipping products to their users. Our products should inspire, look beautiful, and give users a sense of joy and delight.
 
 The teams that I lead, are committed to unlocking deep insights into user behaviors, needs, and motivations. I create space for my people to approach challenges innovatively so that they can weave user-centric design solutions into the fabric of their work. I also, encourage the creation of user experiences that are as pragmatic and intuitive as possible. To position their work at the forefront of the user's needs, UX designers should consistently chip away at reducing friction and increasing usability.

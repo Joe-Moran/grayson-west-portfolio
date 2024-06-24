@@ -14,8 +14,8 @@ preview:
   enable: true
   grid:
     enable: true
-    rows: 4
-    columns: 5
+    rows: 1
+    columns: 1
 screenshot:
   image: '../../assets/content/Hearsee 1 1.png'
   altText: 'A picture'
