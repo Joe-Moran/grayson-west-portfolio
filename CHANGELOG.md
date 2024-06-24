@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.53](///compare/v0.0.52...v0.0.53) (2024-06-24)
+
+
+### Features
+
+* add first pass of frontmatter to content pages ce80963
+* create templates for frontmatter 422d3d9
+
+
+### Bug Fixes
+
+* **portfolio content:** allow for empty list of platforms f8d4a15
+* remove duplicate content entries b30db45
+
 ## [0.0.52](///compare/v0.0.51...v0.0.52) (2024-06-21)
 
 
