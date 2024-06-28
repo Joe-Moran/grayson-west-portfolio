@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.57](///compare/v0.0.56...v0.0.57) (2024-06-28)
+
+
+### Bug Fixes
+
+* add frontmatter to new content b688ea2
+
 ## [0.0.56](///compare/v0.0.55...v0.0.56) (2024-06-28)
 
 
