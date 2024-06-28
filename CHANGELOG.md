@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.58](///compare/v0.0.57...v0.0.58) (2024-06-28)
+
+
+### Features
+
+* add icon to portfolio card content 7daaf8f
+* add icons to writing content 5a4ddb2
+
 ## [0.0.57](///compare/v0.0.56...v0.0.57) (2024-06-28)
 
 
