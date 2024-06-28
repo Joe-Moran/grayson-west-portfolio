@@ -5,7 +5,7 @@ preview:
   enable: true
   grid:
     rows: 1
-    columns: 1
+    columns: 2
 featured: true
 background: '../../assets/content/backgrounds/9.jpg'
 ---

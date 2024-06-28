@@ -7,7 +7,8 @@ preview: # The content for preview cards
   grid:
     rows: 1
     columns: 1
-featured: true # Whether this post should be featured on the home page
+featured: false # Whether this post should be featured on the home page
+# TODO: home page grid with enable: true/false
 background: '../../assets/content/backgrounds/8.jpg' # The background image used for preview cards
 ---
 

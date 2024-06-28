@@ -6,6 +6,6 @@ preview: # The content for preview cards
   grid:
     rows: 1
     columns: 1
-featured: true # Whether this post should be featured on the home page
+featured: false # Whether this post should be featured on the home page
 background: '../../assets/content/backgrounds/1.jpg' # The background image used for preview cards
 ---
