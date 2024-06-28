@@ -12,6 +12,7 @@ home:
     rows: 1
     columns: 1 # Whether this post should be featured on the home page
 background: '../../assets/content/backgrounds/3.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/3.svg'
 ---
 
 Successful software development within a product team depends on the collaboration of every team member without fear or hesitation. During my time at The Omni Group, I witnessed the positive outcomes of working together towards a common goal. As we developed some of the first iPhone apps, all product teams came together over four months to tackle the challenge of a new way of interacting with technology. We had no one to guide us through the process of translating our Mac apps to the iPhone, which required us to work collaboratively.

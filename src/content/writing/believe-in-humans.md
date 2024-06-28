@@ -12,6 +12,7 @@ home:
     rows: 1
     columns: 2
 background: '../../assets/content/backgrounds/10.jpg'
+icon: '../../assets/content/SVGs/10.svg'
 ---
 
 Humans are capable of achieving more than they think possible. This belief comes from my own life experiences, things I've seen and learned, and my unshakeable faith in what humans are capable of—being curious, driven, and having endless potential. People can achieve amazing things when a space is created for them to tap into their talents and passions freely.

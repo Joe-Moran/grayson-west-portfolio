@@ -13,6 +13,7 @@ home:
     rows: 1
     columns: 1
 background: '../../assets/content/backgrounds/2.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/2.svg'
 ---
 
 Digital product design exists at the crossroads of creativity and functionality. To thrive in this space, designers must learn as much about development as possible. This is about more than mastering programming languages but constantly educating themself's about the basics of the frameworks, languages, and processes our engineering counterparts use in their work. This is uncharted territory for many designers and design teams to explore. Still, based on my experience, it can lead to drastically improved product team relationships, product outcomes, and business results.

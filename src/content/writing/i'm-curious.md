@@ -12,6 +12,7 @@ home:
     rows: 1
     columns: 2 # Whether this post should be featured on the home page
 background: '../../assets/content/backgrounds/5.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/5.svg'
 ---
 
 I am an immensely curious individual. My early influences and experiences, particularly my involvement in the underground punk scene during my teenage years and my adventurous pursuits in cycling, have shaped my thirst for knowledge and the constant pursuit of the possible and impossible. The punk movement of the 80s embraced a spirit of rebellion and tireless questioning of societal norms, teaching me to be open-minded, adventurous, and persistent. It instilled in me a deep appreciation for diversity and the countless learning opportunities it presents. This ethos has cemented my willingness to embrace change and the continuous evolution it brings.

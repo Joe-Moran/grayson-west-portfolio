@@ -14,6 +14,7 @@ home:
     columns: 1 # Whether this post should be featured on the home page
 # TODO: home page grid with enable: true/false
 background: '../../assets/content/backgrounds/8.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/8.svg'
 ---
 
 As a design leader, it is my responsibility to create a compelling and effective User Experience (UX) strategy vision. I believe that UX strategy is a critical component of Design Operations and sets the direction for the organization. It is not just about mapping out the strategy but also about inspiring the team involved.

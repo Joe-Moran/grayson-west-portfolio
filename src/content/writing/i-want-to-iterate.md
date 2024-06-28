@@ -12,6 +12,7 @@ home:
     rows: 1
     columns: 2 # Whether this post should be featured on the home page
 background: '../../assets/content/backgrounds/6.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/6.svg'
 ---
 
 I am dedicated to the continuous process of iteration as the key to unlocking my and my teams' creativity. My approach emphasizes a constant reviewing, refining, and optimizing processes and frameworks. This pursuit of improvement sets the tone for my firm belief in the transformative power of iterative enhancements.

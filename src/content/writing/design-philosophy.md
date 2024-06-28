@@ -12,6 +12,7 @@ home:
     rows: 1
     columns: 1
 background: '../../assets/content/backgrounds/4.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/4.svg'
 ---
 
 Digital product design should be deeply rooted in the finesse of fine art and underpinned by the rigors of 2D and 3D design principles. Designers should aim to mix a melding of art, craft, science, and design into a process that places value on empathy, definition, swift iteration, and shipping products to their users. Our products should inspire, look beautiful, and give users a sense of joy and delight.
