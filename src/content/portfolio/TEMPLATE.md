@@ -16,7 +16,7 @@ home: # The content for previewing on the home page
     rows: 1
     columns: 1 # total possible columns = 4
 preview:
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 1 # total possible columns = 4

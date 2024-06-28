@@ -16,7 +16,7 @@ home:
     rows: 1
     columns: 1
 preview:
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 1

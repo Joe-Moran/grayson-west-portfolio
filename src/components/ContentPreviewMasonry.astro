@@ -20,6 +20,14 @@ function getGridValues(item: CollectionEntry<'portfolio' | 'writing'>): {
   return gridProperties[previewLocation];
 }
 
+function shouldDisplay(item: CollectionEntry<'portfolio' | 'writing'>): boolean {
+  const displayProperties = {
+    home: item.data.home.enable,
+    'page-preview': item.data.preview.enable,
+  };
+  return displayProperties[previewLocation];
+}
+
 function highestRowCount(collection: CollectionEntry<'portfolio' | 'writing'>[]): number {
   return collection.reduce((previous, current) => {
     const currentRowCount = current.data.preview.grid.rows;
@@ -41,6 +49,7 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
   {
     collection
       .filter((item) => item.data.title.toLowerCase() !== 'template')
+      .filter((item) => shouldDisplay(item))
       .map((item) => {
         return 'screenshot' in item.data ? (
           <CardContentPortfolio
