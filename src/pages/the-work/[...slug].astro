@@ -15,10 +15,12 @@ if (entry === undefined) {
 const { Content } = await entry.render();
 
 const portfolioCollection = await getCollection('portfolio');
-const pages = portfolioCollection.map((item) => ({
-  title: item.data.title,
-  path: `/the-work/${item.slug}`,
-}));
+const pages = portfolioCollection
+  .filter((item) => item.data.title.toLowerCase() !== 'template') // TODO: can I do this in the getCollection settings so I only have to filter once in one file?
+  .map((item) => ({
+    title: item.data.title,
+    path: `/the-work/${item.slug}`,
+  }));
 ---
 
 <Layout title={entry.data.title} subPages={pages}>
