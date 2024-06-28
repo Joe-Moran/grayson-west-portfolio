@@ -4,11 +4,10 @@ summary: Believing in boundless human potential, derived from personal experienc
 preview:
   enable: true
   grid:
-    rows: 2
-    columns: 1
+    rows: 1
+    columns: 2
 featured: true
-background: '../../assets/content/Group1.jpeg'
-icon: '../../assets/vector-art/ai-driven-world 1.svg'
+background: '../../assets/content/backgrounds/10.jpg'
 ---
 
 Humans are capable of achieving more than they think possible. This belief comes from my own life experiences, things I've seen and learned, and my unshakeable faith in what humans are capable of—being curious, driven, and having endless potential. People can achieve amazing things when a space is created for them to tap into their talents and passions freely.

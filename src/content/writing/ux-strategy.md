@@ -1,6 +1,17 @@
-## Summary
-Creating a compelling UX strategy that inspires the team is essential to team and company success. I advocate the my designers get direct access to stakeholders so that they can better understand the problems the need to solve in order to craft amazing user experiences and drive business outcomes. Establishing a robust UX interview framework, working closely with internal teams to improve design processes, and consistent use of wireframes are some of the key elements of my strategy. To maintain a competitive advantage, I advocate for market research and identification of indicator metrics to continuously measure and improve UX effectiveness.
 ---
+title: UX Strategy
+summary: Creating a compelling UX strategy that inspires the team is essential to team and company success. I advocate the my designers get direct access to stakeholders so that they can better understand the problems the need to solve in order to craft amazing user experiences and drive business outcomes. Establishing a robust UX interview framework, working closely with internal teams to improve design processes, and consistent use of wireframes are some of the key elements of my strategy. To maintain a competitive advantage, I advocate for market research and identification of indicator metrics to continuously measure and improve UX effectiveness.
+
+preview: # The content for preview cards
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
+featured: false # Whether this post should be featured on the home page
+# TODO: home page grid with enable: true/false
+background: '../../assets/content/backgrounds/8.jpg' # The background image used for preview cards
+---
+
 As a design leader, it is my responsibility to create a compelling and effective User Experience (UX) strategy vision. I believe that UX strategy is a critical component of Design Operations and sets the direction for the organization. It is not just about mapping out the strategy but also about inspiring the team involved.
 
 I think that designers should have direct access to stakeholders who influence the product design direction, such as executives, product managers, marketing teams, sales, customer support, and engineers. I firmly believe that when designers connect with users and decision-makers, it leads to a better user experience and better business outcomes.
@@ -15,4 +26,4 @@ To strengthen the link between design and development, I work with the developme
 
 To maintain and improve our product's value proposition over time, it is vital to discern the competitive landscape through market research and analyze competitors' offerings. It enables us to understand user choices and derive inspiration to shape our unique value proposition.
 
-An inherent part of my strategy is to identify indicator metrics, continuously measuring and iteratively improving the UX effectiveness. Using both qualitative and quantitative metrics provides a holistic view of the user experience, which is illuminated by analyzing key performance indicators such as task completion rates, error rates, user satisfaction surveys, and usability testing results. 
+An inherent part of my strategy is to identify indicator metrics, continuously measuring and iteratively improving the UX effectiveness. Using both qualitative and quantitative metrics provides a holistic view of the user experience, which is illuminated by analyzing key performance indicators such as task completion rates, error rates, user satisfaction surveys, and usability testing results.

@@ -29,21 +29,23 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
 
 <div class:list={['content-preview-masonry', `grid-rows-${highestRowCount(collection)}`]}>
   {
-    collection.map((item) => {
-      return 'screenshot' in item.data ? (
-        <CardContentPortfolio
-          linkPath={buildLinkPath(item)}
-          content={item as CollectionEntry<'portfolio'>}
-          classes={buildClasses(item)}
-        />
-      ) : (
-        <CardContentWriting
-          linkPath={buildLinkPath(item)}
-          content={item as CollectionEntry<'writing'>}
-          classes={buildClasses(item)}
-        />
-      );
-    })
+    collection
+      .filter((item) => item.data.title.toLowerCase() !== 'template')
+      .map((item) => {
+        return 'screenshot' in item.data ? (
+          <CardContentPortfolio
+            linkPath={buildLinkPath(item)}
+            content={item as CollectionEntry<'portfolio'>}
+            classes={buildClasses(item)}
+          />
+        ) : (
+          <CardContentWriting
+            linkPath={buildLinkPath(item)}
+            content={item as CollectionEntry<'writing'>}
+            classes={buildClasses(item)}
+          />
+        );
+      })
   }
 </div>
 

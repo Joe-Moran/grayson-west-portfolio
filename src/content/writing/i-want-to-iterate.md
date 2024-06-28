@@ -1,7 +1,16 @@
-## Summary
-Adopting the iterative process, I strive for continuous improvement, unlocking my team's creativity, and fostering innovative solutions. Rooted in experiences from high school swimming, where I learned to bridge talent gaps through an iterative approach, I apply this ethos in my professional journey. Upon envisioning problems, I act promptly, running experiments, refining strategies, and facing challenges until optimal solutions are reached. This approach enhances product development and business strategy. I believe swift adaptability and risk management are enabled through iterations. Finally, consistent, incremental progress over time drives transformational shifts, highlighting the transformative power of marginal gains.
 ---
-I am dedicated to the continuous process of iteration as the key to unlocking my and my teams' creativity. My approach emphasizes a constant reviewing, refining, and optimizing processes and frameworks. This  pursuit of improvement sets the tone for my firm belief in the transformative power of iterative enhancements.
+title: I Want to Iterate
+summary: Adopting the iterative process, I strive for continuous improvement, unlocking my team's creativity, and fostering innovative solutions. Rooted in experiences from high school swimming, where I learned to bridge talent gaps through an iterative approach, I apply this ethos in my professional journey. Upon envisioning problems, I act promptly, running experiments, refining strategies, and facing challenges until optimal solutions are reached. This approach enhances product development and business strategy. I believe swift adaptability and risk management are enabled through iterations. Finally, consistent, incremental progress over time drives transformational shifts, highlighting the transformative power of marginal gains.
+preview: # The content for preview cards
+  enable: true
+  grid:
+    rows: 1
+    columns: 2
+featured: true # Whether this post should be featured on the home page
+background: '../../assets/content/backgrounds/6.jpg' # The background image used for preview cards
+---
+
+I am dedicated to the continuous process of iteration as the key to unlocking my and my teams' creativity. My approach emphasizes a constant reviewing, refining, and optimizing processes and frameworks. This pursuit of improvement sets the tone for my firm belief in the transformative power of iterative enhancements.
 
 My journey towards embracing the philosophy of iteration began in my high school years, guided by my swimming coach. Despite not being the fastest swimmer, my unwavering commitment to improvement and willingness to work hard set me apart. I adopted an iterative approach to optimize my technique, reassess my approach, and refine my training methods. This approach not only helped me bridge the talent gap but also shaped my belief in the power of iteration.
 

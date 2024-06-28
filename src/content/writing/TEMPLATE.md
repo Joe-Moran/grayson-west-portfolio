@@ -1,5 +1,5 @@
 ---
-title: Designing for Platforms
+title: Template
 summary: SUMMARY HERE
 preview: # The content for preview cards
   enable: true
