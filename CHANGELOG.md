@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.59](///compare/v0.0.58...v0.0.59) (2024-06-28)
+
+
+### Features
+
+* add cornerstone "screenshot" asset 8536b54
+* filter preview content based on frontmatter "enabled" property 3c10f35
+
 ## [0.0.58](///compare/v0.0.57...v0.0.58) (2024-06-28)
 
 
