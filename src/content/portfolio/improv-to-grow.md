@@ -24,6 +24,8 @@ screenshot: # An image representing the UI example of the product. Used in previ
   image: '../../assets/content/Hearsee 2.png'
   altText: ''
 background: '../../assets/content/backgrounds/1.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/1.svg'
+
 platforms: []
 
 ---

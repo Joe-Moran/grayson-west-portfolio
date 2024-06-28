@@ -23,6 +23,8 @@ screenshot:
   image: '../../assets/content/Hearsee 1 1.png'
   altText: 'A picture'
 background: '../../assets/content/organicbuildingscoloralt.jpeg'
+icon: '../../assets/content/SVGs/1.svg'
+
 platforms:
   - iOS
   - Android

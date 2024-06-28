@@ -21,10 +21,3 @@ const { classes, content, linkPath }: Props = Astro.props;
 >
   {content.data.icon && <Image src={content.data.icon} alt='' class='icon' slot='icon' />}
 </Card>
-
-<style>
-  .icon {
-    position: relative;
-    height: 30%;
-  }
-</style>
