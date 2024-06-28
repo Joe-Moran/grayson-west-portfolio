@@ -5,8 +5,8 @@ import PagePreview from '../components/PagePreview.astro';
 import Hero from '../components/Hero.astro';
 import Values from '../components/Values.astro';
 import Intro from '../components/Intro.astro';
-const writingCollection = await getCollection('writing', ({ data }) => !!data.featured);
-const portfolioCollection = await getCollection('portfolio', ({ data }) => !!data.featured);
+const writingCollection = await getCollection('writing', ({ data }) => !!data.home.enable);
+const portfolioCollection = await getCollection('portfolio', ({ data }) => !!data.home.enable);
 const introEntry = await getEntry('intro', 'paragraph');
 const { Content } = await introEntry.render();
 const title = 'Grayson Gail West';
@@ -25,18 +25,8 @@ const title = 'Grayson Gail West';
   <Values />
 
   <div class='page-previews'>
-    <PagePreview
-      path='how-i-think'
-      title='How I think'
-      children={writingCollection}
-      previewStyle='panel'
-    />
-    <PagePreview
-      path='the-work'
-      title='The Work'
-      children={portfolioCollection}
-      previewStyle='square'
-    />
+    <PagePreview path='how-i-think' title='How I think' children={writingCollection} />
+    <PagePreview path='the-work' title='The Work' children={portfolioCollection} />
   </div>
 </Layout>
 

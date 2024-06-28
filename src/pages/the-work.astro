@@ -13,5 +13,6 @@ const pages = portfolioCollection.map((item) => ({
   <ContentPreviewMasonry
     basePath={new URL(Astro.request.url).pathname}
     collection={portfolioCollection}
+    previewLocation='page-preview'
   />
 </Layout>

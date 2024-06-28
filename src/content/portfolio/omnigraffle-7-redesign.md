@@ -11,11 +11,14 @@ summary: "<h4>Situation</h4>
 <h4>Result</h4>  
 <p>OmniGraffle was a top-10 grossing app on the App Store for seven weeks. In the years since the release, OmniGraffle 7 Pro has been Omni's top-grossing application in The Omni store and on the Mac App Store.</p>
 "
-featured: true
+home:
+  enable: false
+  grid:
+    rows: 1
+    columns: 1
 preview:
   enable: true
   grid:
-    enable: true
     rows: 1
     columns: 1
 screenshot:

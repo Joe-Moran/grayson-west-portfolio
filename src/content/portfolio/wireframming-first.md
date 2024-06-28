@@ -12,11 +12,14 @@ summary: "
 <p>This approach increased adaptability, allowed swifter changes, and reduced complexities in design changes. Our project efficiency soared, illustrating the value of a flexible, low-fidelity early stage design process in improving project outcomes.
 </p>
 "
-featured: true
+home:
+  enable: false
+  grid:
+    rows: 1
+    columns: 1
 preview:
   enable: true
   grid:
-    enable: true
     rows: 1
     columns: 1
 screenshot: # An image representing the UI example of the product. Used in preview cards

@@ -9,11 +9,14 @@ summary: "<h4>Situation</h4>
 <h4>Result</h4>  
 <p>Despite the project pause due to funding constraints, internal user testing prompted positive initial feedback.</p>
 "
-featured: true
+home:
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
 preview:
   enable: true
   grid:
-    enable: true
     rows: 1
     columns: 1
 screenshot:

@@ -13,5 +13,6 @@ const pages = writingCollection.map((item) => ({
   <ContentPreviewMasonry
     basePath={new URL(Astro.request.url).pathname}
     collection={writingCollection}
+    previewLocation='page-preview'
   />
 </Layout>

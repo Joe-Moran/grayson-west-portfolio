@@ -6,7 +6,11 @@ preview:
   grid:
     rows: 1
     columns: 2
-featured: true
+home:
+  enable: true
+  grid:
+    rows: 1
+    columns: 2
 background: '../../assets/content/backgrounds/10.jpg'
 ---
 

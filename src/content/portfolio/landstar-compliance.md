@@ -12,11 +12,14 @@ summary: "
 <p>18% reduction in compliance ticket completion time
 </p>
 "
-featured: true
+home:
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
 preview:
   enable: true
   grid:
-    enable: true
     rows: 1
     columns: 1
 screenshot: # An image representing the UI example of the product. Used in preview cards

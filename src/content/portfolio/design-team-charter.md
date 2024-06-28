@@ -1,11 +1,14 @@
 ---
 title: Design Team Charter
 summary: When I joined the Michigan Software Labs design team, I noticed the lack of a team charter. I proposed creating one to establish a foundation for our work and team identity. Through off-site discussions, we defined our role, strengths, and aspirations. We outlined how we work, set team commitments, aligned with company values, and identified growth areas. This resulted in a high-level team charter, signed by all members and displayed in our workspace. The charter consolidated our identity, fostered a shared vision, and strengthened our team culture.
-featured: true
+home:
+  enable: false
+  grid:
+    rows: 1
+    columns: 1
 preview:
   enable: true
   grid:
-    enable: true
     rows: 1
     columns: 1
 screenshot: # An image representing the UI example of the product. Used in preview cards

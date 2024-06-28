@@ -5,11 +5,20 @@ import CardContentPortfolio from './CardContentPortfolio.astro';
 import CardContentWriting from './CardContentWriting.astro';
 
 interface Props {
-  basePath: string;
+  basePath: string; // TODO: update naming to reflect how it's used
   collection: CollectionEntry<'portfolio' | 'writing'>[];
+  previewLocation: 'home' | 'page-preview';
 }
 
-const { collection, basePath } = Astro.props;
+const { collection, basePath, previewLocation } = Astro.props;
+
+function getGridValues(item: CollectionEntry<'portfolio' | 'writing'>): {
+  columns: number;
+  rows: number;
+} {
+  const gridProperties = { home: item.data.home.grid, 'page-preview': item.data.preview.grid };
+  return gridProperties[previewLocation];
+}
 
 function highestRowCount(collection: CollectionEntry<'portfolio' | 'writing'>[]): number {
   return collection.reduce((previous, current) => {
@@ -19,7 +28,8 @@ function highestRowCount(collection: CollectionEntry<'portfolio' | 'writing'>[])
 }
 
 function buildClasses(item: CollectionEntry<'portfolio' | 'writing'>): string[] {
-  return [`cols-${item.data.preview.grid.columns}`, `rows-${item.data.preview.grid.rows}`];
+  const gridValues = getGridValues(item);
+  return [`cols-${gridValues.columns}`, `rows-${gridValues.rows}`];
 }
 
 function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
@@ -57,8 +67,8 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
 
   .content-preview-masonry {
     --grid-layout-gap: 10px;
-    --grid-column-count: 3;
-    --grid-item-min-width: 300px;
+    --grid-column-count: 4;
+    --grid-item-min-width: 200px;
 
     /**
    * Calculated values.
@@ -69,7 +79,7 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
 
     display: grid;
     grid-template-columns: repeat(
-      auto-fill,
+      auto-fit,
       minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr)
     );
     grid-gap: var(--grid-layout-gap);

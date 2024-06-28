@@ -10,13 +10,16 @@ summary: "
 <h4>Result</h4>  
 <p></p>
 "
-featured: true
+home: # The content for previewing on the home page
+  enable: false
+  grid:
+    rows: 1
+    columns: 1 # total possible columns = 4
 preview:
   enable: true
   grid:
-    enable: true
     rows: 1
-    columns: 1
+    columns: 1 # total possible columns = 4
 screenshot: # An image representing the UI example of the product. Used in preview cards
   image: '../../assets/content/Hearsee 2.png'
   altText: ''

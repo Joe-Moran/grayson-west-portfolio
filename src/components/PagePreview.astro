@@ -1,7 +1,6 @@
 ---
 import { type CollectionEntry } from 'astro:content';
-import CardContentPortfolio from './CardContentPortfolio.astro';
-import CardContentWriting from './CardContentWriting.astro';
+import ContentPreviewMasonry from './ContentPreviewMasonry.astro';
 
 type ChildPage = CollectionEntry<'portfolio' | 'writing'>;
 
@@ -9,14 +8,9 @@ interface Props {
   title: string;
   children: ChildPage[];
   path: string;
-  previewStyle: 'panel' | 'square';
 }
 
-const { title, children, path, previewStyle } = Astro.props;
-
-function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
-  return `${path}/${item.slug}`;
-}
+const { title, children, path } = Astro.props;
 ---
 
 <div class='page-preview'>
@@ -24,23 +18,7 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
     <h2 class='page-title'>{title}</h2>
     <a class='page-link' href={path}>View All</a>
   </div>
-  <div class:list={['page-content-preview', previewStyle]}>
-    {
-      children.map((child) => {
-        return 'screenshot' in child.data ? (
-          <CardContentPortfolio
-            linkPath={buildLinkPath(child)}
-            content={child as CollectionEntry<'portfolio'>}
-          />
-        ) : (
-          <CardContentWriting
-            linkPath={buildLinkPath(child)}
-            content={child as CollectionEntry<'writing'>}
-          />
-        );
-      })
-    }
-  </div>
+  <ContentPreviewMasonry basePath={path} collection={children} previewLocation='home' />
 </div>
 <style>
   .page-preview {
@@ -78,28 +56,6 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
     &:hover,
     &:focus {
       text-decoration-color: inherit;
-    }
-  }
-
-  .page-content-preview {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-
-    > * {
-      min-height: var(--card-height);
-    }
-
-    &.square {
-      > * {
-        flex: 1 250px;
-      }
-    }
-
-    &.panel {
-      > * {
-        flex: 1 0 250px;
-      }
     }
   }
 </style>

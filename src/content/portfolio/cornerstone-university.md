@@ -10,11 +10,14 @@ summary: "
 <h4>Result</h4>  
 <p></p>
 "
-featured: true
+home:
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
 preview:
   enable: true
   grid:
-    enable: true
     rows: 1
     columns: 2
 screenshot: # An image representing the UI example of the product. Used in preview cards

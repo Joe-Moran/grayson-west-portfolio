@@ -13,7 +13,7 @@ const preview = z.object({
 const content = {
   title: z.string(),
   summary: z.string(),
-  featured: z.boolean(),
+  home: preview,
   preview,
 };
 
