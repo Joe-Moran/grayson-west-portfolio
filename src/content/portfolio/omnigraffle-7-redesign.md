@@ -21,9 +21,6 @@ preview:
   grid:
     rows: 1
     columns: 1
-screenshot:
-  image: 
-  altText: 'A picture'
 background: '../../assets/content/organicbuildingscoloralt.jpeg'
 icon: '../../assets/content/SVGs/1.svg'
 
