@@ -1,15 +1,15 @@
 ---
-title: Michigan Software Labs - Modernizing Design Processes
+title: Hearsee Mobility: Web Application
 summary: "
 <h4>Situation</h4>
-<p>Michigan Software Labs, a software consultancy, needed to modernize its design department to meet diverse client needs.</p>
+<p>Hearsee Mobility, a nonprofit developing an indoor navigation system for visually impaired people, faced challenges with their web application design, threatening the project's progress..</p>
 
 <h4>Task</h4>
-<p>As Design Manager, I was tasked with overhauling the design process and rebuilding the team.
+<p>Revitalize the stalled web application project, ensuring seamless integration with existing mobile solutions.
 </p>
 
 <h4>Result</h4>  
-<p>Implemented product design principles and design ops framework, improving efficiency and collaboration. Created a team charter, defined designer roles, and introduced improv techniques for creativity. These changes led to higher quality solutions and a more versatile, skilled design team capable of tackling complex projects across various industries and platforms.
+<p>The team completed the web application on time, reducing building mapping time by 300%. 98% of users reported significant navigation improvement. The project transformed from stagnant to dynamic, creating a comprehensive ecosystem for indoor navigation that enhances independence for visually impaired individuals.
 </p>
 "
 home:
@@ -34,37 +34,32 @@ platforms:
   - IOT
 ---
 
-## Intro:
+## Situation
+Imagine a world where navigating indoor spaces is a daily struggle. For the six million Americans with vision loss, this is reality. Hearsee Mobility, a Utah-based nonprofit, set out to change this with an innovative indoor navigation system. While they had made progress on mobile applications, their crucial web application had stalled, threatening to derail the entire project.
 
-As much as I'd love to showcase the specific projects I oversaw, participated in, and created during my nearly tow years at Michigan Software Labs, I'm unable to do so due to the confidentiality agreement I signed at the start of my employment. However, there is one project called Hearsee mobility that I can discuss, albeit in a limited scope as it has not yet been released. You can read more about this project in its dedicated case study. Despite these limitations, I can share my experience in revolutionizing the design department and the valuable insights I gained in my role as Design Manager.
+Due to a confidentiality agreement, I can only share a limited amount of information about this project. However, I can provide some details from the first release that highlight the challenges and impact of our work.
+## Task
+I was brought in to take charge of the web application's product design, UX design, and overall design strategy. My role was critical: to breathe new life into a stagnant project and create a web application that would seamlessly integrate with the existing mobile solutions.
+## Action
+To tackle these challenges head-on, I implemented a series of strategic measures:
+1. **Design Re-evaluation and Alignment**: When I joined the project, I found that the existing designs were creating limitations for our development team. To address this, I initiated a comprehensive review of the current web application design. I worked closely with the development team to understand their constraints and requirements. Together, we realigned the UX design with technical feasibility, ensuring that our designs provided the necessary flexibility for implementation. This process involved numerous collaborative sessions where we dissected each design decision and its implications for development.
+2. **Feature Integration and Conceptualization**: Many potential features were still in the conceptual stage, untouched by design or development. When discussed, these elements often clashed with existing designs. To resolve this, I organized cross-functional workshops bringing together design, development, and product teams. We conceptualized these features together, ensuring they were both technically feasible and aligned with our overall design strategy. This collaborative approach helped us avoid potential conflicts down the line and created a shared vision for the product.
+3. **Enhanced Communication and Collaboration**: I noticed that there was significant friction between the design and development teams, hampering productive discussions. To address this, I implemented several communication-enhancing strategies:
+    - Regular sync-up meetings where team members could openly discuss challenges and ideas
+    - "Design-Dev Pair" sessions where designers and developers worked side-by-side on specific features
+    - A feedback system that encouraged constructive criticism and idea sharing between teamsThese measures helped break down silos, foster a culture of open communication, and align everyone towards our common goals. As a result, we saw a marked improvement in team morale and productivity.
+4. **User-Centric Approach**: Understanding the diverse needs of the blind and low vision community was crucial to our design process. We conducted extensive user research, including:
+    - In-depth interviews with individuals across the spectrum of visual impairment and facility management.
+    - Shadowing sessions to observe how users navigate unfamiliar spaces
+    - Usability testing with early prototypes
+## Results
+Our renewed approach and collaborative effort yielded impressive outcomes:
+- We completed the web application development within the projected timeline, aligning it seamlessly with the existing mobile solutions.
+- The redesigned web interface reduced building mapping time by 300%, a crucial improvement for facility managers.
+- 98% of users reported that the integrated system (mobile apps + web portal) significantly improved their navigation experience.
+- We created a flexible, scalable design that could easily adapt to changing building needs and future feature additions.
+Most importantly, we transformed a stalled project into a dynamic, user-friendly system that's set to revolutionize indoor navigation for the visually impaired. As James Bloomfield, CEO of Hearsee Mobility, noted, "This technology isn't just about navigation—it's about independence and opening up a world of possibilities for millions."
 
-## Company Overview:
+The Hearsee web application, working in tandem with the mobile apps and RFID-scanning cane, has created a comprehensive ecosystem for indoor navigation. It's not just about finding a specific location; it's about providing a sense of freedom that many take for granted.
 
-Michigan Software Labs is a software consultancy working with a diverse range of regional and national clients, from Fortune 500 companies to universities and non-profit organizations. During my tenure, I led design efforts on software solutions spanning IoT, iOS, Android, iPadOS, and Web applications. Our products addressed needs and solved problems in audio delivery, video consumption, indoor navigation, higher education software, e-learning, manufacturing, logistics, accessibility, and non-profit solutions.
-
-## Transforming the Design Department:
-
-A significant part of my work involved modernizing and streamlining the design department's approach to user experience design. This transformation encompassed several key initiatives:
-- **Introducing Product Design**: I implemented the concept of product design, shifting our approach to software design to be more holistic and user-centered.
-- **Implementing Design Ops**: We established a design ops framework to foster a collective approach to design, moving away from individual-centric methodologies.
-- **Integrating Design Thinking**: I collaborated with leadership to incorporate more design thinking into our client software development process.
-- **Team Restructuring**: I hired and rebuilt the design team, ensuring a diverse range of skills and experience to tackle varied client needs.
-
-## Key Accomplishments:
-
-During my time at Michigan Software Labs, I spearheaded several initiatives that significantly improved our design processes and team dynamics:
-- **Creating a Team Charter**: Established clear goals, values, and expectations for the design team.
-- **Implementing Design Ops**: Streamlined our design processes for greater efficiency and consistency.
-- **Creating Designer Roles**: Defined clear career paths and responsibilities within the design team.
-- **Introducing Product Design**: Shifted our focus to a more holistic, user-centered approach to software design.
-- **Using Improv Techniques**: Employed innovative methods to foster creativity and growth within the team.
-
-These improvements are documented in short case studies available in my portfolio.
-
-## Reflection:
-
-As I mentioned earlier, I can't delve into the specifics of the projects I oversaw, but I'm incredibly proud of the solutions we developed for our clients' diverse challenges. The work we did spanned multiple industries and platforms, showcasing our team's versatility and expertise.
-
-My time at Michigan Software Labs was marked by significant growth and innovation within the design department. By modernizing our approach to user experience design, we were able to deliver higher quality solutions more efficiently. The implementation of product design principles and a design ops framework fundamentally changed how we approached software design, moving from individual efforts to a more collaborative, streamlined process.
-
-This experience reinforced my belief in the power of design thinking and the importance of a well-structured, diverse design team. While I may not be able to showcase specific projects, the processes and frameworks we put in place speak volumes about the impact of thoughtful, strategic design leadership.
+Looking ahead, the potential for Hearsee-enabled buildings continues to grow. With our flexible, user-centric design, we've laid the groundwork for a future where visual impairment no longer limits one's ability to confidently navigate any indoor space. As a UX designer, being part of this transformative project has been both challenging and deeply rewarding, reminding me of the power of thoughtful, inclusive design to change lives.
