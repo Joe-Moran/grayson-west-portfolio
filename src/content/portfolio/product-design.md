@@ -1,5 +1,5 @@
 ---
-title: DesignOps at Michigan Software Labs
+title: Michigan Software Labs - Modernizing Design Processes
 summary: "
 <h4>Situation</h4>
 <p>Michigan Software Labs, a software consultancy, needed to modernize its design department to meet diverse client needs.</p>
