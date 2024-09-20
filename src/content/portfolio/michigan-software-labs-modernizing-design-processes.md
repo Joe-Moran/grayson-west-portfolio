@@ -13,12 +13,12 @@ summary: "
 </p>
 "
 home:
-  enable: false
+  enable: true
   grid:
     rows: 1
     columns: 1
 preview:
-  enable: false
+  enable: true
   grid:
     rows: 1
     columns: 1
