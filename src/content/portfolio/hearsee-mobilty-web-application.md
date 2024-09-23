@@ -1,5 +1,5 @@
 ---
-title: Hearsee Mobility: Web Application
+title: "Hearsee Mobility: Web Application"
 summary: "
 <h4>Situation</h4>
 <p>Hearsee Mobility, a nonprofit developing an indoor navigation system for visually impaired people, faced challenges with their web application design, threatening the project's progress..</p>
