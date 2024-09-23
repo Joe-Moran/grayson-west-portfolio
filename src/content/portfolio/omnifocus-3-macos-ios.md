@@ -1,5 +1,5 @@
 ---
-title: OmniFocus 3 for Mac and iOS  
+title: OmniFocus 3 for macOS and iOS
 summary: "
 <h4>Situation</h4>
 <p>OmniFocus, a task management app, needed a major update. As a key developer for version 3, I worked with the CEO and product manager to improve functionality and user experience across Mac and iOS platforms.</p>

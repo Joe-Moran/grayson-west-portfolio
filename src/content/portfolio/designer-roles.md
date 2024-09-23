@@ -10,7 +10,6 @@ summary: "
 
 <h4>Result</h4>  
 <p>Detailed role definitions for Product and UX Designers were developed, covering responsibilities and best practices. The initiative was well-received, improving cross-functional understanding and collaboration across the company.
-
 </p>
 "
 home:
