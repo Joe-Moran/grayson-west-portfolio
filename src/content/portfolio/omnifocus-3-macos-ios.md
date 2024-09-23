@@ -23,15 +23,14 @@ preview:
     rows: 1
     columns: 1
 screenshot: # An image representing the UI example of the product. Used in preview cards
-  image: '../../assets/content/casestudies/2020-03-27.png'
+  image: '../../assets/content/casestudies/omnifocus-3-image-1.png'
   altText: ''
 background: '../../assets/content/backgrounds/1.jpg' # The background image used for preview cards
 icon: '../../assets/content/SVGs/1.svg'
 platforms:
   - iOS
-  - Android
-  - web
-  - IOT
+  - MacOS
+  - iPad OS
 ---
 
 ## Situation
