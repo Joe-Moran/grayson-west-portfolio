@@ -32,17 +32,12 @@ platforms:
   - Mobile
   - Web
 ---
-
-## Intro:
-
+## Situation
 As much as I'd love to showcase the specific projects I oversaw, participated in, and created during my nearly tow years at Michigan Software Labs, I'm unable to do so due to the confidentiality agreement I signed at the start of my employment. However, there is one project called Hearsee mobility that I can discuss, albeit in a limited scope as it has not yet been released. You can read more about this project in its dedicated case study. Despite these limitations, I can share my experience in revolutionizing the design department and the valuable insights I gained in my role as Design Manager.
-
 ## Company Overview:
-
 Michigan Software Labs is a software consultancy working with a diverse range of regional and national clients, from Fortune 500 companies to universities and non-profit organizations. During my tenure, I led design efforts on software solutions spanning IoT, iOS, Android, iPadOS, and Web applications. Our products addressed needs and solved problems in audio delivery, video consumption, indoor navigation, higher education software, e-learning, manufacturing, logistics, accessibility, and non-profit solutions.
 
 ## Transforming the Design Department:
-
 A significant part of my work involved modernizing and streamlining the design department's approach to user experience design. This transformation encompassed several key initiatives:
 - **Introducing Product Design**: I implemented the concept of product design, shifting our approach to software design to be more holistic and user-centered.
 - **Implementing Design Ops**: We established a design ops framework to foster a collective approach to design, moving away from individual-centric methodologies.
@@ -50,7 +45,6 @@ A significant part of my work involved modernizing and streamlining the design d
 - **Team Restructuring**: I hired and rebuilt the design team, ensuring a diverse range of skills and experience to tackle varied client needs.
 
 ## Key Accomplishments:
-
 During my time at Michigan Software Labs, I spearheaded several initiatives that significantly improved our design processes and team dynamics:
 - **Creating a Team Charter**: Established clear goals, values, and expectations for the design team.
 - **Implementing Design Ops**: Streamlined our design processes for greater efficiency and consistency.
@@ -59,9 +53,7 @@ During my time at Michigan Software Labs, I spearheaded several initiatives that
 - **Using Improv Techniques**: Employed innovative methods to foster creativity and growth within the team.
 
 These improvements are documented in short case studies available in my portfolio.
-
 ## Reflection:
-
 As I mentioned earlier, I can't delve into the specifics of the projects I oversaw, but I'm incredibly proud of the solutions we developed for our clients' diverse challenges. The work we did spanned multiple industries and platforms, showcasing our team's versatility and expertise.
 
 My time at Michigan Software Labs was marked by significant growth and innovation within the design department. By modernizing our approach to user experience design, we were able to deliver higher quality solutions more efficiently. The implementation of product design principles and a design ops framework fundamentally changed how we approached software design, moving from individual efforts to a more collaborative, streamlined process.
