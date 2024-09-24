@@ -32,7 +32,7 @@ platforms:
   - MacOS
   - iPad OS
 ---
-
+import omnifocusImage from '../assets/content/casestudies/omnifocus-3-image-1.png';
 <figure>
   <img src="../../assets/content/casestudies/omnifocus-3-image-1.png" alt="This is alt text"/>
   <figcaption>This is a caption test!</figcaption>
