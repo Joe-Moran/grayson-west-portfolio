@@ -41,9 +41,9 @@ The focus of the V7 redesign was to empower and support the creative professiona
 - Convert Text To Shapes  
 - Keyboard Shortcuts  
 - New Onboarding Experience  
-### Action
+## Rising Action
 For the release of OmniGraffle 7.0, I led UX team engaged in research to gain insight into what OmniGraffle customers were currently requesting and what their current pain points were within the application. The UX team worked very closely with Omni's software engineers and shared our findings and results of this research. This collaboration helped my team consider technical limitations and possibilities we may have otherwise overlooked. 
-### Climax
+## Falling Action
 Here's some short summaries of what we worked on:
 1. **Artboards**: An innovative feature that treated artboards like layers, introducing flexibility and efficiency to the user experience. Users were able to define areas for toolbar buttons, export images of varying resolutions, and contain objects in a project with ease. Furthermore, any shape—square, circle, triangle, or octagon—could be transformed into an artboard.
 2. **Bezier Point Editing Tool Improvements**: We made it easier for users to add or subtract vector points without navigating to a different tool. This speedier, more streamlined process improved the drag-out control response for vector points for a more intuitive design process.
