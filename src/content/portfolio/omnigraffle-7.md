@@ -30,7 +30,7 @@ icon: '../../assets/content/SVGs/1.svg'
 platforms:
   - Mac OS
 ---
-![OmniGraffle 7 for macOS](../../src/assets/content/casestudies/omngraffle-image-1.png)
+![OmniGraffle 7 for macOS](../../assets/content/casestudies/omngraffle-image-1.png)
 ## Situation
 OmniGraffle is a vector based diagramming and digital illustration application for macOS and iOS. Creative director for end-to-end redesign, including managing the research and design operations. Managed a team of UX designers, UI designers, and researchers. 
 ## Task
