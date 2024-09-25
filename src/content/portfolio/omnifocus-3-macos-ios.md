@@ -56,10 +56,12 @@ This seemingly straightforward task proved to be more complex than initially ant
 - Visualization: We created a stylized tag iconography for the perspectives and left sidebar to brand the feature. In the outline view, we opted for a simple capsule shape to maintain readability.
 - Space management: We implemented an ellipsis/more tag system to handle multiple tags without cluttering the outline view.
 ### Enhancing Custom Perspectives
+![OmniFocus for Mac perspectives window](../../assets/content/casestudies/omnifocus-3-perspectives-2.png)
 To cater to our power users, we developed a more dynamic perspective filter engine. We leveraged the macOS predicate editor framework to create an interface allowing users to build complex "if that, then this" scenarios. This significantly expanded the filtering options available to users.
 ### Improving Calendar Visualization
 We integrated calendar events directly into the Forecast perspective's outline view, interleaving them with action items. To differentiate between the two, we applied the user's calendar app color to a calendar icon for events. This integration reduced friction and improved users' ability to associate actions with events.
 ### Customizable Inspectors (iOS)
+![Customizable OmniFocus for iOS inspectors](../../assets/content/casestudies/omnifocus-3-custom-inspectors.png)
 To address the cognitive load issue in the inspector view, we designed a customizable experience. Users can now rearrange, hide, and easily access inspector options according to their preferences, minimizing distractions and improving usability.
 ## Result
 The launch of OmniFocus 3 was met with overwhelmingly positive feedback from users and media alike:
