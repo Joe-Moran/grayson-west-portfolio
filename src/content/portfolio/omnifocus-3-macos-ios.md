@@ -32,7 +32,10 @@ platforms:
   - MacOS
   - iPad OS
 ---
-![OmniFocus 3 for macOS, iPad OS, and iOS](../../assets/content/casestudies/omnifocus-3-image-1.png)
+<figure>
+  <img src="../../assets/content/casestudies/omnifocus-3-image-1.png"  alt="OmniFocus" />
+  <figcaption>This is a test of a caption</figcaption>
+</figure>
 ## Situation
 OmniFocus, a popular task management application, was due for a major update. As a key player in the development of version 3, I worked closely with the CEO and product manager to determine the scope of this new release. Our goal was to address user feedback, enhance functionality, and improve the overall user experience across both Mac and iOS platforms.
 ## Task
