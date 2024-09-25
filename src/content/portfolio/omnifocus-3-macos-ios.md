@@ -34,7 +34,7 @@ platforms:
 ---
 ![OmniFocus 3 for macOS, iPad OS, and iOS](../../assets/content/casestudies/omnifocus-3-image-1.png)
 ## Situation
-OmniFocus, a popular task management application, was due for a major update. As a key player in the development of version 3, I worked closely with the CEO and product manager to determine the scope of this new release. Our goal was to address user feedback, enhance functionality, and improve the overall user experience across both Mac and iOS platforms.
+OmniFocus, a popular task management application, was due for a major update. As a key player in the development of version 3, I worked closely with the CEO and product manager to determine the scope of this new release. Our goal was to address user feedback, enhance functionality, and improve the overall user experience across both Mac, iPad OS, and iOS platforms.
 
 ---
 ## Task
@@ -51,6 +51,8 @@ OmniFocus, a popular task management application, was due for a major update. As
 2. Enhancing the power of perspectives (Mac and iOS)
 3. Improving calendar visualization in the Forecast perspective (Mac and iOS)
 4. Making inspectors customizable (iOS only)
+
+---
 ## Action
 ### Replacing Contexts with Tags
 This seemingly straightforward task proved to be more complex than initially anticipated. We had to consider:
@@ -65,6 +67,8 @@ We integrated calendar events directly into the Forecast perspective's outline v
 ### Customizable Inspectors (iOS)
 ![Customizable OmniFocus for iOS inspectors](../../assets/content/casestudies/omnifocus-3-custom-inspectors.png)
 To address the cognitive load issue in the inspector view, we designed a customizable experience. Users can now rearrange, hide, and easily access inspector options according to their preferences, minimizing distractions and improving usability.
+
+---
 ## Result
 The launch of OmniFocus 3 was met with overwhelmingly positive feedback from users and media alike:
 1. User adoption:
@@ -73,5 +77,7 @@ The launch of OmniFocus 3 was met with overwhelmingly positive feedback from use
    - OmniFocus 3 for Mac spent four weeks as a top-25 grossing app in the App Store
 2. Media reception:
    Rosemary Orchard from MacStories praised the release, stating: "This release represents a substantial upgrade that has brought more control to my system and will keep me, and many others, committed OmniFocus users far into the future."
-
+   
+---
+## Conclusion
 The success of OmniFocus 3 demonstrated our team's ability to understand user needs, implement complex features, and deliver a product that significantly improved upon its predecessor. The project not only met but exceeded our goals, solidifying OmniFocus's position as a leading task management solution.
