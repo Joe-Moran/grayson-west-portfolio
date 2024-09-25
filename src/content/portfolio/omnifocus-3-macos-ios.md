@@ -35,6 +35,8 @@ platforms:
 ![OmniFocus 3 for macOS, iPad OS, and iOS](../../assets/content/casestudies/omnifocus-3-image-1.png)
 ## Situation
 OmniFocus, a popular task management application, was due for a major update. As a key player in the development of version 3, I worked closely with the CEO and product manager to determine the scope of this new release. Our goal was to address user feedback, enhance functionality, and improve the overall user experience across both Mac and iOS platforms.
+
+---
 ## Task
 **My primary responsibilities included:**
 1. Leading the user experience team in a complete redesign of the application
