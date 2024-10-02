@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.62](///compare/v0.0.61...v0.0.62) (2024-10-02)
+
+
+### Bug Fixes
+
+* center post page heading 32f5dc2
+
 ## [0.0.61](///compare/v0.0.60...v0.0.61) (2024-10-02)
 
 ## [0.0.60](///compare/v0.0.59...v0.0.60) (2024-08-08)
