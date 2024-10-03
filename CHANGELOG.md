@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.63](///compare/v0.0.62...v0.0.63) (2024-10-03)
+
+
+### Features
+
+* enable ordering of content previews 9402449
+
 ## [0.0.62](///compare/v0.0.61...v0.0.62) (2024-10-02)
 
 
