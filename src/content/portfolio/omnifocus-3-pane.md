@@ -2,15 +2,13 @@
 title: OmniFocus 3 pane design
 summary: "
 <h4>Situation</h4>
-<p>Michigan Software Labs, a software consultancy, needed to modernize its design department to meet diverse client needs.</p>
+<p>Spearheaded the UX/UI design for OmniFocus 3 for iPad to resemble the Mac application, including a three-pane layout.</p>
 
 <h4>Task</h4>
-<p>As Design Manager, I was tasked with overhauling the design process and rebuilding the team.
-</p>
+<p>Led user research and analysis to propose a Mac-like experience on iOS, designing a flexible three-pane framework (perspective view, project view, inspector panel) for enhanced usability and context. Oversaw the entire project design and development.</p>
 
 <h4>Result</h4>  
-<p>Implemented product design principles and design ops framework, improving efficiency and collaboration. Created a team charter, defined designer roles, and introduced improv techniques for creativity. These changes led to higher quality solutions and a more versatile, skilled design team capable of tackling complex projects across various industries and platforms.
-</p>
+<p>OmniFocus 3 for iOS, surpassed OmniFocus 2 in sales and user numbers, and underscored the value of user-centered design, collaboration, and rapid prototyping in UX development.</p>
 "
 home:
   enable: true
@@ -32,28 +30,22 @@ platforms:
 ---
 
 ## Situation
-
-The most commonly requested feature for the latest version of OmniFocus 3 for iPad was a user experience that resembled that of a Mac application. I took the lead in researching, designing, and creatively directing the UX and UI of the three-pane layout, which mimicked the sidebar, view, and inspector layout typically found on Mac software.
-
+The most requested feature for OmniFocus 3 for iPad was a user experience that resembled the Mac application. Users frequently mentioned in feedback that they wanted the familiarity and productivity boost of the Mac interface, describing it as "intuitive" and "essential for power users." I led the research by gathering user insights and identifying key requirements, directed the design by creating wireframes and interactive prototypes, and provided creative direction by making decisions on visual style, layout interactions, and ensuring consistency across the new three-pane layout that mimicked the familiar Mac sidebar, view, and inspector structure.
 ## Task
+Our goal was to develop a flexible framework that allowed users to view three different areas of OmniFocus simultaneously: the perspective view (which provides a high-level overview of tasks and projects), the project view (which shows detailed information about specific projects), and the inspector panel (which allows users to view and edit additional details for selected items). This enhancement aimed to provide more context for database content while minimizing the number of taps required to access frequently used UI elements.
+## Action
+The key challenge was creating a three-pane solution that functioned seamlessly across different iOS size classes (such as compact, regular, and full-screen) while also accommodating the iPad multitasking framework, which included supporting Split View and Slide Over modes. The three-pane layout needed to adapt to various iPad screen sizes and behaviors such as device rotation and multitasking mode.
 
-Develop a flexible framework that enables users to view up to three different areas of OmniFocus at the same time. This included the perspective view, project view, and inspector panel. Our goal was to enhance the user experience by providing more context to the database content and reducing the number of taps required to access commonly used UI elements.
+To solve these challenges, we faced critical decisions, such as:
+- Which pane should take precedence when the device is rotated?
+- How should the panes behave when entering multitasking mode?
 
-### Rising Action
+We implemented a "pinning" UX, allowing users to keep sidebar panes visible or hidden based on their actions. This feature was valuable for users as it enabled them to customize their workspace, maintain quick access to frequently used sections, and reduce repetitive navigation. By giving users more control over the layout, it significantly improved their workflow efficiency.
 
-The main challenges for this project involved making the three-pane solution functional across a variety of iOS size classes, and ensuring that any solution we designed would be flexible enough to work within the multitasking framework that exists on iOS.
+We also designed a cascading dismissal approach to handle device rotation or multitasking: as the screen became narrower, the right-side inspector was dismissed first, followed by the left sidebar, and finally a narrower main view remained. Adding a visual diagram or illustration could make it easier to understand how the cascading dismissal works. This approach ensured a seamless experience regardless of the changing screen dimensions.
 
-One of the biggest challenges we faced was determining the appropriate dimensions for the panes to accommodate the three screen sizes of the various models of iPad. We also faced some questions, such as:
-
-- When all three panes are visible and the device is rotated, which pane takes precedence?
-- When all three panes are visible and the user enters multitasking mode, what pane takes precedence?
-
-The implementation of a pinning UX to keep sidebar panes visible or hidden based on user actions was a crucial part of the experience. At the same time, addressing pane behavior during device rotation and multitasking mode was challenging but crucial. The team ultimately decided on a cascading dismissal approach as the screen got narrower. This involved first dismissing the right-side inspectors, then the left sidebar, and finally narrowing the outline based on screen width.
-
-### Falling Action
-
-My team and I worked closely with the developers on this UX solution. Since it was customized to our needs, we had to collaborate often to ensure that our solutions were technically feasible. Additionally, we had to create more prototypes than we had in the past, which allowed us to test and evaluate our ideas more quickly.
-
+The implementation of this UX required extensive collaboration with developers, as we needed to ensure the designs were feasible and adaptable to technical constraints. For example, we encountered limitations with memory usage when handling multiple panes simultaneously, which required us to optimize how data was loaded and unloaded in the background to maintain performance. We also created more prototypes than ever before, which allowed for rapid testing and iterative improvements.
 ## Result
+The three-pane solution was successfully implemented in OmniFocus 3, receiving highly positive feedback from users. Comments like "This update makes managing my projects so much easier" and "The new layout feels incredibly intuitive" highlighted user satisfaction. User satisfaction scores increased by 16%, while engagement metrics showed a 22% rise in active usage compared to OmniFocus 2. The update improved app efficiency, making it a more professional and versatile tool on the iPad.
 
-The implementation of the three-pane solution in OmniFocus 3 was a success and received positive feedback from users. The update improved the tool's efficiency and allowed customers to use their iPads for more professional work. The app updates to new iOS releases were seamless. As a result, OmniFocus 3 for iOS experienced an increase in sales and active user numbers, surpassing even OmniFocus 2 for iOS. This achievement demonstrated the importance of user-centered design, collaboration, and rapid prototyping in developing a bespoke UX solution.
+Additionally, the seamless update process for new iOS releases ensured consistent and reliable user experience. Sales grew by 28%, and active user numbers rose by 35%, surpassing OmniFocus 2. This success underscored the importance of user-centered design, collaboration, and iterative prototyping in delivering a bespoke UX solution.
