@@ -14,7 +14,6 @@ home:
 background: '../../assets/content/backgrounds/6.jpg' # The background image used for preview cards
 icon: '../../assets/content/SVGs/6.svg'
 ---
-
 I love to iterate! Constant refining and optimizing is on of the key's to unlocking creativity. It's a process—reviewing, tweaking, making things better—that brings out the best ideas and, ultimately, the best results.
 
 I was first exposed to iteration back to high school. I wasn't the fastest swimmer on the team, but what set me apart was my determination to keep improving. My coach taught me that improvement is all about small, deliberate changes. I would constantly analyze my technique, reassess my approach, and fine-tune my training methods. Bit by bit, those changes added up. This experience shaped my belief in the power of iteration to bridge gaps and make meaningful progress.
