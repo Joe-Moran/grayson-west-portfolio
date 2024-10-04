@@ -1,6 +1,6 @@
 ---
-title: I Believe In Humans
-summary: Believing in boundless human potential, derived from personal experiences, is my driving force. I learned about nurturing potential from my mother, a theater director. Her passion for fostering talent and unlocking latent creativity profoundly impacted me. My time as a competitive cyclist in Europe reinforced the power of collective effort over individual triumph. I'm fascinated by human curiosity, problem-solving abilities, imagination, and above all, passion. As a leader, my mission is not only acknowledging these qualities but also nurturing growth, guided by lessons learned from my mentors. Now, I aim to pay it forward.
+title: I Believe In People
+summary: Humans have incredible potential, capable of achieving far more than they realize. This belief is rooted in my experiences, from observing my mother, an inspiring theater director, nurture talent, to learning about the power of teamwork during my time as a competitive cyclist in Europe. Leadership, for me, is about creating environments where people can thrive, fostering their innate abilities. I am fascinated by human curiosity, imagination, and especially passion, which fuels dreams and drives extraordinary accomplishments. My goal as a leader is to unlock this potential in others.
 preview:
   enable: true
   grid:
@@ -15,12 +15,10 @@ background: '../../assets/content/backgrounds/10.jpg'
 icon: '../../assets/content/SVGs/10.svg'
 ---
 
-Humans are capable of achieving more than they think possible. This belief comes from my own life experiences, things I've seen and learned, and my unshakeable faith in what humans are capable of—being curious, driven, and having endless potential. People can achieve amazing things when a space is created for them to tap into their talents and passions freely.
+Humans are capable of achieving far more than they believe possible. This conviction comes from my own life experiences, things I've seen and learned, and my unshakeable faith in human potential—our curiosity, drive, and boundless capacity. People can achieve extraordinary things when given the space to freely tap into their talents and passions.
 
-My mother was an extraordinary theater director. I witnessed firsthand the joy she derived from helping artists tap into their latent creativity, pushing the boundaries they never thought they could transcend. Many a weeknight, I would sit in her theater seats during her rehearsals. I was supposed to be doing my homework, but I would be transfixed by watching her interact, coach, and inspire her actors. I did not know it then, but her passion for fostering talent had a lasting impact on my life, empowering me to understand that leadership is about nurturing potential.
+My mother was an extraordinary theater director. I witnessed firsthand the joy she derived from helping artists tap into their latent creativity, pushing past boundaries they never thought they could transcend. Many weeknights, I would sit in the theater seats during her rehearsals. I was supposed to be doing my homework, but I was often transfixed by watching her interact with, coach, and inspire her actors. I didn't know it then, but her passion for fostering talent left a lasting impact on me, teaching me that true leadership is about nurturing potential.
 
-During my time as a competitive cyclist in Europe, I learned the significance of collaboration and teamwork that people are capable of. Winning a bike race was not about racing individually; nine teammates joined as a unified force to get one person to the finish line first. This is why I strongly believe in the potential of teams. United teams can solve seemingly impossible problems. There is immense power in unity, power in the collective whereby the sum is more significant than its parts.
+During my time as a competitive cyclist in Europe, I learned the importance of collaboration and teamwork. Winning a bike race wasn't about individual effort; it took nine teammates working together as a unified force to get one person across the finish line first. This is why I believe so strongly in the potential of teams. United teams can solve seemingly impossible problems. There is immense power in unity—in the collective—where the whole is greater than the sum of its parts.
 
-Humans fascinate me with their curiosity, problem-solving abilities, and boundless imaginations. But most of all, their passion. Passion can fuel dreams, incite revolutions, and create marvels. As a leader, I aspire to tap into this latent fuel that exists in all of us.
-
-It's not just about acknowledging the qualities of humans; it's also about contributing to their growth and development that keeps me coming to work every day—a commitment driven by the invaluable lessons I've learned from mentors who guided me along my path. Now, I want to pass this on to others.
+Humans fascinate me with their curiosity, problem-solving abilities, and limitless imaginations. But most of all, I am inspired by their passion. Passion fuels dreams, incites revolutions, and creates wonders. As a leader, I aspire to tap into this latent fuel that exists within all of us.
