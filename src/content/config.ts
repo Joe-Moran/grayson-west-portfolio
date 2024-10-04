@@ -15,6 +15,7 @@ const content = {
   summary: z.string(),
   home: preview,
   preview,
+  order: z.number().default(9999),
 };
 
 const writingCollection = defineCollection({

@@ -50,6 +50,7 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
     collection
       .filter((item) => item.data.title.toLowerCase() !== 'template')
       .filter((item) => shouldDisplay(item))
+      .sort((a, b) => a.data.order - b.data.order)
       .map((item) => {
         return 'screenshot' in item.data ? (
           <CardContentPortfolio
