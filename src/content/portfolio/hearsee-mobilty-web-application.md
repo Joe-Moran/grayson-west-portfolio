@@ -23,7 +23,7 @@ preview:
     rows: 1
     columns: 1
 screenshot: # An image representing the UI example of the product. Used in preview cards
-  image: '../../assets/content/casestudies/2020-03-27.png'
+  image: '../../assets/content/casestudies/hearsee-cover.png'
   altText: ''
 background: '../../assets/content/backgrounds/27.jpg' # The background image used for preview cards
 icon: '../../assets/content/SVGs/27.svg'
@@ -34,10 +34,22 @@ order: 1
 ---
 
 ## Situation
-
+![Hearsee web interface and mobile app](../../assets/content/casestudies/hearsee-cover.png)
 Imagine a world where navigating indoor spaces is a daily struggle. For the six million Americans with vision loss, this is reality. Hearsee Mobility, a Utah-based nonprofit, set out to change this with an innovative indoor navigation system. While they had made progress on mobile applications, their crucial web application had stalled, threatening to derail the entire project.
 
 Due to a confidentiality agreement, I can only share a limited amount of information about this project. However, I can provide some details from the first release that highlight the challenges and impact of our work.
+## What is the Hearsee Mobility platform?
+Hearsee  mobility tech platform designed to help blind and visually impaired (BVI) people navigate indoor spaces more effectively. Utilizing RFID technology, it integrates specialized hardware within the handles of white canes, RFID tags placed throughout buildings, and a mobile app for seamless indoor navigation. As users walk by RFID tags, the cane's hardware reads the information and communicates it to the mobile app, which also acts as a navigation device to help users find their destination. A web application allows building managers to upload floor plans, place tags, and create routes for enhanced accessibility. Hearsee offers an affordable solution to bridge the gap between basic ADA requirements and true navigability for BVI individuals.
+### Web App:
+- Used to upload building floor plans.
+- Allows placement of RFID tags on the floor plan.
+- Enables users to create navigable routes.
+- Routes are uploaded to the cloud and accessible to the mobile app.
+### Mobile App:
+- Connects with the white cane hardware via Bluetooth.
+- Receives information from RFID tags to assist in navigation.
+- Provides navigation guidance to users within the building.
+- Allows users to search for specific destinations in a building.
 
 ## Task
 
