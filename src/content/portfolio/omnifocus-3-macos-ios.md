@@ -71,18 +71,16 @@ Throughout development, we faced several key challenges:
 - **Calendar Integration Complexity**: Integrating calendar events into the Forecast perspective required careful consideration to avoid visual clutter. We used users' calendar app colors to differentiate events, reducing friction and enhancing clarity.
 - **Reducing Cognitive Load in Inspectors**: The default inspector view had too many options, creating cognitive overload. We designed customizable inspectors that allowed users to rearrange, hide, and prioritize options, validated through iterative testing.
 ## Design Actions
-**Replacing Contexts with Tags**
+### Replacing Contexts with Tags
 - Created tag iconography for consistent branding
 - Used capsule shapes for tags in the outline view for readability
 - Managed tag clutter with an ellipsis/more tag system
-
-**Enhancing Custom Perspectives**
+### Enhancing Custom Perspectives
 - Enhanced the perspective filter engine with the macOS predicate editor framework, allowing power users to create advanced filtering rules and customize workflows.
-
-**Improving Calendar Visualization**
+### Improving Calendar Visualization
 - Integrated calendar events into the Forecast perspective, using users' calendar app colors for differentiation, allowing easy association between meetings and tasks.
-
-**Customizable Inspectors (iOS)**
+### Customizable Inspectors (iOS)
+![OmniFocus 3 custom inspectors](../../assets/content/casestudies/omnifocus-3-custom-inspectors.png)
 - Designed customizable inspectors to allow users to personalize their experience, reducing cognitive load and enhancing usability.
 ## User-Centered Metrics and Tracking
 To evaluate the effectiveness of our design improvements, we tracked several key user-centered metrics:
@@ -91,6 +89,7 @@ To evaluate the effectiveness of our design improvements, we tracked several key
 - **Feature Adoption Metrics**: Customizable inspectors saw a 46% uptake within the first month, demonstrating users valued personalization.
 - **Support Tickets and Feedback**: The number of tickets related to confusion around contexts dropped significantly, indicating a clearer, more intuitive user experience.
 ## Results and Key Takeaways
+![OmniFocus 2 on the right and OmniFocus 3 on the left](../../assets/content/casestudies/omnifocus-3-before-after.png)
 OmniFocus 3 launched to overwhelmingly positive feedback:
 - **User Adoption**: Daily active users increased by 12% on Mac and 17% on iOS, compared to a 5% growth rate for the previous version. OmniFocus 3 for iOS remained a top-25 grossing app for six weeks in the App Store, while the Mac version held a top-25 position for four weeks, doubling the duration of the prior version.
 - **Media Reception**: Rosemary Orchard from MacStories praised the release, saying:
