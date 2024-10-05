@@ -133,6 +133,11 @@ Looking ahead, I envision product design at Michigan Software Labs evolving in s
 ## Visual Representation
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
     .container {
         display: flex;
         width: 80%;
@@ -148,14 +153,15 @@ Looking ahead, I envision product design at Michigan Software Labs evolving in s
         color: #fff;
     }
     .before {
-        background-color: #808080; /* Muted color */
+        background-color: #a85148; /* Muted color */
     }
     .after {
-        background-color: #4caf50; /* Vibrant color */
+        background-color: #f6c266; /* Vibrant color */
     }
     .section-title {
         font-size: 1.5em;
         margin-bottom: 10px;
+        font-weight: 800; /* Extra bold */
     }
     .metric {
         display: flex;
