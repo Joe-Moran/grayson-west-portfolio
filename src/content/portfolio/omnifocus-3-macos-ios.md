@@ -40,6 +40,7 @@ order: 2
 OmniFocus, a leading task management app, required a major update to address evolving user needs and maintain its competitive edge. As a key contributor to version 3, I worked closely with the CEO and product manager to define the scope of the release. 
 
 Our goal was to enhance the product based on user feedback—such as the need for more flexible tagging and improved calendar integration—and to ensure an enhanced user experience across Mac and iOS platforms. We gathered user insights through interviews, surveys, and usability testing, ensuring our design addressed real user needs and pain points.
+![OmniFocus 3 for iPad](../../assets/content/casestudies/omniFocus-3-wipad.png)
 ## Objectives and Responsibilities
 My responsibilities were key to the project's success, including:
 **Team Leadership & Strategy**
