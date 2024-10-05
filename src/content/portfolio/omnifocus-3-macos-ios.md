@@ -76,9 +76,11 @@ Throughout development, we faced several key challenges:
 - Used capsule shapes for tags in the outline view for readability
 - Managed tag clutter with an ellipsis/more tag system
 ### Enhancing Custom Perspectives
+![OmniFocus perspective modal window](../../assets/content/casestudies/omnifocus-3-perspectives-1.png)
 - Enhanced the perspective filter engine with the macOS predicate editor framework, allowing power users to create advanced filtering rules and customize workflows.
+![OmniFocus perspective options](../../assets/content/casestudies/omnifocus-3-perspectives-2.png)
 ### Improving Calendar Visualization
-![Improved OmniFocus calendar visalization](../../assets/content/casestudies/omnifocu-calevents.png)
+![Improved OmniFocus calendar visualization](../../assets/content/casestudies/omnifocu-calevents.png)
 - Integrated calendar events into the Forecast perspective, using users' calendar app colors for differentiation, allowing easy association between meetings and tasks.
 ### Customizable Inspectors (iOS)
 ![OmniFocus 3 custom inspectors](../../assets/content/casestudies/omnifocus-3-custom-inspectors.png)
