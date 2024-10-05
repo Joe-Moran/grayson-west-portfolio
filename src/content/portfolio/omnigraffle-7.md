@@ -73,20 +73,20 @@ We employed a mix of qualitative and quantitative research methods to guide the 
             font-family: Arial, sans-serif;
         }
         th, td {
-            border: 1px solid #dddddd;
+            border: 1px solid #f6c266;
             text-align: left;
             padding: 8px;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #a85148;
         }
     </style>
     
     <table>
         <thead>
             <tr>
-                <th>Category</th>
-                <th>Details</th>
+                <th style="color: #f6c266;">Category</th>
+                <th style="color: #f6c266;">Details</th>
             </tr>
         </thead>
         <tbody>
