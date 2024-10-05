@@ -62,9 +62,16 @@ I was brought in to take charge of the web application's product design, UX desi
 To tackle these challenges head-on, I implemented a series of strategic measures:
 ![Early Hearsee wireframe](../../assets/content/casestudies/hearsee-early-wireframe.png)
 ### Design Re-evaluation and Alignment 
-When I joined the project, I found that the existing designs were creating limitations for our development team. To address this, I initiated a comprehensive review of the current web application design. I worked closely with the development team to understand their constraints and requirements. Together, we realigned the UX design with technical feasibility, ensuring that our designs provided the necessary flexibility for implementation. This process involved numerous collaborative sessions where we dissected each design decision and its implications for development.
+When I joined the project, I found that the existing designs were creating limitations for our development team. To address this:
+- I initiated a comprehensive review of the current web application design.
+- I worked closely with the development team to understand their constraints and requirements.
+- Together, we realigned the UX design with technical feasibility, ensuring that our designs provided the necessary flexibility for implementation.
+- This process involved numerous collaborative sessions where we dissected each design decision and its implications for development.
 ### Feature Integration and Conceptualization
-Many potential features were still in the conceptual stage, untouched by design or development. When discussed, these elements often clashed with existing designs. To resolve this, I organized cross-functional workshops bringing together design, development, and product teams. We conceptualized these features together, ensuring they were both technically feasible and aligned with our overall design strategy. This collaborative approach helped us avoid potential conflicts down the line and created a shared vision for the product.
+Many potential features were still in the conceptual stage, untouched by design or development. When discussed, these elements often clashed with existing designs. To resolve this:
+- I organized cross-functional workshops bringing together design, development, and product teams.
+- We conceptualized these features together, ensuring they were both technically feasible and aligned with our overall design strategy.
+- This collaborative approach helped us avoid potential conflicts down the line and created a shared vision for the product.
 ### Enhanced Communication and Collaboration
 I noticed that there was significant friction between the design and development teams, hampering productive discussions. To address this, I implemented several communication-enhancing strategies:
 - Regular sync-up meetings where team members could openly discuss challenges and ideas
