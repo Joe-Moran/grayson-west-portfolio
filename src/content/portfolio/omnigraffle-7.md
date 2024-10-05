@@ -91,6 +91,7 @@ We introduced an innovative artboard feature that treated artboards like layers,
 ![OmniGraffle bezier point editing](../../assets/content/casestudies/omnigraffle-beizer.png)
 We simplified the process of adding or removing vector points, allowing users to do so without switching tools. This enhancement provided a faster and more fluid editing experience. Users reported being able to make precise adjustments more efficiently, significantly reducing the time spent on vector manipulation and contributing to a smoother workflow.
 ### 3. Convert Lines and Text to Shapes
+![Converting fonts to outlines in OmniGraffle](../../assets/content/casestudies/omnigraffle-font-outlines.png)
 Responding to user requests, we added the ability to convert strokes and text into shapes while preserving aesthetics with minimal vector points. This functionality was seamlessly integrated into the existing menu for easy access.
 ### 4. Keyboard Shortcuts
 To improve ease of use, we relocated keyboard shortcuts to a modal window accessible via the OmniGraffle menu. Tools and menus were clearly listed, and single-key functionality was introduced. We also added warning icons for conflicting shortcuts, enhancing navigation efficiency.
