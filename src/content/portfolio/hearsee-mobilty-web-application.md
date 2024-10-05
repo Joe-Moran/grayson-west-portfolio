@@ -62,6 +62,7 @@ I was brought in to take charge of the web application's product design, UX desi
 To tackle these challenges head-on, I implemented a series of strategic measures:
 ![Early Hearsee wireframe](../../assets/content/casestudies/hearsee-early-wireframe.png)
 ### Design Re-evaluation and Alignment 
+![Early user flow in the web app](../../assets/content/casestudies/hearsee-flowchart.png)
 When I joined the project, I found that the existing designs were creating limitations for our development team. To address this:
 - I initiated a comprehensive review of the current web application design.
 - I worked closely with the development team to understand their constraints and requirements.
