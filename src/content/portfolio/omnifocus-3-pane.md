@@ -32,7 +32,7 @@ order: 4
 ![OmniFocus 3 for iPad with new 3 panes](../../assets/content/casestudies/omnifocus-pane-1.png)
 ## Background
 The most requested feature for OmniFocus 3 for iPad was a user experience that resembled the Mac application. Users wanted the familiarity and productivity boost of the Mac interface, describing it as "intuitive" and "essential for power users."
-
+![OmniFocus 3 in dark mode](../../assets/content/casestudies/omnifocus-3-dark.png)
 The core problem was that the existing iPad interface did not provide the same level of efficiency or intuitive control as the Mac version. Users were frustrated with performing extra steps to access key features, affecting their productivity. The goal was to bridge this gap and provide a consistent experience across platforms that would enhance both familiarity and ease of use.
 ## User Research Details
 To address this problem, I led the research process by gathering user insights and identifying key requirements. The research involved user interviews, surveys, and usability testing with a sample of 50 users, including both new and experienced power users. Key findings highlighted the need for a more efficient navigation structure and the importance of reducing the number of taps required to access frequently used features. Users found the existing iPad interface cumbersome compared to the Mac version.
