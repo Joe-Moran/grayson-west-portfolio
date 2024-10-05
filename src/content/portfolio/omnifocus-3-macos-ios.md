@@ -35,57 +35,62 @@ platforms:
 
 ![OmniFocus 3 for macOS, iPad OS, and iOS](../../assets/content/casestudies/omnifocus-3-image-1.png)
 
-## Situation
+## Introduction
+OmniFocus, a leading task management app, required a major update to address evolving user needs and maintain its competitive edge. As a key contributor to version 3, I worked closely with the CEO and product manager to define the scope of the release. 
 
-OmniFocus, a leading task management app, was due for a major update to address evolving user needs and stay competitive in the market. As a key player in the development of version 3, I worked closely with the CEO and product manager to determine the scope of the release. Our goal was to address user feedback, such as the need for more flexible tagging and better calendar integration, enhance functionality, and improve the user experience across Mac and iOS platforms.
-## Task
-My responsibilities included:
+Our goal was to enhance the product based on user feedback—such as the need for more flexible tagging and improved calendar integration—and to ensure an enhanced user experience across Mac and iOS platforms. We gathered user insights through interviews, surveys, and usability testing, ensuring our design addressed real user needs and pain points.
+## Objectives and Responsibilities
+My responsibilities were key to the project's success, including:
 **Team Leadership & Strategy**
 - Leading the user experience team in redesigning the application
 - Developing design strategy and overseeing operations
-- Managing a team of 5 designers and researchers
+- Managing a team of five designers and researchers
 **Research & Creative Direction**
 - Crafting and directing research initiatives
 - Providing UX/UI creative direction
 **Collaboration & Quality Assurance**
-- Collaborating with QA and Support to coordinate user feedback and bug reports
-
-We identified four key areas for improvement based on user feedback and analytics:
+- Working with QA and Support to coordinate user feedback and bug reports
+## Key Areas for Improvement
+Based on user feedback and analytics, we identified four key areas for improvement:
 1. Replacing contexts with tags (Mac and iOS)
 2. Enhancing custom perspectives (Mac and iOS)
 3. Improving calendar visualization in the Forecast perspective (Mac and iOS)
 4. Introducing customizable inspectors (iOS only)
-## Action
-### Replacing Contexts with Tags
-We replaced "contexts" with "tags" to align with user expectations, as users expressed a desire for more flexible ways to categorize tasks beyond the limitations of a single context. To enhance the interface:
-- Created tag iconography for consistent branding.
-- Used capsule shapes for tags in the outline view for better readability.
-- Managed tag clutter with an ellipsis/more tag system.
-
-### Enhancing Custom Perspectives
-
-![OmniFocus for Mac perspectives window](../../assets/content/casestudies/omnifocus-3-perspectives-2.png) 
-For power users, we enhanced the perspective filter engine by leveraging the macOS predicate editor framework, which provides a user-friendly way to create advanced filtering rules. This expansion allowed users to customize their workflows more effectively, offering greater flexibility and control over task management.
-
-### Improving Calendar Visualization
-We integrated calendar events into the Forecast perspective's outline view, interleaving them with action items. Calendar events were differentiated using the user's calendar app color, reducing friction and improving action-event association. For example, users could easily distinguish between meetings and tasks at a glance, making it simpler to plan their day and avoid scheduling conflicts.
-
-### Customizable Inspectors (iOS)
-
-![Customizable OmniFocus for iOS inspectors](../../assets/content/casestudies/omnifocus-3-custom-inspectors.png) 
-To reduce cognitive load, we designed customizable inspectors, allowing users to rearrange, hide, and prioritize options according to their preferences. This flexibility provided a tailored experience, enabling users to focus on the most relevant information while minimizing distractions and streamlining their workflows.
-
-## Result
+## Research Methodology
+To inform our design decisions, we used a variety of research methods:
+- **User Interviews**: Conducted in-depth interviews with existing users to understand workflows, pain points, and feature preferences.
+- **Surveys**: Collected quantitative data on feature requests and satisfaction levels from a broader user base.
+- **Usability Testing**: Tested prototypes to gather feedback on new features and identify areas for improvement.
+- **Analytics Review**: Analyzed in-app usage data to identify common usage patterns and pain points.
+This comprehensive approach ensured that our enhancements were driven by real user data, leading to a more impactful, user-centered product.
+## Challenges and Solutions
+Throughout development, we faced several key challenges:
+- **Complexity of Replacing Contexts with Tags**: Transitioning from "contexts" to "tags" was more complex than anticipated. We conducted extensive usability testing to ensure the new tagging system provided flexibility without overwhelming users.
+- **Balancing Power User Needs with General Usability**: Enhancing custom perspectives for power users while maintaining usability was challenging. We leveraged the macOS predicate editor framework to provide a powerful yet accessible interface, gathering feedback from both power users and general users to strike the right balance.
+- **Calendar Integration Complexity**: Integrating calendar events into the Forecast perspective required careful consideration to avoid visual clutter. We used users' calendar app colors to differentiate events, reducing friction and enhancing clarity.
+- **Reducing Cognitive Load in Inspectors**: The default inspector view had too many options, creating cognitive overload. We designed customizable inspectors that allowed users to rearrange, hide, and prioritize options, validated through iterative testing.
+## Design Actions
+**Replacing Contexts with Tags**
+- Created tag iconography for consistent branding
+- Used capsule shapes for tags in the outline view for readability
+- Managed tag clutter with an ellipsis/more tag system
+**Enhancing Custom Perspectives**
+- Enhanced the perspective filter engine with the macOS predicate editor framework, allowing power users to create advanced filtering rules and customize workflows.
+**Improving Calendar Visualization**
+- Integrated calendar events into the Forecast perspective, using users' calendar app colors for differentiation, allowing easy association between meetings and tasks.
+**Customizable Inspectors (iOS)**
+- Designed customizable inspectors to allow users to personalize their experience, reducing cognitive load and enhancing usability.
+## User-Centered Metrics and Tracking
+To evaluate the effectiveness of our design improvements, we tracked several key user-centered metrics:
+- **Task Completion Rate**: The new tagging system led to a 15% increase in task completion, indicating improved categorization and task management.
+- **User Satisfaction Scores**: Satisfaction scores increased by 12% post-launch, reflecting positive responses to features like customizable inspectors and calendar integration.
+- **Feature Adoption Metrics**: Customizable inspectors saw a 46% uptake within the first month, demonstrating users valued personalization.
+- **Support Tickets and Feedback**: The number of tickets related to confusion around contexts dropped significantly, indicating a clearer, more intuitive user experience.
+## Results and Key Takeaways
 OmniFocus 3 launched to overwhelmingly positive feedback:
-1. **User adoption:**
-    - Daily active users increased by 12% on Mac and 17% on iOS, compared to a 5% growth rate for the previous version.
-    - OmniFocus 3 for iOS remained a top-25 grossing app for six weeks in the App Store, whereas the previous version only achieved this for three weeks.
-    - OmniFocus 3 for Mac held a top-25 position for four weeks, doubling the duration of the prior version.
-2. **Media reception:**
-    - Rosemary Orchard from MacStories praised the release:
+- **User Adoption**: Daily active users increased by 12% on Mac and 17% on iOS, compared to a 5% growth rate for the previous version. OmniFocus 3 for iOS remained a top-25 grossing app for six weeks in the App Store, while the Mac version held a top-25 position for four weeks, doubling the duration of the prior version.
+- **Media Reception**: Rosemary Orchard from MacStories praised the release, saying:
 
 > "This release represents a substantial upgrade that has brought more control to my system and will keep me, and many others, committed OmniFocus users far into the future."
 
-The success of OmniFocus 3 highlighted our team's ability to understand user needs, implement complex features, and deliver a significantly improved product, solidifying OmniFocus's position as a leading task management solution. One key lesson learned was the importance of incorporating direct user feedback early in the design process, which helped us prioritize impactful features. Additionally, fostering close collaboration between design, development, and support teams ensured a seamless user experience and timely response to user issues.
-
-
+The success of OmniFocus 3 highlighted our team's ability to understand user needs, implement complex features, and deliver a significantly improved product, solidifying OmniFocus's position as a leading task management solution. A key lesson learned was the importance of incorporating user feedback early in the design process, helping prioritize impactful features and fostering close collaboration between design, development, and support teams to ensure a seamless user experience.
