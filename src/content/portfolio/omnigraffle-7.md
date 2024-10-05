@@ -25,8 +25,8 @@ preview:
 screenshot: # An image representing the UI example of the product. Used in preview cards
   image: '../../assets/content/casestudies/2020-03-27.png'
   altText: ''
-background: '../../assets/content/backgrounds/1.jpg' # The background image used for preview cards
-icon: '../../assets/content/SVGs/1.svg'
+background: '../../assets/content/backgrounds/30.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/30.svg'
 platforms:
   - Mac OS
 order: 1
