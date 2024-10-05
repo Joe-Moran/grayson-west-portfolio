@@ -133,7 +133,7 @@ Looking ahead, I envision product design at Michigan Software Labs evolving in s
 ## Visual Representation
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+        @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
     body {
         font-family: 'Poppins', sans-serif;
@@ -181,38 +181,38 @@ Looking ahead, I envision product design at Michigan Software Labs evolving in s
     <div class="before">
         <div class="section-title">Before Product Design</div>
         <div class="metric">
-            <div class="metric-icon">📅</div> <!-- Calendar icon -->
+            <span class="material-icons metric-icon">event</span> <!-- Google Calendar icon -->
             <div class="metric-text">Project Completion Time: 6 months</div>
         </div>
         <div class="metric">
-            <div class="metric-icon">⭐</div> <!-- Half-filled star icon -->
+            <span class="material-icons metric-icon">star_half</span> <!-- Half-filled star icon -->
             <div class="metric-text">Client Satisfaction: 65%</div>
         </div>
         <div class="metric">
-            <div class="metric-icon">↻</div> <!-- Circular arrow icon -->
+            <span class="material-icons metric-icon">autorenew</span> <!-- Circular arrow icon -->
             <div class="metric-text">Rework Percentage: 40%</div>
         </div>
         <div class="metric">
-            <div class="metric-icon">🎯</div> <!-- Speedometer icon -->
+            <span class="material-icons metric-icon">speed</span> <!-- Speedometer icon -->
             <div class="metric-text">Team Efficiency Score: 60%</div>
         </div>
     </div>
     <div class="after">
         <div class="section-title">After Product Design</div>
         <div class="metric">
-            <div class="metric-icon">📅</div> <!-- Calendar icon -->
+            <span class="material-icons metric-icon">event</span> <!-- Google Calendar icon -->
             <div class="metric-text">Project Completion Time: 4 months</div>
         </div>
         <div class="metric">
-            <div class="metric-icon">⭐</div> <!-- Full star icon -->
+            <span class="material-icons metric-icon">star</span> <!-- Full star icon -->
             <div class="metric-text">Client Satisfaction: 95%</div>
         </div>
         <div class="metric">
-            <div class="metric-icon">↻</div> <!-- Circular arrow icon -->
+            <span class="material-icons metric-icon">autorenew</span> <!-- Circular arrow icon -->
             <div class="metric-text">Rework Percentage: 15%</div>
         </div>
         <div class="metric">
-            <div class="metric-icon">🎯</div> <!-- Speedometer icon -->
+            <span class="material-icons metric-icon">speed</span> <!-- Speedometer icon -->
             <div class="metric-text">Team Efficiency Score: 90%</div>
         </div>
     </div>
