@@ -57,11 +57,11 @@ The key challenge was creating a three-pane solution that functioned seamlessly 
 ### Challenges and Resolutions Summary
 To provide a quick reference, here is a summary of the key challenges we faced and how we resolved them during the design process:
 
-|**Challenge**|**Resolution**|
-|---|---|
-|Ensuring the three panes adapted to different screen sizes without overwhelming the UI.|Developed a flexible grid system and dynamic resizing rules based on usability testing feedback.|
-|Making the layout compatible with Split View and Slide Over modes.|Implemented a cascading dismissal approach, refining transitions to improve user experience.|
-|Allowing users to keep specific panes visible while navigating.|Introduced a "pinning" feature with added visual indicators to clarify interactions.|
+| **Challenge**                                                                           | **Resolution**                                                                                   |
+| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Ensuring the three panes adapted to different screen sizes without overwhelming the UI. | Developed a flexible grid system and dynamic resizing rules based on usability testing feedback. |
+| Making the layout compatible with Split View and Slide Over modes.                      | Implemented a cascading dismissal approach, refining transitions to improve user experience.     |
+| Allowing users to keep specific panes visible while navigating.                         | Introduced a "pinning" feature with added visual indicators to clarify interactions.             |
 
 ### Iterative Prototyping and Key Challenges
 During the prototyping phase, we conducted multiple iterations to address the specific challenges that arose:
