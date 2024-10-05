@@ -32,7 +32,7 @@ platforms:
 order: 1
 ---
 
-![OmniGraffle 7 for macOS](../../assets/content/casestudies/omngraffle-macbook.png)
+![OmniGraffle 7 for macOS](../../assets/content/casestudies/omnigraffle-macbook.png)
 
 ## Situation
 OmniGraffle is a vector-based diagramming and illustration tool for macOS and iOS. As the creative director for the end-to-end redesign of OmniGraffle, I managed research, design operations, and a talented team of UX designers, UI designers, and researchers. This effort led to a 23% increase in download-to-trial conversion rates and positioned OmniGraffle 7 as a top-10 grossing app on the App Store for seven weeks.
