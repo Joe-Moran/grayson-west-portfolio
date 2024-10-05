@@ -45,11 +45,7 @@ This kind of feedback helped shape the design requirements and directly informed
 
 ### Persona Development
 To understand user needs more thoroughly, we created user personas and journey maps, highlighting workflows and common pain points. The personas were developed based on insights gathered during user interviews and surveys, focusing on users' specific needs, behaviors, and goals. By creating personas to represent different user segments, such as new users and power users, we were able to tailor our design solutions effectively.
-
-One primary persona was Alex, a university student who used OmniFocus to manage coursework, assignments, and extracurricular activities. Alex needed a simple and intuitive interface that allowed him to quickly create and manage tasks without spending excessive time navigating the app. He valued ease of use and required an interface that supported his busy schedule, helping him stay organized with minimal effort.
-
-Another key persona was Dr. Thompson, a university professor and power user of OmniFocus. Dr. Thompson managed multiple research projects, classes, and administrative responsibilities. He relied heavily on the app's advanced features and appreciated having multiple panes visible simultaneously to track different aspects of his work. Dr. Thompson needed a flexible and powerful interface that enabled rapid switching between tasks and the ability to customize the workspace according to his needs. He prioritized efficiency and needed a layout that provided maximum control over his workflow.
-
+![OmniFocus personas](../../assets/content/casestudies/omnifocus-pane-persona.png)
 These personas helped us identify with key user segments: power users who required quick access to multiple views, and new users who benefited from familiar, intuitive navigation. By focusing on these personas, we ensured that our design decisions directly addressed the unique needs of each user type.
 ## Goals
 Our goal was to develop a flexible framework that allowed users to view three different areas of OmniFocus simultaneously: the perspective view (which provides a high-level overview of tasks and projects), the project view (which shows detailed information about specific projects), and the inspector panel (which allows users to view and edit additional details for selected items). This enhancement aimed to provide more context for database content while minimizing the number of taps required to access frequently used UI elements.
