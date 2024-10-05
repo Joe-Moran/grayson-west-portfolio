@@ -25,12 +25,13 @@ preview:
 screenshot: # An image representing the UI example of the product. Used in preview cards
   image: '../../assets/content/casestudies/omnifocus-3-image-1.png'
   altText: ''
-background: '../../assets/content/backgrounds/1.jpg' # The background image used for preview cards
-icon: '../../assets/content/SVGs/1.svg'
+background: '../../assets/content/backgrounds/29.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/29.svg'
 platforms:
   - iOS
   - MacOS
   - iPad OS
+order: 2
 ---
 
 ![OmniFocus 3 for macOS, iPad OS, and iOS](../../assets/content/casestudies/omnifocus-3-image-1.png)
@@ -74,10 +75,13 @@ Throughout development, we faced several key challenges:
 - Created tag iconography for consistent branding
 - Used capsule shapes for tags in the outline view for readability
 - Managed tag clutter with an ellipsis/more tag system
+
 **Enhancing Custom Perspectives**
 - Enhanced the perspective filter engine with the macOS predicate editor framework, allowing power users to create advanced filtering rules and customize workflows.
+
 **Improving Calendar Visualization**
 - Integrated calendar events into the Forecast perspective, using users' calendar app colors for differentiation, allowing easy association between meetings and tasks.
+
 **Customizable Inspectors (iOS)**
 - Designed customizable inspectors to allow users to personalize their experience, reducing cognitive load and enhancing usability.
 ## User-Centered Metrics and Tracking
