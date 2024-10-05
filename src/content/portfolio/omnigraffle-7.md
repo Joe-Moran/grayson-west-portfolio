@@ -29,7 +29,7 @@ background: '../../assets/content/backgrounds/30.jpg' # The background image use
 icon: '../../assets/content/SVGs/30.svg'
 platforms:
   - Mac OS
-order: 1
+order: 2
 ---
 
 ![OmniGraffle 7 for macOS](../../assets/content/casestudies/omnigraffle-macbook.png)

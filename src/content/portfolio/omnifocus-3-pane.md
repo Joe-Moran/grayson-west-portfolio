@@ -27,7 +27,7 @@ background: '../../assets/content/casestudies/omnifocus-pane-1.png' # The backgr
 icon: '../../assets/content/SVGs/28.svg'
 platforms:
   - iPad OS
-order: 3
+order: 4
 ---
 
 ## Background

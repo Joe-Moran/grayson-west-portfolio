@@ -31,7 +31,7 @@ platforms:
   - iOS
   - MacOS
   - iPad OS
-order: 2
+order: 3
 ---
 
 ![OmniFocus 3 for macOS, iPad OS, and iOS](../../assets/content/casestudies/omnifocus-3-image-1.png)
