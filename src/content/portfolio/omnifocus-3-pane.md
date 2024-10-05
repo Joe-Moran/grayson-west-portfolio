@@ -62,10 +62,12 @@ To provide a quick reference, here is a summary of the key challenges we faced a
 | Allowing users to keep specific panes visible while navigating.                         | Introduced a "pinning" feature with added visual indicators to clarify interactions.             |
 
 ### Iterative Prototyping and Key Challenges
+![3 pane prototype](../../assets/content/casestudies/iPad+Pro-Landscape-Full.png)
 During the prototyping phase, we conducted multiple iterations to address the specific challenges that arose:
-- **Iteration 1: Initial Layout Design**
-    - **Challenge**: Ensuring the three panes could adapt to different screen sizes without overwhelming the user interface.
-    - **Solution**: We started with a flexible grid system and conducted usability testing to determine the optimal sizing for each pane. Feedback indicated that the original layout was too cluttered on smaller screens, which led us to create more dynamic resizing rules.
+#### Iteration 1: Initial Layout Design
+   - **Challenge**: Ensuring the three panes could adapt to different screen sizes without overwhelming the user interface.
+   - **Solution**: We started with a flexible grid system and conducted usability testing to determine the optimal sizing for each pane. Feedback indicated that the original layout was too cluttered on smaller screens, which led us to create more dynamic resizing rules.
+![3 pane prototype](../../assets/content/casestudies/iPad+Pro-Portrait-Full.png)  
 - **Iteration 2: Multitasking Mode Adaptation**
     - **Challenge**: Making the three-pane layout compatible with Split View and Slide Over multitasking modes.
     - **Solution**: We implemented a cascading dismissal approach, where the right-side inspector was dismissed first as the screen size narrowed. User testing revealed that this approach worked well for multitasking but needed smoother transitions, which we refined in subsequent iterations.
