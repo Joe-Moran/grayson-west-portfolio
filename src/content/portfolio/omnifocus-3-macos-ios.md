@@ -72,9 +72,11 @@ Throughout development, we faced several key challenges:
 - **Reducing Cognitive Load in Inspectors**: The default inspector view had too many options, creating cognitive overload. We designed customizable inspectors that allowed users to rearrange, hide, and prioritize options, validated through iterative testing.
 ## Design Actions
 ### Replacing Contexts with Tags
+ ![OmniFocus 3 tag perspective](../../assets/content/casestudies/omnifocus-3-perspectives-1.png)
 - Created tag iconography for consistent branding
 - Used capsule shapes for tags in the outline view for readability
 - Managed tag clutter with an ellipsis/more tag system
+![OmniFocus 3 tag view options](../../assets/content/casestudies/omnifocus-3-perspectives-2.png)
 ### Enhancing Custom Perspectives
 ![OmniFocus perspective modal window](../../assets/content/casestudies/omnifocus-3-perspectives-1.png)
 - Enhanced the perspective filter engine with the macOS predicate editor framework, allowing power users to create advanced filtering rules and customize workflows.
