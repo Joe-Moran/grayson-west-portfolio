@@ -80,7 +80,9 @@ Our renewed approach and collaborative effort yielded impressive outcomes:
 - We completed the web application development within the projected timeline, aligning it seamlessly with the existing mobile solutions.
 - The redesigned web interface reduced building mapping time by 300%, a crucial improvement for facility managers.
 - 98% of users reported that the integrated system (mobile apps + web portal) significantly improved their navigation experience.
-- We created a flexible, scalable design that could easily adapt to changing building needs and future feature additions. Most importantly, we transformed a stalled project into a dynamic, user-friendly system that's set to revolutionize indoor navigation for the visually impaired. As James Bloomfield, CEO of Hearsee Mobility, noted, "This technology isn't just about navigation—it's about independence and opening up a world of possibilities for millions."
+- We created a flexible, scalable design that could easily adapt to changing building needs and future feature additions. Most importantly, we transformed a stalled project into a dynamic, user-friendly system that's set to revolutionize indoor navigation for the visually impaired. As James Bloomfield, CEO of Hearsee Mobility, noted:
+
+> "This technology isn't just about navigation—it's about independence and opening up a world of possibilities for millions."
 
 The Hearsee web application, working in tandem with the mobile apps and RFID-scanning cane, has created a comprehensive ecosystem for indoor navigation. It's not just about finding a specific location; it's about providing a sense of freedom that many take for granted.
 
