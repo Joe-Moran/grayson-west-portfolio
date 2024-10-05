@@ -61,7 +61,9 @@ We collaborated closely with Omni's engineering team to ensure the proposed solu
 - **Artboards Implementation**: Developing the Artboards feature presented a significant challenge due to technical limitations with handling layers in the existing drawing model. By working alongside engineering, we developed a solution that treated artboards like layers while maintaining system performance, resulting in a smooth user experience.
 ## Key Improvements
 ### 1. Artboards
-![OmniGraffle 7 Artboard layer(../../assets/content/casestudies/omnigraffle-arrow-name.png)
+
+![OmniGraffle 7 Artboard layer](../../assets/content/casestudies/omnigraffle-arrow-name.png)
+
 We introduced an innovative artboard feature that treated artboards like layers, offering users increased flexibility and efficiency. For example, one of our users, a graphic designer working on a complex website layout, found that artboards significantly streamlined her workflow. She could easily organize different sections of the site within individual artboards, export them at required resolutions, and manage her project more effectively without losing track of components.
 ### 2. Bezier Point Editing Tool
 We simplified the process of adding or removing vector points, allowing users to do so without switching tools. This enhancement provided a faster and more fluid editing experience. Users reported being able to make precise adjustments more efficiently, significantly reducing the time spent on vector manipulation and contributing to a smoother workflow.
