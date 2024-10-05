@@ -55,16 +55,7 @@ We employed a mix of qualitative and quantitative research methods to guide the 
 - **Participants**: 15 users experienced with OmniGraffle 6.
 - **Method**: In-depth interviews with open-ended questions.
 #### Key Insights:
-1. **Feature Requests**:
-    - **60%** requested better beizer point editing.
-    - Example: Creating custom vector shapes.
-2. **Pain Points**:
-    - **50%** found the lack of artboards in OmniGraffle 6 a deal breaker.
-    - Issues with finding essential features.
-3. **Goals and Expectations**:
-    - **70%** emphasized the need to work more quickly.
-    - Focused on improving productivity and reducing unnecessary steps.
-    
+
     <style>
         table {
             width: 80%;
