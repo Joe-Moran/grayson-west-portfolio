@@ -89,15 +89,11 @@ We collaborated closely with Omni's engineering team to ensure the proposed solu
 We introduced an innovative artboard feature that treated artboards like layers, offering users increased flexibility and efficiency. For example, one of our users, a graphic designer working on a complex website layout, found that artboards significantly streamlined her workflow. She could easily organize different sections of the site within individual artboards, export them at required resolutions, and manage her project more effectively without losing track of components.
 ### 2. Bezier Point Editing Tool
 We simplified the process of adding or removing vector points, allowing users to do so without switching tools. This enhancement provided a faster and more fluid editing experience. Users reported being able to make precise adjustments more efficiently, significantly reducing the time spent on vector manipulation and contributing to a smoother workflow.
-![OmniGraffle beizer point editing.](../../assets/content/casestudies/omnigraffle-beizer.png)
 ### 3. Convert Lines and Text to Shapes
-![OmniGraffle 7 Artboard layer](../../assets/content/casestudies/omnigraffle-font-outlines.png)
 Responding to user requests, we added the ability to convert strokes and text into shapes while preserving aesthetics with minimal vector points. This functionality was seamlessly integrated into the existing menu for easy access.
 ### 4. Keyboard Shortcuts
-![OmniGraffle 7 Artboard layer](../../assets/content/casestudies/omnigraffle-keyboard-short.png)
 To improve ease of use, we relocated keyboard shortcuts to a modal window accessible via the OmniGraffle menu. Tools and menus were clearly listed, and single-key functionality was introduced. We also added warning icons for conflicting shortcuts, enhancing navigation efficiency.
 ### 5. New Onboarding Experience
-![OmniGraffle 7 Artboard layer](../../assets/content/casestudies/omnigraffle-onboarding.png)
 Based on analytics and user feedback, we revamped the first-run onboarding experience. We added a short introductory video showcasing key features, a "What's New" section for updates, and a comprehensive walkthrough of the interface. These changes led to significant increases in download-to-trial conversion rates: 23% on the App Store and 16% on our website.
 ## Challenges and Solutions
 During the redesign process, we faced several challenges requiring creative problem-solving and cross-functional collaboration:
