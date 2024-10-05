@@ -64,69 +64,61 @@ We employed a mix of qualitative and quantitative research methods to guide the 
 3. **Goals and Expectations**:
     - **70%** emphasized the need to work more quickly.
     - Focused on improving productivity and reducing unnecessary steps.
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HTML Table Example</title>
-        <style>
-            table {
-                width: 80%;
-                border-collapse: collapse;
-                margin: 20px 0;
-                font-family: Arial, sans-serif;
-            }
-            th, td {
-                border: 1px solid #dddddd;
-                text-align: left;
-                padding: 8px;
-            }
-            th {
-                background-color: #f2f2f2;
-            }
-        </style>
-    </head>
-    <body>
-        <table>
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Details</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Feature Requests</td>
-                    <td>
-                        <ul>
-                            <li><strong>60%</strong> requested better Bezier point editing.</li>
-                            <li>Example: Creating custom vector shapes.</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Pain Points</td>
-                    <td>
-                        <ul>
-                            <li><strong>50%</strong> found the lack of artboards in OmniGraffle 6 a deal breaker.</li>
-                            <li>Issues with finding essential features.</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Goals and Expectations</td>
-                    <td>
-                        <ul>
-                            <li><strong>70%</strong> emphasized the need to work more quickly.</li>
-                            <li>Focused on improving productivity and reducing unnecessary steps.</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </body>
-    </html>
+    
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Feature Requests</td>
+                <td>
+                    <ul>
+                        <li><strong>60%</strong> requested better Bezier point editing.</li>
+                        <li>Example: Creating custom vector shapes.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Pain Points</td>
+                <td>
+                    <ul>
+                        <li><strong>50%</strong> found the lack of artboards in OmniGraffle 6 a deal breaker.</li>
+                        <li>Issues with finding essential features.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Goals and Expectations</td>
+                <td>
+                    <ul>
+                        <li><strong>70%</strong> emphasized the need to work more quickly.</li>
+                        <li>Focused on improving productivity and reducing unnecessary steps.</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
 #### Usability Testing (Pre-Development Phase)
 - **Objective**: Identify areas for improvement in OmniGraffle 6.
