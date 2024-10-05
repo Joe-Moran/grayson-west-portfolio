@@ -88,6 +88,7 @@ We collaborated closely with Omni's engineering team to ensure the proposed solu
 ![OmniGraffle 7 Artboard layer](../../assets/content/casestudies/omnigraffle-arrow-name.png)
 We introduced an innovative artboard feature that treated artboards like layers, offering users increased flexibility and efficiency. For example, one of our users, a graphic designer working on a complex website layout, found that artboards significantly streamlined her workflow. She could easily organize different sections of the site within individual artboards, export them at required resolutions, and manage her project more effectively without losing track of components.
 ### 2. Bezier Point Editing Tool
+![OmniGraffle bezier point editing](../../assets/content/casestudies/omnigraffle-beizer.png)
 We simplified the process of adding or removing vector points, allowing users to do so without switching tools. This enhancement provided a faster and more fluid editing experience. Users reported being able to make precise adjustments more efficiently, significantly reducing the time spent on vector manipulation and contributing to a smoother workflow.
 ### 3. Convert Lines and Text to Shapes
 Responding to user requests, we added the ability to convert strokes and text into shapes while preserving aesthetics with minimal vector points. This functionality was seamlessly integrated into the existing menu for easy access.
