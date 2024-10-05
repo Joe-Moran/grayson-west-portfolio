@@ -41,11 +41,13 @@ Due to a confidentiality agreement, I can only share a limited amount of informa
 ## What is the Hearsee Mobility platform?
 Hearsee  mobility tech platform designed to help blind and visually impaired (BVI) people navigate indoor spaces more effectively. Utilizing RFID technology, it integrates specialized hardware within the handles of white canes, RFID tags placed throughout buildings, and a mobile app for seamless indoor navigation. As users walk by RFID tags, the cane's hardware reads the information and communicates it to the mobile app, which also acts as a navigation device to help users find their destination. A web application allows building managers to upload floor plans, place tags, and create routes for enhanced accessibility. Hearsee offers an affordable solution to bridge the gap between basic ADA requirements and true navigability for BVI individuals.
 ### Web App:
+![Hearsee web interface](../../assets/content/casestudies/hearsee-building-map.png)
 - Used to upload building floor plans.
 - Allows placement of RFID tags on the floor plan.
 - Enables users to create navigable routes.
 - Routes are uploaded to the cloud and accessible to the mobile app.
 ### Mobile App:
+![Hearsee mobile app](../../assets/content/casestudies/hearsee-app-3-iphones.png)
 - Connects with the white cane hardware via Bluetooth.
 - Receives information from RFID tags to assist in navigation.
 - Provides navigation guidance to users within the building.
