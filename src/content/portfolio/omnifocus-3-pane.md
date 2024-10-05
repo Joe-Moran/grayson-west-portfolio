@@ -29,7 +29,7 @@ platforms:
   - iPad OS
 order: 4
 ---
-
+![OmniFocus 3 for iPad with new 3 panes](../../assets/content/casestudies/omnifocus-pane-1.png)
 ## Background
 The most requested feature for OmniFocus 3 for iPad was a user experience that resembled the Mac application. Users wanted the familiarity and productivity boost of the Mac interface, describing it as "intuitive" and "essential for power users."
 
