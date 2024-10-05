@@ -55,62 +55,15 @@ We employed a mix of qualitative and quantitative research methods to guide the 
 - **Participants**: 15 users experienced with OmniGraffle 6.
 - **Method**: In-depth interviews with open-ended questions.
 #### Key Insights:
-
-    <style>
-        table {
-            width: 80%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-family: Arial, sans-serif;
-        }
-        th, td {
-            border: 1px solid #f6c266;
-            text-align: left;
-            padding: 8px;
-        }
-        th {
-            background-color: #a85148;
-        }
-    </style>
-    
-    <table>
-        <thead>
-            <tr>
-                <th style="color: #f6c266;">Category</th>
-                <th style="color: #f6c266;">Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Feature Requests</td>
-                <td>
-                    <ul>
-                        <li><strong>60%</strong> requested better Bezier point editing.</li>
-                        <li>Example: Creating custom vector shapes.</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>Pain Points</td>
-                <td>
-                    <ul>
-                        <li><strong>50%</strong> found the lack of artboards in OmniGraffle 6 a deal breaker.</li>
-                        <li>Issues with finding essential features.</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>Goals and Expectations</td>
-                <td>
-                    <ul>
-                        <li><strong>70%</strong> emphasized the need to work more quickly.</li>
-                        <li>Focused on improving productivity and reducing unnecessary steps.</li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
+1. **Feature Requests**:
+    - **60%** requested better beizer point editing.
+    - Example: Creating custom vector shapes.
+2. **Pain Points**:
+    - **50%** found the lack of artboards in OmniGraffle 6 a deal breaker.
+    - Issues with finding essential features.
+3. **Goals and Expectations**:
+    - **70%** emphasized the need to work more quickly.
+    - Focused on improving productivity and reducing unnecessary steps.
 #### Usability Testing (Pre-Development Phase)
 - **Objective**: Identify areas for improvement in OmniGraffle 6.
 - **Participants**: 10 users with representative use cases.
