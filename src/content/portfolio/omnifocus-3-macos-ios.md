@@ -78,6 +78,7 @@ Throughout development, we faced several key challenges:
 ### Enhancing Custom Perspectives
 - Enhanced the perspective filter engine with the macOS predicate editor framework, allowing power users to create advanced filtering rules and customize workflows.
 ### Improving Calendar Visualization
+![Improved OmniFocus calendar visalization](../../assets/content/casestudies/omnifocu-calevents.png)
 - Integrated calendar events into the Forecast perspective, using users' calendar app colors for differentiation, allowing easy association between meetings and tasks.
 ### Customizable Inspectors (iOS)
 ![OmniFocus 3 custom inspectors](../../assets/content/casestudies/omnifocus-3-custom-inspectors.png)
