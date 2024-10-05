@@ -23,12 +23,11 @@ preview:
 screenshot: # An image representing the UI example of the product. Used in preview cards
   image: '../../assets/content/casestudies/2020-03-27.png'
   altText: ''
-background: '../../assets/content/backgrounds/1.jpg' # The background image used for preview cards
-icon: '../../assets/content/SVGs/1.svg'
+background: '../../assets/content/backgrounds/25.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/25.svg'
 platforms:
   - Process
-  - Mobile
-  - Web
+order: 5
 ---
 ## Situation
 During my nearly two years at Michigan Software Labs, I had the opportunity to transform the design department by introducing a user-centered design philosophy and implementing cross-functional team workshops to enhance product design and team collaboration. While I can't share specific projects due to confidentiality agreements, I can highlight one public project, Hearsee Mobility, which focused on creating an accessible navigation solution for visually impaired users, discussed in a dedicated case study. Beyond that, I want to share the broader story of how I helped revolutionize the design process at Michigan Software Labs and the valuable insights I gained as Design Manager.

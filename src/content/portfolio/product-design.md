@@ -28,7 +28,7 @@ background: '../../assets/content/backgrounds/26.jpg' # The background image use
 icon: '../../assets/content/SVGs/26.svg'
 platforms:
   - Process
-order: 5
+order: 6
 ---
 
 ## Situation
