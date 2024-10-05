@@ -32,7 +32,7 @@ platforms:
 order: 1
 ---
 
-![OmniGraffle 7 for macOS](../../assets/content/casestudies/omngraffle-image-1.png)
+![OmniGraffle 7 for macOS](../../assets/content/casestudies/omngraffle-macbook.png)
 
 ## Situation
 OmniGraffle is a vector-based diagramming and illustration tool for macOS and iOS. As the creative director for the end-to-end redesign of OmniGraffle, I managed research, design operations, and a talented team of UX designers, UI designers, and researchers. This effort led to a 23% increase in download-to-trial conversion rates and positioned OmniGraffle 7 as a top-10 grossing app on the App Store for seven weeks.
@@ -49,6 +49,30 @@ For the OmniGraffle 7.0 release, I led the UX team in research to identify user 
 We employed a mix of qualitative and quantitative research methods to guide the redesign:
 - **User Interviews**: Conducted in-depth interviews to gather insights into how users interacted with the product and identify specific frustrations.
 - **Usability Testing**: Carried out usability tests to observe real user behavior, uncovering key pain points and validating our assumptions.
+#### User Interviews (Pre-Development Phase)
+- **Objective**: Understand user needs, motivations, and challenges before OmniGraffle 7 development.
+- **Participants**: 15 users experienced with OmniGraffle 6.
+- **Method**: In-depth interviews with open-ended questions.
+#### Key Insights:
+1. **Feature Requests**:
+    - **60%** requested better beizer point editing.
+    - Example: Creating custom vector shapes.
+2. **Pain Points**:
+    - **50%** found the lack of artboards in OmniGraffle 6 a deal breaker.
+    - Issues with finding essential features.
+3. **Goals and Expectations**:
+    - **70%** emphasized the need to work more quickly.
+    - Focused on improving productivity and reducing unnecessary steps.
+#### Usability Testing (Pre-Development Phase)
+- **Objective**: Identify areas for improvement in OmniGraffle 6.
+- **Participants**: 10 users with representative use cases.
+#### Measured Metrics:
+1. **Task Success Rate**:
+    - **65%** of participants completed key tasks successfully.
+    - Insight: Need for significant redesign in some workflows and add new features.
+2. **Time on Task**:
+    - Average time: **4.2 minutes** for key workflows.
+    - **55%** of users felt this was too long, indicating the need for efficiency improvements.
 ### Research Findings
 The research provided valuable insights into the most-requested features and user frustrations:
 - **Artboards**: Users needed a better way to organize and manage complex projects.
@@ -61,17 +85,19 @@ We collaborated closely with Omni's engineering team to ensure the proposed solu
 - **Artboards Implementation**: Developing the Artboards feature presented a significant challenge due to technical limitations with handling layers in the existing drawing model. By working alongside engineering, we developed a solution that treated artboards like layers while maintaining system performance, resulting in a smooth user experience.
 ## Key Improvements
 ### 1. Artboards
-
 ![OmniGraffle 7 Artboard layer](../../assets/content/casestudies/omnigraffle-arrow-name.png)
-
 We introduced an innovative artboard feature that treated artboards like layers, offering users increased flexibility and efficiency. For example, one of our users, a graphic designer working on a complex website layout, found that artboards significantly streamlined her workflow. She could easily organize different sections of the site within individual artboards, export them at required resolutions, and manage her project more effectively without losing track of components.
 ### 2. Bezier Point Editing Tool
 We simplified the process of adding or removing vector points, allowing users to do so without switching tools. This enhancement provided a faster and more fluid editing experience. Users reported being able to make precise adjustments more efficiently, significantly reducing the time spent on vector manipulation and contributing to a smoother workflow.
+![OmniGraffle beizer point editing.](../../assets/content/casestudies/omnigraffle-beizer.png)
 ### 3. Convert Lines and Text to Shapes
+![OmniGraffle 7 Artboard layer](../../assets/content/casestudies/omnigraffle-font-outlines.png)
 Responding to user requests, we added the ability to convert strokes and text into shapes while preserving aesthetics with minimal vector points. This functionality was seamlessly integrated into the existing menu for easy access.
 ### 4. Keyboard Shortcuts
+![OmniGraffle 7 Artboard layer](../../assets/content/casestudies/omnigraffle-keyboard-short.png)
 To improve ease of use, we relocated keyboard shortcuts to a modal window accessible via the OmniGraffle menu. Tools and menus were clearly listed, and single-key functionality was introduced. We also added warning icons for conflicting shortcuts, enhancing navigation efficiency.
 ### 5. New Onboarding Experience
+![OmniGraffle 7 Artboard layer](../../assets/content/casestudies/omnigraffle-onboarding.png)
 Based on analytics and user feedback, we revamped the first-run onboarding experience. We added a short introductory video showcasing key features, a "What's New" section for updates, and a comprehensive walkthrough of the interface. These changes led to significant increases in download-to-trial conversion rates: 23% on the App Store and 16% on our website.
 ## Challenges and Solutions
 During the redesign process, we faced several challenges requiring creative problem-solving and cross-functional collaboration:
