@@ -54,7 +54,7 @@ These personas helped us identify with key user segments: power users who requir
 Our goal was to develop a flexible framework that allowed users to view three different areas of OmniFocus simultaneously: the perspective view (which provides a high-level overview of tasks and projects), the project view (which shows detailed information about specific projects), and the inspector panel (which allows users to view and edit additional details for selected items). This enhancement aimed to provide more context for database content while minimizing the number of taps required to access frequently used UI elements.
 ## Approach
 The key challenge was creating a three-pane solution that functioned seamlessly across different iOS size classes (such as compact, regular, and full-screen) while also accommodating the iPad multitasking framework, which included supporting Split View and Slide Over modes. The three-pane layout needed to adapt to various iPad screen sizes and behaviors, such as device rotation and multitasking mode.
-### Challenges and Resolutions Summary
+### Challenges and Resolutions
 To provide a quick reference, here is a summary of the key challenges we faced and how we resolved them during the design process:
 
 | **Challenge**                                                                           | **Resolution**                                                                                   |
