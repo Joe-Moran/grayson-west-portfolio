@@ -69,9 +69,11 @@ During the prototyping phase, we conducted multiple iterations to address the sp
 - **Solution**: We started with a flexible grid system and conducted usability testing to determine the optimal sizing for each pane. Feedback indicated that the original layout was too cluttered on smaller screens, which led us to create more dynamic resizing rules.
 ![3 pane prototype](../../assets/content/casestudies/iPad+Pro-Portrait-Full.png)  
 #### Iteration 2: Multitasking Mode Adaptation*
+![Mulitasking in action](../../assets/content/casestudies/omnifocus-pane-video-1.gif)
 - **Challenge**: Making the three-pane layout compatible with Split View and Slide Over multitasking modes.
 - **Solution**: We implemented a cascading dismissal approach, where the right-side inspector was dismissed first as the screen size narrowed. User testing revealed that this approach worked well for multitasking but needed smoother transitions, which we refined in subsequent iterations.
 #### Iteration 3: Pinning Feature
+![Pinning a pane in action](../../assets/content/casestudies/omnifocus-pane-video-2.gif)
 - **Challenge**: Allowing users to keep specific panes visible while navigating other parts of the app.
 - **Solution**: We introduced a "pinning" feature, allowing users to lock a pane in place. During testing, users appreciated the flexibility, but some found the interaction unclear. Based on their feedback, we added visual indicators to show when a pane was pinned.
 ### Developer Collaboration and Feedback
