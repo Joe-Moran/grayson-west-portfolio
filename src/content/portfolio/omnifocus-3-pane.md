@@ -72,10 +72,8 @@ During the prototyping phase, we conducted multiple iterations to address the sp
 - **Challenge**: Making the three-pane layout compatible with Split View and Slide Over multitasking modes.
 - **Solution**: We implemented a cascading dismissal approach, where the right-side inspector was dismissed first as the screen size narrowed. User testing revealed that this approach worked well for multitasking but needed smoother transitions, which we refined in subsequent iterations.
 #### Iteration 3: Pinning Feature
-![Pan pinning in action](../../assets/content/casestudies/omnifocus-pane-video-1.mov)
 - **Challenge**: Allowing users to keep specific panes visible while navigating other parts of the app.
 - **Solution**: We introduced a "pinning" feature, allowing users to lock a pane in place. During testing, users appreciated the flexibility, but some found the interaction unclear. Based on their feedback, we added visual indicators to show when a pane was pinned.
-![Pan pinning in action](../../assets/content/casestudies/omnifocus-pane-video-2.mov)
 ### Developer Collaboration and Feedback
 The implementation of this UX required extensive collaboration with developers to ensure that the designs were feasible and adaptable to technical constraints:
 - **Memory Management**: Handling multiple panes simultaneously led to memory usage issues. Developers provided feedback on optimizing data loading and unloading, which resulted in improved performance. We adjusted the design to only load data in active panes, significantly reducing memory consumption.
