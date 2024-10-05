@@ -55,7 +55,7 @@ Hearsee  mobility tech platform designed to help blind and visually impaired (BV
 
 ## Task
 
-I was brought in to take charge of the web application's product design, UX design, and overall design strategy. My role was critical: to breathe new life into a stagnant project and create a web application that would seamlessly integrate with the existing mobile solutions.
+I was brought in to take charge of the web application's product design, UX design, and overall design strategy. My role was to breathe new life into a stagnant project and create a web application that would seamlessly integrate with the existing mobile solutions.
 
 ## Action
 
