@@ -24,10 +24,11 @@ preview:
 screenshot: # An image representing the UI example of the product. Used in preview cards
   image: '../../assets/content/casestudies/2020-03-27.png'
   altText: ''
-background: '../../assets/content/backgrounds/1.jpg' # The background image used for preview cards
-icon: '../../assets/content/SVGs/1.svg'
+background: '../../assets/content/backgrounds/26.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/26.svg'
 platforms:
   - Process
+order: 5
 ---
 
 ## Situation
@@ -131,7 +132,86 @@ Looking ahead, I envision product design at Michigan Software Labs evolving in s
 
 ## Visual Representation
 
-Note: include a visual element here.
+<style>
+    .container {
+        display: flex;
+        width: 80%;
+        max-width: 900px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .before, .after {
+        flex: 1;
+        padding: 20px;
+        color: #fff;
+    }
+    .before {
+        background-color: #808080; /* Muted color */
+    }
+    .after {
+        background-color: #4caf50; /* Vibrant color */
+    }
+    .section-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .metric {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .metric-icon {
+        font-size: 2em;
+        margin-right: 10px;
+    }
+    .metric-text {
+        font-size: 1.2em;
+    }
+</style>
+
+<div class="container">
+    <div class="before">
+        <div class="section-title">Before Product Design</div>
+        <div class="metric">
+            <div class="metric-icon">📅</div> <!-- Calendar icon -->
+            <div class="metric-text">Project Completion Time: 6 months</div>
+        </div>
+        <div class="metric">
+            <div class="metric-icon">⭐</div> <!-- Half-filled star icon -->
+            <div class="metric-text">Client Satisfaction: 65%</div>
+        </div>
+        <div class="metric">
+            <div class="metric-icon">↻</div> <!-- Circular arrow icon -->
+            <div class="metric-text">Rework Percentage: 40%</div>
+        </div>
+        <div class="metric">
+            <div class="metric-icon">🎯</div> <!-- Speedometer icon -->
+            <div class="metric-text">Team Efficiency Score: 60%</div>
+        </div>
+    </div>
+    <div class="after">
+        <div class="section-title">After Product Design</div>
+        <div class="metric">
+            <div class="metric-icon">📅</div> <!-- Calendar icon -->
+            <div class="metric-text">Project Completion Time: 4 months</div>
+        </div>
+        <div class="metric">
+            <div class="metric-icon">⭐</div> <!-- Full star icon -->
+            <div class="metric-text">Client Satisfaction: 95%</div>
+        </div>
+        <div class="metric">
+            <div class="metric-icon">↻</div> <!-- Circular arrow icon -->
+            <div class="metric-text">Rework Percentage: 15%</div>
+        </div>
+        <div class="metric">
+            <div class="metric-icon">🎯</div> <!-- Speedometer icon -->
+            <div class="metric-text">Team Efficiency Score: 90%</div>
+        </div>
+    </div>
+</div>
+
 
 Infographic titled "The Impact of Product Design at Michigan Software Labs":
 
