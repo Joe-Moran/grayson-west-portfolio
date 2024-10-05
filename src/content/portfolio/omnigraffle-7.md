@@ -94,6 +94,7 @@ We simplified the process of adding or removing vector points, allowing users to
 ![Converting fonts to outlines in OmniGraffle](../../assets/content/casestudies/omnigraffle-font-outlines.png)
 Responding to user requests, we added the ability to convert strokes and text into shapes while preserving aesthetics with minimal vector points. This functionality was seamlessly integrated into the existing menu for easy access.
 ### 4. Keyboard Shortcuts
+![Keyboard short cut modal window](../../assets/content/casestudies/omnigraffle-keyboard-short.png)
 To improve ease of use, we relocated keyboard shortcuts to a modal window accessible via the OmniGraffle menu. Tools and menus were clearly listed, and single-key functionality was introduced. We also added warning icons for conflicting shortcuts, enhancing navigation efficiency.
 ### 5. New Onboarding Experience
 Based on analytics and user feedback, we revamped the first-run onboarding experience. We added a short introductory video showcasing key features, a "What's New" section for updates, and a comprehensive walkthrough of the interface. These changes led to significant increases in download-to-trial conversion rates: 23% on the App Store and 16% on our website.
