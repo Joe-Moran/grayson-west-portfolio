@@ -18,7 +18,7 @@ const { title, children, path } = Astro.props;
     <h2 class='page-title'>{title}</h2>
     <a class='page-link' href={path}>View All</a>
   </div>
-  <ContentPreviewMasonry basePath={path} collection={children} previewLocation='home' />
+  <ContentPreviewMasonry basePath={path} collection={children} previewLocation='home' columns={4} />
 </div>
 <style>
   .page-preview {
