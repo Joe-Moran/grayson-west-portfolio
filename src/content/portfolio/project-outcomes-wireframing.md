@@ -1,5 +1,5 @@
 ---
-title: Improving Design Processes through Wireframing
+title: Project Outcomes & Wireframming
 summary: "
 <h4>Situation</h4>
 <p>Michigan Software Labs faced inefficiencies in UX design, with designers jumping to high-fidelity designs too quickly. This led to increased revisions and hindered client roadmaps.</p>
@@ -26,7 +26,7 @@ screenshot: # An image representing the UI example of the product. Used in previ
   image: '../../assets/content/casestudies/2020-03-27.png'
   altText: ''
 background: '../../assets/content/backgrounds/20.jpg' # The background image used for preview cards
-icon: '../../assets/content/SVGs/20.svg'
+icon: '../../assets/content/SVGs/20 .svg'
 platforms:
   - Process
 order: 9
