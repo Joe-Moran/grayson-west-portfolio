@@ -119,7 +119,6 @@ The implementation of DesignOps at Michigan Software Labs led to significant imp
 8. **Company-wide Impact**: Design thinking principles began to influence decision-making across different departments, leading to more user-centric solutions company-wide.
 
 ### Concrete Example
-
 For a healthcare client's patient management system, our new DesignOps approach led to:
 
 - 25% reduction in development time
@@ -127,19 +126,16 @@ For a healthcare client's patient management system, our new DesignOps approach 
 - 98% positive user feedback, up from 75% in previous projects
 
 ### Team Perspective
-
 "The DesignOps implementation transformed our work. We're more efficient, collaborative, and innovative. It's exciting to come to work now!" - Senior Designer
 
 "As a new hire, the clear processes and documentation helped me contribute meaningfully to projects within weeks, not months." - Junior Designer
 
 ### Client Impact
-
 A client from a major healthcare provider remarked, "The transformation in Michigan Software Labs' design process is evident. Their solutions are not only more intuitive but also align perfectly with our business goals. It's clear that design is now at the forefront of their development process."
 
 Another client, a Fortune 500 retail company, noted: "The speed and quality of work have significantly improved. Michigan Software Labs now feels like an extension of our team rather than just a vendor."
 
 ## Industry Context
-
 Our DesignOps implementation puts us at the forefront of the industry. According to a 2023 survey by DesignOps Global:
 
 - Only 30% of software consultancies have a formal DesignOps structure
@@ -147,32 +143,20 @@ Our DesignOps implementation puts us at the forefront of the industry. According
 - Our 40% improvement in project delivery time outperforms the industry average of 25%
 
 ## Long-term Strategy
-
 The DesignOps implementation aligns with Michigan Software Labs' long-term goals:
-
 1. Positioning as a leader in user-centric software development
 2. Expanding service offerings to include DesignOps consulting for clients
 3. Attracting top-tier design talent through our innovative processes
 4. Scaling our operations efficiently to handle larger, more complex projects
 
 ## Lessons Learned
-
 1. **Change Management is Crucial**: Clear communication and demonstrating early wins were key to overcoming resistance.
 2. **Flexibility is Important**: While standardization is beneficial, processes need to be flexible enough to accommodate different project needs.
 3. **Continuous Improvement**: DesignOps is not a one-time implementation but an ongoing process of refinement and adaptation.
 4. **Cross-functional Buy-in**: Engaging non-design teams early in the process was crucial for company-wide adoption of design thinking.
 
-## Visual Representation
-
-Include visual elements.
-
-1. **Before/After Infographic**: Showing key metrics like project delivery time, client satisfaction, and team productivity before and after DesignOps implementation.
-2. **DesignOps Process Flowchart**: Illustrating how design now integrates with other departments and stages of product development.
-3. **Team Structure Diagram**: Showcasing how roles and responsibilities have been redefined and clarified.
-4. **Project Timeline Comparison**: A visual representation of how DesignOps has streamlined the project lifecycle.
 
 ## Reflection and Future Directions
-
 Implementing DesignOps at Michigan Software Labs was a transformative journey that required persistence, creativity, and a willingness to challenge the status quo. The results demonstrate the power of a well-structured, collaborative design process in driving business success.
 
 This experience reinforced my belief in the importance of systemic thinking in design leadership. By focusing on the entire design ecosystem – from hiring and onboarding to process standardization and cross-functional collaboration – we were able to create a more efficient, innovative, and impactful design team.
