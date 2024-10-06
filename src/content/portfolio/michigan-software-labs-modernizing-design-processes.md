@@ -11,7 +11,7 @@ summary: "
 <p>These changes resulted in a 25% reduction in project delivery time, improved cross-functional team alignment, higher engagement with clients, and a more efficient, collaborative, and user-focused design process.</p>
 "
 home:
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 2
