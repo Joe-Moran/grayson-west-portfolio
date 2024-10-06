@@ -68,36 +68,38 @@ To achieve our objectives, I implemented the following key initiatives:
 - Mapped and optimized end-to-end design workflows
 - Implemented Figma and Miro as our primary design tools for better collaboration
 - Established clear design principles and guidelines
-2. Resource Optimization
+### Resource Optimization
    - Introduced a skills matrix for strategic project staffing
    - Implemented Forecast for capacity planning and resource allocation
    - Created a standardized onboarding program for new designers
-3. Design System Development
+### Design System Development
    - Built a modular design system with reusable components
    - Conducted workshops to ensure team-wide adoption
    - Integrated the design system with our development framework
-4. Metrics and Measurement
+### Metrics and Measurement
    - Defined key performance indicators (KPIs) for design efficiency and impact
    - Implemented Jira for project tracking and time management
    - Developed a quarterly design impact report for stakeholders
-5. Cross-functional Integration
+### Cross-functional Integration
    - Established regular design critiques with development and product teams
    - Introduced design sprints for complex problem-solving
    - Created a design liaison role to bridge communication gaps
-6. Continuous Learning Program
+### Continuous Learning Program
    - Launched a monthly "Design Dialogues" series for skill sharing
    - Established partnerships with design education platforms
    - Implemented a mentorship program pairing senior and junior designers
-7. Client Engagement Enhancement
+### Client Engagement Enhancement
    - Developed a client feedback loop specific to design deliverables
    - Created a design-focused case study template to showcase our work
    - Introduced collaborative design workshops with key clients
-8. Scalable Infrastructure - Implemented Abstract for version control and asset management - Developed a design operations playbook for consistent scaling - Established a DesignOps committee to oversee ongoing improvements Each initiative was implemented in phases, with regular check-ins and adjustments based on team feedback and performance metrics. This approach ensured a smooth transition and allowed for continuous refinement of our DesignOps framework.
+### Scalable Infrastructure 
+- Implemented Abstract for version control and asset management 
+- Developed a design operations playbook for consistent scaling 
+- Established a DesignOps committee to oversee ongoing improvements 
+Each initiative was implemented in phases, with regular check-ins and adjustments based on team feedback and performance metrics. This approach ensured a smooth transition and allowed for continuous refinement of our DesignOps framework.
 
 ## Challenges Faced
-
 The implementation of DesignOps wasn't without its hurdles:
-
 1. **Resistance to Change**: Some team members were initially resistant to new processes and tools.
    - Solution: We organized workshops to demonstrate the benefits and provided one-on-one support.
 2. **Resource Constraints**: Implementing new systems required time and budget allocation.
@@ -106,9 +108,7 @@ The implementation of DesignOps wasn't without its hurdles:
    - Solution: We established regular check-ins and celebrations of small wins to keep the team engaged.
 
 ## Result
-
 The implementation of DesignOps at Michigan Software Labs led to significant improvements across multiple areas:
-
 1. **Increased Efficiency**: Project delivery times improved by 40%, with a 30% reduction in missed deadlines.
 2. **Enhanced Quality**: Design consistency and quality improved, resulting in a 50% decrease in post-handoff rework.
 3. **Improved Collaboration**: Cross-functional teamwork increased, with non-design team members actively participating in design processes.
