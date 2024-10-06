@@ -100,9 +100,12 @@ This example demonstrates how innovative product design can revolutionize disast
 One client, the CEO of a mid-sized tech company, remarked: "Michigan Software Labs' product design approach transformed our project. They didn't just deliver what we asked for – they delivered what we actually needed. The result has had a measurable impact on our business outcomes."
 ## Long-term Impact
 The shift to product design has positioned Michigan Software Labs for sustained growth and innovation:
-1. **Market Differentiation**: We've established ourselves as a go-to consultancy for clients seeking comprehensive, strategic product solutions.
-2. **Talent Attraction**: Our commitment to product design has helped us attract top-tier design talent, further enhancing our capabilities.
-3. **Expanded Service Offerings**: We've been able to introduce new service offerings, such as product strategy workshops, increasing our value to clients.
+**Market Differentiation**: 
+We've established ourselves as a go-to consultancy for clients seeking comprehensive, strategic product solutions.
+**Talent Attraction**:
+Our commitment to product design has helped us attract top-tier design talent, further enhancing our capabilities.
+**Expanded Service Offerings**: 
+We've been able to introduce new service offerings, such as product strategy workshops, increasing our value to clients.
 ## Future Directions
 Looking ahead, I envision product design at Michigan Software Labs evolving in several ways:
 ### I Integration
