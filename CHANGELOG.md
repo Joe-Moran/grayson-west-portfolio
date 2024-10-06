@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.75](///compare/v0.0.74...v0.0.75) (2024-10-06)
+
+
+### Bug Fixes
+
+* display dropdown nav menu below page title 913baf5
+* remove overwrite changes from merge conflict 297d0e6
+
 ## [0.0.74](///compare/v0.0.73...v0.0.74) (2024-10-06)
 
 ## [0.0.73](///compare/v0.0.72...v0.0.73) (2024-10-06)
