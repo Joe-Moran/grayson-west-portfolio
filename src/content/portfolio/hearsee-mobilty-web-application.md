@@ -41,13 +41,27 @@ Due to a confidentiality agreement, I can only share a limited amount of informa
 ## What is the Hearsee Mobility platform?
 Hearsee  mobility tech platform designed to help blind and visually impaired (BVI) people navigate indoor spaces more effectively. Utilizing RFID technology, it integrates specialized hardware within the handles of white canes, RFID tags placed throughout buildings, and a mobile app for seamless indoor navigation. As users walk by RFID tags, the cane's hardware reads the information and communicates it to the mobile app, which also acts as a navigation device to help users find their destination. A web application allows building managers to upload floor plans, place tags, and create routes for enhanced accessibility. Hearsee offers an affordable solution to bridge the gap between basic ADA requirements and true navigability for BVI individuals.
 ### Web App:
+<figure>
+  
 ![Hearsee web interface](../../assets/content/casestudies/hearsee-building-map.png)
+
+<figcaption>The first iteration of the Hearsee mapping interface.</figcaption>
+</figure>
+
 - Used to upload building floor plans.
 - Allows placement of RFID tags on the floor plan.
 - Enables users to create navigable routes.
 - Routes are uploaded to the cloud and accessible to the mobile app.
+
 ### Mobile App:
+
+<figure>
+  
 ![Hearsee mobile app](../../assets/content/casestudies/hearsee-app-3-iphones.png)
+
+<figcaption>The Hearsee mobile application for iOS.</figcaption>
+</figure>
+
 - Connects with the white cane hardware via Bluetooth.
 - Receives information from RFID tags to assist in navigation.
 - Provides navigation guidance to users within the building.
@@ -60,9 +74,22 @@ I was brought in to take charge of the web application's product design, UX desi
 ## Action
 
 To tackle these challenges head-on, I implemented a series of strategic measures:
+<figure>
+  
 ![Early Hearsee wireframe](../../assets/content/casestudies/hearsee-early-wireframe.png)
+
+<figcaption>First wireframes of the Hearsee web upload and map creation screen.</figcaption>
+</figure>
+
 ### Design Re-evaluation and Alignment 
+
+<figure>
+  
 ![Early user flow in the web app](../../assets/content/casestudies/hearsee-flowchart.png)
+
+<figcaption>Early information architecture exploration of the Hearsee web application.</figcaption>
+</figure>
+
 When I joined the project, I found that the existing designs were creating limitations for our development team. To address this:
 - I initiated a comprehensive review of the current web application design.
 - I worked closely with the development team to understand their constraints and requirements.
@@ -80,7 +107,13 @@ I noticed that there was significant friction between the design and development
 - A feedback system that encouraged constructive criticism and idea sharing between teamsThese measures helped break down silos, foster a culture of open communication, and align everyone towards our common goals. As a result, we saw a marked improvement in team morale and productivity.
 ### User-Centric Approach
 Understanding the diverse needs of the blind and low vision community was crucial to our design process. We conducted extensive user research, including:
+<figure>
+  
 ![Hearsee facility manager user archetype](../../assets/content/casestudies/hearsee-archetype.png)
+
+<figcaption>Facility manager user archetype.</figcaption>
+</figure>
+
 - In-depth interviews with individuals across the spectrum of visual impairment and facility management.
 - Shadowing sessions to observe how users navigate unfamiliar spaces
 - Usability testing with early prototypes

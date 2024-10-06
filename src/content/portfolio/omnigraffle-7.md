@@ -36,8 +36,15 @@ order: 2
 
 ## Situation
 OmniGraffle is a vector-based diagramming and illustration tool for macOS and iOS. As the creative director for the end-to-end redesign of OmniGraffle, I managed research, design operations, and a talented team of UX designers, UI designers, and researchers. This effort led to a 23% increase in download-to-trial conversion rates and positioned OmniGraffle 7 as a top-10 grossing app on the App Store for seven weeks.
-## Task
+## Task'
+
+<figure>
+  
 ![OmniGraffle 7 flowchart](../../assets/content/casestudies/omngraffle-image-1.png)
+
+<figcaption>OmniGraffle 7 for macOS application window.</figcaption>
+</figure>
+
 The focus of the version 7 redesign was to enhance the efficiency and usability of OmniGraffle for creative professionals. Our primary goal was to streamline workflows and make key features more accessible, reducing complexity, improving design efficiency, and enhancing usability. The release of OmniGraffle 7.0 introduced several significant improvements:
 - **Artboards**: Helped users manage complex projects more effectively.
 - **Bezier Point Editing Tool Enhancements**: Simplified vector manipulation.
@@ -85,21 +92,66 @@ The research provided valuable insights into the most-requested features and use
 We collaborated closely with Omni's engineering team to ensure the proposed solutions were feasible and effectively addressed both user needs and technical constraints.
 - **Artboards Implementation**: Developing the Artboards feature presented a significant challenge due to technical limitations with handling layers in the existing drawing model. By working alongside engineering, we developed a solution that treated artboards like layers while maintaining system performance, resulting in a smooth user experience.
 ## Key Improvements
+
 ### 1. Artboards
+<figure>
+  
 ![OmniGraffle 7 Artboard layer](../../assets/content/casestudies/omnigraffle-arrow-name.png)
+
+<figcaption>An example of where OmniGraffle 7 artboards reside in the layers panel.</figcaption>
+</figure>
+
 We introduced an innovative artboard feature that treated artboards like layers, offering users increased flexibility and efficiency. For example, one of our users, a graphic designer working on a complex website layout, found that artboards significantly streamlined her workflow. She could easily organize different sections of the site within individual artboards, export them at required resolutions, and manage her project more effectively without losing track of components. Here's how it works:
+
+<figure>
+  
 ![OmniGraffle artboard functionality](../../assets/content/casestudies/omnigraffle-artboard-expl.png)
+
+<figcaption>An illustration of how OmniGraffle artboards function.</figcaption>
+</figure>
+
 ### 2. Bezier Point Editing Tool
+
+<figure>
+  
 ![OmniGraffle bezier point editing](../../assets/content/casestudies/omnigraffle-beizer.png)
+
+<figcaption>OmniGraffle 7 bezier lines in action.</figcaption>
+</figure>
+
 We simplified the process of adding or removing vector points, allowing users to do so without switching tools. This enhancement provided a faster and more fluid editing experience. Users reported being able to make precise adjustments more efficiently, significantly reducing the time spent on vector manipulation and contributing to a smoother workflow.
+
 ### 3. Convert Lines and Text to Shapes
+
+<figure>
+  
 ![Converting fonts to outlines in OmniGraffle](../../assets/content/casestudies/omnigraffle-font-outlines.png)
+
+<figcaption>Turning fonts into outlines in OmniGraffle 7.</figcaption>
+</figure>
+
 Responding to user requests, we added the ability to convert strokes and text into shapes while preserving aesthetics with minimal vector points. This functionality was seamlessly integrated into the existing menu for easy access.
+
 ### 4. Keyboard Shortcuts
-![Keyboard short cut modal window](../../assets/content/casestudies/omnigraffle-keyboard-short.png)
+
+<figure>
+  
+![Keyboard shortcut modal window](../../assets/content/casestudies/omnigraffle-keyboard-short.png)
+
+<figcaption>OmniGraffle 7's keyboard shortcut modal window]</figcaption>
+</figure>
+
 To improve ease of use, we relocated keyboard shortcuts to a modal window accessible via the OmniGraffle menu. Tools and menus were clearly listed, and single-key functionality was introduced. We also added warning icons for conflicting shortcuts, enhancing navigation efficiency.
+
 ### 5. New Onboarding Experience
+
+<figure>
+  
 ![New onboarding screen that appears on first launch](../../assets/content/casestudies/omnigraffle-onboarding.png)
+
+<figcaption>The new OmniGraffle 7 first launch onboarding screen.</figcaption>
+</figure>
+
 Based on analytics and user feedback, we revamped the first-run onboarding experience. We added a short introductory video showcasing key features, a "What's New" section for updates, and a comprehensive walkthrough of the interface. These changes led to significant increases in download-to-trial conversion rates: 23% on the App Store and 16% on our website.
 ## Challenges and Solutions
 During the redesign process, we faced several challenges requiring creative problem-solving and cross-functional collaboration:
