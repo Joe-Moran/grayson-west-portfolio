@@ -14,5 +14,6 @@ const pages = writingCollection.map((item) => ({
     basePath={new URL(Astro.request.url).pathname}
     collection={writingCollection}
     previewLocation='page-preview'
+    columns={4}
   />
 </Layout>

@@ -8,9 +8,10 @@ interface Props {
   basePath: string; // TODO: update naming to reflect how it's used
   collection: CollectionEntry<'portfolio' | 'writing'>[];
   previewLocation: 'home' | 'page-preview';
+  columns?: 2 | 3 | 4;
 }
 
-const { collection, basePath, previewLocation } = Astro.props;
+const { collection, basePath, previewLocation, columns = 2 } = Astro.props;
 
 function getGridValues(item: CollectionEntry<'portfolio' | 'writing'>): {
   columns: number;
@@ -69,7 +70,7 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
   }
 </div>
 
-<style lang='scss' is:global>
+<style lang='scss' is:global define:vars={{ columns }}>
   .icon {
     position: relative;
     height: 30%;
@@ -77,7 +78,7 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
 
   .content-preview-masonry {
     --grid-layout-gap: 10px;
-    --grid-column-count: 4;
+    --grid-column-count: var(--columns);
     --grid-item-min-width: 200px;
 
     /**

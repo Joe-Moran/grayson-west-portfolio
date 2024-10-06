@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.71](///compare/v0.0.70...v0.0.71) (2024-10-06)
+
+## [0.0.70](///compare/v0.0.69...v0.0.70) (2024-10-06)
+
+
+### Bug Fixes
+
+* set column count to 4 for home page content preview grids b99cee3
+
+## [0.0.69](///compare/v0.0.68...v0.0.69) (2024-10-06)
+
+## [0.0.68](///compare/v0.0.67...v0.0.68) (2024-10-06)
+
+## [0.0.67](///compare/v0.0.66...v0.0.67) (2024-10-06)
+
+
+### Features
+
+* make screenshots optional for content previews 3458d24
+
+## [0.0.66](///compare/v0.0.65...v0.0.66) (2024-10-06)
+
+
+### Bug Fixes
+
+* layer card hover text over screenshot f568d32
+
+## [0.0.65](///compare/v0.0.64...v0.0.65) (2024-10-06)
+
 ## [0.0.64](///compare/v0.0.63...v0.0.64) (2024-10-06)
 
 ## [0.0.63](///compare/v0.0.62...v0.0.63) (2024-10-03)
