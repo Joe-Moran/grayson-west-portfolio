@@ -12,7 +12,7 @@ summary: "
 <p>Successfully integrated Product Design principles, leading to improved product development, enhanced client satisfaction, and balanced decision-making. The company gained a competitive advantage, with one project reducing non-profit supply delivery time by 25% and increasing donor engagement by 45%.</p>
 "
 home:
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 2

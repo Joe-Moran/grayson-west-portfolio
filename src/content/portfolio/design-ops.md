@@ -14,7 +14,7 @@ summary: "
 </p>
 "
 home:
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 2
