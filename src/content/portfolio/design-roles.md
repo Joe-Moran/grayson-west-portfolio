@@ -164,13 +164,18 @@ _**This looks like**_
 - **Presenting Work for Review by the Team and Fellow Designers**: Regularly present your work for review by the team and other designers. Be open to feedback from teammates. This can provide different perspectives, highlight potential issues, and ultimately lead to a more refined and effective product.
 
 ## Result
-
 The rollout of this initiative was executed in several strategic phases:
-
-1. **Initial Designer Feedback**:    - Presented the initial draft to the design team    - Gathered their feedback and suggestions    - Integrated necessary changes based on their input
-2. **Stakeholder Review**:    - Sought feedback from project managers and other key stakeholders    - Incorporated their insights and suggestions into the document
-3. **Finalization and Approval**:\
-      - Developed a final draft incorporating all feedback\
-      - Obtained approval from all relevant stakeholders
-4. **Company-wide Introduction**:    - Presented the finalized role definitions to the entire company\
-      - Published the document on our internal Confluence page for easy access and reference The reaction to the role definition work was overwhelmingly positive. The design team expressed satisfaction with having documented expectations of how they should operate, while the company as a whole appreciated having a clear reference point for design roles and responsibilities. The initiative was well-received across all departments, improving cross-functional understanding and collaboration. This positive reception validated the need for such role definitions and confirmed the effectiveness of our collaborative approach in developing them.
+**Initial Designer Feedback**:    
+- Presented the initial draft to the design team    
+- Gathered their feedback and suggestions    
+- Integrated necessary changes based on their input
+**Stakeholder Review**:    
+- Sought feedback from project managers and other key stakeholders    
+- Incorporated their insights and suggestions into the document
+**Finalization and Approval**
+- Developed a final draft incorporating all feedback\
+- Obtained approval from all relevant stakeholders
+**Company-wide Introduction**:    
+- Presented the finalized role definitions to the entire company
+- Published the document on our internal Confluence page for easy access and reference 
+The reaction to the role definition work was overwhelmingly positive. The design team expressed satisfaction with having documented expectations of how they should operate, while the company as a whole appreciated having a clear reference point for design roles and responsibilities. The initiative was well-received across all departments, improving cross-functional understanding and collaboration. This positive reception validated the need for such role definitions and confirmed the effectiveness of our collaborative approach in developing them.
