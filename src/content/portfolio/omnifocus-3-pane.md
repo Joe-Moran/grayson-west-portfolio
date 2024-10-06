@@ -81,8 +81,8 @@ To provide a quick reference, here is a summary of the key challenges we faced a
 | Challenge | Resolution |
 | --- | --- |
 | Ensuring the three panes adapted to different screen sizes without overwhelming the UI. | Developed a flexible grid system and dynamic resizing rules based on usability testing feedback. |
-| Making the layout compatible with Split View and Slide Over modes.                      | Implemented a cascading dismissal approach, refining transitions to improve user experience.     |
-| Allowing users to keep specific panes visible while navigating.                         | Introduced a "pinning" feature with added visual indicators to clarify interactions.             |
+| Making the layout compatible with Split View and Slide Over modes. | Implemented a cascading dismissal approach, refining transitions to improve user experience. |
+| Allowing users to keep specific panes visible while navigating. | Introduced a "pinning" feature with added visual indicators to clarify interactions. |
 
 ### Iterative Prototyping and Key Challenges
 
