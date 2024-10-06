@@ -22,10 +22,14 @@ const { classes, content, linkPath } = Astro.props;
 >
   {content.data.icon && <Image src={content.data.icon} alt='' class='icon' slot='icon' />}
 
-  <Picture
-    slot='body'
-    src={content.data.screenshot.image}
-    alt={content.data.screenshot.altText}
-    class='screenshot'
-  />
+  {
+    content.data.screenshot && (
+      <Picture
+        slot='body'
+        src={content.data.screenshot.image}
+        alt={content.data.screenshot.altText}
+        class='screenshot'
+      />
+    )
+  }
 </Card>

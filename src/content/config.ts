@@ -39,7 +39,7 @@ const portfolio = defineCollection({
         message: 'Cover image must be at least 1080 pixels wide!',
       }),
       icon: image().optional(),
-      screenshot: z.object({ image: image(), altText: z.string() }),
+      screenshot: z.object({ image: image(), altText: z.string() }).optional(),
       platforms: z.string().array(),
     }),
 });
