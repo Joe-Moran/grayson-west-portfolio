@@ -89,10 +89,19 @@ const { title, pages } = Astro.props;
       font-size: 0.9375rem;
     }
 
-    .image-caption {
+    figcaption {
       font-family: Poppins, sans-serif;
       font-size: 0.75rem;
       text-align: center;
+    }
+
+    figure {
+      margin-bottom: 30px;
+
+      p,
+      img {
+        margin-bottom: 0;
+      }
     }
 
     li {
