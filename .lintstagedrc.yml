@@ -1,3 +1,6 @@
 '*.{js,jsx,mjs,ts,astro,html}':
   - 'npm run lint:staged -- --fix'
   - 'npm run stylelint:staged -- --fix'
+
+'*.{js, jsx,ts}':
+  - 'npm run test -- --passWithNoTests'

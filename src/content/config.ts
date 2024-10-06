@@ -10,19 +10,23 @@ const preview = z.object({
   grid: z.object({ rows: z.number(), columns: z.number() }),
 });
 
-const content = {
+const content = (image) => ({
   title: z.string(),
   summary: z.string(),
   home: preview,
   preview,
   order: z.number().default(9999),
-};
+  background: image().refine((img) => img.width >= 1080, {
+    message: 'Cover image must be at least 1080 pixels wide!',
+  }),
+  icon: image().optional(),
+});
 
 const writingCollection = defineCollection({
   type: 'content',
   schema: ({ image }) =>
     z.object({
-      ...content,
+      ...content(image),
       background: image().refine((img) => img.width >= 1080, {
         message: 'Cover image must be at least 1080 pixels wide!',
       }),
@@ -34,11 +38,7 @@ const portfolio = defineCollection({
   type: 'content',
   schema: ({ image }) =>
     z.object({
-      ...content,
-      background: image().refine((img) => img.width >= 1080, {
-        message: 'Cover image must be at least 1080 pixels wide!',
-      }),
-      icon: image().optional(),
+      ...content(image),
       screenshot: z.object({ image: image(), altText: z.string() }).optional(),
       platforms: z.string().array(),
     }),

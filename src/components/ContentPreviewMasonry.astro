@@ -53,7 +53,7 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
       .filter((item) => shouldDisplay(item))
       .sort((a, b) => a.data.order - b.data.order)
       .map((item) => {
-        return 'screenshot' in item.data ? (
+        return 'platforms' in item.data ? (
           <CardContentPortfolio
             linkPath={buildLinkPath(item)}
             content={item as CollectionEntry<'portfolio'>}
