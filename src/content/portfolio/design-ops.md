@@ -34,22 +34,24 @@ order: 8
 ---
 
 ## Situation
-
 Upon joining Michigan Software Labs, a software consultancy serving diverse clients from startups to Fortune 500 companies, I identified several challenges stemming from the lack of a formal Design Operations (DesignOps) structure:
 
-1. Workflow Inefficiencies: The design process lacked standardization, resulting in inconsistent outputs and frequent bottlenecks. For instance, our team spent an average of 6 hours per week searching for or recreating design assets due to disorganized file management.
-2. Resource Allocation: Project staffing was often reactive rather than strategic. Designers were frequently reassigned mid-project, leading to knowledge gaps and disrupted workflows. This resulted in a 25% increase in project onboarding time.
-3. Tool Fragmentation: The team used multiple, often incompatible design tools without a cohesive strategy. This led to version control issues and hindered collaboration, with an estimated 20% of design time lost to tool-related inefficiencies.
-4. Lack of Design Systems: Absence of a unified design system resulted in inconsistent user experiences across projects. This increased QA time by 30% and often necessitated extensive rework during development phases.
-5. Metrics and Measurement: We lacked clear KPIs for measuring design impact and efficiency. This made it difficult to justify design decisions to stakeholders and to continuously improve our processes.
-6. Scalability Challenges: As the company grew, our design processes didn't scale effectively. Projects that once took 3 months were now taking 4.5 months due to increased complexity and team size.
+### Workflow Inefficiencies
+The design process lacked standardization, resulting in inconsistent outputs and frequent bottlenecks. For instance, our team spent an average of 6 hours per week searching for or recreating design assets due to disorganized file management.
+### Resource Allocation
+Project staffing was often reactive rather than strategic. Designers were frequently reassigned mid-project, leading to knowledge gaps and disrupted workflows. This resulted in a 25% increase in project onboarding time.
+### Tool Fragmentation
+The team used multiple, often incompatible design tools without a cohesive strategy. This led to version control issues and hindered collaboration, with an estimated 20% of design time lost to tool-related inefficiencies.
+### Lack of Design Systems
+Absence of a unified design system resulted in inconsistent user experiences across projects. This increased QA time by 30% and often necessitated extensive rework during development phases.
+### Metrics and Measurement
+We lacked clear KPIs for measuring design impact and efficiency. This made it difficult to justify design decisions to stakeholders and to continuously improve our processes.
+### Scalability Challenges
+As the company grew, our design processes didn't scale effectively. Projects that once took 3 months were now taking 4.5 months due to increased complexity and team size.
 
 These issues not only affected the design team's productivity but also impacted the company's ability to deliver high-quality solutions to clients on time. Client satisfaction scores for design-related aspects had dropped from 8.5 to 7.2 out of 10 over the past year, putting our reputation for design excellence at risk.
-
 ## Task
-
 My primary objective was to implement a robust DesignOps framework at Michigan Software Labs within a two-year timeframe. The key goals were to:
-
 1. Streamline design workflows and reduce non-design activities by 50%.
 2. Optimize resource management and reduce project onboarding time by 40%.
 3. Unify design tools and establish a centralized asset management system.
@@ -61,13 +63,11 @@ My primary objective was to implement a robust DesignOps framework at Michigan S
 9. Increase client satisfaction scores for design from 7.2 to 9.0 out of 10. These initiatives aimed to position Michigan Software Labs as a leader in design-driven software development, improving both internal efficiency and client outcomes.
 
 ## Action
-
 To achieve our objectives, I implemented the following key initiatives:
-
-1. Design Process Standardization
-   - Mapped and optimized end-to-end design workflows
-   - Implemented Figma and Miro as our primary design tools for better collaboration
-   - Established clear design principles and guidelines
+### Design Process Standardization
+- Mapped and optimized end-to-end design workflows
+- Implemented Figma and Miro as our primary design tools for better collaboration
+- Established clear design principles and guidelines
 2. Resource Optimization
    - Introduced a skills matrix for strategic project staffing
    - Implemented Forecast for capacity planning and resource allocation

@@ -23,7 +23,7 @@ preview:
 screenshot: # An image representing the UI example of the product. Used in preview cards
   image: '../../assets/content/casestudies/2020-03-27.png'
   altText: ''
-background: '../../assets/content/casestudies/omnifocus-pane-1.png' # The background image used for preview cards
+background: '../../assets/content/backgrounds/28.jpg' # The background image used for preview cards
 icon: '../../assets/content/SVGs/28.svg'
 platforms:
   - iPad OS

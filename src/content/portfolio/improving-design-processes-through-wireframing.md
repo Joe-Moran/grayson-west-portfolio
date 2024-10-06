@@ -25,10 +25,11 @@ preview:
 screenshot: # An image representing the UI example of the product. Used in preview cards
   image: '../../assets/content/casestudies/2020-03-27.png'
   altText: ''
-background: '../../assets/content/backgrounds/1.jpg' # The background image used for preview cards
-icon: '../../assets/content/SVGs/1.svg'
+background: '../../assets/content/backgrounds/20.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/20.svg'
 platforms:
   - Process
+order: 9
 ---
 
 ## Situation
