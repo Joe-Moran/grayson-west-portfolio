@@ -23,9 +23,6 @@ preview:
   grid:
     rows: 1
     columns: 1
-screenshot: # An image representing the UI example of the product. Used in preview cards
-  image: 
-  altText: ''
 background: '../../assets/content/backgrounds/22.jpg' # The background image used for preview cards
 icon: '../../assets/content/SVGs/18.svg'
 platforms:

@@ -22,9 +22,6 @@ preview:
   grid:
     rows: 1
     columns: 1
-screenshot: # An image representing the UI example of the product. Used in preview cards
-  image: 
-  altText: ''
 background: '../../assets/content/backgrounds/20.jpg' # The background image used for preview cards
 icon: '../../assets/content/SVGs/20 .svg'
 platforms:
@@ -33,25 +30,25 @@ order: 9
 ---
 
 ## Situation
-
 In 2022, Michigan Software Labs faced a challenge in its approach to user experience design and product development. The the designers in the department had a practice of jumping directly into high-fidelity designs, which was particularly evident in the Hearsee project, was causing inefficiencies and limiting creative exploration. This approach led to increased time spent on late-stage revisions and hindered our clients roadmaps and increased their overhead. With 62% of software firms facing similar issues according to a recent industry survey, it was clear that a strategic shift in our design process was necessary to improve project outcomes and align with best practices.
 
 ## Task
-
 My objective was to introduce wireframing as a key step in our design process. While recognizing it as a marginal gain, I believed it could significantly save clients money, reduce our development effort, and give our designers more flexibility to explore optimal design solutions. I set modest targets: 15% reduction in design iteration time and 25% decrease in late-stage client change requests within six months. By implementing wireframing across projects, I aimed to enhance our processes, leading to more efficient delivery and improved client satisfaction.
 
 ## Action
-
 To address this challenge, I implemented the following strategies:
-
-1. **Introduction of Low-Fidelity Wireframing**: I instructed my team to start the practice of whiteboarding quick, conceptual designs to explore ideas prior to committing to detailed designs. This rapid wireframing approach allowed for greater flexibility in the early stages of design.
-2. **Enhancement of Collaborative Processes**: I organized bi-weekly cross-functional workshops where designers and developers could collectively brainstorm and iterate using these wireframes. This was a significant shift from our previous siloed approach.
-3. **Demonstration of Tangible Benefits**: Through the Hearsee project, I illustrated how wireframing facilitated rapid iteration and real-time adjustments during strategy discussions. We documented time spent on revisions before and after implementing wireframing.
-4. **Company-Wide Knowledge Sharing**: I presented our findings and the advantages of low-fidelity wireframing to the entire Michigan Software Labs team through a series of lunch-and-learn sessions.
-5. **Cultural Shift Promotion**: I encouraged a more adaptable, collaborative approach between design and development teams, introducing a 'wireframe review' step in our project workflow.
+### Introduction of Low-Fidelity Wireframing
+I instructed my team to start the practice of whiteboarding quick, conceptual designs to explore ideas prior to committing to detailed designs. This rapid wireframing approach allowed for greater flexibility in the early stages of design.
+### Enhancement of Collaborative Processes
+I organized bi-weekly cross-functional workshops where designers and developers could collectively brainstorm and iterate using these wireframes. This was a significant shift from our previous siloed approach.
+### Demonstration of Tangible Benefits
+Through the Hearsee project, I illustrated how wireframing facilitated rapid iteration and real-time adjustments during strategy discussions. We documented time spent on revisions before and after implementing wireframing.
+### Company-Wide Knowledge Sharing:
+I presented our findings and the advantages of low-fidelity wireframing to the entire Michigan Software Labs team through a series of lunch-and-learn sessions.
+### Cultural Shift Promotion
+I encouraged a more adaptable, collaborative approach between design and development teams, introducing a 'wireframe review' step in our project workflow.
 
 ### Challenges and Solutions
-
 One significant challenge was initial resistance from leadership and senior designers who were comfortable with the existing process. To address this, we:
 
 - Conducted one-on-one sessions to address concerns
@@ -59,11 +56,10 @@ One significant challenge was initial resistance from leadership and senior desi
 - Provided training on wireframing tools and techniques
 
 ## Result
-
 The implementation of wireframing practices yielded significant positive outcomes:
-
-- **Accelerated Iteration Cycles**: We reduced design iteration time by 40%, exceeding our initial goal of 30%.
-- **Enhanced Cross-Functional Collaboration**: Our internal collaboration satisfaction scores improved by 35%, surpassing our 25% target.
+### Accelerated Iteration Cycles
+We reduced design iteration time by 40%, exceeding our initial goal of 30%.
+### Enhanced Cross-Functional Collaboration**: Our internal collaboration satisfaction scores improved by 35%, surpassing our 25% target.
 - **Optimized Resource Allocation**: We decreased the need for extensive high-fidelity redesigns by 60%, saving an estimated 120 designer hours per month.
 - **Increased Operational Flexibility**: Developer-proposed changes increased by 50%, indicating improved engagement and innovation.
 - **Streamlined Development Process**: Overall project delivery times decreased by 20% due to fewer late-stage design changes.
