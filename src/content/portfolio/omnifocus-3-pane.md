@@ -78,7 +78,7 @@ The key challenge was creating a three-pane solution that functioned seamlessly 
 ### Challenges and Resolutions
 To provide a quick reference, here is a summary of the key challenges we faced and how we resolved them during the design process:
 
-| **Challenge**                                                                           | **Resolution**                                                                                   |
+| Challenge                                                                               | Resolution                                                                                       |
 | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | Ensuring the three panes adapted to different screen sizes without overwhelming the UI. | Developed a flexible grid system and dynamic resizing rules based on usability testing feedback. |
 | Making the layout compatible with Split View and Slide Over modes.                      | Implemented a cascading dismissal approach, refining transitions to improve user experience.     |
