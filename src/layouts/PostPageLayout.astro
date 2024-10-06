@@ -53,6 +53,14 @@ const { title, pages } = Astro.props;
       line-height: 1.3;
     }
 
+    h2,
+    h3,
+    h4 {
+      + :not(h1, h2, h3, h4, h5, h6) {
+        margin-top: 8px;
+      }
+    }
+
     h2 {
       font-size: 1.75rem;
       font-weight: 600;
