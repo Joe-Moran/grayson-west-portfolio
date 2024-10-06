@@ -27,7 +27,7 @@ screenshot: # An image representing the UI example of the product. Used in previ
   image: '../../assets/content/casestudies/2020-03-27.png'
   altText: ''
 background: '../../assets/content/backgrounds/22.jpg' # The background image used for preview cards
-icon: '../../assets/content/SVGs/22.svg'
+icon: '../../assets/content/SVGs/18.svg'
 platforms:
   - Process
 order: 8
