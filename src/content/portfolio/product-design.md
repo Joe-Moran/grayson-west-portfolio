@@ -1,5 +1,5 @@
 ---
-title: Product Design at Michigan Software Labs
+title: Product Design
 summary: "
 <h4>Situation</h4>
 <p>Michigan Software Labs lacked Product Design principles, focusing solely on UX design. This led to inefficiencies, missed opportunities for innovation, and strained client relationships.</p>
