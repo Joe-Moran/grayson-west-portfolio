@@ -1,5 +1,5 @@
 ---
-title: DesignOps at Michigan Software Labs
+title: DesignOps at MSL
 summary: "
 <h4>Situation</h4>
 <p>Michigan Software Labs faced workflow inefficiencies, resource allocation issues, tool fragmentation, and lack of design systems. These challenges led to decreased productivity and client satisfaction.</p>
@@ -26,10 +26,11 @@ preview:
 screenshot: # An image representing the UI example of the product. Used in preview cards
   image: '../../assets/content/casestudies/2020-03-27.png'
   altText: ''
-background: '../../assets/content/backgrounds/1.jpg' # The background image used for preview cards
-icon: '../../assets/content/SVGs/1.svg'
+background: '../../assets/content/backgrounds/22.jpg' # The background image used for preview cards
+icon: '../../assets/content/SVGs/22.svg'
 platforms:
   - Process
+order: 8
 ---
 
 ## Situation
