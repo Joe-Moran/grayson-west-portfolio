@@ -49,15 +49,16 @@ As the company grew, our design processes didn't scale effectively. Projects tha
 These issues not only affected the design team's productivity but also impacted the company's ability to deliver high-quality solutions to clients on time. Client satisfaction scores for design-related aspects had dropped from 8.5 to 7.2 out of 10 over the past year, putting our reputation for design excellence at risk.
 ## Task
 My primary objective was to implement a robust DesignOps framework at Michigan Software Labs within a two-year timeframe. The key goals were to:
-1. Streamline design workflows and reduce non-design activities by 50%.
-2. Optimize resource management and reduce project onboarding time by 40%.
+1. Streamline design workflows and reduce non-design activities by 10%.
+2. Optimize resource management and reduce project onboarding time by 37%.
 3. Unify design tools and establish a centralized asset management system.
-4. Develop a comprehensive, modular design system with 90% adherence in new projects.
+4. Develop a comprehensive, modular wireframe design system with 61% adherence in new projects.
 5. Implement design metrics and reporting to demonstrate value to stakeholders.
-6. Enhance scalability to accommodate 50% team growth without efficiency loss.
-7. Improve cross-functional collaboration, reducing design-related delays by 60%.
+6. Enhance scalability to accommodate 20% team growth without efficiency loss.
+7. Improve cross-functional collaboration, reducing design-related delays by 30%.
 8. Elevate design culture through continuous learning and mentorship programs.
-9. Increase client satisfaction scores for design from 7.2 to 9.0 out of 10. These initiatives aimed to position Michigan Software Labs as a leader in design-driven software development, improving both internal efficiency and client outcomes.
+9. Increase client satisfaction scores for design from 7.2 to 9.0 out of 10. 
+These initiatives aimed to position Michigan Software Labs as a leader in design-driven software development, improving both internal efficiency and client outcomes.
 
 ## Action
 To achieve our objectives, I implemented the following key initiatives:
@@ -106,18 +107,25 @@ The implementation of DesignOps wasn't without its hurdles:
 
 ## Result
 The implementation of DesignOps at Michigan Software Labs led to significant improvements across multiple areas:
-1. **Increased Efficiency**: Project delivery times improved by 40%, with a 30% reduction in missed deadlines.
-2. **Enhanced Quality**: Design consistency and quality improved, resulting in a 50% decrease in post-handoff rework.
-3. **Improved Collaboration**: Cross-functional teamwork increased, with non-design team members actively participating in design processes.
-4. **Faster Onboarding**: New team members became productive 40% faster due to standardized processes and clear documentation.
-5. **Career Growth**: Employee satisfaction in the design team increased by 35%, with clearer career progression paths.
-6. **Innovation Boost**: The number of innovative design solutions proposed by the team increased by 60% year-over-year.
-7. **Client Satisfaction**: Client feedback scores on design quality and project management improved from an average of 7.2 to 9.1 out of 10.
-8. **Company-wide Impact**: Design thinking principles began to influence decision-making across different departments, leading to more user-centric solutions company-wide.
+**Increased Efficiency**: 
+Project delivery times improved by 40%, with a 30% reduction in missed deadlines.
+**Enhanced Quality**: 
+Design consistency and quality improved, resulting in a 50% decrease in post-handoff rework.
+**Improved Collaboration**: 
+Cross-functional teamwork increased, with non-design team members actively participating in design processes.
+**Faster Onboarding**: 
+New team members became productive 40% faster due to standardized processes and clear documentation.
+**Career Growth**: 
+Employee satisfaction in the design team increased by 35%, with clearer career progression paths.
+**Innovation Boost**: 
+The number of innovative design solutions proposed by the team increased by 60% year-over-year.
+**Client Satisfaction**: 
+Client feedback scores on design quality and project management improved from an average of 7.2 to 9.1 out of 10.
+**Company-wide Impact**: 
+Design thinking principles began to influence decision-making across different departments, leading to more user-centric solutions company-wide.
 
 ### Concrete Example
 For a healthcare client's patient management system, our new DesignOps approach led to:
-
 - 25% reduction in development time
 - 40% decrease in post-launch bug fixes
 - 98% positive user feedback, up from 75% in previous projects
@@ -147,10 +155,14 @@ The DesignOps implementation aligns with Michigan Software Labs' long-term goals
 4. Scaling our operations efficiently to handle larger, more complex projects
 
 ## Lessons Learned
-1. **Change Management is Crucial**: Clear communication and demonstrating early wins were key to overcoming resistance.
-2. **Flexibility is Important**: While standardization is beneficial, processes need to be flexible enough to accommodate different project needs.
-3. **Continuous Improvement**: DesignOps is not a one-time implementation but an ongoing process of refinement and adaptation.
-4. **Cross-functional Buy-in**: Engaging non-design teams early in the process was crucial for company-wide adoption of design thinking.
+**Change Management is Crucial**: 
+Clear communication and demonstrating early wins were key to overcoming resistance.
+**Flexibility is Important**: 
+While standardization is beneficial, processes need to be flexible enough to accommodate different project needs.
+**Continuous Improvement**: 
+DesignOps is not a one-time implementation but an ongoing process of refinement and adaptation.
+**Cross-functional Buy-in**: 
+Engaging non-design teams early in the process was crucial for company-wide adoption of design thinking.
 
 
 ## Reflection and Future Directions
@@ -163,4 +175,6 @@ Looking ahead, we continue to refine our DesignOps framework, exploring new tool
 1. Further integration of AI in our design processes to enhance efficiency and innovation.
 2. Expanding our design thinking workshops to clients, helping them cultivate a design-centric approach within their own organizations.
 3. Developing a DesignOps certification program for our team members, further establishing our expertise in this area.
-4. Exploring how DesignOps can be adapted for remote and distributed teams, anticipating future work trends. The success of our DesignOps implementation serves as a testament to the power of thoughtful, strategic design leadership in driving organizational change and delivering exceptional value to clients. It has not only transformed our immediate design work but has positioned Michigan Software Labs as a leader in design-driven software development, ready to tackle the challenges and opportunities of the evolving digital landscape.
+4. Exploring how DesignOps can be adapted for remote and distributed teams, anticipating future work trends. 
+
+The success of our DesignOps implementation serves as a testament to the power of thoughtful, strategic design leadership in driving organizational change and delivering exceptional value to clients. It has not only transformed our immediate design work but has positioned Michigan Software Labs as a leader in design-driven software development, ready to tackle the challenges and opportunities of the evolving digital landscape.
