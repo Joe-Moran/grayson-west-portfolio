@@ -1,5 +1,5 @@
 ---
-title: Michigan Software Labs - Modernizing Design Processes
+title: Michigan Software Labs
 summary: "
 <h4>Situation</h4>
 <p>At Michigan Software Labs, the design department faced challenges such as inconsistent processes, a lack of user-centered focus, and siloed efforts.</p>
