@@ -56,22 +56,27 @@ Ultimately, I wanted to provide my team with a clear understanding of what was e
 
 To begin the task of creating well-defined roles, I implemented a collaborative approach that involved various stakeholders within the company. This process consisted of several key steps:
 
-1. **Consulting the Design Team**:     I asked my team of designers to create bullet-point lists detailing what they believed should be expected of them when working on a project. This exercise helped capture their perspectives and current understanding of their roles.
-2. **Engaging Project Managers**:    I worked closely with project managers to:    - Understand how they viewed design within the scope of project management    - Gather their ideas and opinions on how designers should operate    - Identify any gaps between project management expectations and current design practices
-3. **Collaborating with Software Engineers**:    I held discussions with software engineers to:    - Gain insight into their perceptions of how designers were functioning\
-      - Understand their expectations and needs from the design team\
-      - Identify opportunities for improving collaboration between design and development This approach allowed me to gather comprehensive insights from different perspectives, ensuring that the role definitions would address the needs and expectations of all team members involved in our projects.
+### Consulting the Design Team
+I asked my team of designers to create bullet-point lists detailing what they believed should be expected of them when working on a project. This exercise helped capture their perspectives and current understanding of their roles.
+### Engaging Project Managers
+I worked closely with project managers to:   
+ - Understand how they viewed design within the scope of project management    
+ - Gather their ideas and opinions on how designers should operate    
+ - Identify any gaps between project management expectations and current design practices
+### Collaborating with Software Engineers
+I held discussions with software engineers to:    
+- Gain insight into their perceptions of how designers were functioning
+- Understand their expectations and needs from the design team
+- Identify opportunities for improving collaboration between design and development This approach allowed me to gather comprehensive insights from different perspectives, ensuring that the role definitions would address the needs and expectations of all team members involved in our projects.
 
-### Climax
-
+### Results
 After gathering all the information, I came up with the following roles for Product Designers and UX Designers at the company.
 
 #### A Product Designer is Accountable for…
 
 ##### Setting Design Direction for the Product
 
-\_With input from the Design Manager **This looks like:**
-
+With input from the Design Manager **This looks like:**
 - **Understand the Project and Goals:** Grasp the project's purpose, audience, and business aims. Learn the product's role, features, and functionality.
 - **Research and Gather Insights:** Study current design trends, industry norms, and successful products in related fields. Use various sources for inspiration and analyze user feedback and market studies.
 - **Collaborate with Stakeholders:** Discuss with stakeholders to gather input and understand their vision and product requirements.
