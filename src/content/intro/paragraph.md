@@ -1,5 +1,5 @@
 ---
-title: Greetings!
+title: ""
 greeting: I’m a design leader with over 15 years of experience in product design and guiding software development teams.
 ---
 
