@@ -84,16 +84,19 @@ These iterations and close collaboration with the development team ensured that 
 ## Outcomes
 ### Metrics Visualization
 To better illustrate the success of the project, we visualized key metrics through charts and graphs:
-- **User Satisfaction Increase**: A 16% increase in user satisfaction was observed after implementing the new design. This improvement is depicted in the line chart below, showing user satisfaction scores before and after the update.
-- **Engagement Metrics**: Engagement rose by 22%, with a higher number of active users. The bar graph below displays the growth in active usage compared to the previous version, OmniFocus 2.
-- **Sales Growth**: Sales grew by 28%, with active user numbers rising by 35%, surpassing the figures for OmniFocus 2. This trend is shown in the pie chart, illustrating the percentage growth in sales and user numbers.
+**User Satisfaction Increase**: 
+A 16% increase in user satisfaction was observed after implementing the new design. This improvement is depicted in the line chart below, showing user satisfaction scores before and after the update.
+**Engagement Metrics**: 
+Engagement rose by 22%, with a higher number of active users. The bar graph below displays the growth in active usage compared to the previous version, OmniFocus 2.
+**Sales Growth**: 
+Sales grew by 28%, with active user numbers rising by 35%, surpassing the figures for OmniFocus 2. This trend is shown in the pie chart, illustrating the percentage growth in sales and user numbers.
 Including these visual elements made the results more impactful and easier to understand at a glance.
 
 The three-pane solution was successfully implemented in OmniFocus 3, receiving highly positive feedback from users. Comments like:
 
 > "This update makes managing my projects so much easier"
 
-and
+**and**
 
 > "The new layout feels incredibly intuitive"
 
