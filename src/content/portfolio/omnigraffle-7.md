@@ -55,23 +55,23 @@ We employed a mix of qualitative and quantitative research methods to guide the 
 - **Participants**: 15 users experienced with OmniGraffle 6.
 - **Method**: In-depth interviews with open-ended questions.
 #### Key Insights:
-1. **Feature Requests**:
+**Feature Requests**:
     - **60%** requested better beizer point editing.
     - Example: Creating custom vector shapes.
-2. **Pain Points**:
+**Pain Points**:
     - **50%** found the lack of artboards in OmniGraffle 6 a deal breaker.
     - Issues with finding essential features.
-3. **Goals and Expectations**:
+**Goals and Expectations**:
     - **70%** emphasized the need to work more quickly.
     - Focused on improving productivity and reducing unnecessary steps.
 #### Usability Testing (Pre-Development Phase)
 - **Objective**: Identify areas for improvement in OmniGraffle 6.
 - **Participants**: 10 users with representative use cases.
 #### Measured Metrics:
-1. **Task Success Rate**:
+**Task Success Rate**:
     - **65%** of participants completed key tasks successfully.
     - Insight: Need for significant redesign in some workflows and add new features.
-2. **Time on Task**:
+**Time on Task**:
     - Average time: **4.2 minutes** for key workflows.
     - **55%** of users felt this was too long, indicating the need for efficiency improvements.
 ### Research Findings
@@ -111,9 +111,12 @@ Analytics and user feedback indicated confusion during the initial onboarding ex
 Introducing new features such as the Bezier Point Editing Tool enhancements and Convert Lines to Shapes required careful consideration to avoid overwhelming users. Through iterative usability testing, we struck a balance that ensured these features were powerful yet easy to use.
 ## Result
 To measure the impact of our redesign efforts, we compared key metrics before and after the release of OmniGraffle 7.0:
-- **Download-to-Trial Conversion Rate**: Before the redesign, the conversion rate was 12% from the Mac App Store and 18% from our website. After implementing the new onboarding experience, these rates increased to 35% from the Mac App Store (a 23% improvement) and 34% from our website (a 16% improvement).
-- **Sales Growth**: In the three months following the release of OmniGraffle 7, sales increased by 33% compared to the same period for OmniGraffle 6, making OmniGraffle 7 for Mac the second most successful release in the application's history.
-- **User Efficiency**: User testing revealed a 12% reduction in the time taken to complete common workflows, such as project organization and vector manipulation, due to improvements like Artboards and Bezier Point Editing Tool enhancements.
+### Download-to-Trial Conversion Rate
+Before the redesign, the conversion rate was 12% from the Mac App Store and 18% from our website. After implementing the new onboarding experience, these rates increased to 35% from the Mac App Store (a 23% improvement) and 34% from our website (a 16% improvement).
+### Sales Growth
+In the three months following the release of OmniGraffle 7, sales increased by 33% compared to the same period for OmniGraffle 6, making OmniGraffle 7 for Mac the second most successful release in the application's history.
+### User Efficiency
+User testing revealed a 12% reduction in the time taken to complete common workflows, such as project organization and vector manipulation, due to improvements like Artboards and Bezier Point Editing Tool enhancements.
 For three months following the release, sales increased by 18% compared to OmniGraffle 6 during the same period. It remained a top-10 grossing app on the App Store for seven weeks. In the three years since its release, OmniGraffle 7 Pro has consistently been Omni's top-grossing product on both the Omni store and the Mac App Store.
 ## Conclusion
 Implementing the artboard feature was more challenging than anticipated, but the experience ultimately strengthened our team's understanding of the drawing model and enhanced cross-functional collaboration. This project underscored the importance of deeply understanding the technical aspects of the product and highlighted the value of perseverance in overcoming obstacles. Despite my design expertise, I learned not to assume shared knowledge between design and development teams. Using simple explanations and visual aids, I effectively conveyed the importance of artboards, underscoring the value of cross-team communication and education in successful product development.
