@@ -1,6 +1,8 @@
 ---
 title: Creating Joyful, Productive Team
-summary: My goal is to foster engaging and enjoyable work environments. I advocate for the freedom to experiment, learn, and evolve without fear, boosting expression of creativity and personal authenticity. I strive to nurture diverse ideas, promote continuous professional development, and craft fulfilling experiences. I fundamentally believe in the power of combining passion, creativity, and enjoyment to create absorbing and challenging activities. My aim is to integrate fun as a key element to spark innovation, kindle curiosity, encourage adventure, and drive growth within the business.
+summary: Work should be challenging—but it should also be fun.
+  
+  I’ve never believed that creativity thrives in silence. Some of the best ideas I’ve seen came from laughter, debate, or an unexpected side tangent in a team meeting. I lead with the belief that teams do their best work when they feel safe, supported, and free to try weird things. If the room feels flat, something’s off. If there’s energy, momentum follows.
 preview:
   enable: true
   grid:
