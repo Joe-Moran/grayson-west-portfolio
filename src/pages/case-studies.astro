@@ -5,11 +5,11 @@ import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
 const portfolioCollection = await getCollection('portfolio');
 const pages = portfolioCollection.map((item) => ({
   title: item.data.title,
-  path: `/the-work/${item.slug}`,
+  path: `/case-studies/${item.slug}`,
 }));
 ---
 
-<Layout title='The Work' subPages={pages}>
+<Layout title='Case Studies' subPages={pages}>
   <ContentPreviewMasonry
     basePath={new URL(Astro.request.url).pathname}
     collection={portfolioCollection}

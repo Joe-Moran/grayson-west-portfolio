@@ -20,7 +20,7 @@ const pages = writingCollection
   .filter((item) => item.data.title.toLowerCase() !== 'template') // TODO: can I do this in the getCollection settings so I only have to filter once in one file?
   .map((item) => ({
     title: item.data.title,
-    path: `/how-i-think/${item.slug}`,
+    path: `/how-i-lead/${item.slug}`,
   }));
 ---
 

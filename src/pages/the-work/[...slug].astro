@@ -19,7 +19,7 @@ const pages = portfolioCollection
   .filter((item) => item.data.title.toLowerCase() !== 'template') // TODO: can I do this in the getCollection settings so I only have to filter once in one file?
   .map((item) => ({
     title: item.data.title,
-    path: `/the-work/${item.slug}`,
+    path: `/case-studies/${item.slug}`,
   }));
 ---
 
