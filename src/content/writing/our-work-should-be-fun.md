@@ -1,5 +1,5 @@
 ---
-title: Creating Joyful, Productive Team
+title: Creating Productive Teams
 summary: Work should be challenging—but it should also be fun.
   
   I’ve never believed that creativity thrives in silence. Some of the best ideas I’ve seen came from laughter, debate, or an unexpected side tangent in a team meeting. I lead with the belief that teams do their best work when they feel safe, supported, and free to try weird things. If the room feels flat, something’s off. If there’s energy, momentum follows.
