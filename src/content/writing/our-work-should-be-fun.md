@@ -1,5 +1,5 @@
 ---
-title: Our Work Should Be Fun
+title: Creating Joyful, Productive Team
 summary: My goal is to foster engaging and enjoyable work environments. I advocate for the freedom to experiment, learn, and evolve without fear, boosting expression of creativity and personal authenticity. I strive to nurture diverse ideas, promote continuous professional development, and craft fulfilling experiences. I fundamentally believe in the power of combining passion, creativity, and enjoyment to create absorbing and challenging activities. My aim is to integrate fun as a key element to spark innovation, kindle curiosity, encourage adventure, and drive growth within the business.
 preview:
   enable: true
