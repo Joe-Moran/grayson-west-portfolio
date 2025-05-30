@@ -1,6 +1,6 @@
 ---
 title: ""
-greeting: I’m a design leader with over 15 years of experience in product design and guiding software development teams.
+greeting: I’m a design leader with over 18 years of experience shaping user experiences across platforms, products, and industries.
 ---
 
-Average is boring, and “ordinary” is nothing to aspire to. I have an obsession with loosening restraints so that my teams are can find that place where creativity and productivity fuse into innovative design solutions.
+I thrive in ambiguity, ask hard questions, and lead with curiosity. My approach is grounded in collaboration, driven by outcomes, and aimed at unlocking the creative potential in every challenge.
