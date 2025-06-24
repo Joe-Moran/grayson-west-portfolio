@@ -10,7 +10,7 @@ const { mainLandmarkId }: Props = Astro.props;
 const footerContent = await getEntry('footer', 'footer');
 
 const pages: WebPage[] = [
-  { path: '/how-i-lead', title: 'How I Lead' },
+  // { path: '/how-i-lead', title: 'How I Lead' },
   { path: '/case-studies', title: 'Case Studies' },
   { path: `mailto:${footerContent.data.email}`, title: "Let's Chat" },
 ];
