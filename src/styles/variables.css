@@ -12,7 +12,7 @@
   --color-logo: var(--orange);
   --color-text-h1: var(--orange);
   --color-border: var(--orange);
-  --color-post-background: #281f2c;
-  --color-post-text: var(--white);
+  --color-post-background: #fffef3;
+  --color-post-text: #3a2423;
   --mobile-breakpoint: 768px;
 }
