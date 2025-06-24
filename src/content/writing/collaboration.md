@@ -2,7 +2,7 @@
 title: Collaboration
 summary: Successful software development relies on fostering a collaborative environment where team members feel safe sharing ideas. At The Omni Group, I saw the power of teamwork during our development of early iPhone apps, overcoming challenges through communication and rapid prototyping. This taught me the value of collaboration and diverse perspectives for creative problem-solving. At Michigan Software Labs, I championed collaboration through meetings, presentations, and leading by example, resulting in a supportive team environment and more impactful product features, such as an improved onboarding process that reduced user drop-off rates.
 preview: # The content for preview cards
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 1

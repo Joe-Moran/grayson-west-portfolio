@@ -2,12 +2,12 @@
 title: Iteration
 summary: Iteration fuels my creativity—constant refining brings the best ideas and results. My high school swimming experience taught me that small, deliberate changes lead to big improvements. In work, I proactively seek to fix processes through experimentation and iteration. This mindset is vital in product development, fostering growth through incremental gains and user feedback. It keeps us adaptable, reducing friction and improving efficiency. Iteration also helps spot issues early and encourages challenging the status quo. Marginal gains, over time, lead to significant breakthroughs and meaningful progress.
 preview: # The content for preview cards
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 2
 home:
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 2 # Whether this post should be featured on the home page

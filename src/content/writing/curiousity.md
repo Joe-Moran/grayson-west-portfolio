@@ -2,12 +2,12 @@
 title: Curiousity
 summary: I'm an endlessly curious person, shaped by my punk roots and pursuit of professional cycling. The punk ethos taught me to question norms and value diverse perspectives, while cycling taught resilience and the courage to chase dreams. I enjoy tackling complex problems, seeing challenges as exciting opportunities to learn and innovate. I value collaboration with those who share a passion for exploration and adaptability. As a leader, I strive to foster an environment that encourages curiosity, open communication, and collective growth through a spirit of adventure and mutual discovery.
 preview: # The content for preview cards
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 2
 home:
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 2 # Whether this post should be featured on the home page

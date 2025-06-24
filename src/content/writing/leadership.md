@@ -3,7 +3,7 @@ title: Leadership
 summary: I lead with honest communication, proactive coaching, and a dedication to individual growth. By fostering trust and transparency, I help my team members unlock their potential, face challenges, and celebrate successes. My coaching style is based on constructive feedback, openness, and empowering autonomy. I create a supportive environment that values both success and learning from failure, encouraging everyone to contribute to our direction and culture. As a leader, I aim to be a partner in breaking down barriers so my team can reach their full potential.
 
 preview: # The content for preview cards
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 1

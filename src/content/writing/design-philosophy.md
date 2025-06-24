@@ -2,7 +2,7 @@
 title: Design Philosophy
 summary: In order to create a successful digital product, it's crucial to prioritize the needs and behaviors of the users and of the business. A well-designed digital product should be the result of a collaborative effort that allows for swift iteration and continuous improvement. Design decisions should be backed by data, be measurable, and solve the stated problem. By putting the needs of the users first, we can create digital products that not only meet but exceed their expectations and deliver tremendous value to all stakeholders.
 preview: # The content for preview cards
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 1

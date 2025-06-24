@@ -2,7 +2,7 @@
 title: Innovation
 summary: I strongly believe in innovation, collaboration, and the relentless pursuit of the impossible. As designers and leaders, we should aim to draw insights from the present to shape the future user experience, empower our teams to experiment, and cultivate adaptability and critical thinking skills. My outlook on digital product design is founded on the principles of discovery, resilience, and an insatiable curiosity to reimagine, redesign, and revolutionize.
 preview: # The content for preview cards
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 1
