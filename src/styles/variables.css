@@ -1,8 +1,8 @@
 :root {
   --white: rgb(245 245 245);
-  --orange: #ffc052;
+  --orange: #3a2423;
   --blue: #347ab9;
-  --red: #b54b44;
+  --red: #3a2423;
   --color-background: #fffef3;
   --color-heading: var(--orange);
   --color-heading-background: var(--red);
