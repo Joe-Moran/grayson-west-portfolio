@@ -12,9 +12,11 @@ const { title } = Astro.props;
 <div class='hero'>
   <BackgroundImage image={hero} alt='' class:list={['image']} />
 
+  <!--
   <div class='heading-container'>
     <h1 class='heading'>{title}</h1>
   </div>
+  -->
 </div>
 
 <style>
@@ -26,7 +28,7 @@ const { title } = Astro.props;
     background: gray;
   }
 
-  .heading-container {
+  /* .heading-container {
     position: relative;
     z-index: 2;
     display: flex;
@@ -42,5 +44,5 @@ const { title } = Astro.props;
     color: var(--orange);
     text-transform: uppercase;
     background: var(--color-heading-background);
-  }
+  } */
 </style>
