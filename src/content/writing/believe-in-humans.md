@@ -2,12 +2,12 @@
 title: I Believe In People
 summary: Humans have incredible potential, capable of achieving far more than they realize. This belief is rooted in my experiences, from observing my mother, an inspiring theater director, nurture talent, to learning about the power of teamwork during my time as a competitive cyclist in Europe. Leadership, for me, is about creating environments where people can thrive, fostering their innate abilities. I am fascinated by human curiosity, imagination, and especially passion, which fuels dreams and drives extraordinary accomplishments. My goal as a leader is to unlock this potential in others.
 preview:
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 2
 home:
-  enable: true
+  enable: false
   grid:
     rows: 1
     columns: 2
