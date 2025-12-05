@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.76](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.73...v0.0.76) (2025-12-05)
+
+
+### Bug Fixes
+
+* display dropdown nav menu below page title ([913baf5](https://github.com/Joe-Moran/grayson-west-portfolio/commit/913baf59eff1b0346771e0816a61d1b31b7b985a))
+* remove overwrite changes from merge conflict ([297d0e6](https://github.com/Joe-Moran/grayson-west-portfolio/commit/297d0e6f333b85b32ae856b297fbbf8aba792a51))
+
 ## [0.0.75](///compare/v0.0.74...v0.0.75) (2024-10-06)
 
 
