@@ -5,13 +5,14 @@ import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
 import Intro from '../components/Intro.astro';
 import Hero from '../components/Hero.astro';
 
-const portfolioCollection = await getCollection('portfolio');
+const portfolioCollection = await getCollection('portfolio', ({ data }) =>
+  !data.disciplines || data.disciplines.includes('ux')
+);
 
 const pages = portfolioCollection.map((item) => ({
   title: item.data.title,
   path: `/the-work/${item.slug}`,
-}));
----
+}));---
 
 <Layout title='UX' subPages={pages}>
 	<Hero title="User Experience" />

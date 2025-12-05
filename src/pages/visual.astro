@@ -1,7 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 import Hero from '../components/Hero.astro';
 import Intro from '../components/Intro.astro';
+import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
+
+const portfolioCollection = await getCollection('portfolio', ({ data }) =>
+  data.disciplines?.includes('visual')
+);
 ---
 
 <Layout title="Visual & Motion">
@@ -9,12 +15,25 @@ import Intro from '../components/Intro.astro';
 
   <main id="main">
 	<div class="intro-container">
-	  <Intro greeting="This section brings together my visual practice: graphic design, motion graphics, and video.">
+	  <Intro greeting="Visual design, motion graphics, and video work.">
 		<div class="intro-content">
 		  <p>
-			This section brings together my visual practice: graphic design, motion graphics, and video. I use these mediums to explore rhythm, typography, composition, and storytelling in ways that complement my UX work.
+			This section brings together my visual practice: graphic design, motion graphics, and
+			video. I use these mediums to explore rhythm, typography, composition, and storytelling
+			in ways that complement my UX work.
+		  </p>
+		  <p>
+			Below is a reusable grid of case studies using the same card layout as my UX section.
+			Over time, this will evolve to highlight visual and motion-focused projects.
 		  </p>
 		</div>
 	  </Intro>
 	</div>
+
+	<ContentPreviewMasonry
+	  basePath="/the-work"
+	  collection={portfolioCollection}
+	  previewLocation="page-preview"
+	/>
+  </main>
 </Layout>

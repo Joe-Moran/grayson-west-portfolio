@@ -20,17 +20,19 @@ preview:
   grid:
     rows: 1
     columns: 1
-screenshot: # An image representing the UI example of the product. Used in preview cards
-  image: '../../assets/content/casestudies/omnifocus-3-dark.png'
+screenshot:
+  image: '../../../assets/content/casestudies/omnifocus-3-dark.png'
   altText: ''
-background: '../../assets/content/backgrounds/28.jpg' # The background image used for preview cards
-icon: '../../assets/content/SVGs/28.svg'
+background: '../../../assets/content/backgrounds/28.jpg'
+icon: '../../../assets/content/SVGs/28.svg'
 platforms:
   - iPad OS
+disciplines:
+  - ux
 order: 4
 ---
 
-![OmniFocus 3 for iPad with new 3 panes](../../assets/content/casestudies/omnifocus-pane-1.png)
+![OmniFocus 3 for iPad with new 3 panes](../../../assets/content/casestudies/omnifocus-pane-1.png)
 
 ## Background
 
@@ -38,12 +40,12 @@ The most requested feature for OmniFocus 3 for iPad was a user experience that r
 
 <figure>
   
-![OmniFocus 3 in dark mode](../../assets/content/casestudies/omnifocus-3-dark.png)
+![OmniFocus 3 in dark mode](../../../assets/content/casestudies/omnifocus-3-dark.png)
 
 <figcaption>OmniFocus for iPad OS.</figcaption>
 </figure>
 
-The core problem was that the existing iPad interface did not provide the same level of efficiency or intuitive control as the Mac version. Users were frustrated with performing extra steps to access key features, affecting their productivity. The goal was to bridge this gap and provide a consistent experience across platforms that would enhance both familiarity and ease of use.
+The core problem was that the existing iPad interface did not provide the the same level of efficiency or intuitive control as the Mac version. Users were frustrated with performing extra steps to access key features, affecting their productivity. The goal was to bridge this gap and provide a consistent experience across platforms that would enhance both familiarity and ease of use.
 
 ## User Research Details
 
@@ -61,7 +63,7 @@ To understand user needs more thoroughly, we created user personas and journey m
 
 <figure>
   
-![OmniFocus personas](../../assets/content/casestudies/omnifocus-pane-persona.png)
+![OmniFocus personas](../../../assets/content/casestudies/omnifocus-pane-persona.png)
 
 <figcaption>Two personas we developed for our work on the three pane design.</figcaption>
 </figure>
@@ -76,7 +78,7 @@ Our goal was to develop a flexible framework that allowed users to view three di
 
 <figure>
   
-![Apple size classes](../../assets/content/casestudies/omnifocus-pane-screenclasses.png)
+![Apple size classes](../../../assets/content/casestudies/omnifocus-pane-screenclasses.png)
 
 <figcaption>The wide variety of Apple size classes we had to accommodate for in our design.</figcaption>
 </figure>
@@ -97,7 +99,7 @@ To provide a quick reference, here is a summary of the key challenges we faced a
 
 <figure>
   
-![3 pane prototype](../../assets/content/casestudies/iPad+Pro-Landscape-Full.png)
+![3 pane prototype](../../../assets/content/casestudies/iPad+Pro-Landscape-Full.png)
 
 <figcaption>A screenshot of our early prototype to figure out how the panes would work with different screen sizes.</figcaption>
 </figure>
@@ -106,12 +108,12 @@ During the prototyping phase, we conducted multiple iterations to address the sp
 
 #### Iteration 1: Initial Layout Design
 
-- **Challenge**: Ensuring the three panes could adapt to different screen sizes without overwhelming the user interface.
+- **Challenge**: Ensuring the three panes could adapt to different screen sizes without overwhelming the user interface.  
 - **Solution**: We started with a flexible grid system and conducted usability testing to determine the optimal sizing for each pane. Feedback indicated that the original layout was too cluttered on smaller screens, which led us to create more dynamic resizing rules.
 
 <figure>
   
-![3 pane prototype](../../assets/content/casestudies/iPad+Pro-Portrait-Full.png)
+![3 pane prototype portrait](../../../assets/content/casestudies/iPad+Pro-Portrait-Full.png)
 
 <figcaption>Another example of our prototype.</figcaption>
 </figure>
@@ -120,47 +122,45 @@ During the prototyping phase, we conducted multiple iterations to address the sp
 
 <figure>
   
-![Split view in action](../../assets/content/casestudies/omnifocus-pane-video-1.gif)
+![Split view in action](../../../assets/content/casestudies/omnifocus-pane-video-1.gif)
 
-<figcaption>How split view works in with our design.</figcaption>
+<figcaption>How split view works with our design.</figcaption>
 </figure>
 
-- **Challenge**: Making the three-pane layout compatible with Split View and Slide Over multitasking modes.
+- **Challenge**: Making the three-pane layout compatible with Split View and Slide Over multitasking modes.  
 - **Solution**: We implemented a cascading dismissal approach, where the right-side inspector was dismissed first as the screen size narrowed. User testing revealed that this approach worked well for multitasking but needed smoother transitions, which we refined in subsequent iterations.
 
 #### Iteration 3: Pinning Feature
 
 <figure>
   
-![Pinning a pane in action](../../assets/content/casestudies/omnifocus-pane-video-2.gif)
+![Pinning a pane in action](../../../assets/content/casestudies/omnifocus-pane-video-2.gif)
 
 <figcaption>How pinning a pane in place works.</figcaption>
 </figure>
 
-- **Challenge**: Allowing users to keep specific panes visible while navigating other parts of the app.
+- **Challenge**: Allowing users to keep specific panes visible while navigating other parts of the app.  
 - **Solution**: We introduced a "pinning" feature, allowing users to lock a pane in place. During testing, users appreciated the flexibility, but some found the interaction unclear. Based on their feedback, we added visual indicators to show when a pane was pinned.
 
 ### Developer Collaboration and Feedback
 
 The implementation of this UX required extensive collaboration with developers to ensure that the designs were feasible and adaptable to technical constraints:
 
-- **Memory Management**: Handling multiple panes simultaneously led to memory usage issues. Developers provided feedback on optimizing data loading and unloading, which resulted in improved performance. We adjusted the design to only load data in active panes, significantly reducing memory consumption.
-- **Smooth Transitions**: Developers also worked on refining the animations for pane transitions, ensuring a seamless user experience. Their feedback was crucial in adjusting the timing and responsiveness of the animations, which improved the overall fluidity of the interface. These iterations and close collaboration with the development team ensured that the final product met both user needs and technical requirements, resulting in a robust and user-friendly solution.
+- **Memory Management**: Handling multiple panes simultaneously led to memory usage issues. Developers provided feedback on optimizing data loading and unloading, which resulted in improved performance. We adjusted the design to only load data in active panes, significantly reducing memory consumption.  
+- **Smooth Transitions**: Developers also worked on refining the animations for pane transitions, ensuring a seamless user experience. Their feedback was crucial in adjusting the timing and responsiveness of the animations, which improved the overall fluidity of the interface.  
+
+These iterations and close collaboration with the development team ensured that the final product met both user needs and technical requirements, resulting in a robust and user-friendly solution.
 
 ## Outcomes
-
-### Metrics Visualization
-
-To better illustrate the success of the project, we visualized key metrics through charts and graphs: **User Satisfaction Increase**: A 16% increase in user satisfaction was observed after implementing the new design. This improvement is depicted in the line chart below, showing user satisfaction scores before and after the update. **Engagement Metrics**: Engagement rose by 22%, with a higher number of active users. The bar graph below displays the growth in active usage compared to the previous version, OmniFocus 2. **Sales Growth**: Sales grew by 28%, with active user numbers rising by 35%, surpassing the figures for OmniFocus 2. This trend is shown in the pie chart, illustrating the percentage growth in sales and user numbers. Including these visual elements made the results more impactful and easier to understand at a glance.
 
 The three-pane solution was successfully implemented in OmniFocus 3, receiving highly positive feedback from users. Comments like:
 
 > "This update makes managing my projects so much easier"
 
-**and**
+and
 
 > "The new layout feels incredibly intuitive"
 
-demonstrated user satisfaction. User satisfaction scores increased by 16%, while engagement metrics showed a 22% rise in active usage compared to OmniFocus 2. The update improved app efficiency, making it a more versatile tool on the iPad.
+demonstrated user satisfaction. User satisfaction scores increased by **16%**, while engagement metrics showed a **22%** rise in active usage compared to OmniFocus 2. The update improved app efficiency, making it a more versatile tool on the iPad.
 
-Additionally, the seamless update process for new iOS releases ensured a consistent and reliable user experience. Sales grew by 28%, and active user numbers rose by 35%, surpassing OmniFocus 2. This success underscored the importance of user-centered design, collaboration, and iterative prototyping in delivering a bespoke UX solution.
+Sales grew by **28%**, and active user numbers rose by **35%**, surpassing OmniFocus 2. This success underscored the importance of user-centered design, collaboration, and iterative prototyping in delivering a bespoke UX solution.

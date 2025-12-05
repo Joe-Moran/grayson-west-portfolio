@@ -1,0 +1,150 @@
+---
+title: Better Project Outcomes
+summary: "
+<h4>Situation</h4>
+<p>Michigan Software Labs lacked Product Design principles, focusing solely on UX design. This led to inefficiencies, missed opportunities for innovation, and strained client relationships.</p>
+
+<h4>Task</h4>
+<p>As the new Design Manager, introduce and implement Product Design methodologies, demonstrating their value over traditional UX design to improve processes and client outcomes.
+</p>
+
+<h4>Result</h4>  
+<p>Successfully integrated Product Design principles, leading to improved product development, enhanced client satisfaction, and balanced decision-making. The company gained a competitive advantage, with one project reducing non-profit supply delivery time by 25% and increasing donor engagement by 45%.</p>
+"
+home:
+  enable: false
+  grid:
+    rows: 1
+    columns: 2
+preview:
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
+background: '../../../assets/content/backgrounds/19.jpg'
+icon: '../../../assets/content/SVGs/19.svg'
+platforms:
+  - Process
+disciplines:
+  - ux
+order: 9
+---
+
+## Situation
+In 2022, Michigan Software Labs faced a challenge in its approach to user experience design and product development. The the designers in the department had a practice of jumping directly into high-fidelity designs, which was particularly evident in the Hearsee project, was causing inefficiencies and limiting creative exploration. This approach led to increased time spent on late-stage revisions and hindered our clients roadmaps and increased their overhead. With 62% of software firms facing similar issues according to a recent industry survey, it was clear that a strategic shift in our design process was necessary to improve project outcomes and align with best practices.
+
+## Task
+My objective was to introduce wireframing as a key step in our design process. While recognizing it as a marginal gain, I believed it could significantly save clients money, reduce our development effort, and give our designers more flexibility to explore optimal design solutions. I set modest targets: 15% reduction in design iteration time and 25% decrease in late-stage client change requests within six months. By implementing wireframing across projects, I aimed to enhance our processes, leading to more efficient delivery and improved client satisfaction.
+
+## Action
+To address this challenge, I implemented the following strategies:
+
+### Introduction of Low-Fidelity Wireframing
+I instructed my team to start the practice of whiteboarding quick, conceptual designs to explore ideas prior to committing to detailed designs. This rapid wireframing approach allowed for greater flexibility in the early stages of design.
+
+### Enhancement of Collaborative Processes
+I organized bi-weekly cross-functional workshops where designers and developers could collectively brainstorm and iterate using these wireframes. This was a significant shift from our previous siloed approach.
+
+### Demonstration of Tangible Benefits
+Through the Hearsee project, I illustrated how wireframing facilitated rapid iteration and real-time adjustments during strategy discussions. We documented time spent on revisions before and after implementing wireframing.
+
+### Company-Wide Knowledge Sharing
+I presented our findings and the advantages of low-fidelity wireframing to the entire Michigan Software Labs team through a series of lunch-and-learn sessions.
+
+### Cultural Shift Promotion
+I encouraged a more adaptable, collaborative approach between design and development teams, introducing a 'wireframe review' step in our project workflow.
+
+## Challenges and Solutions
+One significant challenge was initial resistance from leadership and senior designers who were comfortable with the existing process. To address this, we:
+
+- Conducted one-on-one sessions to address concerns  
+- Showcased early successes from pilot projects  
+- Provided training on wireframing tools and techniques  
+
+## Result
+The implementation of wireframing practices yielded significant positive outcomes:
+
+### Accelerated Iteration Cycles
+We reduced design iteration time by **40%**, exceeding our initial goal of 30%.
+
+### Enhanced Cross-Functional Collaboration
+Internal collaboration satisfaction scores improved by **35%**, surpassing the 25% target.
+
+### Optimized Resource Allocation
+We decreased the need for extensive high-fidelity redesigns by **60%**, saving an estimated **120 designer hours/month**.
+
+### Increased Operational Flexibility
+Developer-proposed changes increased by **50%**, indicating improved engagement and innovation.
+
+### Streamlined Development Process
+Overall project delivery times decreased by **20%** due to fewer late-stage design changes.
+
+### Improved Time-to-Market
+We delivered initial designs **30% faster** than before.
+
+---
+
+### Comparative Analysis: Hearsee Project
+
+| Metric | Before Wireframing | After Wireframing | Improvement |
+|--------|--------------------|-------------------|-------------|
+| Design Iterations | 8 | 5 | 37.5% reduction |
+| Time to First Client Presentation | 4 weeks | 2.5 weeks | 37.5% faster |
+| Late-Stage Design Changes | 15 | 6 | 60% reduction |
+
+---
+
+## Stakeholder Feedback
+
+### Lead Developer  
+> "Wireframing has dramatically improved our ability to provide input early in the design process, reducing costly late-stage changes."
+
+### Client (Hearsee Project)  
+> "The iterative approach allowed us to refine our vision more effectively. We felt more involved in the design process."
+
+### Product Manager  
+> "This shift in our design process has not only improved our project outcomes but has also positioned us as a more agile and innovative partner to our clients."
+
+---
+
+## Long-term Impact and Future Directions
+
+The success of this initiative resulted in:
+
+1. A comprehensive wireframing toolkit and guidelines for all projects  
+2. Integration of wireframing into the pitch-process (improved win rate by **15%**)  
+3. A mentorship program for developing wireframing proficiency  
+
+We're now exploring **AI-assisted wireframing tools** to streamline early-stage exploration even further.
+
+---
+
+## Why I Pursued Change
+
+Wireframing plays a crucial role in product development:
+
+- **Structural focus** — clarifies fundamental layout and logic  
+- **Exploration** — enables broad conceptual ideation  
+- **Resource efficiency** — reduces costly rework  
+- **Enhanced communication** — unifies understanding across teams  
+- **Scope management** — prevents feature creep  
+- **User testing** — validates core concepts early  
+
+---
+
+## Key Lessons Learned
+
+1. Early stakeholder buy-in is essential.  
+2. Quantifying improvements accelerates adoption.  
+3. Training and support matter.  
+4. Flexibility leads to better outcomes.  
+
+---
+
+## Conclusion
+
+Introducing wireframing transformed Michigan Software Labs’ design culture. It improved efficiency, accelerated delivery, enhanced cross-functional collaboration, and led to more user-centered, higher-quality products.
+
+This case study demonstrates how small, strategic changes—when executed thoughtfully—can generate outsized improvements in outcomes, process, and client satisfaction.
+
+Wireframing is now a permanent part of the company’s methodology and a cornerstone of its design maturity.
