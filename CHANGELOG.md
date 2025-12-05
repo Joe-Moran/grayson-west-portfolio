@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.77](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.76...v0.0.77) (2025-12-05)
+
 ## [0.0.76](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.73...v0.0.76) (2025-12-05)
 
 
