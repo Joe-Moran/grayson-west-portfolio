@@ -2,10 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
+import Intro from '../components/Intro.astro';
+import Hero from '../components/Hero.astro';
 
 const portfolioCollection = await getCollection('portfolio');
 
-// These define the sidebar project links, just like The Work
 const pages = portfolioCollection.map((item) => ({
   title: item.data.title,
   path: `/the-work/${item.slug}`,
@@ -13,9 +14,23 @@ const pages = portfolioCollection.map((item) => ({
 ---
 
 <Layout title='UX' subPages={pages}>
-  <ContentPreviewMasonry
-	basePath='/the-work'
-	collection={portfolioCollection}
-	previewLocation='page-preview'
-  />
+	<Hero title="User Experience" />
+  <main id="main">
+	<div class="intro-container">
+	  <Intro greeting="I’m a UX and product design leader who works at the intersection of strategy, research, design, and visual storytelling.">
+		<div class="intro-content">
+		  <p>
+			Below is a selection of case studies that highlight how I collaborate with teams, shape
+			product direction, and deliver measurable outcomes across platforms and industries.
+		  </p>
+		</div>
+	  </Intro>
+	</div>
+
+	<ContentPreviewMasonry
+	  basePath='/the-work'
+	  collection={portfolioCollection}
+	  previewLocation='page-preview'
+	/>
+  </main>
 </Layout>

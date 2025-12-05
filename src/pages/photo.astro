@@ -1,13 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Intro from '../components/Intro.astro';
 ---
 
-<Layout title="Visual">
+<Layout title="Photography">
+  <Hero title="Photography" />
+
   <main id="main">
-	<h1>Visual</h1>
-	<p>
-	  This section will feature my visual work: graphic design, motion graphics, video, and other
-	  visual explorations.
-	</p>
-  </main>
+	<div class="intro-container">
+	  <Intro greeting="This section brings together my Photography.">
+		<div class="intro-content">
+		  <p>
+			This section brings together my visual practice: graphic design, motion graphics, and video. I use these mediums to explore rhythm, typography, composition, and storytelling in ways that complement my UX work.
+		  </p>
+		</div>
+	  </Intro>
+	</div>
 </Layout>
