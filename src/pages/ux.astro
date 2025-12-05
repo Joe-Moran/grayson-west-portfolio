@@ -1,13 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
+
+const portfolioCollection = await getCollection('portfolio');
+
+// These define the sidebar project links, just like The Work
+const pages = portfolioCollection.map((item) => ({
+  title: item.data.title,
+  path: `/the-work/${item.slug}`,
+}));
 ---
 
-<Layout title="UX">
-  <main id="main">
-	<h1>UX</h1>
-	<p>
-	  This section will feature my UX and product design case studies. I’ll organize projects here
-	  so hiring managers can quickly understand how I think, work, and deliver outcomes.
-	</p>
-  </main>
+<Layout title='UX' subPages={pages}>
+  <ContentPreviewMasonry
+	basePath='/the-work'
+	collection={portfolioCollection}
+	previewLocation='page-preview'
+  />
 </Layout>
