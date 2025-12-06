@@ -1,16 +1,18 @@
 ---
 import BackgroundImage from './BackgroundImage.astro';
-import hero from '../assets/hero.jpeg';
+import defaultHero from '../assets/hero.jpeg';
 
 interface Props {
   title: string;
+  image?: any;
 }
 
-const { title } = Astro.props;
+const { title, image } = Astro.props;
+const heroImage = image ?? defaultHero;
 ---
 
 <div class='hero'>
-  <BackgroundImage image={hero} alt='' class:list={['image']} />
+  <BackgroundImage image={heroImage} alt='' class:list={['image']} />
 
   <div class='heading-container'>
     <h1 class='heading'>{title}</h1>
