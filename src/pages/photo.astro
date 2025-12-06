@@ -1,20 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 import Hero from '../components/Hero.astro';
 import Intro from '../components/Intro.astro';
+import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
+
+const portfolioCollection = await getCollection('portfolio', ({ data }) =>
+  data.disciplines?.includes('photo')
+);
 ---
 
 <Layout title="Photography">
   <Hero title="Photography" />
 
-  <main id="main">
-	<div class="intro-container">
-	  <Intro greeting="This section brings together my Photography.">
-		<div class="intro-content">
-		  <p>
-			This section brings together my visual practice: graphic design, motion graphics, and video. I use these mediums to explore rhythm, typography, composition, and storytelling in ways that complement my UX work.
-		  </p>
-		</div>
-	  </Intro>
-	</div>
+  <div class="intro-container">
+	<Intro greeting="This section brings together my photography.">
+	  <div class="intro-content">
+		<p>
+		  This section focuses on my photography work — observations, landscapes, and small
+		  moments that influence how I see composition, light, and storytelling in product
+		  design.
+		</p>
+		<p>
+		  Over time, this will grow into a body of visual studies that sit alongside my UX and
+		  visual design practice.
+		</p>
+	  </div>
+	</Intro>
+  </div>
+
+  <ContentPreviewMasonry
+	basePath="/the-work"
+	collection={portfolioCollection}
+	previewLocation="page-preview"
+  />
 </Layout>

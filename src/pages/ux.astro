@@ -12,7 +12,8 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 const pages = portfolioCollection.map((item) => ({
   title: item.data.title,
   path: `/the-work/${item.slug}`,
-}));---
+}));
+---
 
 <Layout title='UX' subPages={pages}>
 	<Hero title="User Experience" />

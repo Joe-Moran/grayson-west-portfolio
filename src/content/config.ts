@@ -2,18 +2,12 @@ import { defineCollection, z } from 'astro:content';
 
 const personality = defineCollection({
   type: 'data',
-  schema: z.object({
-    assets: z.string().array(),
-    traits: z.string().array(),
-  }),
+  schema: z.object({ assets: z.string().array(), traits: z.string().array() }),
 });
 
 const preview = z.object({
   enable: z.boolean(),
-  grid: z.object({
-    rows: z.number(),
-    columns: z.number(),
-  }),
+  grid: z.object({ rows: z.number(), columns: z.number() }),
 });
 
 const content = (image) => ({
@@ -45,24 +39,21 @@ const portfolio = defineCollection({
   schema: ({ image }) =>
     z.object({
       ...content(image),
-
-      // Existing screenshot field
-      screenshot: z
-        .object({
-          image: image(),
-          altText: z.string(),
-        })
-        .optional(),
-
-      // Existing platforms field
+      screenshot: z.object({ image: image(), altText: z.string() }).optional(),
       platforms: z.string().array(),
-
-      // ⭐ NEW FIELD: disciplines for UX / Visual / Photo / Sound separation
-      disciplines: z.string().array().optional(),
+      disciplines: z.array(z.string()).optional(),
     }),
 });
 
-// Intro collection (home page text)
+// NEW: about collection
+const about = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+  }),
+});
+
+// TODO: is this the best approach for making the intro easily editable?
 const intro = defineCollection({
   type: 'content',
   schema: z.object({
@@ -71,7 +62,6 @@ const intro = defineCollection({
   }),
 });
 
-// Footer collection
 const footer = defineCollection({
   type: 'data',
   schema: ({ image }) =>
@@ -88,10 +78,12 @@ const footer = defineCollection({
     }),
 });
 
+// NOTE: added `about` here
 export const collections = {
   personality,
   writing: writingCollection,
   portfolio,
   intro,
   footer,
+  about,
 };
