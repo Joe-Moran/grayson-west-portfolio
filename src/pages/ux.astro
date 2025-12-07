@@ -41,10 +41,9 @@ const pages = portfolioCollection.map((item) => ({
 			.filter((item) => item.data.title.toLowerCase() !== 'template')
 			.sort((a, b) => a.data.order - b.data.order)
 			.map((item) => {
-			  const img =
-				'screenshot' in item.data && item.data.screenshot?.image
-				  ? item.data.screenshot.image
-				  : item.data.background;
+			  // IMPORTANT: use .src so WorkCard gets URL strings, not metadata objects
+			  const background = item.data.background?.src;
+			  const screenshot = item.data.screenshot?.image?.src;
 
 			  const label =
 				Array.isArray(item.data.platforms) && item.data.platforms.length
@@ -55,7 +54,8 @@ const pages = portfolioCollection.map((item) => ({
 				<WorkCard
 				  title={item.data.title}
 				  href={`/the-work/${item.slug}`}
-				  image={img}
+				  background={background}
+				  image={screenshot}
 				  label={label}
 				/>
 			  );
@@ -66,7 +66,7 @@ const pages = portfolioCollection.map((item) => ({
   </main>
 </Layout>
 
-<style>
+<style is:global>
   .discipline-section {
 	padding-inline: clamp(12px, 4vw, 25px);
 	padding-bottom: 42px;
@@ -84,8 +84,12 @@ const pages = portfolioCollection.map((item) => ({
 	}
   }
 
-  /* Per-page card height for UX – adjust as you like */
+  /* Taller UX cards + control screenshot sizing / position */
   .discipline-section--ux .work-card {
-	min-height: 220px;
+	min-height: 480px;
+
+	--screenshot-max-width: 88%;
+	--screenshot-max-height: 70%;
+	--screenshot-translate-y: -60%;
   }
 </style>

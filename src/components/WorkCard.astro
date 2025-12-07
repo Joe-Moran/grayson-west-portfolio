@@ -1,23 +1,19 @@
 ---
-import { Image } from 'astro:assets';
-
 interface Props {
   title: string;
   href: string;
-  image?: any;      // main card image (Astro image object)
-  background?: any; // optional background image (not used yet)
-  label?: string;   // short text under the title
+  image?: string;      // URL string
+  background?: string; // URL string
+  label?: string;
 }
 
 const { title, href, image, background, label } = Astro.props;
 ---
 
 <a href={href} class="work-card">
-  {image && (
-	<div class="work-card-image-wrapper">
-	  <Image src={image} alt={title} loading="lazy" class="work-card-image" />
-	</div>
-  )}
+  {background && <img src={background} alt="" class="work-card-bg" loading="lazy" />}
+
+  {image && <img src={image} alt={title} class="work-card-fg" loading="lazy" />}
 
   <div class="work-card-content">
 	<h2>{title}</h2>
@@ -34,29 +30,53 @@ const { title, href, image, background, label } = Astro.props;
 	background: #0e1015;
 	color: var(--white);
 	display: flex;
-	flex-direction: column;
-	min-height: 190px; /* baseline – can be overridden per page */
+	align-items: flex-end;
+	min-height: 260px;
+	padding: 16px;
+	box-sizing: border-box;
+
+	/* defaults for screenshot sizing / positioning */
+	--screenshot-max-width: 80%;
+	--screenshot-max-height: 60%;
+	--screenshot-translate-y: -55%;
   }
 
-  .work-card-image-wrapper {
-	width: 100%;
-	height: 140px;
-	overflow: hidden;
-  }
-
-  .work-card-image {
+  .work-card-bg {
+	position: absolute;
+	inset: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	display: block;
-	opacity: 0.88;
-	transition: opacity 0.2s ease, transform 0.2s ease;
+	filter: brightness(0.7);
+	z-index: 0;
+  }
+
+  .work-card-fg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, var(--screenshot-translate-y));
+	max-width: var(--screenshot-max-width);
+	max-height: var(--screenshot-max-height);
+	object-fit: contain;
+	background: transparent;
+
+	border-radius: 10px;
+	box-shadow: none;
+	z-index: 2;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
   .work-card-content {
+	position: relative;
+	z-index: 1;
 	display: flex;
 	flex-direction: column;
 	padding: 14px 16px 16px;
+
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(4px);
+	border-radius: 8px;
   }
 
   .work-card h2 {
@@ -75,9 +95,9 @@ const { title, href, image, background, label } = Astro.props;
 	color: var(--muted-text, #c9ced8);
   }
 
-  .work-card:hover .work-card-image {
-	opacity: 1;
-	transform: scale(1.02);
+  .work-card:hover .work-card-fg {
+	transform: translate(-50%, calc(var(--screenshot-translate-y) - 5%));
+	box-shadow: none;
   }
 
   .work-card:hover {
