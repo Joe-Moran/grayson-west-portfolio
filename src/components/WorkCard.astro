@@ -1,0 +1,86 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  href: string;
+  image?: any;      // main card image (Astro image object)
+  background?: any; // optional background image (not used yet)
+  label?: string;   // short text under the title
+}
+
+const { title, href, image, background, label } = Astro.props;
+---
+
+<a href={href} class="work-card">
+  {image && (
+	<div class="work-card-image-wrapper">
+	  <Image src={image} alt={title} loading="lazy" class="work-card-image" />
+	</div>
+  )}
+
+  <div class="work-card-content">
+	<h2>{title}</h2>
+	{label && <p>{label}</p>}
+  </div>
+</a>
+
+<style>
+  .work-card {
+	position: relative;
+	overflow: hidden;
+	border-radius: 12px;
+	text-decoration: none;
+	background: #0e1015;
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	min-height: 190px; /* baseline – can be overridden per page */
+  }
+
+  .work-card-image-wrapper {
+	width: 100%;
+	height: 140px;
+	overflow: hidden;
+  }
+
+  .work-card-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	opacity: 0.88;
+	transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .work-card-content {
+	display: flex;
+	flex-direction: column;
+	padding: 14px 16px 16px;
+  }
+
+  .work-card h2 {
+	margin: 0 0 4px 0;
+	font-size: 1.5rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--orange);
+  }
+
+  .work-card p {
+	margin: 0;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	color: var(--muted-text, #c9ced8);
+  }
+
+  .work-card:hover .work-card-image {
+	opacity: 1;
+	transform: scale(1.02);
+  }
+
+  .work-card:hover {
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  }
+</style>

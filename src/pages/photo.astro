@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import Hero from '../components/Hero.astro';
 import Intro from '../components/Intro.astro';
-import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
+import WorkCard from '../components/WorkCard.astro';
 
 const portfolioCollection = await getCollection('portfolio', ({ data }) =>
   data.disciplines?.includes('photo')
@@ -13,25 +13,75 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 <Layout title="Photography">
   <Hero title="Photography" />
 
-  <div class="intro-container">
-	<Intro greeting="This section brings together my photography.">
-	  <div class="intro-content">
-		<p>
-		  This section focuses on my photography work — observations, landscapes, and small
-		  moments that influence how I see composition, light, and storytelling in product
-		  design.
-		</p>
-		<p>
-		  Over time, this will grow into a body of visual studies that sit alongside my UX and
-		  visual design practice.
-		</p>
-	  </div>
-	</Intro>
-  </div>
+  <main id="main">
+	<div class="intro-container">
+	  <Intro greeting="This section brings together my photography." title="Photography">
+		<div class="intro-content">
+		  <p>
+			This section focuses on my photography work — observations, landscapes, and small
+			moments that influence how I see composition, light, and storytelling in product
+			design.
+		  </p>
+		  <p>
+			Over time, this will grow into a body of visual studies that sit alongside my UX and
+			visual design practice.
+		  </p>
+		</div>
+	  </Intro>
+	</div>
 
-  <ContentPreviewMasonry
-	basePath="/the-work"
-	collection={portfolioCollection}
-	previewLocation="page-preview"
-  />
+	<section class="discipline-section discipline-section--photo" aria-label="Photography work">
+	  <div class="discipline-grid">
+		{
+		  portfolioCollection
+			.filter((item) => item.data.title.toLowerCase() !== 'template')
+			.sort((a, b) => a.data.order - b.data.order)
+			.map((item) => {
+			  const img =
+				'screenshot' in item.data && item.data.screenshot?.image
+				  ? item.data.screenshot.image
+				  : item.data.background;
+
+			  const label =
+				Array.isArray(item.data.platforms) && item.data.platforms.length
+				  ? item.data.platforms.join(' · ')
+				  : '';
+
+			  return (
+				<WorkCard
+				  title={item.data.title}
+				  href={`/the-work/${item.slug}`}
+				  image={img}
+				  label={label}
+				/>
+			  );
+			})
+		}
+	  </div>
+	</section>
+  </main>
 </Layout>
+
+<style>
+  .discipline-section {
+	padding-inline: clamp(12px, 4vw, 25px);
+	padding-bottom: 42px;
+  }
+
+  .discipline-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 28px;
+  }
+
+  @media (max-width: 720px) {
+	.discipline-grid {
+	  grid-template-columns: 1fr;
+	}
+  }
+
+  /* Per-page card height for Photo */
+  .discipline-section--photo .work-card {
+	min-height: 260px; /* photography often looks nice a bit taller */
+  }
+</style>

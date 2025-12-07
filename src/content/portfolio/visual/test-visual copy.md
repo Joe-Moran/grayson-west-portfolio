@@ -32,7 +32,7 @@ platforms:
   - Graphic Design
 disciplines:
   - visual
-order: 2
+order: 3
 ---
 
 ![OmniFocus 3 for macOS, iPad OS, and iOS](../../../assets/content/visual/wallpaper/omni-nail-gun-2.png)

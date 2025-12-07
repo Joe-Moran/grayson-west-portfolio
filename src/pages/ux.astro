@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
 import Intro from '../components/Intro.astro';
 import Hero from '../components/Hero.astro';
+import WorkCard from '../components/WorkCard.astro';
 import uxHero from '../assets/hero-ux.png';
 
 const portfolioCollection = await getCollection('portfolio', ({ data }) =>
@@ -16,12 +16,15 @@ const pages = portfolioCollection.map((item) => ({
 }));
 ---
 
-<Layout title='UX' subPages={pages}>
+<Layout title="UX" subPages={pages}>
   <Hero title="User Experience" image={uxHero} />
 
   <main id="main">
 	<div class="intro-container">
-	  <Intro greeting="I’m a UX and product design leader who works at the intersection of strategy, research, design, and visual storytelling.">
+	  <Intro
+		greeting="I’m a UX and product design leader who works at the intersection of strategy, research, design, and visual storytelling."
+		title="UX Case Studies"
+	  >
 		<div class="intro-content">
 		  <p>
 			Below is a selection of case studies that highlight how I collaborate with teams, shape
@@ -31,10 +34,58 @@ const pages = portfolioCollection.map((item) => ({
 	  </Intro>
 	</div>
 
-	<ContentPreviewMasonry
-	  basePath='/the-work'
-	  collection={portfolioCollection}
-	  previewLocation='page-preview'
-	/>
+	<section class="discipline-section discipline-section--ux" aria-label="UX work">
+	  <div class="discipline-grid">
+		{
+		  portfolioCollection
+			.filter((item) => item.data.title.toLowerCase() !== 'template')
+			.sort((a, b) => a.data.order - b.data.order)
+			.map((item) => {
+			  const img =
+				'screenshot' in item.data && item.data.screenshot?.image
+				  ? item.data.screenshot.image
+				  : item.data.background;
+
+			  const label =
+				Array.isArray(item.data.platforms) && item.data.platforms.length
+				  ? item.data.platforms.join(' · ')
+				  : '';
+
+			  return (
+				<WorkCard
+				  title={item.data.title}
+				  href={`/the-work/${item.slug}`}
+				  image={img}
+				  label={label}
+				/>
+			  );
+			})
+		}
+	  </div>
+	</section>
   </main>
 </Layout>
+
+<style>
+  .discipline-section {
+	padding-inline: clamp(12px, 4vw, 25px);
+	padding-bottom: 42px;
+  }
+
+  .discipline-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 28px;
+  }
+
+  @media (max-width: 720px) {
+	.discipline-grid {
+	  grid-template-columns: 1fr;
+	}
+  }
+
+  /* Per-page card height for UX – adjust as you like */
+  .discipline-section--ux .work-card {
+	min-height: 220px;
+  }
+</style>

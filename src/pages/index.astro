@@ -4,6 +4,7 @@ import { getEntry } from 'astro:content';
 import Hero from '../components/Hero.astro';
 import Values from '../components/Values.astro';
 import Intro from '../components/Intro.astro';
+import WorkCard from '../components/WorkCard.astro';
 
 // Card images
 import uxCard from '../assets/home-cards/home-card-ux.png';
@@ -31,53 +32,33 @@ const title = 'Grayson Gail West';
 
   <section class="home-section" aria-label="Work areas">
     <div class="home-grid">
-      <a href="/ux" class="home-card">
-        <img
-          src={uxCard.src}
-          width={uxCard.width}
-          height={uxCard.height}
-          alt="User Experience"
-          loading="lazy"
-        />
-        <h2>UX</h2>
-        <p>User experience, product design, and strategy case studies.</p>
-      </a>
+      <WorkCard
+        title="UX"
+        href="/ux"
+        image={uxCard}
+        label="User experience, product design, and strategy case studies."
+      />
 
-      <a href="/visual" class="home-card">
-        <img
-          src={visualCard.src}
-          width={visualCard.width}
-          height={visualCard.height}
-          alt="Visual & Motion"
-          loading="lazy"
-        />
-        <h2>Visual</h2>
-        <p>Graphic design, motion graphics, and video experiments.</p>
-      </a>
+      <WorkCard
+        title="Visual"
+        href="/visual"
+        image={visualCard}
+        label="Graphic design, motion graphics, and video experiments."
+      />
 
-      <a href="/photo" class="home-card">
-        <img
-          src={photoCard.src}
-          width={photoCard.width}
-          height={photoCard.height}
-          alt="Photography"
-          loading="lazy"
-        />
-        <h2>Photo</h2>
-        <p>Photography that sharpens composition, light, and timing.</p>
-      </a>
+      <WorkCard
+        title="Photo"
+        href="/photo"
+        image={photoCard}
+        label="Photography that sharpens composition, light, and timing."
+      />
 
-      <a href="/sound" class="home-card">
-        <img
-          src={soundCard.src}
-          width={soundCard.width}
-          height={soundCard.height}
-          alt="Sound & Music"
-          loading="lazy"
-        />
-        <h2>Sound</h2>
-        <p>Sound design, field recordings, and ambient music practice.</p>
-      </a>
+      <WorkCard
+        title="Sound"
+        href="/sound"
+        image={soundCard}
+        label="Sound design, field recordings, and ambient music practice."
+      />
     </div>
   </section>
 </Layout>
@@ -98,51 +79,5 @@ const title = 'Grayson Gail West';
     .home-grid {
       grid-template-columns: 1fr;
     }
-  }
-
-  .home-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    text-decoration: none;
-    background: #0e1015;
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    min-height: 190px;
-  }
-
-  .home-card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    display: block;
-    opacity: 0.88;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-  }
-
-  .home-card h2 {
-    margin: 14px 16px 4px;
-    font-size: 1.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--orange);
-  }
-
-  .home-card p {
-    margin: 0 16px 16px;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: var(--muted-text, #c9ced8);
-  }
-
-  .home-card:hover img {
-    opacity: 1;
-    transform: scale(1.02);
-  }
-
-  .home-card:hover {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   }
 </style>

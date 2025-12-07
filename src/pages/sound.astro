@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import Hero from '../components/Hero.astro';
 import Intro from '../components/Intro.astro';
-import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
+import WorkCard from '../components/WorkCard.astro';
 
 const portfolioCollection = await getCollection('portfolio', ({ data }) =>
   data.disciplines?.includes('sound')
@@ -13,24 +13,70 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 <Layout title="Sound & Music">
   <Hero title="Sound & Music" />
 
-  <div class="intro-container">
-	<Intro greeting="This section brings together my sound, music, and field recording work.">
-	  <div class="intro-content">
-		<p>
-		  This section focuses on sound design, music experiments, and field recordings that
-		  influence how I think about rhythm, pacing, and atmosphere in product and visual design.
-		</p>
-		<p>
-		  Over time, this will grow into a collection of sonic studies that sit alongside my UX,
-		  visual, and photography practice.
-		</p>
-	  </div>
-	</Intro>
-  </div>
+  <main id="main">
+	<div class="intro-container">
+	  <Intro greeting="This section brings together my sound and music practice." title="Sound & Music">
+		<div class="intro-content">
+		  <p>
+			This section explores sound design, ambient music, and experimental audio work that
+			informs how I think about pacing, rhythm, and atmosphere in product design.
+		  </p>
+		</div>
+	  </Intro>
+	</div>
 
-  <ContentPreviewMasonry
-	basePath="/the-work"
-	collection={portfolioCollection}
-	previewLocation="page-preview"
-  />
+	<section class="discipline-section discipline-section--sound" aria-label="Sound & Music work">
+	  <div class="discipline-grid">
+		{
+		  portfolioCollection
+			.filter((item) => item.data.title.toLowerCase() !== 'template')
+			.sort((a, b) => a.data.order - b.data.order)
+			.map((item) => {
+			  const img =
+				'screenshot' in item.data && item.data.screenshot?.image
+				  ? item.data.screenshot.image
+				  : item.data.background;
+
+			  const label =
+				Array.isArray(item.data.platforms) && item.data.platforms.length
+				  ? item.data.platforms.join(' · ')
+				  : '';
+
+			  return (
+				<WorkCard
+				  title={item.data.title}
+				  href={`/the-work/${item.slug}`}
+				  image={img}
+				  label={label}
+				/>
+			  );
+			})
+		}
+	  </div>
+	</section>
+  </main>
 </Layout>
+
+<style>
+  .discipline-section {
+	padding-inline: clamp(12px, 4vw, 25px);
+	padding-bottom: 42px;
+  }
+
+  .discipline-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 28px;
+  }
+
+  @media (max-width: 720px) {
+	.discipline-grid {
+	  grid-template-columns: 1fr;
+	}
+  }
+
+  /* Per-page card height for Sound */
+  .discipline-section--sound .work-card {
+	min-height: 210px;
+  }
+</style>
