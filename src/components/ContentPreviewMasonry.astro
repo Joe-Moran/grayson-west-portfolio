@@ -77,9 +77,11 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
   }
 
   .content-preview-masonry {
-    --grid-layout-gap: 10px;
-    --grid-column-count: var(--columns);
-    --grid-item-min-width: 200px;
+  padding-inline: clamp(12px, 4vw, 12px); /* ← adds left/right spacing */
+  
+  --grid-layout-gap: 10px;
+  --grid-column-count: var(--columns);
+  --grid-item-min-width: 200px;
 
     /**
    * Calculated values.
