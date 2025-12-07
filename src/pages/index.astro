@@ -1,41 +1,148 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCollection, getEntry } from 'astro:content';
-import PagePreview from '../components/PagePreview.astro';
+import { getEntry } from 'astro:content';
 import Hero from '../components/Hero.astro';
 import Values from '../components/Values.astro';
 import Intro from '../components/Intro.astro';
-const writingCollection = await getCollection('writing', ({ data }) => !!data.home.enable);
-const portfolioCollection = await getCollection('portfolio', ({ data }) => !!data.home.enable);
+
+// Card images
+import uxCard from '../assets/home-cards/home-card-ux.png';
+import visualCard from '../assets/home-cards/home-card-visual.png';
+import photoCard from '../assets/home-cards/home-card-photo.png';
+import soundCard from '../assets/home-cards/home-card-sound.png';
+
 const introEntry = await getEntry('intro', 'paragraph');
 const { Content } = await introEntry.render();
 const title = 'Grayson Gail West';
 ---
 
-<Layout title='Grayson Gail West'>
+<Layout title={title}>
   <Hero title={title} />
 
-  <div class='intro-container'>
+  <div class="intro-container">
     <Intro title={introEntry.data.title} greeting={introEntry.data.greeting}>
-      <div class='intro-content'>
+      <div class="intro-content">
         <Content />
       </div>
     </Intro>
   </div>
+
   <Values />
 
-  <div class='page-previews'>
-      <!--
-      <PagePreview path='how-i-think' title='How I think' children={writingCollection} />
-      -->
-      <PagePreview path='ux' title='UX' children={portfolioCollection} />
+  <section class="home-section" aria-label="Work areas">
+    <div class="home-grid">
+      <a href="/ux" class="home-card">
+        <img
+          src={uxCard.src}
+          width={uxCard.width}
+          height={uxCard.height}
+          alt="User Experience"
+          loading="lazy"
+        />
+        <h2>UX</h2>
+        <p>User experience, product design, and strategy case studies.</p>
+      </a>
+
+      <a href="/visual" class="home-card">
+        <img
+          src={visualCard.src}
+          width={visualCard.width}
+          height={visualCard.height}
+          alt="Visual & Motion"
+          loading="lazy"
+        />
+        <h2>Visual</h2>
+        <p>Graphic design, motion graphics, and video experiments.</p>
+      </a>
+
+      <a href="/photo" class="home-card">
+        <img
+          src={photoCard.src}
+          width={photoCard.width}
+          height={photoCard.height}
+          alt="Photography"
+          loading="lazy"
+        />
+        <h2>Photo</h2>
+        <p>Photography that sharpens composition, light, and timing.</p>
+      </a>
+
+      <a href="/sound" class="home-card">
+        <img
+          src={soundCard.src}
+          width={soundCard.width}
+          height={soundCard.height}
+          alt="Sound & Music"
+          loading="lazy"
+        />
+        <h2>Sound</h2>
+        <p>Sound design, field recordings, and ambient music practice.</p>
+      </a>
     </div>
-  </Layout>
+  </section>
+</Layout>
 
 <style>
-  .page-previews {
+  .home-section {
+    padding-inline: clamp(12px, 4vw, 25px);
+    padding-bottom: 42px;
+  }
+
+  .home-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  @media (max-width: 720px) {
+    .home-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .home-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    text-decoration: none;
+    background: #0e1015;
+    color: var(--white);
     display: flex;
     flex-direction: column;
-    gap: 42px;
+    min-height: 190px;
+  }
+
+  .home-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    opacity: 0.88;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .home-card h2 {
+    margin: 14px 16px 4px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--orange);
+  }
+
+  .home-card p {
+    margin: 0 16px 16px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--muted-text, #c9ced8);
+  }
+
+  .home-card:hover img {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  .home-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   }
 </style>
