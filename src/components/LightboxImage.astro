@@ -1,0 +1,55 @@
+---
+interface Props {
+  src: any;              // can be imported image metadata OR string URL
+  alt: string;
+  caption?: string;
+}
+
+const { src, alt, caption } = Astro.props;
+
+// Normalize to a plain string URL for <img> and data attributes
+const resolvedSrc = typeof src === 'string' ? src : src?.src;
+---
+
+<figure class="lb-thumb">
+  <button
+	type="button"
+	class="lb-thumb-button"
+	data-lightbox-src={resolvedSrc}
+	data-lightbox-alt={alt}
+	data-lightbox-caption={caption || ''}
+  >
+	<img src={resolvedSrc} alt={alt} loading="lazy" />
+  </button>
+
+  {caption && <figcaption class="lb-thumb-caption">{caption}</figcaption>}
+</figure>
+
+<style>
+  .lb-thumb {
+	margin: 0 0 1.5rem 0;
+	text-align: left;
+  }
+
+  .lb-thumb-button {
+	padding: 0;
+	border: none;
+	background: transparent;
+	cursor: zoom-in;
+  }
+
+  /* 👇 THIS CONTROLS THE IMAGE SIZE IN THE MODAL */
+  .lb-thumb img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 10px;
+  }
+
+  .lb-thumb-caption {
+	margin-top: 0.4rem;
+	font-size: 0.9rem;
+	line-height: 1.4;
+	color: var(--muted-text, #c9ced8);
+  }
+</style>

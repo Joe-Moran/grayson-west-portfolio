@@ -1,0 +1,16 @@
+{
+  "clips" : [
+    {
+      "content" : "import LightboxImage from '\\${1:..\/..\/..\/components\/LightboxImage.astro}';\nimport \\${2:imageVar} from '\\${3:..\/..\/..\/assets\/content\/visual\/your-image.png}';",
+      "name" : "mdx-lightroom-import"
+    },
+    {
+      "content" : "<LightboxImage\n  src={\\${1:imageVar}}\n  alt=\"\\${2:Descriptive alt text}\"\n  caption=\"\\${3:Short caption shown under the image}\"\n\/>",
+      "name" : "mdx-lightbox-image"
+    },
+    {
+      "content" : "![\\${1:Descriptive alt text}](\\${2:..\/..\/..\/assets\/content\/visual\/your-image.png} \"\\${3:Optional caption}\")",
+      "name" : "non-lightroom-image"
+    }
+  ]
+}

@@ -1,7 +1,9 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import LightboxGlobal from '../components/LightboxGlobal.astro';
 import type { WebPage } from '../types/Page.mts';
+
 interface Props {
   title: string;
   subPages?: WebPage[];
@@ -32,6 +34,9 @@ const mainLandmarkId = 'main-content';
       <slot />
     </main>
     <Footer />
+
+    {/* Global lightbox overlay */}
+    <LightboxGlobal />
   </body>
 
   <style is:global>
@@ -54,12 +59,11 @@ const mainLandmarkId = 'main-content';
       background: var(--color-background);
     }
 
-    main#main-content {
+    main {
       display: flex;
       flex-direction: column;
       gap: 42px;
       color: var(--white);
-      padding-bottom: 60px; /* or 96px if you want more air */
     }
   </style>
 </html>
