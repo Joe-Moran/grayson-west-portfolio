@@ -15,16 +15,13 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 
   <main id="main">
 	<div class="intro-container">
-	  <Intro greeting="This section brings together my photography." title="Photography">
-		<div class="intro-content">
+	  <Intro greeting="This section brings together my photography.">
+	  <div class="intro-content">
 		  <p>
-			This section focuses on my photography work — observations, landscapes, and small
-			moments that influence how I see composition, light, and storytelling in product
-			design.
+			This section focuses on my photography work — observations, landscapes, and small moments that influence how I see composition, light, and storytelling in product design.
 		  </p>
 		  <p>
-			Over time, this will grow into a body of visual studies that sit alongside my UX and
-			visual design practice.
+			Over time, this will grow into a body of visual studies that sit alongside my UX and visual design practice.
 		  </p>
 		</div>
 	  </Intro>
@@ -37,10 +34,8 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 			.filter((item) => item.data.title.toLowerCase() !== 'template')
 			.sort((a, b) => a.data.order - b.data.order)
 			.map((item) => {
-			  const img =
-				'screenshot' in item.data && item.data.screenshot?.image
-				  ? item.data.screenshot.image
-				  : item.data.background;
+			  const background = item.data.background?.src;
+			  const screenshot = item.data.screenshot?.image?.src;
 
 			  const label =
 				Array.isArray(item.data.platforms) && item.data.platforms.length
@@ -51,7 +46,8 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 				<WorkCard
 				  title={item.data.title}
 				  href={`/the-work/${item.slug}`}
-				  image={img}
+				  background={background}
+				  image={screenshot}
 				  label={label}
 				/>
 			  );
@@ -62,7 +58,7 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
   </main>
 </Layout>
 
-<style>
+<style is:global>
   .discipline-section {
 	padding-inline: clamp(12px, 4vw, 25px);
 	padding-bottom: 42px;
@@ -80,8 +76,11 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 	}
   }
 
-  /* Per-page card height for Photo */
-  .discipline-section--photo .work-card {
-	min-height: 260px; /* photography often looks nice a bit taller */
+.discipline-section--photo .work-card {
+	min-height: 420px;
+  
+	--screenshot-max-width: 95%;
+	--screenshot-max-height: 65%;
+	--screenshot-translate-y: -69%;
   }
 </style>

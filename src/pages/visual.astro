@@ -13,9 +13,9 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 <Layout title="Visual & Motion">
   <Hero title="Visual & Motion" />
 
-  <main id="main">
+<main id="main">
 	<div class="intro-container">
-	  <Intro greeting="Visual design, motion graphics, and video work." title="Visual & Motion">
+	  <Intro greeting="Visual design, motion graphics, and video work.">
 		<div class="intro-content">
 		  <p>
 			This section brings together my visual practice: graphic design, motion graphics, and
@@ -23,7 +23,6 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 			in ways that complement my UX work.
 		  </p>
 		  <p>
-			Below is a reusable grid of case studies using the same card layout as my UX section.
 			Over time, this will evolve to highlight visual and motion-focused projects.
 		  </p>
 		</div>
@@ -37,10 +36,8 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 			.filter((item) => item.data.title.toLowerCase() !== 'template')
 			.sort((a, b) => a.data.order - b.data.order)
 			.map((item) => {
-			  const img =
-				'screenshot' in item.data && item.data.screenshot?.image
-				  ? item.data.screenshot.image
-				  : item.data.background;
+			  const background = item.data.background?.src;
+			  const screenshot = item.data.screenshot?.image?.src;
 
 			  const label =
 				Array.isArray(item.data.platforms) && item.data.platforms.length
@@ -51,7 +48,8 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 				<WorkCard
 				  title={item.data.title}
 				  href={`/the-work/${item.slug}`}
-				  image={img}
+				  background={background}
+				  image={screenshot}
 				  label={label}
 				/>
 			  );
@@ -62,7 +60,7 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
   </main>
 </Layout>
 
-<style>
+<style is:global>
   .discipline-section {
 	padding-inline: clamp(12px, 4vw, 25px);
 	padding-bottom: 42px;
@@ -80,8 +78,10 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 	}
   }
 
-  /* Per-page card height for Visual */
-  .discipline-section--visual .work-card {
-	min-height: 220px; /* tweak this if you want taller/shorter */
-  }
-</style>
+.discipline-section--visual .work-card {
+	min-height: 480px;
+  
+	--screenshot-max-width: 90%;
+	--screenshot-max-height: 60%;
+	--screenshot-translate-y: -65%;
+  }</style>

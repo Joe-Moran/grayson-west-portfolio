@@ -15,7 +15,7 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 
   <main id="main">
 	<div class="intro-container">
-	  <Intro greeting="This section brings together my sound and music practice." title="Sound & Music">
+	  <Intro greeting="This section brings together my sound and music practice.">
 		<div class="intro-content">
 		  <p>
 			This section explores sound design, ambient music, and experimental audio work that
@@ -32,10 +32,8 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 			.filter((item) => item.data.title.toLowerCase() !== 'template')
 			.sort((a, b) => a.data.order - b.data.order)
 			.map((item) => {
-			  const img =
-				'screenshot' in item.data && item.data.screenshot?.image
-				  ? item.data.screenshot.image
-				  : item.data.background;
+			  const background = item.data.background?.src;
+			  const screenshot = item.data.screenshot?.image?.src;
 
 			  const label =
 				Array.isArray(item.data.platforms) && item.data.platforms.length
@@ -46,7 +44,8 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 				<WorkCard
 				  title={item.data.title}
 				  href={`/the-work/${item.slug}`}
-				  image={img}
+				  background={background}
+				  image={screenshot}
 				  label={label}
 				/>
 			  );
@@ -57,7 +56,7 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
   </main>
 </Layout>
 
-<style>
+<style is:global>
   .discipline-section {
 	padding-inline: clamp(12px, 4vw, 25px);
 	padding-bottom: 42px;
@@ -75,8 +74,10 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 	}
   }
 
-  /* Per-page card height for Sound */
-  .discipline-section--sound .work-card {
-	min-height: 210px;
-  }
-</style>
+.discipline-section--sound .work-card {
+	min-height: 240px;
+  
+	--screenshot-max-width: 80%;
+	--screenshot-max-height: 60%;
+	--screenshot-translate-y: -50%;
+  }</style>
