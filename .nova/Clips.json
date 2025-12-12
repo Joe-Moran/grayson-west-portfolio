@@ -1,16 +1,19 @@
 {
   "clips" : [
     {
-      "content" : "import LightboxImage from '\\${1:..\/..\/..\/components\/LightboxImage.astro}';\nimport \\${2:imageVar} from '\\${3:..\/..\/..\/assets\/content\/visual\/your-image.png}';",
-      "name" : "mdx-lightroom-import"
+      "content" : "---\n# REQUIRED: Visible title for cards + page\ntitle: TITLE_GOES_HERE\n\nhome:\n  enable: true\n  grid:\n\trows: 1\n\tcolumns: 2\n\npreview:\n  enable: true\n  grid:\n\trows: 1\n\tcolumns: 1\n\n# REQUIRED: Full-bleed card background image\nbackground: '..\/..\/..\/assets\/content\/backgrounds\/BACKGROUND_IMAGE.jpg'\n\n# OPTIONAL: Foreground image used on cards\nscreenshot:\n  image: '..\/..\/..\/assets\/content\/visual\/PATH\/SCREENSHOT_IMAGE.png'\n  altText: 'SHORT DESCRIPTION'\n\n# OPTIONAL: Icon used in legacy cards or future UI\nicon: '..\/..\/..\/assets\/content\/SVGs\/ICON_NAME.svg'\n\n# REQUIRED: Appears under card title\nplatforms:\n  - Graphic Design\n\n# REQUIRED: Determines section (ux, visual, photo, sound)\ndisciplines:\n  - visual\n\n# Optional: lower numbers appear earlier\norder: 999\n---\n\n{\/* Required for clickable images *\/}\nimport LightboxImage from '..\/..\/..\/components\/LightboxImage.astro';",
+      "name" : "Frontmatter",
+      "trigger" : "frontmatter"
     },
     {
-      "content" : "<LightboxImage\n  src={\\${1:imageVar}}\n  alt=\"\\${2:Descriptive alt text}\"\n  caption=\"\\${3:Short caption shown under the image}\"\n\/>",
-      "name" : "mdx-lightbox-image"
+      "content" : "import IMAGE_NAME from '..\/..\/..\/assets\/content\/visual\/PATH\/FILE.png';",
+      "name" : "image import",
+      "trigger" : "imgimport"
     },
     {
-      "content" : "![\\${1:Descriptive alt text}](\\${2:..\/..\/..\/assets\/content\/visual\/your-image.png} \"\\${3:Optional caption}\")",
-      "name" : "non-lightroom-image"
+      "content" : "<figure>\n  <LightboxImage\n\tsrc={IMAGE_NAME}\n\talt=\"\"\n\tcaption=\"\"\n  \/>\n<\/figure>",
+      "name" : "Image Section",
+      "trigger" : "imagesection"
     }
   ]
 }

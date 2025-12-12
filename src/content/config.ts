@@ -12,7 +12,7 @@ const preview = z.object({
 
 const content = (image) => ({
   title: z.string(),
-  summary: z.string(),
+  summary: z.string().optional(),
   home: preview,
   preview,
   order: z.number().default(9999),
