@@ -1,7 +1,8 @@
 ---
 import type { WebPage } from '../types/Page.mts';
 import SiteHeader from './SiteHeader.tsx';
-import { getEntry } from 'astro:content';
+import { getEntry, getCollection } from 'astro:content';
+
 interface Props {
   mainLandmarkId: string;
 }
@@ -17,15 +18,50 @@ const pages: WebPage[] = [
   { path: '/about', title: 'About' },
   { path: `mailto:${footerContent.data.email}`, title: 'Contact' },
 ];
+
+const portfolioCollection = await getCollection('portfolio');
+
+const toPages = (discipline: 'ux' | 'visual' | 'photo' | 'sound') =>
+  portfolioCollection
+    .filter((item) => item.data.title.toLowerCase() !== 'template')
+    .filter((item) => item.data.disciplines?.includes(discipline))
+    .sort((a, b) => a.data.order - b.data.order)
+    .map((item) => ({
+      title: item.data.title,
+      path: `/the-work/${item.slug}`,
+    }));
+
+const disciplineSubpages = {
+  ux: toPages('ux'),
+  visual: toPages('visual'),
+  photo: toPages('photo'),
+  sound: toPages('sound'),
+};
+
+const currentPath = new URL(Astro.request.url).pathname;
+
+const currentDiscipline =
+  currentPath.startsWith('/ux')
+    ? 'ux'
+    : currentPath.startsWith('/visual')
+    ? 'visual'
+    : currentPath.startsWith('/photo')
+    ? 'photo'
+    : currentPath.startsWith('/sound')
+    ? 'sound'
+    : undefined;
 ---
 
-<header class='header'>
-  <a href={`#${mainLandmarkId}`} class='skip-link'>Skip to main content</a>
-  <a class='logo' href='/'>GGW</a>
+<header class="header">
+  <a href={`#${mainLandmarkId}`} class="skip-link">Skip to main content</a>
+  <a class="logo" href="/">GGW</a>
+
   <SiteHeader
     navItems={pages}
-    currentPath={new URL(Astro.request.url).pathname}
-    client:only='react'
+    currentPath={currentPath}
+    disciplineSubpages={disciplineSubpages}
+    currentDiscipline={currentDiscipline}
+    client:only="react"
   />
 </header>
 

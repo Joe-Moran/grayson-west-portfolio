@@ -1,43 +1,33 @@
 .nav-container {
-  display: flex;
-  justify-content: flex-end;
+  position: relative;
+}
+
+.nav-drawer-button {
+  background: none;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
 }
 
 .nav-drawer {
   position: absolute;
-  inset: 100% 0 -100vh;
-  z-index: 3;
-  padding: 0 16px;
-  text-align: right;
+  top: 100%;
+  right: 0;
+  left: 0;
   background: var(--color-background);
-
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    list-style: none;
-
-    &:not(:last-child) {
-      margin-bottom: 8px;
-    }
-
-    a {
-      font-size: 1.75rem;
-    }
-  }
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.45);
+  z-index: 10;
 }
 
-.nav-drawer-button {
-  position: relative;
-  z-index: 100;
-  margin: 20px;
-  background: none;
-  border: none;
+.nav-drawer ul {
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+}
 
-  img {
-    width: 32px;
-    height: 32px;
-  }
+/* ✅ NEW: discipline dropdown spacing */
+.discipline-dropdown {
+  list-style: none;
+  margin: 0 0 12px 0;
+  padding: 0;
 }

@@ -1,4 +1,8 @@
 .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
   padding: 8px;
   font-size: 1.125rem;
   font-weight: 700;
@@ -15,4 +19,18 @@
   &.active {
     background: var(--color-nav-current);
   }
+
+  &.has-dropdown {
+    padding-right: 6px;
+  }
+}
+
+.nav-link-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--red);
+  transform: translateY(2px);
 }

@@ -1,0 +1,72 @@
+.header-discipline-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Toggle button */
+.header-discipline-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 8px;
+  margin-left: 6px;
+
+  background: transparent;
+  border: 2px solid var(--red);
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+/* CSS-only caret */
+.header-discipline-caret {
+  width: 0;
+  height: 0;
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--red);
+}
+
+/* Dropdown list */
+.header-discipline-list {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+
+  background: var(--color-background);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+
+  min-width: 220px;
+  z-index: 20;
+}
+
+.header-discipline-list ul {
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+}
+
+.header-discipline-list li {
+  margin: 0;
+}
+
+.header-discipline-list a {
+  display: block;
+  padding: 8px 14px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: background 150ms ease-in-out;
+}
+
+.header-discipline-list a:hover,
+.header-discipline-list a[aria-current='page'] {
+  background: rgba(255, 255, 255, 0.08);
+}
