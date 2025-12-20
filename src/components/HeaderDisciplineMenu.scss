@@ -1,59 +1,73 @@
+/* IMPORTANT:
+   The dropdown should anchor to the LEFT EDGE of the red pill.
+   That pill lives outside this component, so this component should NOT
+   be the positioning anchor.
+
+   We'll assume HeaderDisciplineMenu is rendered inside:
+   .nav-discipline-anchor { position: relative; }
+*/
+
+/* this component can stay inline-flex; NOT the positioning anchor */
 .header-discipline-menu {
-  position: relative;
   display: inline-flex;
-  align-items: center;
+  align-items: stretch;
 }
 
-/* Toggle button */
-.header-discipline-toggle {
+/* caret button */
+.header-discipline-menu__button {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
 
-  padding: 6px 8px;
-  margin-left: 6px;
+  height: 100%;
+  padding: 0 10px;
 
   background: transparent;
-  border: 2px solid var(--red);
-  border-radius: 4px;
-
+  border: 0;
   cursor: pointer;
+  line-height: 1;
+
+  &:not(:focus-visible) {
+    outline: none;
+  }
 }
 
-/* CSS-only caret */
-.header-discipline-caret {
+/* CSS caret */
+.header-discipline-menu__caret {
   width: 0;
   height: 0;
 
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 6px solid var(--red);
+  border-top: 6px solid #f6c366;
+  transform: translateY(2px);
 }
 
-/* Dropdown list */
-.header-discipline-list {
+/* Dropdown panel
+   NOW we anchor to the wrapper (nav-discipline-anchor), not to this menu */
+.header-discipline-menu__list {
   position: absolute;
   top: calc(100% + 6px);
-  right: 0;
+  left: 0;
+
+  min-width: 220px;
+  z-index: 9999;
 
   background: var(--color-background);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
-
-  min-width: 220px;
-  z-index: 20;
 }
 
-.header-discipline-list ul {
+.header-discipline-menu__list ul {
   margin: 0;
   padding: 8px 0;
   list-style: none;
 }
 
-.header-discipline-list li {
+.header-discipline-menu__list li {
   margin: 0;
 }
 
-.header-discipline-list a {
+.header-discipline-menu__list a {
   display: block;
   padding: 8px 14px;
 
@@ -66,7 +80,7 @@
   transition: background 150ms ease-in-out;
 }
 
-.header-discipline-list a:hover,
-.header-discipline-list a[aria-current='page'] {
+.header-discipline-menu__list a:hover,
+.header-discipline-menu__list a[aria-current='page'] {
   background: rgba(255, 255, 255, 0.08);
 }

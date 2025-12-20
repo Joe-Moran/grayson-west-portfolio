@@ -18,9 +18,20 @@ if (!entry) {
 }
 
 const { Content } = await entry.render();
+
+const currentDiscipline =
+  entry.data.disciplines?.includes('ux')
+    ? 'ux'
+    : entry.data.disciplines?.includes('visual')
+    ? 'visual'
+    : entry.data.disciplines?.includes('photo')
+    ? 'photo'
+    : entry.data.disciplines?.includes('sound')
+    ? 'sound'
+    : undefined;
 ---
 
-<Layout title={entry.data.title}>
+<Layout title={entry.data.title} currentDiscipline={currentDiscipline}>
   <PostPageLayout title={entry.data.title}>
     <Content slot="content" />
 

@@ -5,9 +5,11 @@ import { getEntry, getCollection } from 'astro:content';
 
 interface Props {
   mainLandmarkId: string;
+  currentDiscipline?: 'ux' | 'visual' | 'photo' | 'sound';
 }
 
-const { mainLandmarkId }: Props = Astro.props;
+const { mainLandmarkId, currentDiscipline }: Props = Astro.props;
+
 const footerContent = await getEntry('footer', 'footer');
 
 const pages: WebPage[] = [
@@ -21,6 +23,7 @@ const pages: WebPage[] = [
 
 const portfolioCollection = await getCollection('portfolio');
 
+// helper: filter out template + build link list
 const toPages = (discipline: 'ux' | 'visual' | 'photo' | 'sound') =>
   portfolioCollection
     .filter((item) => item.data.title.toLowerCase() !== 'template')
@@ -39,29 +42,17 @@ const disciplineSubpages = {
 };
 
 const currentPath = new URL(Astro.request.url).pathname;
-
-const currentDiscipline =
-  currentPath.startsWith('/ux')
-    ? 'ux'
-    : currentPath.startsWith('/visual')
-    ? 'visual'
-    : currentPath.startsWith('/photo')
-    ? 'photo'
-    : currentPath.startsWith('/sound')
-    ? 'sound'
-    : undefined;
 ---
 
-<header class="header">
-  <a href={`#${mainLandmarkId}`} class="skip-link">Skip to main content</a>
-  <a class="logo" href="/">GGW</a>
-
+<header class='header'>
+  <a href={`#${mainLandmarkId}`} class='skip-link'>Skip to main content</a>
+  <a class='logo' href='/'>GGW</a>
   <SiteHeader
     navItems={pages}
     currentPath={currentPath}
     disciplineSubpages={disciplineSubpages}
     currentDiscipline={currentDiscipline}
-    client:only="react"
+    client:only='react'
   />
 </header>
 

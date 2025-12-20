@@ -3,34 +3,47 @@
   align-items: center;
   gap: 6px;
 
-  padding: 8px;
+  padding: 8px 12px;
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-nav);
-  text-decoration-color: transparent;
+  text-decoration: none;
   text-transform: uppercase;
-  transition: 250ms ease-in all;
+
+  transition: background 200ms ease-in-out;
 
   &:hover,
   &:focus-visible {
-    text-decoration-color: inherit;
+    text-decoration: none;
   }
 
+  /* Active link does NOT paint background directly */
   &.active {
-    background: var(--color-nav-current);
+    background: transparent;
   }
 
-  &.has-dropdown {
-    padding-right: 6px;
+  /* Discipline links reserve space consistently */
+  &.discipline-link {
+    padding-right: 12px;
   }
 }
 
-.nav-link-caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid var(--red);
-  transform: translateY(2px);
+/* ============================= */
+/* ACTIVE DISCIPLINE PILL WRAPPER */
+/* ============================= */
+
+.nav-item--active-discipline .nav-item-inner {
+  display: inline-flex;
+  align-items: center;
+
+  background: var(--color-nav-current);
+  border-radius: 4px;
+
+  /* THIS is the anchor for the dropdown */
+  position: relative;
+}
+
+/* Prevent nested backgrounds */
+.nav-item--active-discipline .nav-link {
+  background: transparent;
 }
