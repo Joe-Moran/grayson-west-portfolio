@@ -17,15 +17,31 @@
     text-decoration: none;
   }
 
-  /* Active link does NOT paint background directly */
+  /* ACTIVE LINK — no background here anymore (pill handles it) */
   &.active {
     background: transparent;
   }
 
-  /* Discipline links reserve space consistently */
   &.discipline-link {
-    padding-right: 12px;
+    padding-right: 8px; /* reserve a bit of space */
   }
+}
+
+/* Caret is always present for discipline links to prevent layout shift */
+.nav-link-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid transparent;
+
+  transform: translateY(1px);
+}
+
+.nav-link-caret.is-visible {
+  border-top-color: #f6c366;
 }
 
 /* ============================= */
@@ -33,17 +49,22 @@
 /* ============================= */
 
 .nav-item--active-discipline .nav-item-inner {
+  position: relative; /* ✅ dropdown anchors to this */
   display: inline-flex;
   align-items: center;
 
   background: var(--color-nav-current);
   border-radius: 4px;
-
-  /* THIS is the anchor for the dropdown */
-  position: relative;
 }
 
-/* Prevent nested backgrounds */
+/* ensure link doesn't create a second pill */
 .nav-item--active-discipline .nav-link {
   background: transparent;
+}
+
+/* dropdown anchor should not become the positioning context */
+.nav-item--active-discipline .nav-discipline-anchor {
+  position: static;
+  display: inline-flex;
+  align-items: center;
 }

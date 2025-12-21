@@ -64,10 +64,13 @@ const resolvedDiscipline = currentDiscipline ?? inferredDiscipline;
       background-size: 224px;
     }
 
-    header {
-      position: sticky;
-      min-height: 60px;
-    }
+   header {
+     position: sticky;
+     top: 0;
+     height: 60px;
+     min-height: 60px;
+     z-index: 1000;
+   }
 
     body {
       display: flex;

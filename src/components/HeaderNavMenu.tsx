@@ -29,7 +29,7 @@ export default function HeaderNavMenu(props: HeaderNavMenuProps) {
 }
 
 const toListItemNavLink =
-  (currentPath: string, currentDiscipline?: DisciplineKey, disciplineSubpages?: DisciplineSubpages) =>
+  (currentPath: string, currentDiscipline: DisciplineKey | undefined, disciplineSubpages: DisciplineSubpages) =>
   (item: WebPage, index: number) => {
     const isCurrent = currentPath.startsWith(item.path);
 
@@ -47,39 +47,28 @@ const toListItemNavLink =
     const isDisciplineLink = disciplineForPath !== undefined;
     const hasDropdown = isDisciplineLink && disciplineForPath === currentDiscipline;
 
-    // ✅ If this is the active discipline link, render the pill wrapper AND the dropdown together.
-    if (hasDropdown && disciplineSubpages) {
-      return (
-        <li key={index} className="nav-item nav-item--active-discipline">
-          <span className="nav-item-inner">
-            <HeaderNavMenuNavLink
-              path={item.path}
-              title={item.title}
-              isCurrent={isCurrent}
-              isDisciplineLink={true}
-              hasDropdown={true}
-            />
-
-            <HeaderDisciplineMenu
-              pages={disciplineSubpages[disciplineForPath]}
-              elementId={`discipline-${disciplineForPath}-menu`}
-              currentPath={currentPath}
-            />
-          </span>
-        </li>
-      );
-    }
-
-    // Normal links (including non-active discipline links) just render as-is.
     return (
-      <li key={index} className="nav-item">
-        <HeaderNavMenuNavLink
-          path={item.path}
-          title={item.title}
-          isCurrent={isCurrent}
-          isDisciplineLink={isDisciplineLink}
-          hasDropdown={false}
-        />
+      <li key={index} className={hasDropdown ? 'nav-item--active-discipline' : ''}>
+        <span className={hasDropdown ? 'nav-item-inner' : undefined}>
+          <HeaderNavMenuNavLink
+            path={item.path}
+            title={item.title}
+            isCurrent={isCurrent}
+            hasDropdown={hasDropdown}
+            isDisciplineLink={isDisciplineLink}
+          />
+
+          {/* Render the dropdown MENU only for the active discipline */}
+          {hasDropdown && (
+            <span className="nav-discipline-anchor">
+              <HeaderDisciplineMenu
+                pages={disciplineSubpages[disciplineForPath]}
+                elementId={`discipline-${disciplineForPath}-menu`}
+                currentPath={currentPath}
+              />
+            </span>
+          )}
+        </span>
       </li>
     );
   };

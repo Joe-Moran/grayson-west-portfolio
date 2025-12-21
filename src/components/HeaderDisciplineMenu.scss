@@ -1,19 +1,9 @@
-/* IMPORTANT:
-   The dropdown should anchor to the LEFT EDGE of the red pill.
-   That pill lives outside this component, so this component should NOT
-   be the positioning anchor.
-
-   We'll assume HeaderDisciplineMenu is rendered inside:
-   .nav-discipline-anchor { position: relative; }
-*/
-
-/* this component can stay inline-flex; NOT the positioning anchor */
 .header-discipline-menu {
   display: inline-flex;
   align-items: stretch;
 }
 
-/* caret button */
+/* Toggle button */
 .header-discipline-menu__button {
   display: inline-flex;
   align-items: center;
@@ -32,8 +22,9 @@
   }
 }
 
-/* CSS caret */
+/* CSS-only caret */
 .header-discipline-menu__caret {
+  display: inline-block;
   width: 0;
   height: 0;
 
@@ -43,8 +34,7 @@
   transform: translateY(2px);
 }
 
-/* Dropdown panel
-   NOW we anchor to the wrapper (nav-discipline-anchor), not to this menu */
+/* Dropdown panel — positioned relative to the RED PILL wrapper */
 .header-discipline-menu__list {
   position: absolute;
   top: calc(100% + 6px);
