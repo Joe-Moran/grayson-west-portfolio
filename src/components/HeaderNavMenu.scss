@@ -1,37 +1,64 @@
+/* ===========================
+   NAV CONTAINER
+   =========================== */
+
 .nav-container {
   flex: 1;
+  display: flex;
+  align-items: center;
 }
+
+/* ===========================
+   NAV LIST (DESKTOP)
+   =========================== */
 
 .nav-list {
   display: flex;
-  container-type: normal;
   gap: clamp(10px, 3.4cqw, 50px);
   justify-content: flex-end;
   padding: 0 32px;
   list-style: none;
+  margin: 0;
 }
 
+/* Ensure all list items align consistently */
 .nav-list > li {
-  display: flex;        /* ✅ makes every item behave consistently */
-  align-items: center;  /* ✅ prevents the “one item is lower” issue */
+  display: flex;
+  align-items: center;
 }
 
+/* Anchor for discipline dropdown positioning */
 .nav-discipline-anchor {
-  position: relative; /* ✅ THIS is the anchor */
+  position: relative;
   display: inline-flex;
   align-items: stretch;
 }
 
-/* CSS-first responsive: render both, show/hide by breakpoint */
+/* ===========================
+   RESPONSIVE VISIBILITY
+   CSS-FIRST (NO JS)
+   =========================== */
+
+/*
+  We always render BOTH menus in React.
+  CSS decides which one is visible.
+  This avoids layout shift, flicker, and hydration issues.
+*/
+
 .nav-desktop {
   display: none;
 }
 
 .nav-mobile {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
-@media screen and (min-width: 769px) {
+/* ===========================
+   DESKTOP BREAKPOINT
+   =========================== */
+
+@media (min-width: 769px) {
   .nav-desktop {
     display: block;
   }
