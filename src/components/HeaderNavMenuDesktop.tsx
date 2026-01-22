@@ -17,7 +17,7 @@ export default function HeaderNavMenuDesktop({
   currentPath: string;
 }) {
   return (
-    <div className="nav-container">
+    <div className="nav-container nav-desktop">
       <nav aria-label="Main site navigation">
         <ul className="nav-list">
           {children}

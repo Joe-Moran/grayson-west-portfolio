@@ -1,25 +1,54 @@
-.nav-container.nav-mobile {
-  position: relative;
+/* ✅ Mobile nav container should keep a stable width in the header
+   even when the hamburger becomes position:fixed (open state). */
+.nav-container--mobile { 
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  /* ✅ This prevents header GGW from shifting when button becomes fixed */
+  min-width: 56px;
 }
 
-/* Hamburger button */
+/* ✅ Keeps header layout stable even when the real button becomes fixed */
+.nav-drawer-button-slot {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger button (in header) */
 .nav-drawer-button {
   color: var(--color-nav);
   background: transparent;
   border: 0;
+
+  /* ✅ fixed button size so header layout is stable */
+  width: 56px;
+  height: 56px;
+
   padding: 10px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  /* ✅ keep it above overlay */
   position: relative;
   z-index: 10000;
 
   &:not(:focus-visible) {
     outline: none;
   }
+}
+
+/* ✅ When open, pin the SAME button to top-right of the screen (acts as X) */
+.nav-drawer-button.is-open {
+  position: fixed;
+  top: 18px;
+  right: 16px;
+  z-index: 10001;
 }
 
 .hamburger {
@@ -43,16 +72,14 @@
 .nav-drawer-button[aria-expanded='true'] .hamburger span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
-
 .nav-drawer-button[aria-expanded='true'] .hamburger span:nth-child(2) {
   opacity: 0;
 }
-
 .nav-drawer-button[aria-expanded='true'] .hamburger span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Backdrop so drawer overlays (does not push page content) */
+/* Backdrop */
 .nav-drawer-backdrop {
   position: fixed;
   inset: 0;
@@ -62,55 +89,71 @@
   cursor: pointer;
 }
 
-/* ✅ Drawer panel — FULL SCREEN */
+/* Full-screen drawer */
 .nav-drawer {
   position: fixed;
   z-index: 9998;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
+  inset: 0;
   width: 100vw;
-
   background: var(--color-background);
-  box-shadow: none;
-
   padding: 18px 16px;
   overflow-y: auto;
 }
 
+/* Top row inside the drawer */
+.nav-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+
+  /* space for the pinned X button */
+  padding-right: 56px;
+  padding-bottom: 10px;
+}
+
+/* Drawer logo link wrapper */
+.nav-drawer-logo {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ✅ Match the real header logo exactly (from Header.astro) */
+.nav-drawer-header .logo {
+  padding: 10px;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--orange);
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Menu list */
 .nav-drawer-list {
   list-style: none;
-  margin: 0;
+  margin: 8px 0 0 0;
   padding: 0;
 }
 
-/* Items / links */
 .nav-drawer-item {
   margin: 0;
   padding: 0;
 }
 
-.nav-drawer-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
 /* Main links */
 .nav-drawer-link {
-  display: inline-flex;
-  align-items: center;
-
+  display: block;
   font-size: 1.05rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-
   color: var(--color-nav);
   text-decoration: none;
+
   padding: 10px 6px;
   border-radius: 8px;
 
@@ -125,55 +168,14 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* Caret button (expand/collapse) */
-.nav-drawer-caret {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-
-  border: 0;
-  background: rgba(255, 255, 255, 0.06);
-  cursor: pointer;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  &:not(:focus-visible) {
-    outline: none;
-  }
-}
-
-.nav-drawer-caret span {
-  width: 0;
-  height: 0;
-
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 7px solid #f6c366;
-  transform: translateY(1px);
-  transition: transform 150ms ease;
-}
-
-.nav-drawer-caret[aria-expanded='true'] span {
-  transform: rotate(180deg) translateY(-1px);
-}
-
 /* Subpages list */
 .nav-drawer-sublist {
   list-style: none;
   margin: 6px 0 14px 0;
   padding: 6px 0 0 0;
-
   border-left: 2px solid rgba(255, 255, 255, 0.08);
 }
 
-.nav-drawer-sublist li {
-  margin: 0;
-  padding: 0;
-}
-
-/* Subpage links — single color, no underline */
 .nav-drawer-sublink {
   display: block;
   padding: 10px 10px 10px 14px;

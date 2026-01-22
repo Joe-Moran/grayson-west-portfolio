@@ -1,69 +1,50 @@
-/* ===========================
-   NAV CONTAINER
-   =========================== */
-
 .nav-container {
   flex: 1;
-  display: flex;
-  align-items: center;
 }
 
-/* ===========================
-   NAV LIST (DESKTOP)
-   =========================== */
-
-.nav-list {
+/* Desktop nav list layout */
+.nav-container.nav-desktop .nav-list {
   display: flex;
+  container-type: normal;
   gap: clamp(10px, 3.4cqw, 50px);
   justify-content: flex-end;
   padding: 0 32px;
   list-style: none;
-  margin: 0;
 }
 
-/* Ensure all list items align consistently */
-.nav-list > li {
+.nav-container.nav-desktop .nav-list > li {
   display: flex;
   align-items: center;
 }
 
-/* Anchor for discipline dropdown positioning */
+/* Dropdown anchor */
 .nav-discipline-anchor {
   position: relative;
   display: inline-flex;
   align-items: stretch;
 }
 
-/* ===========================
-   RESPONSIVE VISIBILITY
-   CSS-FIRST (NO JS)
-   =========================== */
-
-/*
-  We always render BOTH menus in React.
-  CSS decides which one is visible.
-  This avoids layout shift, flicker, and hydration issues.
-*/
-
-.nav-desktop {
+/* Mobile-first: show mobile, hide desktop */
+.nav-container.nav-desktop {
   display: none;
 }
 
-.nav-mobile {
+/* IMPORTANT: support BOTH class names that exist in your project */
+.nav-container.nav-container--mobile,
+.nav-container.nav-mobile {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
-/* ===========================
-   DESKTOP BREAKPOINT
-   =========================== */
-
-@media (min-width: 769px) {
-  .nav-desktop {
+/* Desktop breakpoint */
+@media screen and (min-width: 769px) {
+  .nav-container.nav-desktop {
     display: block;
   }
 
-  .nav-mobile {
+  .nav-container.nav-container--mobile,
+  .nav-container.nav-mobile {
     display: none;
   }
 }

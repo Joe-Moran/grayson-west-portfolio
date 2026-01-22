@@ -11,42 +11,36 @@ type HeaderNavMenuProps = {
   navItems: WebPage[];
   currentPath: string;
 
-  // NOTE: kept for now so we don’t have to refactor the parent yet.
-  // This component no longer uses JS to decide mobile vs desktop.
-  isMobile: boolean;
+  // legacy — ignored (CSS controls visibility)
+  isMobile?: boolean;
 
   currentDiscipline?: DisciplineKey;
   disciplineSubpages: DisciplineSubpages;
 };
 
 export default function HeaderNavMenu(props: HeaderNavMenuProps) {
-  const NavListItems = props.navItems.map(
-    toListItemNavLink(props.currentPath, props.currentDiscipline)
-  );
+  const NavListItems = props.navItems.map(toListItemNavLink(props.currentPath, props.currentDiscipline));
 
   return (
     <>
-      {/* Mobile menu (CSS controls visibility) */}
-      <div className="nav-mobile">
-        <HeaderNavMenuMobile
-          currentDiscipline={props.currentDiscipline}
-          disciplineSubpages={props.disciplineSubpages}
-          currentPath={props.currentPath}
-        >
-          {NavListItems}
-        </HeaderNavMenuMobile>
-      </div>
+      {/* Desktop always rendered — CSS decides visibility */}
+      <HeaderNavMenuDesktop
+        currentDiscipline={props.currentDiscipline}
+        disciplineSubpages={props.disciplineSubpages}
+        currentPath={props.currentPath}
+      >
+        {NavListItems}
+      </HeaderNavMenuDesktop>
 
-      {/* Desktop menu (CSS controls visibility) */}
-      <div className="nav-desktop">
-        <HeaderNavMenuDesktop
-          currentDiscipline={props.currentDiscipline}
-          disciplineSubpages={props.disciplineSubpages}
-          currentPath={props.currentPath}
-        >
-          {NavListItems}
-        </HeaderNavMenuDesktop>
-      </div>
+      {/* Mobile always rendered — CSS decides visibility */}
+      <HeaderNavMenuMobile
+        navItems={props.navItems}
+        currentPath={props.currentPath}
+        disciplineSubpages={props.disciplineSubpages}
+        currentDiscipline={props.currentDiscipline}
+      >
+        {NavListItems}
+      </HeaderNavMenuMobile>
     </>
   );
 }
