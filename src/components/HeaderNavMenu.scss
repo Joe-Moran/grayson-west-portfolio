@@ -47,4 +47,24 @@
   .nav-container.nav-mobile {
     display: none;
   }
+  
+  .nav-item-inner {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .nav-item--active-discipline .nav-item-inner {
+    background: var(--color-nav-current);
+    border-radius: 4px;
+  }
+  
+  .nav-item--active-discipline .nav-link {
+    background: transparent;
+  }
+  
+  .nav-discipline-anchor {
+    display: inline-flex;
+    align-items: center;
+  }
 }

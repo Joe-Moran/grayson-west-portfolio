@@ -2,6 +2,7 @@ import type { WebPage } from '../types/Page.mts';
 import HeaderNavMenuNavLink from './HeaderNavMenuNavLink';
 import HeaderNavMenuDesktop from './HeaderNavMenuDesktop';
 import HeaderNavMenuMobile from './HeaderNavMenuMobile';
+import HeaderDisciplineMenu from './HeaderDisciplineMenu';
 import './HeaderNavMenu.scss';
 
 type DisciplineKey = 'ux' | 'visual' | 'photo' | 'sound';
@@ -10,43 +11,38 @@ type DisciplineSubpages = Record<DisciplineKey, WebPage[]>;
 type HeaderNavMenuProps = {
   navItems: WebPage[];
   currentPath: string;
-
-  // legacy — ignored (CSS controls visibility)
-  isMobile?: boolean;
-
+  isMobile?: boolean; // legacy — ignored
   currentDiscipline?: DisciplineKey;
   disciplineSubpages: DisciplineSubpages;
 };
 
 export default function HeaderNavMenu(props: HeaderNavMenuProps) {
-  const NavListItems = props.navItems.map(toListItemNavLink(props.currentPath, props.currentDiscipline));
+  const NavListItems = props.navItems.map(
+    toListItemNavLink(props.currentPath, props.currentDiscipline, props.disciplineSubpages)
+  );
 
   return (
     <>
-      {/* Desktop always rendered — CSS decides visibility */}
-      <HeaderNavMenuDesktop
-        currentDiscipline={props.currentDiscipline}
-        disciplineSubpages={props.disciplineSubpages}
-        currentPath={props.currentPath}
-      >
+      <HeaderNavMenuDesktop currentPath={props.currentPath}>
         {NavListItems}
       </HeaderNavMenuDesktop>
 
-      {/* Mobile always rendered — CSS decides visibility */}
       <HeaderNavMenuMobile
         navItems={props.navItems}
         currentPath={props.currentPath}
         disciplineSubpages={props.disciplineSubpages}
         currentDiscipline={props.currentDiscipline}
-      >
-        {NavListItems}
-      </HeaderNavMenuMobile>
+      />
     </>
   );
 }
 
 const toListItemNavLink =
-  (currentPath: string, currentDiscipline?: DisciplineKey) =>
+  (
+    currentPath: string,
+    currentDiscipline: DisciplineKey | undefined,
+    disciplineSubpages: DisciplineSubpages
+  ) =>
   (item: WebPage, index: number) => {
     const isCurrent = currentPath.startsWith(item.path);
 
@@ -61,18 +57,32 @@ const toListItemNavLink =
         ? 'sound'
         : undefined;
 
-    const hasDropdown = disciplineForPath !== undefined && disciplineForPath === currentDiscipline;
     const isDisciplineLink = disciplineForPath !== undefined;
+    const isActiveDiscipline =
+      disciplineForPath !== undefined && disciplineForPath === currentDiscipline;
 
     return (
-      <li key={index}>
-        <HeaderNavMenuNavLink
-          path={item.path}
-          title={item.title}
-          isCurrent={isCurrent}
-          hasDropdown={hasDropdown}
-          isDisciplineLink={isDisciplineLink}
-        />
+      <li key={index} className={isActiveDiscipline ? 'nav-item--active-discipline' : ''}>
+        <span className="nav-item-inner">
+          <HeaderNavMenuNavLink
+            path={item.path}
+            title={item.title}
+            isCurrent={isCurrent}
+            hasDropdown={isActiveDiscipline}
+            isDisciplineLink={isDisciplineLink}
+          />
+
+          {/* ✅ Attach dropdown to the ACTIVE discipline link */}
+          {isActiveDiscipline && (
+            <span className="nav-discipline-anchor">
+              <HeaderDisciplineMenu
+                pages={disciplineSubpages[currentDiscipline]}
+                elementId={`discipline-${currentDiscipline}-menu`}
+                currentPath={currentPath}
+              />
+            </span>
+          )}
+        </span>
       </li>
     );
   };
