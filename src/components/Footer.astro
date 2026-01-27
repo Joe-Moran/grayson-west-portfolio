@@ -1,22 +1,48 @@
 ---
 import { getEntry } from 'astro:content';
 import { Image } from 'astro:assets';
+
+// Bypass Astro's /_image pipeline for this one SVG (prevents clipping)
+import instagramIconUrl from '../assets/instagram-2-logo.svg?url';
+
 const content = await getEntry('footer', 'footer');
 ---
 
-<footer class='footer'>
-  <!-- TODO: turn into reusable component: "Site Logo"? -->
-  <div class='main-content'>
-    <span class='site-name'>{content.data.title}</span>
+<footer class="footer">
+  <div class="main-content">
+    <span class="site-name">{content.data.title}</span>
     <a href={`mailto:${content.data.email}`}>{content.data.email}</a>
   </div>
 
-  <nav class='footer-nav' aria-label='footer links'>
+  <nav class="footer-nav" aria-label="footer links">
+    <a href="https://patternflux.com" class="footer-writing">
+      Writing
+    </a>
+
     {
       content.data.links.map((link) => (
-        <a href={link.url}>
+        <a href={link.url} aria-label={link.title}>
           {link.image != undefined ? (
-            <Image src={link.image} alt={link.title} format='svg' />
+            link.title.toLowerCase() === 'instagram' ? (
+              <img
+                class={`footer-icon footer-icon--${link.title.toLowerCase()}`}
+                src={instagramIconUrl}
+                alt={link.title}
+                width="26"
+                height="26"
+                loading="lazy"
+                decoding="async"
+              />
+            ) : (
+              <Image
+                class={`footer-icon footer-icon--${link.title.toLowerCase()}`}
+                src={link.image}
+                alt={link.title}
+                format="svg"
+                width={26}
+                height={26}
+              />
+            )
           ) : (
             link.title
           )}
@@ -50,6 +76,35 @@ const content = await getEntry('footer', 'footer');
     display: flex;
     gap: 36px;
     align-items: center;
+  }
+
+  /* Keep nav items vertically aligned */
+  .footer-nav a {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .footer-icon {
+    display: block;
+    line-height: 0;
+    object-fit: contain;
+  }
+
+  /* Icon-style logos */
+  .footer-icon--instagram {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Wordmark-style logos */
+  .footer-icon--linkedin {
+    height: 26px;
+    width: auto;
+  }
+
+  /* “Writing” should sit nicely with icons */
+  .footer-writing {
+    line-height: 1;
   }
 
   .site-name {

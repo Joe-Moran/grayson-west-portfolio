@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import Hero from '../components/Hero.astro';
 import Intro from '../components/Intro.astro';
 import WorkCard from '../components/WorkCard.astro';
+import soundHero from '../assets/hero-sound.png';
 
 const portfolioCollection = await getCollection('portfolio', ({ data }) =>
   data.disciplines?.includes('sound')
@@ -11,7 +12,7 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 ---
 
 <Layout title="Sound & Music">
-  <Hero title="Sound & Music" />
+  <Hero title="Sound & Music" image={soundHero} />
 
   <main id="main">
 	<div class="intro-container">
@@ -73,11 +74,4 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
 	  grid-template-columns: 1fr;
 	}
   }
-
-.discipline-section--sound .work-card {
-	min-height: 240px;
-  
-	--screenshot-max-width: 80%;
-	--screenshot-max-height: 60%;
-	--screenshot-translate-y: -50%;
-  }</style>
+</style>

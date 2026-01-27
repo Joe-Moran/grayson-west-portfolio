@@ -75,10 +75,16 @@ const resolvedDiscipline = currentDiscipline ?? inferredDiscipline;
     body {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       min-height: 100vh;
       margin: 0;
       background: var(--color-background);
+    }
+    
+    /* This makes the outer layout main take remaining space,
+       so the footer stays down without pushing the hero */
+    body > main {
+      flex: 1;
     }
 
     main {
