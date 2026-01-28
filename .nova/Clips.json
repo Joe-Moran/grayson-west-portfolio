@@ -1,8 +1,8 @@
 {
   "clips" : [
     {
-      "content" : "---\n# REQUIRED: Visible title for cards + page\ntitle: TITLE_GOES_HERE\n\nhome:\n  enable: true\n  grid:\n\trows: 1\n\tcolumns: 2\n\npreview:\n  enable: true\n  grid:\n\trows: 1\n\tcolumns: 1\n\n# REQUIRED: Full-bleed card background image\nbackground: '..\/..\/..\/assets\/content\/backgrounds\/BACKGROUND_IMAGE.jpg'\n\n# OPTIONAL: Foreground image used on cards\nscreenshot:\n  image: '..\/..\/..\/assets\/content\/visual\/PATH\/SCREENSHOT_IMAGE.png'\n  altText: 'SHORT DESCRIPTION'\n\n# OPTIONAL: Icon used in legacy cards or future UI\nicon: '..\/..\/..\/assets\/content\/SVGs\/ICON_NAME.svg'\n\n# REQUIRED: Appears under card title\nplatforms:\n  - Graphic Design\n\n# REQUIRED: Determines section (ux, visual, photo, sound)\ndisciplines:\n  - visual\n\n# Optional: lower numbers appear earlier\norder: 999\n---\n\n{\/* Required for clickable images *\/}\nimport LightboxImage from '..\/..\/..\/components\/LightboxImage.astro';",
-      "name" : "Frontmatter",
+      "content" : "---\ntitle: Macworld Booth Designs\n\nhome:\n  enable: true\n  grid:\n\trows: 1\n\tcolumns: 2\n\npreview:\n  enable: true\n  grid:\n\trows: 1\n\tcolumns: 1\n\nbackground: '..\/..\/..\/assets\/content\/backgrounds\/3.jpg'\n\nscreenshot:\n  image: '..\/..\/..\/assets\/content\/visual\/booth-art\/booth-card.png'\n  altText: 'OmniGraffle Macworld Booth design.'\n\nplatforms:\n  - Graphic Design\n\ndisciplines:\n  - visual\n\norder: 4\n---",
+      "name" : ".mdx frontmatter",
       "trigger" : "frontmatter"
     },
     {
