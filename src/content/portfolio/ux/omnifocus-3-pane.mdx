@@ -1,0 +1,193 @@
+---
+title: OmniFocus 3 pane design
+
+home:
+  enable: true
+  grid:
+    rows: 1
+    columns: 2
+
+preview:
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
+
+screenshot:
+  image: '../../../assets/content/casestudies/omnifocus-3-dark.png'
+  altText: ''
+
+background: '../../../assets/content/backgrounds/28.jpg'
+icon: '../../../assets/content/SVGs/28.svg'
+
+platforms:
+  - iPad OS
+
+disciplines:
+  - ux
+
+order: 4
+---
+
+import LightboxImage from '../../../components/LightboxImage.astro';
+
+import paneHero from '../../../assets/content/casestudies/omnifocus-pane-1.png';
+import darkMode from '../../../assets/content/casestudies/omnifocus-3-dark.png';
+import personas from '../../../assets/content/casestudies/omnifocus-pane-persona.png';
+import sizeClasses from '../../../assets/content/casestudies/omnifocus-pane-screenclasses.png';
+import protoLandscape from '../../../assets/content/casestudies/iPad+Pro-Landscape-Full.png';
+import protoPortrait from '../../../assets/content/casestudies/iPad+Pro-Portrait-Full.png';
+import splitViewGif from '../../../assets/content/casestudies/omnifocus-pane-video-1.gif';
+import pinningGif from '../../../assets/content/casestudies/omnifocus-pane-video-2.gif';
+
+## Background
+
+The most requested feature for OmniFocus 3 for iPad was a user experience that resembled the Mac application. Users wanted the familiarity and productivity boost of the Mac interface, describing it as *intuitive* and *essential for power users*.
+
+<figure>
+  <LightboxImage
+    src={paneHero}
+    alt="OmniFocus 3 for iPad with new three-pane layout"
+    caption="OmniFocus 3 for iPad with the new three-pane layout."
+  />
+</figure>
+
+<figure>
+  <LightboxImage
+    src={darkMode}
+    alt="OmniFocus for iPad OS in dark mode"
+    caption="OmniFocus for iPad OS."
+  />
+</figure>
+
+The core problem was that the existing iPad interface did not provide the same level of efficiency or intuitive control as the Mac version. Users were frustrated with performing extra steps to access key features, which negatively affected productivity.
+
+---
+
+## User Research Details
+
+To address this problem, I led a research process that included user interviews, surveys, and usability testing with a group of approximately 50 users — both new users and experienced power users.
+
+One user summarized the frustration clearly:
+
+> “I love the Mac version because everything is just a click away, but on the iPad, it feels like I'm constantly tapping through menus and windows.”
+
+These insights helped define clear design goals: reduce navigation friction, surface more context, and minimize the number of taps required to complete common tasks.
+
+---
+
+## Persona Development
+
+To deepen our understanding, we created personas and journey maps representing both new users and power users.
+
+<figure>
+  <LightboxImage
+    src={personas}
+    alt="User personas for the OmniFocus three-pane design"
+    caption="Two personas developed to represent new users and power users."
+  />
+</figure>
+
+These personas helped ensure the design addressed different experience levels without sacrificing efficiency.
+
+---
+
+## Goals
+
+The primary goal was to create a flexible framework that allowed users to view:
+
+- a **perspective view**
+- a **project view**
+- an **inspector panel**
+
+simultaneously — providing context while reducing navigation overhead.
+
+---
+
+## Approach
+
+<figure>
+  <LightboxImage
+    src={sizeClasses}
+    alt="Apple size classes used in OmniFocus"
+    caption="The wide range of Apple size classes the design needed to support."
+  />
+</figure>
+
+A major challenge was designing a three-pane layout that worked across multiple iPad size classes and multitasking modes such as Split View and Slide Over.
+
+---
+
+## Iterative Prototyping
+
+### Early Layout Exploration
+
+<figure>
+  <LightboxImage
+    src={protoLandscape}
+    alt="Early landscape prototype of the three-pane layout"
+    caption="Early landscape prototype exploring pane sizing and hierarchy."
+  />
+</figure>
+
+<figure>
+  <LightboxImage
+    src={protoPortrait}
+    alt="Portrait prototype of the three-pane layout"
+    caption="Portrait prototype testing layout behavior across orientations."
+  />
+</figure>
+
+Early testing revealed that static pane sizes felt cramped on smaller screens, which led to more dynamic resizing rules.
+
+---
+
+### Split View & Slide Over
+
+<figure>
+  <LightboxImage
+    src={splitViewGif}
+    alt="Split View behavior of the three-pane layout"
+    caption="How the three-pane layout adapts in Split View."
+  />
+</figure>
+
+A cascading dismissal approach was introduced, allowing panes to collapse progressively as screen width decreased.
+
+---
+
+### Pinning Feature
+
+<figure>
+  <LightboxImage
+    src={pinningGif}
+    alt="Pinning a pane in OmniFocus"
+    caption="Pinning a pane to keep it visible while navigating."
+  />
+</figure>
+
+Pinning allowed users to maintain context while navigating deeper into tasks, with visual indicators added to clarify state.
+
+---
+
+## Developer Collaboration
+
+Close collaboration with engineering was essential:
+
+- **Memory management** improvements reduced overhead when multiple panes were visible.
+- **Animation tuning** refined transitions to feel smooth and intentional.
+
+These changes improved both performance and perceived quality.
+
+---
+
+## Outcomes
+
+The three-pane design shipped in OmniFocus 3 and was met with strong user response.
+
+- User satisfaction increased by **16%**
+- Active usage rose **22%**
+- Sales increased **28%**
+- Active user count grew **35%**
+
+The project reinforced the value of user-centered design, close collaboration, and iterative prototyping.
