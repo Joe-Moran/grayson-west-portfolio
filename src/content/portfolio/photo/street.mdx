@@ -1,0 +1,71 @@
+---
+title: Street
+
+home:
+  enable: true
+  grid:
+    rows: 1
+    columns: 2
+preview:
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
+background: '../../../assets/content/backgrounds/12.jpg'
+screenshot:
+  image: '../../../assets/content/photos/street/street-4.png'
+  altText: 'Geometry and lines'
+platforms:
+  - Random Street Photography
+disciplines:
+  - photo
+order: 2
+---
+
+import LightboxImage from '../../../components/LightboxImage.astro';
+import street1 from '../../../assets/content/photos/abstract/street-1.png';
+import street2 from '../../../assets/content/photos/abstract/street-2.png';
+import street3 from '../../../assets/content/photos/abstract/street-3.png';
+import street4 from '../../../assets/content/photos/abstract/street-4.png';
+import street5 from '../../../assets/content/photos/abstract/street-5.png';
+
+<figure>
+  <LightboxImage
+    src={street1}
+    alt="Black and white photograph of an empty roadway or runway stretching toward distant mountains beneath dramatic, layered clouds."
+    caption="A straight line into open space—infrastructure dissolving into landscape, scale defined by distance and sky."
+  />
+</figure>
+
+<figure>
+  <LightboxImage
+    src={street2}
+    alt="A small concrete structure in the woods covered in layered graffiti, surrounded by fallen leaves and bare trees."
+    caption="An abandoned utility structure reclaimed by paint, weather, and the quiet persistence of the forest."
+  />
+</figure>
+
+<figure>
+  <LightboxImage
+    src={street3}
+    alt="Black and white photograph of a small boat moored beside a wooden dock, reflected in still water alongside nearby buildings."
+    caption="Reflections folding architecture and water together—stillness blurring what’s built and what’s floating."
+  />
+</figure>
+
+<figure>
+  <LightboxImage
+    src={street4}
+    alt="Empty underground subway platform with curved concrete ceilings, columns, and train tracks receding into the distance."
+    caption="Transit without motion—designed curves, waiting light, and the quiet geometry of pause."
+  />
+</figure>
+
+<figure>
+  <LightboxImage
+    src={street5}
+    alt="Street mural depicting a stylized blue face painted across a building wall, with surrounding urban textures and storefronts."
+    caption="A face embedded in the street—color and expression interrupting the everyday flow of the city."
+  />
+</figure>
+
