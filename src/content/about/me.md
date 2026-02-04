@@ -1,6 +1,7 @@
 ---
 title: "About Me"
 ---
+# Hello!
 
 I’m a multidisciplinary designer and creative practitioner with over 15 years of experience in UX, product design, and visual storytelling.
 
