@@ -21,6 +21,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "@astrojs/cloudflare": "^10.2.4",
+    "@astrojs/mdx": "^3.1.9",
     "@astrojs/react": "^3.3.1",
     "@types/react": "^18.2.78",
     "@types/react-dom": "^18.2.25",
@@ -60,7 +61,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "husky": "^9.0.11",
     "jsdom": "^24.0.0",
-    "lint-staged": "^15.2.2",
+    "lint-staged": "^15.2.11",
     "postcss-html": "^1.6.0",
     "sass": "^1.75.0",
     "storybook": "^8.0.9",

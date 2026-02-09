@@ -1,0 +1,176 @@
+---
+/**
+ * Global lightbox overlay + behavior.
+ * Renders once in Layout and listens for clicks on elements
+ * with [data-lightbox-src], [data-lightbox-alt], [data-lightbox-caption].
+ */
+---
+
+<div id="lightbox-root" hidden>
+  <div class="lb-backdrop"></div>
+
+  <figure class="lb-modal">
+    <button
+      type="button"
+      class="lb-close"
+      aria-label="Close image"
+    >
+      <span>&times;</span>
+    </button>
+
+    <img class="lb-image" alt="" />
+
+    <figcaption class="lb-caption"></figcaption>
+  </figure>
+</div>
+
+<style>
+  #lightbox-root {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    background: rgb(0 0 0 / 75%);
+  }
+
+  #lightbox-root[hidden] {
+    display: none;
+  }
+
+  .lb-modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: min(960px, 100%);
+    max-height: 100%;
+    padding: 24px;
+    margin: 0;
+    background: #0f1117;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgb(0 0 0 / 70%);
+  }
+
+  .lb-image {
+    display: block;
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+
+  .lb-caption {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--muted-text, #c9ced8);
+  }
+
+  .lb-close {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    background: rgb(0 0 0 / 85%);
+    border: 2px solid #fff;
+    border-radius: 999px;
+  }
+
+  .lb-backdrop {
+    position: fixed;
+    inset: 0;
+
+    /* Transparent layer to catch clicks outside the modal */
+  }
+
+  @media (width <= 720px) {
+    #lightbox-root {
+      padding: 16px;
+    }
+
+    .lb-modal {
+      padding: 16px;
+    }
+  }
+</style>
+
+<script type="module">
+  if (typeof window !== 'undefined') {
+    window.addEventListener('DOMContentLoaded', () => {
+      const root = document.getElementById('lightbox-root');
+      if (!root) return;
+
+      const imageEl = root.querySelector('.lb-image');
+      const captionEl = root.querySelector('.lb-caption');
+      const closeBtn = root.querySelector('.lb-close');
+
+      function openLightbox(src, alt, caption) {
+        if (!(imageEl instanceof HTMLImageElement)) return;
+
+        imageEl.src = src;
+        imageEl.alt = alt || '';
+
+        if (captionEl instanceof HTMLElement) {
+          if (caption) {
+            captionEl.textContent = caption;
+            captionEl.hidden = false;
+          } else {
+            captionEl.textContent = '';
+            captionEl.hidden = true;
+          }
+        }
+
+        root.hidden = false;
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        root.hidden = true;
+        document.body.style.overflow = '';
+      }
+
+      document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof HTMLElement)) return;
+
+        const trigger = target.closest('[data-lightbox-src]');
+        if (trigger) {
+          event.preventDefault();
+          const src = trigger.getAttribute('data-lightbox-src');
+          const alt = trigger.getAttribute('data-lightbox-alt') || '';
+          const caption = trigger.getAttribute('data-lightbox-caption') || '';
+
+          if (src) {
+            openLightbox(src, alt, caption);
+          }
+          return;
+        }
+
+        if (!root.hidden && (target === root || target.classList.contains('lb-backdrop'))) {
+          closeLightbox();
+        }
+      });
+
+      if (closeBtn instanceof HTMLButtonElement) {
+        closeBtn.addEventListener('click', closeLightbox);
+      }
+
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !root.hidden) {
+          closeLightbox();
+        }
+      });
+    });
+  }
+</script>

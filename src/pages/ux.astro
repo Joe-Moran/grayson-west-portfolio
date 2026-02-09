@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import Intro from '../components/Intro.astro';
+import Hero from '../components/Hero.astro';
+import WorkCard from '../components/WorkCard.astro';
+import uxHero from '../assets/hero-ux.png';
+
+const portfolioCollection = await getCollection('portfolio', ({ data }) =>
+  !data.disciplines || data.disciplines.includes('ux')
+);
+
+const pages = portfolioCollection.map((item) => ({
+  title: item.data.title,
+  path: `/the-work/${item.slug}`,
+}));
+---
+
+<Layout title="UX" subPages={pages}>
+  <Hero title="User Experience" image={uxHero} />
+
+  <main id="main">
+    <div class="intro-container">
+      <Intro
+        greeting="I lead UX and product design work that connects strategy, research, and execution."
+      >
+        <div class="intro-content">
+          <p>
+            The projects collected here show how I partner with teams to navigate complexity, balance user needs with business goals, and build products that hold up over time. The emphasis is on process, collaboration, and thoughtful tradeoffs—not just final artifacts.
+          </p>
+        </div>
+      </Intro>
+    </div>
+
+    <section
+      class="discipline-section discipline-section-ux"
+      aria-label="UX work"
+    >
+      <div class="discipline-grid">
+        {
+          portfolioCollection
+            .filter((item) => item.data.title.toLowerCase() !== 'template')
+            .sort((a, b) => a.data.order - b.data.order)
+            .map((item) => {
+              // IMPORTANT: use .src so WorkCard gets URL strings, not metadata objects
+              const background = item.data.background?.src;
+              const screenshot = item.data.screenshot?.image?.src;
+
+              const label =
+                Array.isArray(item.data.platforms) && item.data.platforms.length
+                  ? item.data.platforms.join(' · ')
+                  : '';
+
+              return (
+                <WorkCard
+                  title={item.data.title}
+                  href={`/the-work/${item.slug}`}
+                  background={background}
+                  image={screenshot}
+                  label={label}
+                />
+              );
+            })
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style is:global>
+  .discipline-section {
+    padding-inline: clamp(12px, 4vw, 25px);
+    padding-bottom: 42px;
+  }
+
+  .discipline-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  @media (width <= 720px) {
+    .discipline-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Taller UX cards + control screenshot sizing / position */
+  .discipline-section-ux .work-card {
+    min-height: 480px;
+
+    --screenshot-max-width: 88%;
+    --screenshot-max-height: 60%;
+    --screenshot-translate-y: -60%;
+  }
+</style>

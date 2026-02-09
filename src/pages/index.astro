@@ -1,39 +1,83 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCollection, getEntry } from 'astro:content';
-import PagePreview from '../components/PagePreview.astro';
+import { getEntry } from 'astro:content';
 import Hero from '../components/Hero.astro';
 import Values from '../components/Values.astro';
 import Intro from '../components/Intro.astro';
-const writingCollection = await getCollection('writing', ({ data }) => !!data.home.enable);
-const portfolioCollection = await getCollection('portfolio', ({ data }) => !!data.home.enable);
+import WorkCard from '../components/WorkCard.astro';
+
+// Card images
+import uxCard from '../assets/home-cards/home-card-ux.png';
+import visualCard from '../assets/home-cards/home-card-visual.png';
+import photoCard from '../assets/home-cards/home-card-photo.png';
+import soundCard from '../assets/home-cards/home-card-sound.png';
+
 const introEntry = await getEntry('intro', 'paragraph');
 const { Content } = await introEntry.render();
 const title = 'Grayson Gail West';
 ---
 
-<Layout title='Grayson Gail West'>
+<Layout title={title}>
   <Hero title={title} />
 
-  <div class='intro-container'>
+  <div class="intro-container">
     <Intro title={introEntry.data.title} greeting={introEntry.data.greeting}>
-      <div class='intro-content'>
+      <div class="intro-content">
         <Content />
       </div>
     </Intro>
   </div>
+
   <Values />
 
-  <div class='page-previews'>
-    <PagePreview path='how-i-think' title='How I think' children={writingCollection} />
-    <PagePreview path='the-work' title='The Work' children={portfolioCollection} />
-  </div>
+<section class="home-section" aria-label="Work areas">
+    <div class="home-grid">
+      <WorkCard
+        title="UX"
+        href="/ux"
+        background={uxCard.src}
+        label="User experience, product design, and strategy case studies."
+      />
+  
+      <WorkCard
+        title="Visual"
+        href="/visual"
+        background={visualCard.src}
+        label="Graphic design, motion graphics, and video experiments."
+      />
+  
+      <WorkCard
+        title="Photo"
+        href="/photo"
+        background={photoCard.src}
+        label="Photography that sharpens composition, light, and timing."
+      />
+  
+      <WorkCard
+        title="Sound"
+        href="/sound"
+        background={soundCard.src}
+        label="Sound design, field recordings, and ambient music practice."
+      />
+    </div>
+  </section>
 </Layout>
 
 <style>
-  .page-previews {
-    display: flex;
-    flex-direction: column;
-    gap: 42px;
+  .home-section {
+    padding-inline: clamp(12px, 4vw, 25px);
+    padding-bottom: 42px;
+  }
+
+  .home-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  @media (width <= 720px) {
+    .home-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

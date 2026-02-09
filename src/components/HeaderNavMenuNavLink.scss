@@ -1,18 +1,70 @@
 .nav-link {
-  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 12px;
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-nav);
-  text-decoration-color: transparent;
+  text-decoration: none;
   text-transform: uppercase;
-  transition: 250ms ease-in all;
+
+  transition: background 200ms ease-in-out;
 
   &:hover,
   &:focus-visible {
-    text-decoration-color: inherit;
+    text-decoration: none;
   }
 
+  /* ACTIVE LINK — no background here anymore (pill handles it) */
   &.active {
-    background: var(--color-nav-current);
+    background: transparent;
   }
+
+  &.discipline-link {
+    padding-right: 8px; /* reserve a bit of space */
+  }
+}
+
+/* Caret is always present for discipline links to prevent layout shift */
+.nav-link-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid transparent;
+
+  transform: translateY(1px);
+}
+
+.nav-link-caret.is-visible {
+  border-top-color: #f6c366;
+}
+
+/* ============================= */
+/* ACTIVE DISCIPLINE PILL WRAPPER */
+/* ============================= */
+
+.nav-item--active-discipline .nav-item-inner {
+  position: relative; /* ✅ dropdown anchors to this */
+  display: inline-flex;
+  align-items: center;
+
+  background: var(--color-nav-current);
+  border-radius: 4px;
+}
+
+/* ensure link doesn't create a second pill */
+.nav-item--active-discipline .nav-link {
+  background: transparent;
+}
+
+/* dropdown anchor should not become the positioning context */
+.nav-item--active-discipline .nav-discipline-anchor {
+  position: static;
+  display: inline-flex;
+  align-items: center;
 }

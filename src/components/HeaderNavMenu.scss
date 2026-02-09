@@ -2,11 +2,69 @@
   flex: 1;
 }
 
-.nav-list {
+/* Desktop nav list layout */
+.nav-container.nav-desktop .nav-list {
   display: flex;
   container-type: normal;
   gap: clamp(10px, 3.4cqw, 50px);
   justify-content: flex-end;
   padding: 0 32px;
   list-style: none;
+}
+
+.nav-container.nav-desktop .nav-list > li {
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown anchor */
+.nav-discipline-anchor {
+  position: relative;
+  display: inline-flex;
+  align-items: stretch;
+}
+
+/* Mobile-first: show mobile, hide desktop */
+.nav-container.nav-desktop {
+  display: none;
+}
+
+/* IMPORTANT: support BOTH class names that exist in your project */
+.nav-container.nav-container--mobile,
+.nav-container.nav-mobile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Desktop breakpoint */
+@media screen and (min-width: 769px) {
+  .nav-container.nav-desktop {
+    display: block;
+  }
+
+  .nav-container.nav-container--mobile,
+  .nav-container.nav-mobile {
+    display: none;
+  }
+  
+  .nav-item-inner {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .nav-item--active-discipline .nav-item-inner {
+    background: var(--color-nav-current);
+    border-radius: 4px;
+  }
+  
+  .nav-item--active-discipline .nav-link {
+    background: transparent;
+  }
+  
+  .nav-discipline-anchor {
+    display: inline-flex;
+    align-items: center;
+  }
 }

@@ -77,9 +77,17 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
   }
 
   .content-preview-masonry {
-    --grid-layout-gap: 10px;
-    --grid-column-count: var(--columns);
-    --grid-item-min-width: 200px;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr)
+    );
+    grid-gap: var(--grid-layout-gap);
+  padding-inline: clamp(12px, 4vw, 12px); /* ← adds left/right spacing */
+  
+  --grid-layout-gap: 10px;
+  --grid-column-count: var(--columns);
+  --grid-item-min-width: 200px;
 
     /**
    * Calculated values.
@@ -87,13 +95,6 @@ function buildLinkPath(item: CollectionEntry<'portfolio' | 'writing'>): string {
     --gap-count: calc(var(--grid-column-count) - 1);
     --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
     --grid-item-max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
-
-    display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr)
-    );
-    grid-gap: var(--grid-layout-gap);
   }
 
   @for $gridSpanCount from 1 through 12 {

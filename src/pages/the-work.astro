@@ -1,18 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
-import ContentPreviewMasonry from '../components/ContentPreviewMasonry.astro';
-const portfolioCollection = await getCollection('portfolio');
-const pages = portfolioCollection.map((item) => ({
-  title: item.data.title,
-  path: `/the-work/${item.slug}`,
-}));
 ---
 
-<Layout title='The Work' subPages={pages}>
-  <ContentPreviewMasonry
-    basePath={new URL(Astro.request.url).pathname}
-    collection={portfolioCollection}
-    previewLocation='page-preview'
-  />
+<Layout title="UX">
+  <main id="main">
+    <meta http-equiv="refresh" content="0;url=/ux" />
+    <p>
+      This page has moved. If you’re not redirected automatically,
+      <a href="/ux">click here to view my UX work.</a>
+    </p>
+  </main>
 </Layout>

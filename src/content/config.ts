@@ -12,7 +12,7 @@ const preview = z.object({
 
 const content = (image) => ({
   title: z.string(),
-  summary: z.string(),
+  summary: z.string().optional(),
   home: preview,
   preview,
   order: z.number().default(9999),
@@ -41,7 +41,16 @@ const portfolio = defineCollection({
       ...content(image),
       screenshot: z.object({ image: image(), altText: z.string() }).optional(),
       platforms: z.string().array(),
+      disciplines: z.array(z.string()).optional(),
     }),
+});
+
+// NEW: about collection
+const about = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+  }),
 });
 
 // TODO: is this the best approach for making the intro easily editable?
@@ -69,4 +78,12 @@ const footer = defineCollection({
     }),
 });
 
-export const collections = { personality, writing: writingCollection, portfolio, intro, footer };
+// NOTE: added `about` here
+export const collections = {
+  personality,
+  writing: writingCollection,
+  portfolio,
+  intro,
+  footer,
+  about,
+};

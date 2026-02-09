@@ -1,6 +1,6 @@
 ---
 title: ""
-greeting: I’m a design leader with over 15 years of experience in product design and guiding software development teams.
+greeting: Welcome! I work across UX and product design, as well as visual, motion, photography, and sound. This site gathers that work in one place.
 ---
 
-Average is boring, and “ordinary” is nothing to aspire to. I have an obsession with loosening restraints so that my teams are can find that place where creativity and productivity fuse into innovative design solutions.
+This site is a collection of work across product design, visual projects, photography, motion, sound, and music. Some of it is client work, some of it is personal or experimental. Together, it reflects how I think and make things.

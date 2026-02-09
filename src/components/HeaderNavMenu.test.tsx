@@ -3,10 +3,18 @@ import '@testing-library/jest-dom';
 import { render, fireEvent, screen } from '@testing-library/react';
 import HeaderNavMenu from './HeaderNavMenu.tsx';
 
+const disciplineSubpages = {
+  ux: [],
+  visual: [],
+  photo: [],
+  sound: [],
+};
+
 const defaultProps = {
   navItems: [{ path: '', title: '' }],
   currentPath: '',
   isMobile: false,
+  disciplineSubpages,
 };
 
 const menuButtonName = /open navigation drawer/i;
@@ -74,6 +82,7 @@ function renderHeaderNavMenu(props) {
       navItems={props.navItems}
       currentPath={props.currentPath}
       isMobile={props.isMobile}
+      disciplineSubpages={props.disciplineSubpages}
     />,
   );
 }

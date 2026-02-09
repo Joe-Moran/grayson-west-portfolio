@@ -1,19 +1,47 @@
 ---
 import type { WebPage } from '../types/Page.mts';
 import SiteHeader from './SiteHeader.tsx';
-import { getEntry } from 'astro:content';
+import { getEntry, getCollection } from 'astro:content';
+
 interface Props {
   mainLandmarkId: string;
+  currentDiscipline?: 'ux' | 'visual' | 'photo' | 'sound';
 }
 
-const { mainLandmarkId }: Props = Astro.props;
+const { mainLandmarkId, currentDiscipline }: Props = Astro.props;
+
 const footerContent = await getEntry('footer', 'footer');
 
 const pages: WebPage[] = [
-  { path: '/how-i-think', title: 'How I Think' },
-  { path: '/the-work', title: 'The Work' },
-  { path: `mailto:${footerContent.data.email}`, title: "Let's Chat" },
+  { path: '/ux', title: 'UX' },
+  { path: '/visual', title: 'Visual' },
+  { path: '/photo', title: 'Photo' },
+  { path: '/sound', title: 'Sound' },
+  { path: '/about', title: 'About' },
+  { path: `mailto:${footerContent.data.email}`, title: 'Contact' },
 ];
+
+const portfolioCollection = await getCollection('portfolio');
+
+// helper: filter out template + build link list
+const toPages = (discipline: 'ux' | 'visual' | 'photo' | 'sound') =>
+  portfolioCollection
+    .filter((item) => item.data.title.toLowerCase() !== 'template')
+    .filter((item) => item.data.disciplines?.includes(discipline))
+    .sort((a, b) => a.data.order - b.data.order)
+    .map((item) => ({
+      title: item.data.title,
+      path: `/the-work/${item.slug}`,
+    }));
+
+const disciplineSubpages = {
+  ux: toPages('ux'),
+  visual: toPages('visual'),
+  photo: toPages('photo'),
+  sound: toPages('sound'),
+};
+
+const currentPath = new URL(Astro.request.url).pathname;
 ---
 
 <header class='header'>
@@ -21,7 +49,9 @@ const pages: WebPage[] = [
   <a class='logo' href='/'>GGW</a>
   <SiteHeader
     navItems={pages}
-    currentPath={new URL(Astro.request.url).pathname}
+    currentPath={currentPath}
+    disciplineSubpages={disciplineSubpages}
+    currentDiscipline={currentDiscipline}
     client:only='react'
   />
 </header>

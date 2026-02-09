@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import Hero from '../components/Hero.astro';
+import Intro from '../components/Intro.astro';
+import WorkCard from '../components/WorkCard.astro';
+import soundHero from '../assets/hero-sound.png';
+
+const portfolioCollection = await getCollection('portfolio', ({ data }) =>
+  data.disciplines?.includes('sound')
+);
+---
+
+<Layout title="Sound & Music">
+  <Hero title="Sound & Music" image={soundHero} />
+
+  <main id="main">
+    <div class="intro-container">
+      <Intro greeting="Music, sound, and audio work exploring mood, structure, and repetition.">
+        <div class="intro-content">
+          <p>
+            This section collects music, podcast work, field recordings, and audio experiments—ranging from Particle Bunni releases to unfinished sketches. It’s a place to explore how sound can carry feeling, structure, and memory without needing to resolve into a final form.
+          </p>
+        </div>
+      </Intro>
+    </div>
+
+    <section
+      class="discipline-section discipline-section-sound"
+      aria-label="Sound & Music work"
+    >
+      <div class="discipline-grid">
+        {
+          portfolioCollection
+            .filter((item) => item.data.title.toLowerCase() !== 'template')
+            .sort((a, b) => a.data.order - b.data.order)
+            .map((item) => {
+              const background = item.data.background?.src;
+              const screenshot = item.data.screenshot?.image?.src;
+
+              const label =
+                Array.isArray(item.data.platforms) && item.data.platforms.length
+                  ? item.data.platforms.join(' · ')
+                  : '';
+
+              return (
+                <WorkCard
+                  title={item.data.title}
+                  href={`/the-work/${item.slug}`}
+                  background={background}
+                  image={screenshot}
+                  label={label}
+                />
+              );
+            })
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style is:global>
+  .discipline-section {
+    padding-inline: clamp(12px, 4vw, 25px);
+    padding-bottom: 42px;
+  }
+
+  .discipline-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  @media (width <= 720px) {
+    .discipline-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* SOUND overrides */
+  .discipline-section-sound .work-card {
+    min-height: 420px;
+
+    --screenshot-max-width: 85%;
+    --screenshot-max-height: 60%;
+    --screenshot-translate-y: -70%;
+  }
+</style>

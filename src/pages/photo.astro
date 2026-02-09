@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import Hero from '../components/Hero.astro';
+import Intro from '../components/Intro.astro';
+import WorkCard from '../components/WorkCard.astro';
+import photoHero from '../assets/hero-photo.png';
+
+const portfolioCollection = await getCollection('portfolio', ({ data }) =>
+  data.disciplines?.includes('photo')
+);
+---
+
+<Layout title="Photography">
+  <Hero title="Photography" image={photoHero} />
+
+  <main id="main">
+    <div class="intro-container">
+      <Intro greeting="I use photography as a way to slow down, observe, and notice the details most people move past.">
+        <div class="intro-content">
+          <p>
+            My photo work is largely street and observational, focused on light, gesture, structure, and quiet moments. I’m less interested in spectacle and more in how people and environments intersect—how framing and timing shift meaning.
+          </p>
+        </div>
+      </Intro>
+    </div>
+
+    <section class="discipline-section discipline-section-photo" aria-label="Photography work">
+      <div class="discipline-grid">
+        {
+          portfolioCollection
+            .filter((item) => item.data.title.toLowerCase() !== 'template')
+            .sort((a, b) => a.data.order - b.data.order)
+            .map((item) => {
+              const background = item.data.background?.src;
+              const screenshot = item.data.screenshot?.image?.src;
+
+              const label =
+                Array.isArray(item.data.platforms) && item.data.platforms.length
+                  ? item.data.platforms.join(' · ')
+                  : '';
+
+              return (
+                <WorkCard
+                  title={item.data.title}
+                  href={`/the-work/${item.slug}`}
+                  background={background}
+                  image={screenshot}
+                  label={label}
+                />
+              );
+            })
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style is:global>
+  .discipline-section {
+    padding-inline: clamp(12px, 4vw, 25px);
+    padding-bottom: 42px;
+  }
+
+  .discipline-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  @media (width <= 720px) {
+    .discipline-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .discipline-section-photo .work-card {
+    min-height: 420px;
+
+    --screenshot-max-width: 95%;
+    --screenshot-max-height: 65%;
+    --screenshot-translate-y: -69%;
+  }
+</style>

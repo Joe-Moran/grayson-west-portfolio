@@ -1,0 +1,192 @@
+---
+title: OmniGraffle 7 Redesign
+
+home:
+  enable: true
+  grid:
+    rows: 1
+    columns: 2
+
+preview:
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
+
+screenshot:
+  image: '../../../assets/content/casestudies/2020-03-27.png'
+  altText: ''
+
+background: '../../../assets/content/backgrounds/21.jpg'
+icon: '../../../assets/content/SVGs/30.svg'
+
+platforms:
+  - macOS
+
+disciplines:
+  - ux
+
+order: 2
+---
+
+import LightboxImage from '../../../components/LightboxImage.astro';
+
+import omnigraffleMacbook from '../../../assets/content/casestudies/omnigraffle-macbook.png';
+import omnigraffleFlowchart from '../../../assets/content/casestudies/omngraffle-image-1.png';
+import omnigraffleArtboardLayer from '../../../assets/content/casestudies/omnigraffle-arrow-name.png';
+import omnigraffleArtboardExpl from '../../../assets/content/casestudies/omnigraffle-artboard-expl.png';
+import omnigraffleBezier from '../../../assets/content/casestudies/omnigraffle-beizer.png';
+import omnigraffleFontOutlines from '../../../assets/content/casestudies/omnigraffle-font-outlines.png';
+import omnigraffleKeyboardShortcuts from '../../../assets/content/casestudies/omnigraffle-keyboard-short.png';
+import omnigraffleOnboarding from '../../../assets/content/casestudies/omnigraffle-onboarding.png';
+
+<figure>
+  <LightboxImage
+    src={omnigraffleMacbook}
+    alt="OmniGraffle 7 for macOS"
+    caption="OmniGraffle 7 for macOS."
+  />
+</figure>
+
+## Situation
+
+OmniGraffle is a vector-based diagramming and illustration tool for macOS and iOS. As Creative Director for the end-to-end redesign of OmniGraffle 7, I led research, design operations, and a multidisciplinary team of UX designers, UI designers, and researchers.
+
+This work resulted in a **23% increase in download-to-trial conversion** and positioned OmniGraffle 7 as a **top-10 grossing app** on the App Store for seven weeks.
+
+## Task
+
+<figure>
+  <LightboxImage
+    src={omnigraffleFlowchart}
+    alt="OmniGraffle 7 application window"
+    caption="OmniGraffle 7 for macOS application window."
+  />
+</figure>
+
+The goal of the version 7 redesign was to improve efficiency and usability for creative professionals by streamlining workflows, reducing complexity, and making core features easier to access.
+
+Key improvements introduced in OmniGraffle 7 included:
+
+- **Artboards** for managing complex projects  
+- **Bezier point editing enhancements**  
+- **Convert lines and text to shapes**  
+- **Expanded keyboard shortcuts**  
+- **A redesigned onboarding experience**
+
+## Research and Analysis
+
+For the OmniGraffle 7 release, I led the UX team through a combination of qualitative and quantitative research.
+
+### Research Methods
+
+- **User interviews** with experienced OmniGraffle users  
+- **Usability testing** to observe real workflows and friction points  
+
+#### User Interviews (Pre-Development)
+
+- **Participants**: 15 OmniGraffle 6 users  
+- **Key findings**:
+  - 60% requested improved Bezier editing
+  - 50% cited the lack of artboards as a deal-breaker
+  - 70% emphasized speed and efficiency
+
+#### Usability Testing
+
+- **Participants**: 10 users  
+- **Task success rate**: 65%  
+- **Average time on task**: 4.2 minutes  
+- 55% of users felt workflows took too long
+
+These insights clearly indicated the need for both **new features** and **workflow simplification**.
+
+## Collaboration with Engineering
+
+We worked closely with engineering to validate feasibility and align design intent with technical constraints.
+
+One major challenge was implementing **artboards** within an existing drawing model that wasn’t designed for them. By treating artboards similarly to layers while preserving performance, we delivered a flexible solution without compromising stability.
+
+## Key Improvements
+
+### 1. Artboards
+
+<figure>
+  <LightboxImage
+    src={omnigraffleArtboardLayer}
+    alt="Artboards in the layers panel"
+    caption="Artboards integrated into the OmniGraffle layers panel."
+  />
+</figure>
+
+Artboards allowed users to organize complex projects more effectively and export assets at multiple resolutions.
+
+<figure>
+  <LightboxImage
+    src={omnigraffleArtboardExpl}
+    alt="Artboard functionality diagram"
+    caption="Illustration of how artboards function in OmniGraffle."
+  />
+</figure>
+
+### 2. Bezier Point Editing Tool
+
+<figure>
+  <LightboxImage
+    src={omnigraffleBezier}
+    alt="Bezier point editing in OmniGraffle"
+    caption="Enhanced Bezier point editing in OmniGraffle 7."
+  />
+</figure>
+
+Users could now add or remove points without switching tools, significantly improving speed and precision.
+
+### 3. Convert Lines and Text to Shapes
+
+<figure>
+  <LightboxImage
+    src={omnigraffleFontOutlines}
+    alt="Converting text to outlines"
+    caption="Converting fonts into editable vector outlines."
+  />
+</figure>
+
+This feature preserved visual fidelity while keeping vector complexity manageable.
+
+### 4. Keyboard Shortcuts
+
+<figure>
+  <LightboxImage
+    src={omnigraffleKeyboardShortcuts}
+    alt="Keyboard shortcut modal"
+    caption="Keyboard shortcuts presented in a dedicated modal."
+  />
+</figure>
+
+Shortcuts were consolidated, clarified, and enhanced with conflict warnings.
+
+### 5. New Onboarding Experience
+
+<figure>
+  <LightboxImage
+    src={omnigraffleOnboarding}
+    alt="OmniGraffle onboarding screen"
+    caption="Redesigned first-launch onboarding experience."
+  />
+</figure>
+
+The new onboarding flow introduced feature highlights, walkthroughs, and contextual education — driving substantial conversion gains.
+
+## Results
+
+- **Download-to-trial conversion** increased by:
+  - 23% on the Mac App Store
+  - 16% on the Omni website
+- **Sales** increased by 33% in the first three months
+- **Workflow efficiency** improved by 12%
+- OmniGraffle 7 remained a **top-10 grossing app** for seven weeks
+
+## Reflection
+
+This redesign reinforced the importance of deeply understanding both **technical constraints** and **user workflows**. It also highlighted the value of clear communication between design and engineering — especially when introducing foundational changes like artboards.
+
+The result was a more powerful, flexible, and professional-grade tool that better served OmniGraffle’s core audience.

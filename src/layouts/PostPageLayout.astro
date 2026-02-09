@@ -1,13 +1,13 @@
 ---
 import TitleNav from '../components/TitleNav.astro';
-import type { WebPage } from '../types/Page.mts';
 
 interface Props {
   title: string;
-  pages: WebPage[];
+  pages?: any[];
+  currentDiscipline?: 'ux' | 'visual' | 'photo' | 'sound';
 }
 
-const { title, pages } = Astro.props;
+const { title, pages = [] } = Astro.props;
 ---
 
 <div class='post-page'>

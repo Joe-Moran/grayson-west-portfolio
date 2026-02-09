@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import Hero from '../components/Hero.astro';
+import Intro from '../components/Intro.astro';
+import WorkCard from '../components/WorkCard.astro';
+import visualHero from '../assets/hero-visual.png';
+
+const portfolioCollection = await getCollection('portfolio', ({ data }) =>
+  data.disciplines?.includes('visual')
+);
+---
+
+<Layout title="Visual & Motion">
+  <Hero title="Visual & Motion" image={visualHero} />
+
+  <main id="main">
+    <div class="intro-container">
+      <Intro greeting="This body of work reflects how I think visually across very different contexts—from client and commercial projects to personal and experimental explorations.">
+        <div class="intro-content">
+          <p>
+            The projects here span graphic design, posters, logos, video, and motion graphics. Some were created to solve specific problems, others to explore an idea without a brief. That mix is intentional—it’s how I stay sharp, curious, and honest about how visual work functions in different contexts.
+          </p>
+        </div>
+      </Intro>
+    </div>
+
+    <section
+      class="discipline-section discipline-section-visual"
+      aria-label="Visual & Motion work"
+    >
+      <div class="discipline-grid">
+        {
+          portfolioCollection
+            .filter((item) => item.data.title.toLowerCase() !== 'template')
+            .sort((a, b) => a.data.order - b.data.order)
+            .map((item) => {
+              const background = item.data.background?.src;
+              const screenshot = item.data.screenshot?.image?.src;
+
+              const label =
+                Array.isArray(item.data.platforms) && item.data.platforms.length
+                  ? item.data.platforms.join(' · ')
+                  : '';
+
+              return (
+                <WorkCard
+                  title={item.data.title}
+                  href={`/the-work/${item.slug}`}
+                  background={background}
+                  image={screenshot}
+                  label={label}
+                />
+              );
+            })
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style is:global>
+  .discipline-section {
+    padding-inline: clamp(12px, 4vw, 25px);
+    padding-bottom: 42px;
+  }
+
+  .discipline-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  @media (width <= 720px) {
+    .discipline-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .discipline-section-visual .work-card {
+    min-height: 480px;
+
+    --screenshot-max-width: 90%;
+    --screenshot-max-height: 60%;
+    --screenshot-translate-y: -65%;
+  }
+</style>

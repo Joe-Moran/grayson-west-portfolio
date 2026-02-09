@@ -1,0 +1,19 @@
+{
+  "clips" : [
+    {
+      "content" : "---\ntitle: Macworld Booth Designs\n\nhome:\n  enable: true\n  grid:\n\trows: 1\n\tcolumns: 2\n\npreview:\n  enable: true\n  grid:\n\trows: 1\n\tcolumns: 1\n\nbackground: '..\/..\/..\/assets\/content\/backgrounds\/3.jpg'\n\nscreenshot:\n  image: '..\/..\/..\/assets\/content\/visual\/booth-art\/booth-card.png'\n  altText: 'OmniGraffle Macworld Booth design.'\n\nplatforms:\n  - Graphic Design\n\ndisciplines:\n  - visual\n\norder: 4\n---",
+      "name" : ".mdx frontmatter",
+      "trigger" : "frontmatter"
+    },
+    {
+      "content" : "import IMAGE_NAME from '..\/..\/..\/assets\/content\/visual\/PATH\/FILE.png';",
+      "name" : "image import",
+      "trigger" : "imgimport"
+    },
+    {
+      "content" : "<figure>\n  <LightboxImage\n\tsrc={IMAGE_NAME}\n\talt=\"\"\n\tcaption=\"\"\n  \/>\n<\/figure>",
+      "name" : "Image Section",
+      "trigger" : "imagesection"
+    }
+  ]
+}

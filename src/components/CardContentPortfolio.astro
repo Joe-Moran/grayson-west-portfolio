@@ -15,7 +15,7 @@ const { classes, content, linkPath } = Astro.props;
 <Card
   classes={classes}
   title={content.data.title}
-  bodyText={content.data.summary}
+  bodyText={content.data.summary ?? ''}
   linkPath={linkPath}
   descriptors={content.data.platforms}
   backgroundImage={content.data.background}
