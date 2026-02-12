@@ -1,7 +1,9 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import LightboxGlobal from '../components/LightboxGlobal.astro';
 import type { WebPage } from '../types/Page.mts';
+
 interface Props {
   title: string;
   currentDiscipline?: 'ux' | 'visual' | 'photo' | 'sound';
@@ -28,11 +30,12 @@ const mainLandmarkId = 'main-content';
   </head>
 
   <body>
-    <Header mainLandmarkId={mainLandmarkId} />
+    <Header mainLandmarkId={mainLandmarkId} currentDiscipline={Astro.props.currentDiscipline} />
     <main id={mainLandmarkId}>
       <slot />
     </main>
     <Footer />
+    <LightboxGlobal />
   </body>
 
   <style is:global>
