@@ -1,0 +1,110 @@
+---
+title: "Indoor Navigation Architecture"
+
+home:
+  enable: true
+  grid:
+    rows: 1
+    columns: 2
+
+preview:
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
+
+screenshot:
+  image: '../../../assets/content/ux/indoor-nav/indoor-nav-2.png'
+  altText: ''
+
+background: '../../../assets/content/backgrounds/27.jpg'
+icon: '../../../assets/content/SVGs/27.svg'
+
+platforms:
+  - A SaaS Platform Enabling Accessible Wayfinding in Large Facilities
+
+disciplines:
+  - ux
+
+order: 6
+---
+
+import LightboxImage from '../../../components/LightboxImage.astro';
+
+import indoorNav1 from '../../../assets/content/ux/indoor-nav/indoor-nav-1.png';
+import indoorNav2 from '../../../assets/content/ux/indoor-nav/indoor-nav-2.png';
+
+
+> _This case study represents work completed at a prior consultancy. Client names, internal terminology, and visual artifacts have been removed or generalized due to confidentiality agreements. The structural challenges, leadership decisions, and measurable outcomes are accurately represented._
+> 
+> _Due to the internal nature of this enterprise platform, original UI screens, workflow diagrams, and client-specific artifacts are not included. This case focuses instead on systems thinking, organizational dynamics, and measurable operational outcomes._
+
+---
+## Context
+
+I joined a project building a dual-platform accessibility system: a mobile application for visually impaired users navigating complex indoor environments, supported by a web-based mapping tool used by facilities teams to configure and maintain those spaces.
+
+The ambition was meaningful and technically complex. The mobile experience depended entirely on the integrity of the web platform that defined routes, floors, landmarks, and behavioral rules. As feature work accelerated, the web system began to strain under its own execution.
+
+Development slowed. Integrating new capabilities required increasing coordination. Architectural decisions were becoming reactive. I was brought in to lead product design on the web platform and stabilize the system before fragility became embedded in its foundation.
+
+---
+
+## Diagnosis
+
+The system was shipping, but at growing cost. Each new feature required backend refactoring and UI adjustment that should not have been necessary. Engineers were repeatedly modifying underlying logic to accommodate interface decisions that had never been grounded in a durable interaction model.
+
+Core behaviors—multi-floor mapping, route configuration, conditional logic, and state management—had not been fully defined before higher-fidelity UI decisions were made. As functionality expanded, new requirements were forced into structures that were not designed to support them. Velocity declined. Rework increased. Architectural clarity eroded.
+
+The risk was not immediate failure. The risk was long-term brittleness. Extensibility would shrink. Delivery timelines would lengthen. Confidence across design and engineering would continue to erode.
+
+> **Risk:** continued feature growth would compound structural debt and reduce extensibility.
+
+---
+
+## Intervention
+
+Stabilizing the platform required more than incremental adjustment. It required re-establishing the system’s structural logic.
+
+I worked with the team to pause additional feature layering and redirect effort toward defining how the platform needed to behave across floors, routes, user roles, and configuration states. We stepped back from partially implemented UI work and clarified the underlying interaction model first.
+
+Engineers shifted to functionality-first exploration, building and validating working logic without visual polish. Whiteboard sessions replaced presentation artifacts. Conversations centered on state management, edge cases, and long-term extensibility rather than screen refinement.
+
+The reset was financially and politically sensitive. Time had already been invested. Stakeholders needed confidence that the pause would reduce downstream rework rather than delay delivery unnecessarily. The rationale was direct: continuing on the current path would multiply structural compromises. Clarifying the model would reduce them.
+
+> **Shift:** define interaction logic before refining interface.
+
+---
+
+## What Changed
+
+Once the interaction model was clearly articulated, feature integration stabilized.
+
+New capabilities could be introduced without destabilizing backend logic. Refactoring decreased. Engineering discussions moved from reactive adjustments to intentional architectural planning. Design decisions were anchored in system behavior rather than layout constraints.
+
+Collaboration improved as a result of structural clarity. Engineers were no longer compensating for ambiguous assumptions. Design exploration was informed by validated logic. Stakeholders observed forward progress instead of cyclical rework.
+
+Most importantly, the platform regained extensibility. Future features had space to exist without forcing compromise into the core architecture.
+Collaboration improved as a direct consequence of structural clarity. Engineers were no longer implementing against unstable assumptions. Design exploration was informed by real logic rather than guesswork. Stakeholders saw steady forward motion instead of cycles of reversal.
+
+Most importantly, the platform regained extensibility. Future features had room to exist without forcing structural compromise.
+
+> **Impact:**
+> - Reduced backend refactoring cycles  
+> - Improved feature integration velocity  
+> - Stabilized architectural extensibility  
+> - Restored stakeholder confidence in platform direction
+
+---
+## Reflection
+When structural decisions are deferred, the cost does not disappear. It compounds. Refactoring increases. Velocity slows. Teams lose confidence in the system they are building.
+
+Calling for a reset was not a comfortable move. It required asking people to walk away from work that had already consumed time and money. It required absorbing political tension and accepting that if the reset failed, credibility would be affected.
+
+But the alternative was worse. Continuing forward would have locked the platform into fragile foundations that would be harder and more expensive to unwind later.
+
+Once the interaction model was clarified and engineering had room to build against stable assumptions, the product regained momentum. New features integrated without destabilizing prior work. Conversations shifted from patching to extending. The system became something we could build on rather than work around.
+
+The lesson was not about polish or even collaboration. It was about structural responsibility. Design leadership sometimes means stepping in early enough to prevent architectural debt from becoming permanent.
+
+In this case, intervening when we did protected the long-term health of the platform.

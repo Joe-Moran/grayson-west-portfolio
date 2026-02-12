@@ -1,0 +1,105 @@
+---
+title: Enterprise SaaS Design
+
+home:
+  enable: true
+  grid:
+    rows: 1
+    columns: 2
+
+preview:
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
+
+screenshot:
+  image: '../../../assets/content/ux/enterprise/enterprise-1.png'
+  altText: ''
+
+background: '../../../assets/content/backgrounds/28.jpg'
+icon: '../../../assets/content/SVGs/28.svg'
+
+platforms:
+  - Reducing cognitive load in a fragmented regulatory workflow
+
+disciplines:
+  - ux
+
+order: 4
+---
+
+import LightboxImage from '../../../components/LightboxImage.astro';
+import enterprise1 from '../../../assets/content/ux/enterprise/enterprise-1.png';
+import enterprise2 from '../../../assets/content/ux/enterprise/enterprise-2.png';
+
+
+# Reducing Cognitive Load in a Fragmented Regulatory Workflow
+
+> _This case study reflects work completed in a consultancy environment. Client names, internal terminology, and visual artifacts have been removed or generalized due to confidentiality agreements. Because this platform was internal to the organization, original UI screens and workflow diagrams are not included. The structural challenges, leadership decisions, and measurable outcomes are accurately represented._
+
+---
+
+## Context
+
+A large distributed enterprise company managed regulatory compliance through multiple intake channels, including separate email queues, legacy portals, and manual uploads. Each compliance type had its own specialized team, tools, and conventions.
+
+The system functioned, but only through constant human compensation. Processors moved between four to five systems throughout the day. Email acted as the coordination layer. In one observed case, processing a single report required more than twenty discrete interactions across platforms. Critical information lived in separate systems, and much of the integration work happened mentally.
+
+Leadership did not experience this friction directly. The processors did, and research made that gap visible.
+
+I led product design for a new web-based platform intended to consolidate and simplify this workflow.
+
+---
+
+## The Structural Problem
+
+The issue was not simple inefficiency. The structure reflected historical silos rather than how compliance work actually unfolded.
+
+Separate inboxes reinforced specialization boundaries. Email was being used to manage structured regulatory workflows it was never designed to support. Process state, ownership, and cross-team visibility were distributed across tools instead of embedded in a coherent system.
+
+Processors carried the integration burden. They reconciled rule variations, tracked status differences, and navigated fragmented queues manually. Over time, that cognitive load became normalized internally even though it was clearly visible when observed directly.
+
+More volume would not have stabilized the system. It would have amplified fragmentation and increased strain on the people doing the work.
+
+> **Risk:** scaling volume would multiply fragmentation and cognitive load rather than improve throughput.
+
+---
+
+## Resistance
+
+Centralization introduced discomfort. Some stakeholders preferred preserving existing queues and specialization boundaries. Email was familiar, and maintaining the current structure avoided conversations about ownership and operational change. From a distance, the system appeared to function.
+
+I advocated for consolidation anyway. The existing structure was placing unnecessary strain on processors and limiting long-term scalability. Preserving familiarity would have protected comfort at the expense of clarity.
+
+We did not attempt an abrupt overhaul. Intake and triage were unified first, while certain operational distinctions were preserved during transition. Change was sequenced deliberately to reduce disruption while steadily reducing fragmentation.
+
+---
+
+## The Model
+
+We introduced a centralized web-based intake platform built around a unified triage model.
+
+All reports entered one system. Processors filtered by type and priority while viewing cross-system data surfaced in context. Communication moved inside the platform rather than remaining dispersed across email threads.
+
+The objective was not feature expansion. It was load reduction. Instead of switching between systems, processors worked within a single environment. Instead of remembering rule variations manually, workflows reflected actual process states.
+
+> **Shift:** move integration responsibility from people to software.
+
+---
+
+## Outcome
+
+During early rollout, processing time decreased by 18 percent. Manual interaction steps were significantly reduced, and cross-team visibility improved.
+
+Processors reported greater clarity in their daily work. The work felt less reactive and less fragmented. The organization moved from siloed intake toward coordinated triage while preserving necessary domain distinctions.
+
+---
+
+## Reflection
+
+Systems often appear functional because people compensate for their gaps.
+
+Compliance processors had adapted to fragmentation. They developed routines for jumping between tools, tracking details mentally, and using email as connective tissue. That adaptation masked the structural strain embedded in the workflow.
+
+Design leadership in this context meant making that invisible load visible and advocating for structural alignment. Centralization was not about uniformity for its own sake. It was about designing a system that matched how the work actually happened and protecting the people doing it from unnecessary friction.

@@ -1,5 +1,5 @@
 ---
-title: OmniGraffle 7 Redesign
+title: OmniGraffle 7
 
 home:
   enable: true
@@ -21,16 +21,15 @@ background: '../../../assets/content/backgrounds/21.jpg'
 icon: '../../../assets/content/SVGs/30.svg'
 
 platforms:
-  - macOS
+  - Repositioning a Flagship Product Under Financial and Cultural Risk
 
 disciplines:
   - ux
 
-order: 2
+order: 1
 ---
 
 import LightboxImage from '../../../components/LightboxImage.astro';
-
 import omnigraffleMacbook from '../../../assets/content/casestudies/omnigraffle-macbook.png';
 import omnigraffleFlowchart from '../../../assets/content/casestudies/omngraffle-image-1.png';
 import omnigraffleArtboardLayer from '../../../assets/content/casestudies/omnigraffle-arrow-name.png';
@@ -40,6 +39,8 @@ import omnigraffleFontOutlines from '../../../assets/content/casestudies/omnigra
 import omnigraffleKeyboardShortcuts from '../../../assets/content/casestudies/omnigraffle-keyboard-short.png';
 import omnigraffleOnboarding from '../../../assets/content/casestudies/omnigraffle-onboarding.png';
 
+## Repositioning a Flagship Product Under Financial and Cultural Risk
+
 <figure>
   <LightboxImage
     src={omnigraffleMacbook}
@@ -48,145 +49,121 @@ import omnigraffleOnboarding from '../../../assets/content/casestudies/omnigraff
   />
 </figure>
 
-## Situation
+## Context
 
-OmniGraffle is a vector-based diagramming and illustration tool for macOS and iOS. As Creative Director for the end-to-end redesign of OmniGraffle 7, I led research, design operations, and a multidisciplinary team of UX designers, UI designers, and researchers.
+OmniGraffle was the company’s best-selling application and a primary source of revenue. A major redesign carried meaningful financial risk. If the release underperformed, it would directly impact the company’s stability.
 
-This work resulted in a **23% increase in download-to-trial conversion** and positioned OmniGraffle 7 as a **top-10 grossing app** on the App Store for seven weeks.
+At the same time, the product was showing signs of stagnation. Competing vector and diagramming tools had adopted modern workflows, and users increasingly expected capabilities like artboards. OmniGraffle did not have them. We were losing users to tools that better reflected contemporary professional workflows.
 
-## Task
+Internally, there was tension. Omni’s culture is deeply engineering-driven, and its products often evolve from the needs of the people building them. Not everyone felt artboards were necessary. Some believed users didn’t need them. Others worried about complexity or disruption to the drawing model.
 
-<figure>
-  <LightboxImage
-    src={omnigraffleFlowchart}
-    alt="OmniGraffle 7 application window"
-    caption="OmniGraffle 7 for macOS application window."
-  />
-</figure>
+I believed we were behind market expectations and that the absence of artboards signaled stagnation. I bet significant internal credibility on that position.
 
-The goal of the version 7 redesign was to improve efficiency and usability for creative professionals by streamlining workflows, reducing complexity, and making core features easier to access.
+> **Flagship revenue product under structural risk.**  
+> **Loss of professional users.**  
+> **Internal resistance to modernization.**
 
-Key improvements introduced in OmniGraffle 7 included:
+---
 
-- **Artboards** for managing complex projects  
-- **Bezier point editing enhancements**  
-- **Convert lines and text to shapes**  
-- **Expanded keyboard shortcuts**  
-- **A redesigned onboarding experience**
+## The Structural Risk
 
-## Research and Analysis
+The risk was not cosmetic. It was strategic.
 
-For the OmniGraffle 7 release, I led the UX team through a combination of qualitative and quantitative research.
+Without artboards:
+- We were losing professional users who relied on structured canvases.
+- We were behind industry standards across vector tools.
+- The product risked becoming irrelevant in modern workflows.
 
-### Research Methods
+Artboards were not just a feature request. They were a signal. They communicated whether OmniGraffle was evolving with the market or retreating into legacy behavior.
 
-- **User interviews** with experienced OmniGraffle users  
-- **Usability testing** to observe real workflows and friction points  
+Getting this wrong meant more than shipping an unpopular feature. It meant risking revenue decline in the company’s most important product.
 
-#### User Interviews (Pre-Development)
+---
 
-- **Participants**: 15 OmniGraffle 6 users  
-- **Key findings**:
-  - 60% requested improved Bezier editing
-  - 50% cited the lack of artboards as a deal-breaker
-  - 70% emphasized speed and efficiency
+## The Internal Battle
 
-#### Usability Testing
+The CEO supported modernization but encouraged open internal debate. Engineering concerns were valid. The drawing model was complex, and adding artboards required significant backend architectural work.
 
-- **Participants**: 10 users  
-- **Task success rate**: 65%  
-- **Average time on task**: 4.2 minutes  
-- 55% of users felt workflows took too long
+There were also design tensions. Some advocated for introducing patterns that differed from how Omni’s other apps worked. I pushed back on that. Consistency across the product suite mattered. Introducing divergence for the sake of novelty would increase friction and hurt adoption.
 
-These insights clearly indicated the need for both **new features** and **workflow simplification**.
+This required repeated arguments, evidence from research, and continued pressure to align around market reality rather than internal preference.
 
-## Collaboration with Engineering
+---
 
-We worked closely with engineering to validate feasibility and align design intent with technical constraints.
+## Research and Validation
 
-One major challenge was implementing **artboards** within an existing drawing model that wasn’t designed for them. By treating artboards similarly to layers while preserving performance, we delivered a flexible solution without compromising stability.
+We conducted:
+- Pre-development interviews with experienced users
+- Usability testing on OmniGraffle 6
+- Analysis of workflow inefficiencies
+- Evaluation of feature requests and competitive parity
 
-## Key Improvements
+Findings showed:
+- 50% of interviewed users cited the absence of artboards as a serious limitation.
+- 60% requested improvements to Bezier editing.
+- 70% emphasized workflow speed as a priority.
+- Task success rates revealed friction in common workflows.
+- New users struggled significantly with onboarding.
 
-### 1. Artboards
+The need for structural modernization was clear.
 
-<figure>
-  <LightboxImage
-    src={omnigraffleArtboardLayer}
-    alt="Artboards in the layers panel"
-    caption="Artboards integrated into the OmniGraffle layers panel."
-  />
-</figure>
+---
 
-Artboards allowed users to organize complex projects more effectively and export assets at multiple resolutions.
+## The Architectural Decision
 
-<figure>
-  <LightboxImage
-    src={omnigraffleArtboardExpl}
-    alt="Artboard functionality diagram"
-    caption="Illustration of how artboards function in OmniGraffle."
-  />
-</figure>
+Implementing artboards required changes to the drawing model that many believed would be too disruptive. I worked closely with engineering to explore what was feasible inside the constraints of macOS and existing architecture.
 
-### 2. Bezier Point Editing Tool
+The implementation ultimately pushed the backend toward more modern frameworks. What began as resistance became an opportunity to evolve the technical foundation in a way that benefited the product long term.
 
-<figure>
-  <LightboxImage
-    src={omnigraffleBezier}
-    alt="Bezier point editing in OmniGraffle"
-    caption="Enhanced Bezier point editing in OmniGraffle 7."
-  />
-</figure>
+Artboards improved:
+- Canvas organization  
+- Asset export workflows  
+- Multi-layout project management  
+- Professional design parity  
 
-Users could now add or remove points without switching tools, significantly improving speed and precision.
+> **Structural backend modernization.**  
+> **Architectural investment tied to market repositioning.**
 
-### 3. Convert Lines and Text to Shapes
+---
 
-<figure>
-  <LightboxImage
-    src={omnigraffleFontOutlines}
-    alt="Converting text to outlines"
-    caption="Converting fonts into editable vector outlines."
-  />
-</figure>
+## Onboarding as Financial Stabilization
 
-This feature preserved visual fidelity while keeping vector complexity manageable.
+The redesign introduced substantial change, which always carries risk.
 
-### 4. Keyboard Shortcuts
+We revamped onboarding to:
+- Clarify new workflows in plain language
+- Introduce artboards clearly
+- Reduce first-session confusion
+- Support new user adoption
 
-<figure>
-  <LightboxImage
-    src={omnigraffleKeyboardShortcuts}
-    alt="Keyboard shortcut modal"
-    caption="Keyboard shortcuts presented in a dedicated modal."
-  />
-</figure>
+Onboarding reduced friction at the moment of change and softened the financial risk associated with a major structural update.
 
-Shortcuts were consolidated, clarified, and enhanced with conflict warnings.
-
-### 5. New Onboarding Experience
-
-<figure>
-  <LightboxImage
-    src={omnigraffleOnboarding}
-    alt="OmniGraffle onboarding screen"
-    caption="Redesigned first-launch onboarding experience."
-  />
-</figure>
-
-The new onboarding flow introduced feature highlights, walkthroughs, and contextual education — driving substantial conversion gains.
+---
 
 ## Results
 
-- **Download-to-trial conversion** increased by:
-  - 23% on the Mac App Store
-  - 16% on the Omni website
-- **Sales** increased by 33% in the first three months
-- **Workflow efficiency** improved by 12%
-- OmniGraffle 7 remained a **top-10 grossing app** for seven weeks
+Following the release:
+
+- Download-to-trial conversion increased by 23% on the App Store.
+- Website conversion increased by 16%.
+- Sales increased by 33% compared to the same release window of the prior version.
+- OmniGraffle 7 remained a top-10 grossing app for seven weeks.
+- Workflow efficiency improved by 12% in usability testing.
+
+> **23% conversion lift.**  
+> **33% revenue growth in release window.**  
+> **Top-10 grossing app for seven weeks.**
+
+More importantly, the release repositioned the product in the market. It demonstrated that OmniGraffle was willing to evolve alongside professional expectations rather than protect legacy design decisions.
+
+---
 
 ## Reflection
 
-This redesign reinforced the importance of deeply understanding both **technical constraints** and **user workflows**. It also highlighted the value of clear communication between design and engineering — especially when introducing foundational changes like artboards.
+Products cannot be built solely to serve the preferences of the people inside the company. Market expectations matter, especially when revenue depends on them.
 
-The result was a more powerful, flexible, and professional-grade tool that better served OmniGraffle’s core audience.
+Architectural hesitation often masks strategic risk. Sometimes the harder technical path is the safer business path.
+
+Modernization is not about chasing trends. It is about recognizing when a product is falling behind structural expectations and being willing to bet credibility on correcting that course.
+
+In this case, that bet paid off.

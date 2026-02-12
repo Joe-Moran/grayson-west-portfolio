@@ -1,0 +1,135 @@
+---
+title: OmniFocus 3
+
+home:
+  enable: true
+  grid:
+    rows: 1
+    columns: 2
+
+preview:
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
+
+screenshot:
+  image: '../../../assets/content/casestudies/omnifocus-3-image-1.png'
+  altText: ''
+
+background: '../../../assets/content/backgrounds/29.jpg'
+icon: '../../../assets/content/SVGs/29.svg'
+
+platforms:
+  - Modernizing a trusted tool while preserving the workflows that built it
+
+disciplines:
+  - ux
+
+order: 2
+---
+
+import LightboxImage from '../../../components/LightboxImage.astro';
+
+import omnifocusHero from '../../../assets/content/casestudies/omnifocus-3-image-1.png';
+import omnifocusIPad from '../../../assets/content/casestudies/omniFocus-3-wipad.png';
+import omnifocusTags from '../../../assets/content/casestudies/omnifocus-3-tag-2.png';
+import omnifocusPerspectives1 from '../../../assets/content/casestudies/omnifocus-3-perspectives-1.png';
+import omnifocusPerspectives2 from '../../../assets/content/casestudies/omnifocus-3-perspectives-2.png';
+import omnifocusCalendar from '../../../assets/content/casestudies/omnifocu-calevents.png';
+import omnifocusInspectors from '../../../assets/content/casestudies/omnifocus-3-custom-inspectors.png';
+import omnifocusBeforeAfter from '../../../assets/content/casestudies/omnifocus-3-before-after.png';
+
+<figure>
+  <LightboxImage
+    src={omnifocusHero}
+    alt="OmniFocus 3 for macOS, iPadOS, and iOS"
+    caption="OmniFocus 3 across macOS, iPadOS, and iOS."
+  />
+</figure>
+## Context
+OmniFocus is a long-standing task management application with a deeply committed user base. By the time work began on version 3, the product had grown powerful, flexible, and complex. That complexity was part of its appeal, especially for experienced users, but it also created friction for people who did not want or need that level of control upfront.
+
+I worked closely with the CEO and product manager to define the scope of the release while leading the UX team responsible for the redesign across macOS and iOS. My role included research direction, design strategy, and creative oversight, along with managing a team of five designers and researchers. I also partnered closely with QA and Support to incorporate real customer feedback into product decisions.
+
+The work was not about adding features. It was about refining a mature system without destabilizing the trust it had built over years.
+
+---
+
+## The Core Tension
+OmniFocus was originally built as a digital extension of David Allen’s GTD system. Long-time users understood its terminology and structure deeply. Over time, research and support feedback revealed growing friction. Core concepts—especially “contexts”—were difficult for new users to understand. Many customers were already describing them as tags.
+
+Growing the product required addressing that gap. Changing a foundational concept in a mature product carried cultural risk. Power users trusted the system as it was. Altering it could feel like betrayal.
+
+This was not surface polish. It required revisiting the product’s mental model.
+
+> **Tension:** modernize the system’s language without eroding the trust of long-time users.
+
+---
+
+## Replacing Contexts with Tags
+Replacing contexts with tags appeared simple from a feature perspective. It was not simple culturally.
+
+Internally, contexts had existed since the product’s inception. For some team members and dedicated GTD users, they were foundational. Externally, however, expectations were shifting toward more flexible tagging behavior.
+
+The design work focused on preserving power while improving clarity:
+
+- A visual representation that scaled across outline and fluid views  
+- Capsule-style tag displays to preserve readability  
+- Overflow handling to prevent vertical sprawl  
+- Consistent iconography in sidebars and inspectors  
+
+The objective was not simplification for its own sake. It was reducing friction without reducing capability.
+
+Post-launch monitoring showed strong adoption and significantly reduced confusion around contexts. The feared backlash did not materialize at scale.
+
+---
+
+## Custom Perspectives
+Perspectives were a defining capability of OmniFocus. Power users relied on them heavily to shape their workflows.
+
+Research indicated demand for greater filtering flexibility, but expanding filtering risked overwhelming less technical users. Instead of building a fully bespoke system, we leveraged the macOS predicate editor framework. That decision constrained visual freedom but reduced long-term maintenance and platform fragility.
+
+Users gained the ability to build precise “if this, then that” rules while staying grounded in native macOS conventions.
+
+The expansion increased capability without increasing conceptual noise.
+
+---
+
+## Forecast Integration
+The Forecast view was the most-used perspective in OmniFocus. It displayed tasks due each day and optionally surfaced calendar events in a separate section.
+
+Users reported friction between tasks and calendar events occurring sequentially in real life but appearing separated in the interface. Integrating calendar events directly into the chronological outline reduced that disconnect. Color-coded indicators preserved distinction without dividing the timeline.
+
+The change reduced mental context-switching and improved clarity around how the day unfolded.
+
+---
+
+## Customizable Inspectors on iOS
+The inspector contained twelve potential controls affecting an action. For some users, that flexibility was essential. For others, it created cognitive load.
+
+We introduced customizable inspectors that allowed users to rearrange and hide fields. My initial proposal extended further but would have required disproportionate engineering investment. After discussion, we implemented a measured version that delivered personalization without destabilizing the architecture.
+
+Restraint protected long-term stability.
+
+---
+
+## Platform Constraints
+Throughout the redesign, there was tension between custom design and platform convention.
+
+Earlier experience had shown that diverging too far from Apple’s SDK patterns creates long-term maintenance risk. For OmniFocus 3, we intentionally worked within system constraints. Custom components were introduced only when necessary.
+
+Durability guided those decisions. The product needed to remain stable as Apple evolved its frameworks.
+
+---
+
+## Outcomes
+OmniFocus 3 launched to strong adoption and positive reception.
+
+> - Daily active users increased 12 percent on macOS and 17 percent on iOS  
+> - The iOS version remained in the App Store’s top 25 grossing apps for six weeks  
+> - Media reviews highlighted increased flexibility and control  
+
+Long-time users felt heard. New users found the system more approachable.
+
+The release demonstrated that mature products can evolve structurally without abandoning the people who built them into what they are.
