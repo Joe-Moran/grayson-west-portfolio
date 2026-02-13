@@ -14,7 +14,7 @@ preview:
     columns: 1
 
 screenshot:
-  image: '../../../assets/content/casestudies/2020-03-27.png'
+  image: '../../../assets/content/ux/omnigraffle/omnigraffle-1.png'
   altText: ''
 
 background: '../../../assets/content/backgrounds/21.jpg'
@@ -30,24 +30,21 @@ order: 1
 ---
 
 import LightboxImage from '../../../components/LightboxImage.astro';
-import omnigraffleMacbook from '../../../assets/content/casestudies/omnigraffle-macbook.png';
-import omnigraffleFlowchart from '../../../assets/content/casestudies/omngraffle-image-1.png';
-import omnigraffleArtboardLayer from '../../../assets/content/casestudies/omnigraffle-arrow-name.png';
-import omnigraffleArtboardExpl from '../../../assets/content/casestudies/omnigraffle-artboard-expl.png';
-import omnigraffleBezier from '../../../assets/content/casestudies/omnigraffle-beizer.png';
-import omnigraffleFontOutlines from '../../../assets/content/casestudies/omnigraffle-font-outlines.png';
-import omnigraffleKeyboardShortcuts from '../../../assets/content/casestudies/omnigraffle-keyboard-short.png';
-import omnigraffleOnboarding from '../../../assets/content/casestudies/omnigraffle-onboarding.png';
 
-## Repositioning a Flagship Product Under Financial and Cultural Risk
+import omniGraffle1 from '../../../assets/content/ux/omnigraffle/omnigraffle-1.png';
+import omniGraffle2 from '../../../assets/content/ux/omnigraffle/omnigraffle-2.png';
+import omniGraffleOnboard from '../../../assets/content/ux/omnigraffle/omnigraffle-onboard.png';
+import artBoardLayers from '../../../assets/content/ux/omnigraffle/artboard-layers.png';
 
 <figure>
   <LightboxImage
-    src={omnigraffleMacbook}
-    alt="OmniGraffle 7 for macOS"
-    caption="OmniGraffle 7 for macOS."
+    src={omniGraffle1}
+    alt="OmniGraffle interface displayed on a MacBook Pro showing a multi-level diagram with sidebar outline and inspector panels visible."
+    caption="OmniGraffle 7 canvas demonstrating complex hierarchical diagram construction with integrated outline navigation and live inspector controls."
   />
 </figure>
+
+## Repositioning a Flagship Product Under Financial and Cultural Risk
 
 ## Context
 
@@ -80,7 +77,7 @@ Getting this wrong meant more than shipping an unpopular feature. It meant riski
 
 ---
 
-## The Internal Battle
+## Product Tension
 
 The CEO supported modernization but encouraged open internal debate. Engineering concerns were valid. The drawing model was complex, and adding artboards required significant backend architectural work.
 
@@ -113,7 +110,23 @@ The need for structural modernization was clear.
 
 Implementing artboards required changes to the drawing model that many believed would be too disruptive. I worked closely with engineering to explore what was feasible inside the constraints of macOS and existing architecture.
 
+<figure>
+  <LightboxImage
+    src={omniGraffle2}
+    alt="OmniGraffle workspace showing a production workflow diagram split between development and production phases, with color-coded process steps."
+    caption="Large-scale process mapping in OmniGraffle, illustrating support for detailed, multi-phase workflows across structured development and production timelines."
+  />
+</figure>
+
 The implementation ultimately pushed the backend toward more modern frameworks. What began as resistance became an opportunity to evolve the technical foundation in a way that benefited the product long term.
+
+<figure>
+  <LightboxImage
+    src={artBoardLayers}
+    alt="Diagram explaining how an artboard layer in OmniGraffle contains masks and controls the movement of layers above it, while layers below remain unaffected."
+    caption="Conceptual model illustrating how artboards function as structural containers—isolating and controlling grouped layers without impacting the broader canvas hierarchy."
+  />
+</figure>
 
 Artboards improved:
 - Canvas organization  
@@ -135,6 +148,14 @@ We revamped onboarding to:
 - Introduce artboards clearly
 - Reduce first-session confusion
 - Support new user adoption
+
+<figure>
+  <LightboxImage
+    src={omniGraffleOnboard}
+    alt="OmniGraffle 7 welcome screen featuring links to What’s New, Manual, Slack Channel, Forums, and Support resources."
+    caption="Onboarding experience for OmniGraffle 7, designed to orient users quickly and connect them to documentation, community, and support resources."
+  />
+</figure>
 
 Onboarding reduced friction at the moment of change and softened the financial risk associated with a major structural update.
 

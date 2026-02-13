@@ -1,5 +1,5 @@
 ---
-title: Enterprise SaaS Design
+title: Enterprise Compliance Platform
 
 home:
   enable: true
@@ -21,7 +21,7 @@ background: '../../../assets/content/backgrounds/28.jpg'
 icon: '../../../assets/content/SVGs/28.svg'
 
 platforms:
-  - Reducing cognitive load in a fragmented regulatory workflow
+  - Designing a centralized SaaS platform to replace fragmented regulatory intake systems
 
 disciplines:
   - ux
@@ -33,12 +33,9 @@ import LightboxImage from '../../../components/LightboxImage.astro';
 import enterprise1 from '../../../assets/content/ux/enterprise/enterprise-1.png';
 import enterprise2 from '../../../assets/content/ux/enterprise/enterprise-2.png';
 
-
-# Reducing Cognitive Load in a Fragmented Regulatory Workflow
-
 > _This case study reflects work completed in a consultancy environment. Client names, internal terminology, and visual artifacts have been removed or generalized due to confidentiality agreements. Because this platform was internal to the organization, original UI screens and workflow diagrams are not included. The structural challenges, leadership decisions, and measurable outcomes are accurately represented._
 
----
+# Reducing Cognitive Load in a Fragmented Regulatory Workflow
 
 ## Context
 
@@ -57,6 +54,14 @@ I led product design for a new web-based platform intended to consolidate and si
 The issue was not simple inefficiency. The structure reflected historical silos rather than how compliance work actually unfolded.
 
 Separate inboxes reinforced specialization boundaries. Email was being used to manage structured regulatory workflows it was never designed to support. Process state, ownership, and cross-team visibility were distributed across tools instead of embedded in a coherent system.
+
+<figure>
+  <LightboxImage
+  src={enterprise1}
+  alt="Diagram illustrating fragmented regulatory intake channels converging into a centralized triage system."
+  caption="Abstracted systems diagram showing the transition from siloed intake channels to a unified triage model."
+  />
+</figure>
 
 Processors carried the integration burden. They reconciled rule variations, tracked status differences, and navigated fragmented queues manually. Over time, that cognitive load became normalized internally even though it was clearly visible when observed directly.
 
@@ -81,6 +86,14 @@ We did not attempt an abrupt overhaul. Intake and triage were unified first, whi
 We introduced a centralized web-based intake platform built around a unified triage model.
 
 All reports entered one system. Processors filtered by type and priority while viewing cross-system data surfaced in context. Communication moved inside the platform rather than remaining dispersed across email threads.
+
+<figure>
+  <LightboxImage
+  src={enterprise2}
+  alt="Conceptual interface diagram representing a centralized compliance intake and triage platform."
+  caption="Simplified representation of a unified intake interface, designed to reduce cross-system switching and cognitive load for processors."
+  />
+</figure>
 
 The objective was not feature expansion. It was load reduction. Instead of switching between systems, processors worked within a single environment. Instead of remembering rule variations manually, workflows reflected actual process states.
 

@@ -14,7 +14,7 @@ preview:
     columns: 1
 
 screenshot:
-  image: '../../../assets/content/casestudies/omnifocus-3-image-1.png'
+  image: '../../../assets/content/ux/omnifocus/omnifocus-card.png'
   altText: ''
 
 background: '../../../assets/content/backgrounds/29.jpg'
@@ -31,22 +31,21 @@ order: 2
 
 import LightboxImage from '../../../components/LightboxImage.astro';
 
-import omnifocusHero from '../../../assets/content/casestudies/omnifocus-3-image-1.png';
-import omnifocusIPad from '../../../assets/content/casestudies/omniFocus-3-wipad.png';
-import omnifocusTags from '../../../assets/content/casestudies/omnifocus-3-tag-2.png';
-import omnifocusPerspectives1 from '../../../assets/content/casestudies/omnifocus-3-perspectives-1.png';
-import omnifocusPerspectives2 from '../../../assets/content/casestudies/omnifocus-3-perspectives-2.png';
-import omnifocusCalendar from '../../../assets/content/casestudies/omnifocu-calevents.png';
-import omnifocusInspectors from '../../../assets/content/casestudies/omnifocus-3-custom-inspectors.png';
-import omnifocusBeforeAfter from '../../../assets/content/casestudies/omnifocus-3-before-after.png';
+import omniFocusForecast from '../../../assets/content/ux/omnifocus/omnifocus-forecast.png';
+import omniFocusInspectors from '../../../assets/content/ux/omnifocus/omnifocus-inspectors.png';
+import omniFocusIos from '../../../assets/content/ux/omnifocus/omnifocus-ios.png';
+import omniFocusPerspectives from '../../../assets/content/ux/omnifocus/omnifocus-perspectives.png';
+import omniFocusTags from '../../../assets/content/ux/omnifocus/omnifocus-tags.png';
+
 
 <figure>
   <LightboxImage
-    src={omnifocusHero}
+    src={omniFocusIos}
     alt="OmniFocus 3 for macOS, iPadOS, and iOS"
     caption="OmniFocus 3 across macOS, iPadOS, and iOS."
   />
 </figure>
+
 ## Context
 OmniFocus is a long-standing task management application with a deeply committed user base. By the time work began on version 3, the product had grown powerful, flexible, and complex. That complexity was part of its appeal, especially for experienced users, but it also created friction for people who did not want or need that level of control upfront.
 
@@ -72,6 +71,14 @@ Replacing contexts with tags appeared simple from a feature perspective. It was 
 
 Internally, contexts had existed since the product’s inception. For some team members and dedicated GTD users, they were foundational. Externally, however, expectations were shifting toward more flexible tagging behavior.
 
+<figure>
+  <LightboxImage
+    src={omniFocusTags}
+    alt="OmniFocus 3 for macOS, iPadOS, and iOS"
+    caption="OmniFocus 3 across macOS, iPadOS, and iOS."
+  />
+</figure>
+
 The design work focused on preserving power while improving clarity:
 
 - A visual representation that scaled across outline and fluid views  
@@ -90,6 +97,14 @@ Perspectives were a defining capability of OmniFocus. Power users relied on them
 
 Research indicated demand for greater filtering flexibility, but expanding filtering risked overwhelming less technical users. Instead of building a fully bespoke system, we leveraged the macOS predicate editor framework. That decision constrained visual freedom but reduced long-term maintenance and platform fragility.
 
+<figure>
+  <LightboxImage
+    src={omniFocusPerspectives}
+    alt="OmniFocus 3 for macOS, iPadOS, and iOS"
+    caption="OmniFocus 3 across macOS, iPadOS, and iOS."
+  />
+</figure>
+
 Users gained the ability to build precise “if this, then that” rules while staying grounded in native macOS conventions.
 
 The expansion increased capability without increasing conceptual noise.
@@ -101,12 +116,28 @@ The Forecast view was the most-used perspective in OmniFocus. It displayed tasks
 
 Users reported friction between tasks and calendar events occurring sequentially in real life but appearing separated in the interface. Integrating calendar events directly into the chronological outline reduced that disconnect. Color-coded indicators preserved distinction without dividing the timeline.
 
+<figure>
+  <LightboxImage
+    src={omniFocusForecast}
+    alt="OmniFocus 3 for macOS, iPadOS, and iOS"
+    caption="OmniFocus 3 across macOS, iPadOS, and iOS."
+  />
+</figure>
+
 The change reduced mental context-switching and improved clarity around how the day unfolded.
 
 ---
 
 ## Customizable Inspectors on iOS
 The inspector contained twelve potential controls affecting an action. For some users, that flexibility was essential. For others, it created cognitive load.
+
+<figure>
+  <LightboxImage
+    src={omniFocusInspectors}
+    alt="OmniFocus 3 for macOS, iPadOS, and iOS"
+    caption="OmniFocus 3 across macOS, iPadOS, and iOS."
+  />
+</figure>
 
 We introduced customizable inspectors that allowed users to rearrange and hide fields. My initial proposal extended further but would have required disproportionate engineering investment. After discussion, we implemented a measured version that delivered personalization without destabilizing the architecture.
 

@@ -1,5 +1,5 @@
 ---
-title: "Indoor Navigation Architecture"
+title: "Accessibility Navigation Platform"
 
 home:
   enable: true
@@ -21,7 +21,7 @@ background: '../../../assets/content/backgrounds/27.jpg'
 icon: '../../../assets/content/SVGs/27.svg'
 
 platforms:
-  - A SaaS Platform Enabling Accessible Wayfinding in Large Facilities
+  - Stabilizing a dual-platform SaaS system by redefining its core interaction models
 
 disciplines:
   - ux
@@ -44,6 +44,14 @@ I joined a project building a dual-platform accessibility system: a mobile appli
 
 The ambition was meaningful and technically complex. The mobile experience depended entirely on the integrity of the web platform that defined routes, floors, landmarks, and behavioral rules. As feature work accelerated, the web system began to strain under its own execution.
 
+<figure>
+  <LightboxImage
+  src={indoorNav1}
+  alt="Diagram illustrating a dual-platform indoor navigation system connecting a mobile user interface with a web-based mapping and configuration platform."
+  caption="Conceptual system architecture showing the relationship between the mobile navigation experience and the web-based mapping tool used to configure complex indoor environments."
+  />
+</figure>
+
 Development slowed. Integrating new capabilities required increasing coordination. Architectural decisions were becoming reactive. I was brought in to lead product design on the web platform and stabilize the system before fragility became embedded in its foundation.
 
 ---
@@ -53,6 +61,14 @@ Development slowed. Integrating new capabilities required increasing coordinatio
 The system was shipping, but at growing cost. Each new feature required backend refactoring and UI adjustment that should not have been necessary. Engineers were repeatedly modifying underlying logic to accommodate interface decisions that had never been grounded in a durable interaction model.
 
 Core behaviors—multi-floor mapping, route configuration, conditional logic, and state management—had not been fully defined before higher-fidelity UI decisions were made. As functionality expanded, new requirements were forced into structures that were not designed to support them. Velocity declined. Rework increased. Architectural clarity eroded.
+
+<figure>
+  <LightboxImage
+  src={indoorNav2}
+  alt="Abstract diagram representing structured interaction states within a web-based indoor navigation configuration platform."
+  caption="Simplified interaction model illustrating how mapping states, route logic, and configuration behaviors were structured to stabilize the platform."
+  />
+</figure>
 
 The risk was not immediate failure. The risk was long-term brittleness. Extensibility would shrink. Delivery timelines would lengthen. Confidence across design and engineering would continue to erode.
 
