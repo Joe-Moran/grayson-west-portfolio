@@ -54,6 +54,8 @@ The ambition was meaningful and technically complex. The mobile experience depen
 
 Development slowed. Integrating new capabilities required increasing coordination. Architectural decisions were becoming reactive. I was brought in to lead product design on the web platform and stabilize the system before fragility became embedded in its foundation.
 
+> This case study predates the current wave of AI tooling. The “AI in Context” section at the end explores how AI could assist in modeling complex environments and route logic, reducing manual setup while maintaining accuracy and accessibility requirements.
+
 ---
 
 ## Diagnosis
@@ -122,3 +124,12 @@ Once the interaction model was clarified and engineering had room to build again
 The lesson was not about polish or even collaboration. It was about structural responsibility. Design leadership sometimes means stepping in early enough to prevent architectural debt from becoming permanent.
 
 In this case, intervening when we did protected the long-term health of the platform.
+
+## AI in Context
+If I were approaching this system today, I would be interested in where AI could reduce the configuration burden on facilities teams without obscuring the structural logic of the platform itself.
+
+The core challenge in this product was not simply map creation. It was the need to define routes, landmarks, floor transitions, and behavioral rules in a way that remained accurate, extensible, and stable as buildings became more complex. That work carried a high manual cost. Facilities teams were not just entering content. They were effectively modeling an environment and encoding navigation behavior through the platform.
+
+AI could be valuable here as an assistive layer during configuration. It could help identify likely route relationships, suggest landmark metadata, flag inconsistencies in wayfinding logic, or propose floor-linking structures based on patterns already present in the system. That would not remove the need for human judgment, especially in accessibility contexts where precision matters, but it could reduce repetitive setup work and help teams move more quickly through high-friction parts of the configuration process.
+
+The important constraint is that AI should not become a black box inside a system like this. Facilities teams would need to understand what the system is proposing and why. In this context, the role of AI would be to support structured environment modeling, not replace it. The goal would be to reduce manual effort while preserving clarity, control, and trust in the underlying navigation system.
