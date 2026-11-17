@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.80](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.79...v0.0.80) (2026-11-17)
+
+
+### Bug Fixes
+
+* correct letterhead image import name ([6a21862](https://github.com/Joe-Moran/grayson-west-portfolio/commit/6a218626c2c2182d5c4f83a3ae56dc8ef28994c4))
+
 ## [0.0.79](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.78...v0.0.79) (2025-12-05)
 
 ## [0.0.78](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.77...v0.0.78) (2025-12-05)
