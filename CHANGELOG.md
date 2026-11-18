@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.82](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.81...v0.0.82) (2026-11-18)
+
+
+### Features
+
+* refresh OmniFocus case study copy and screenshots ([c5b7219](https://github.com/Joe-Moran/grayson-west-portfolio/commit/c5b7219ac2e699e9fb9607f330f8fba165dd5b79))
+
 ## [0.0.81](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.79...v0.0.81) (2026-11-18)
 
 
