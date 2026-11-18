@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.81](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.79...v0.0.81) (2026-11-18)
+
+
+### Features
+
+* add reusable screenshot frames with lightbox styling ([9ee6d1c](https://github.com/Joe-Moran/grayson-west-portfolio/commit/9ee6d1ceae29a41e8df8dde87e38666d10dd119a))
+* update OmniGraffle case study and media presentation ([7341983](https://github.com/Joe-Moran/grayson-west-portfolio/commit/734198387287202a58c513d3fbdbab61ef561cb5))
+
+
+### Bug Fixes
+
+* correct letterhead image import name ([6a21862](https://github.com/Joe-Moran/grayson-west-portfolio/commit/6a218626c2c2182d5c4f83a3ae56dc8ef28994c4))
+
 ## [0.0.80](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.79...v0.0.80) (2026-11-17)
 
 
