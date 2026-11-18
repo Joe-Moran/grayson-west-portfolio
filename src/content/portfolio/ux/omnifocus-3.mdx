@@ -21,7 +21,7 @@ background: '../../../assets/content/backgrounds/29.jpg'
 icon: '../../../assets/content/SVGs/29.svg'
 
 platforms:
-  - Modernizing a trusted tool while preserving the workflows that built it
+  - Making task management more flexible without adding clutter
 
 disciplines:
   - ux
@@ -30,149 +30,163 @@ order: 2
 ---
 
 import LightboxImage from '../../../components/LightboxImage.astro';
+import ScreenshotImage from '../../../components/ScreenshotImage.astro';
+import tagsSidebar from '../../../assets/content/ux/omnifocus/tags-sidebar.png';
+import omniFocusIpad from '../../../assets/content/ux/omnifocus/omnifocus-3-ipad.png';
 
 import omniFocusForecast from '../../../assets/content/ux/omnifocus/omnifocus-forecast.png';
 import omniFocusInspectors from '../../../assets/content/ux/omnifocus/omnifocus-inspectors.png';
-import omniFocusIos from '../../../assets/content/ux/omnifocus/omnifocus-ios.png';
+import omniFocusIos from '../../../assets/content/ux/omnifocus/of4-hero.png';
 import omniFocusPerspectives from '../../../assets/content/ux/omnifocus/omnifocus-perspectives.png';
 import omniFocusTags from '../../../assets/content/ux/omnifocus/omnifocus-tags.png';
 
 
-<figure>
-  <LightboxImage
-    src={omniFocusIos}
-    alt="OmniFocus 3 for macOS, iPadOS, and iOS"
-    caption="OmniFocus 3 across macOS, iPadOS, and iOS."
-  />
-</figure>
+<ScreenshotImage
+  src={omniFocusIos}
+  background="gold"
+  alt="OmniFocus displayed on a desktop Mac, MacBook, iPad, iPhone, and Apple Watch."
+  caption="OmniFocus across Mac, iPad, iPhone, and Apple Watch."
+/>
 
-## Context
-OmniFocus is a long-standing task management application with a deeply committed user base. By the time work began on version 3, the product had grown powerful, flexible, and complex. That complexity was part of its appeal, especially for experienced users, but it also created friction for people who did not want or need that level of control upfront.
 
-I worked closely with the CEO and product manager to define the scope of the release while leading the UX team responsible for the redesign across macOS and iOS. My role included research direction, design strategy, and creative oversight, along with managing a team of five designers and researchers. I also partnered closely with QA and Support to incorporate real customer feedback into product decisions.
+## Overview
 
-The work was not about adding features. It was about refining a mature system without destabilizing the trust it had built over years.
+OmniFocus is a task management application for Mac, iPhone, and iPad. Version 3 focused on giving people more flexibility in how they organized and viewed their work.
 
-> This case study predates the current wave of AI tooling. The “AI in Context” section at the end explores how AI could assist with task organization, prioritization, and system shaping, reducing setup friction without compromising flexibility.
+<ScreenshotImage
+  src={omniFocusIpad}
+  background="rust"
+  alt="OmniFocus 3 on iPad showing Home navigation, a project outline with tagged tasks, and the selected action’s inspector."
+  caption="OmniFocus 3 on iPad, with navigation, a project outline, and an action inspector displayed side by side."
+/>
 
----
+We replaced contexts with tags, expanded custom perspectives, brought calendar events into the Forecast timeline, and introduced customizable inspectors on iOS. Across these changes, the goal was to preserve the depth people valued while making everyday interactions easier to manage.
 
-## The Core Tension
-OmniFocus was originally built as a digital extension of David Allen’s GTD system. Long-time users understood its terminology and structure deeply. Over time, research and support feedback revealed growing friction. Core concepts—especially “contexts”—were difficult for new users to understand. Many customers were already describing them as tags.
+## My role
 
-Growing the product required addressing that gap. Changing a foundational concept in a mature product carried cultural risk. Power users trusted the system as it was. Altering it could feel like betrayal.
+I led research and design for the release, managing a team of five UX designers, UI designers, and researchers.
 
-This was not surface polish. It required revisiting the product’s mental model.
+I worked with the CEO and product manager to define the scope and priorities. Throughout development, I partnered with engineering on implementation and worked closely with QA and support to coordinate feedback from testers and customers.
 
-> **Tension:** modernize the system’s language without eroding the trust of long-time users.
+My responsibilities included research planning, design strategy, design operations, and UX and UI direction.
 
----
+## The challenge
 
-## Replacing Contexts with Tags
-Replacing contexts with tags appeared simple from a feature perspective. It was not simple culturally.
+OmniFocus supported detailed task management, but some of its established patterns were limiting how people could work.
 
-Internally, contexts had existed since the product’s inception. For some team members and dedicated GTD users, they were foundational. Externally, however, expectations were shifting toward more flexible tagging behavior.
+Each action could have only one context. Custom perspectives needed more flexible filtering. Forecast showed tasks and calendar events in separate sections, making it difficult to understand how they fit together throughout the day.
+
+On iOS, the inspector presented 12 controls for an action. People who needed only a few of those controls still had to navigate the full set.
+
+We needed to make these workflows more flexible while keeping outlines readable, controls accessible, and familiar concepts understandable.
+
+## Approach
+
+Research and customer requests helped us identify four priorities: tags, custom perspectives, Forecast, and iOS inspectors.
+
+As we explored solutions, we worked through the details in sketches, whiteboard sessions, and design iterations. Questions that initially seemed small—what to call tags, how many to display, or where calendar events belonged—had a substantial effect on the experience.
+
+Feedback from testers, customers, QA, and support helped us refine the work. We paid particular attention to how each change fit into the existing application and what it meant for people already comfortable with OmniFocus.
+
+## The work
+
+### Replacing contexts with tags
+
+Moving from one context to multiple tags sounded straightforward. Once we began designing it, several questions emerged: Should we retain the familiar name? How should tags appear throughout the application? How many could we show before they interfered with reading tasks?
+
+**Use the language customers already understood**
+
+<ScreenshotImage
+  src={tagsSidebar}
+  background="plum"
+  alt="OmniFocus 3’s Tags view with a nested tag hierarchy in the sidebar, a selected coworker tag, and a matching action in the outline."
+  caption="OmniFocus 3’s Tags view, showing nested tags in the sidebar and matching actions in the outline."
+/>
+
+Contexts had been part of OmniFocus since its inception, but the concept was often difficult to explain. Customers requesting more flexible organization usually called the feature “tags.”
+
+We adopted that term rather than carrying the old name into the new model. After release, we received very few requests to return to contexts.
+
+**Keep the outline easy to scan**
+
+Tags appeared in navigation, the main outline, and the inspector. We initially tried carrying the tag iconography from the sidebars into the outline, but repeating those icons made task lists visually cluttered.
+
+We moved to simple, single-color capsules in the outline and inspector. The capsules separated tags from task text without competing with it, and using the same treatment in both places connected the task’s display with its editing controls.
+
+**Give tags a limit within each row**
+
+The outline supported two layouts, and the design needed to work in both.
+
+We experimented with showing every tag in the fluid layout, but heavily tagged actions became too tall and made the outline harder to scan. Instead, the available width determined how many tags appeared. An overflow indicator provided access to the rest.
+
+This let people assign the tags they needed while keeping the task list manageable.
 
 <figure>
   <LightboxImage
     src={omniFocusTags}
-    alt="OmniFocus 3 for macOS, iPadOS, and iOS"
-    caption="OmniFocus 3 across macOS, iPadOS, and iOS."
+    alt="OmniFocus 3 in dark mode with nested tags, an action outline, and the selected action’s tag inspector."
+    caption="OmniFocus 3’s dark-mode Tags view, showing the tag hierarchy, task outline, and tag editing controls in the inspector."
   />
 </figure>
 
-The design work focused on preserving power while improving clarity:
+### Making custom perspectives more flexible
 
-- A visual representation that scaled across outline and fluid views  
-- Capsule-style tag displays to preserve readability  
-- Overflow handling to prevent vertical sprawl  
-- Consistent iconography in sidebars and inspectors  
+Custom perspectives let people build focused views of their tasks. Our research showed that experienced users wanted more control over the rules behind those views.
 
-The objective was not simplification for its own sake. It was reducing friction without reducing capability.
+We expanded filtering to support combinations of criteria such as availability, status, dates, estimated duration, tags, and project information.
 
-Post-launch monitoring showed strong adoption and significantly reduced confusion around contexts. The feared backlash did not materialize at scale.
+On Mac, we used the native predicate editor framework as the foundation for configuring those rules. People could build views around specific needs—for example, available tasks that would take less than 15 minutes, or work associated with a particular set of tags.
 
----
-
-## Custom Perspectives
-Perspectives were a defining capability of OmniFocus. Power users relied on them heavily to shape their workflows.
-
-Research indicated demand for greater filtering flexibility, but expanding filtering risked overwhelming less technical users. Instead of building a fully bespoke system, we leveraged the macOS predicate editor framework. That decision constrained visual freedom but reduced long-term maintenance and platform fragility.
+The expanded perspectives were warmly received by advanced users and became a frequent topic of discussion in the OmniFocus community.
 
 <figure>
   <LightboxImage
     src={omniFocusPerspectives}
-    alt="OmniFocus 3 for macOS, iPadOS, and iOS"
-    caption="OmniFocus 3 across macOS, iPadOS, and iOS."
+    alt="OmniFocus 3’s custom perspective editor with the filter criteria menu open."
+    caption="The custom perspective editor, with filtering rules for task availability, status, duration, tags, and projects."
   />
 </figure>
 
-Users gained the ability to build precise “if this, then that” rules while staying grounded in native macOS conventions.
+### Bringing tasks and calendar events into one timeline
 
-The expansion increased capability without increasing conceptual noise.
+Forecast was one of the application’s most-used views. It showed upcoming tasks and could also display calendar events, but those events appeared in a separate section.
 
----
+Customers described the friction this created. Their tasks and meetings happened throughout the same day, yet the interface required them to compare two lists.
 
-## Forecast Integration
-The Forecast view was the most-used perspective in OmniFocus. It displayed tasks due each day and optionally surfaced calendar events in a separate section.
+We integrated calendar events into the Forecast outline alongside tasks. To keep the two distinguishable, we used a calendar icon carrying the event’s existing calendar color.
 
-Users reported friction between tasks and calendar events occurring sequentially in real life but appearing separated in the interface. Integrating calendar events directly into the chronological outline reduced that disconnect. Color-coded indicators preserved distinction without dividing the timeline.
+The combined timeline made the relationship between scheduled events and due tasks easier to see while preserving familiar calendar cues.
 
 <figure>
   <LightboxImage
     src={omniFocusForecast}
-    alt="OmniFocus 3 for macOS, iPadOS, and iOS"
-    caption="OmniFocus 3 across macOS, iPadOS, and iOS."
+    alt="OmniFocus 3’s Forecast view with due tasks and green calendar events, highlighted by a Calendar Events callout."
+    caption="Forecast brings due tasks and calendar events into one outline, using calendar colors and icons to distinguish events."
   />
 </figure>
 
-The change reduced mental context-switching and improved clarity around how the day unfolded.
+### Letting people configure the iOS inspector
 
----
+The iOS inspector offered 12 controls for an action. That flexibility was useful, but feedback showed that people did not want every option presented every time they edited a task.
 
-## Customizable Inspectors on iOS
-The inspector contained twelve potential controls affecting an action. For some users, that flexibility was essential. For others, it created cognitive load.
+We designed a way to reorder the controls and hide less frequently used fields. Hidden options remained accessible when needed.
+
+This allowed people to put their most-used controls first and reduce the amount they had to scan. It preserved the application’s capabilities while giving users more control over their editing experience.
 
 <figure>
   <LightboxImage
     src={omniFocusInspectors}
-    alt="OmniFocus 3 for macOS, iPadOS, and iOS"
-    caption="OmniFocus 3 across macOS, iPadOS, and iOS."
+    alt="OmniFocus 3 on iPhone showing the action inspector and Customize Inspector panel with draggable control rows."
+    caption="The iOS action inspector alongside its customization panel, where users can reorder controls to suit their workflow."
   />
 </figure>
 
-We introduced customizable inspectors that allowed users to rearrange and hide fields. My initial proposal extended further but would have required disproportionate engineering investment. After discussion, we implemented a measured version that delivered personalization without destabilizing the architecture.
+## Results
 
-Restraint protected long-term stability.
+OmniFocus 3 exceeded OmniFocus 2’s sales and active-user numbers.
 
----
+- Daily active users increased by **12% on Mac** and **17% on iOS**.
+- The iOS application spent **six weeks as a top-25 grossing app** on the App Store.
+- The Mac application spent **four weeks as a top-25 grossing app** on the App Store.
 
-## Platform Constraints
-Throughout the redesign, there was tension between custom design and platform convention.
-
-Earlier experience had shown that diverging too far from Apple’s SDK patterns creates long-term maintenance risk. For OmniFocus 3, we intentionally worked within system constraints. Custom components were introduced only when necessary.
-
-Durability guided those decisions. The product needed to remain stable as Apple evolved its frameworks.
-
----
-
-## Outcomes
-OmniFocus 3 launched to strong adoption and positive reception.
-
-> - Daily active users increased 12 percent on macOS and 17 percent on iOS  
-> - The iOS version remained in the App Store’s top 25 grossing apps for six weeks  
-> - Media reviews highlighted increased flexibility and control  
-
-Long-time users felt heard. New users found the system more approachable.
-
-The release demonstrated that mature products can evolve structurally without abandoning the people who built them into what they are.
-
-## AI in Context
-
-If I were approaching OmniFocus 3 today, I would be interested in how AI could support task organization, prioritization, and system shaping without flattening the flexibility that makes the product valuable to serious users.
-
-A central challenge in OmniFocus 3 was reducing friction without reducing capability. The product had grown powerful, but that power came with structural complexity. Replacing contexts with tags, expanding perspectives, integrating Forecast more naturally, and making inspectors customizable were all decisions aimed at preserving depth while making the system easier to understand and use.
-
-AI could extend that same direction. It could help users organize incoming tasks, suggest tags or projects based on patterns, identify likely priorities, or propose perspectives that match how a person already works. For less experienced users, it could reduce the burden of building a personal system from scratch. For advanced users, it could act more like a configurable assistant that helps maintain and adapt an existing system over time.
-
-The risk would be over-automation. OmniFocus has always been valuable because it gives users meaningful control over their workflows. The right role for AI would not be to take over that system. It would be to help users shape it more quickly, adapt it more intelligently, and reduce the friction of configuration without compromising trust or flexibility.
+Customer feedback was particularly positive around customizable inspectors and the expanded perspectives. The transition from contexts to tags also received few requests to restore the previous terminology.
