@@ -1,0 +1,129 @@
+---
+interface Props {
+  src: string;
+  poster: string;
+  title: string;
+  description: string;
+  width: number;
+  height: number;
+}
+const { src, poster, title, description, width, height } = Astro.props;
+---
+
+<figure class="case-video" data-case-video>
+  <div class="video-stage" style={{ 'aspect-ratio': `${width} / ${height}` }}>
+    <video
+      controls
+      playsinline
+      preload="none"
+      poster={poster}
+      width={width}
+      height={height}
+      aria-label={title}
+      data-video-src={src}
+      hidden
+    >
+      <p>Your browser cannot play this video. <a href={src}>Download the MP4</a>.</p>
+    </video>
+    <button type="button" class="video-play" aria-label={`Play ${title}`}>
+      <img src={poster} alt="" width={width} height={height} loading="lazy" />
+      <span class="play-label"><span aria-hidden="true">▶</span> Play video</span>
+    </button>
+  </div>
+  <figcaption>{description}</figcaption>
+  <p class="video-error" role="status" hidden>
+    Unable to start playback. <a href={src}>Open the video directly</a>.
+  </p>
+  <noscript><p><a href={src}>Watch {title} (MP4)</a>.</p></noscript>
+</figure>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-case-video]').forEach((figure) => {
+    const button = figure.querySelector<HTMLButtonElement>('.video-play');
+    const video = figure.querySelector<HTMLVideoElement>('video');
+    const error = figure.querySelector<HTMLElement>('.video-error');
+    if (!button || !video || !error) return;
+
+    button.addEventListener('click', async () => {
+      error.hidden = true;
+      video.src = video.dataset.videoSrc || '';
+      video.hidden = false;
+      button.hidden = true;
+      video.focus();
+      try {
+        await video.play();
+      } catch {
+        // Native controls remain available if the browser declines playback.
+        error.hidden = false;
+      }
+    });
+    video.addEventListener('error', () => { error.hidden = false; });
+  });
+</script>
+
+<style>
+  .case-video {
+    margin: 24px 0;
+  }
+
+  .video-stage {
+    position: relative;
+    overflow: hidden;
+    background: #141414;
+    border-radius: 10px;
+  }
+
+  .video-stage video, .video-play, .video-play img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-stage video {
+    object-fit: contain;
+  }
+
+  .video-play {
+    position: absolute;
+    inset: 0;
+    padding: 0;
+    cursor: pointer;
+    background: #141414;
+    border: 0;
+  }
+
+  .video-play img {
+    margin: 0;
+    object-fit: contain;
+  }
+
+  .play-label {
+    position: absolute;
+    inset: auto auto 24px 50%;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 20px;
+    font: 600 1rem Poppins, sans-serif;
+    color: #281f2c;
+    white-space: nowrap;
+    background: #ffc052;
+    border-radius: 999px;
+    box-shadow: 0 4px 20px rgb(0 0 0 / 40%);
+    transform: translateX(-50%);
+  }
+
+  .video-play:focus-visible {
+    outline: 3px solid #ffc052;
+    outline-offset: -4px;
+  }
+
+  .video-stage [hidden], .video-error[hidden] {
+    display: none;
+  }
+
+  .case-video figcaption {
+    margin-top: 12px;
+    font: 0.95rem/1.5 Poppins, sans-serif;
+  }
+</style>

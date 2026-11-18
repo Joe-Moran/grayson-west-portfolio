@@ -1,4 +1,5 @@
 ---
+import '../styles/device-frames.css';
 /**
  * Global lightbox overlay + behavior.
  * Renders once in Layout and listens for clicks on elements
@@ -18,7 +19,7 @@
       <span>&times;</span>
     </button>
 
-    <div class="lb-image-frame"><img class="lb-image" alt="" /></div>
+    <div class="lb-image-frame"><span class="lb-device-shell"><img class="lb-image" alt="" /></span></div>
 
     <figcaption class="lb-caption"></figcaption>
   </figure>
@@ -54,6 +55,12 @@
     box-shadow: 0 20px 60px rgb(0 0 0 / 70%);
   }
 
+  .lb-device-shell {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
   .lb-image {
     display: block;
     width: 100%;
@@ -80,8 +87,8 @@
     height: auto;
     min-height: 0;
     max-height: 100%;
-    border-radius: var(--image-radius);
     filter: var(--image-shadow);
+    border-radius: var(--image-radius);
   }
 
   .lb-caption {
@@ -140,6 +147,7 @@
 
       function openLightbox(src, alt, caption, trigger) {
         const framed = trigger.classList.contains('screenshot-frame');
+        root.querySelector('.lb-device-shell').classList.toggle('device-ipad', trigger.dataset.lightboxDevice === 'ipad');
         frameEl.classList.toggle('framed', framed);
         frameEl.removeAttribute('style');
         if (framed) {

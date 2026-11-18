@@ -21,7 +21,8 @@ Optional settings:
 
 - `padding`: `small`, `medium` (default), or `large`; uses 1%, 2%, or 3% of the frame width on each side.
 - `aspectRatio`: `auto` (default), `4/3`, `16/9`, or `1/1`. Images remain centered and uncropped. Tall screenshots may leave extra room horizontally in a wide frame.
-- `imageWidth`: percentage of the available inner width, from 1–100 (default 100).
+- `imageWidth`: percentage of the available page width, from 1–100 (default 100). The screenshot and its background resize together, centered, with padding proportional to the frame width.
+- `device`: `ipad` adds a landscape iPad bezel and camera, including in the enlarged view.
 - `rounded`: round the screenshot corners (default false).
 - `shadow`: add a screenshot shadow (default true).
 
