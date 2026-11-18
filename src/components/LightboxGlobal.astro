@@ -18,7 +18,7 @@
       <span>&times;</span>
     </button>
 
-    <img class="lb-image" alt="" />
+    <div class="lb-image-frame"><img class="lb-image" alt="" /></div>
 
     <figcaption class="lb-caption"></figcaption>
   </figure>
@@ -60,6 +60,28 @@
     max-height: 70vh;
     object-fit: contain;
     border-radius: 12px;
+  }
+
+  .lb-image-frame.framed {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, calc(70vh * var(--frame-sizing-ratio)));
+    aspect-ratio: var(--frame-ratio);
+    padding: var(--frame-padding);
+    margin: 0 auto;
+    background: var(--frame-color);
+    border-radius: 10px;
+  }
+
+  .framed .lb-image {
+    width: var(--image-width);
+    height: auto;
+    min-height: 0;
+    max-height: 100%;
+    border-radius: var(--image-radius);
+    filter: var(--image-shadow);
   }
 
   .lb-caption {
@@ -113,9 +135,26 @@
 
       const imageEl = root.querySelector('.lb-image');
       const captionEl = root.querySelector('.lb-caption');
+      const frameEl = root.querySelector('.lb-image-frame');
       const closeBtn = root.querySelector('.lb-close');
 
-      function openLightbox(src, alt, caption) {
+      function openLightbox(src, alt, caption, trigger) {
+        const framed = trigger.classList.contains('screenshot-frame');
+        frameEl.classList.toggle('framed', framed);
+        frameEl.removeAttribute('style');
+        if (framed) {
+          const style = getComputedStyle(trigger);
+          const rect = trigger.getBoundingClientRect();
+          const thumb = trigger.querySelector('img');
+          frameEl.style.setProperty('--frame-color', style.backgroundColor);
+          const inset = parseFloat(style.getPropertyValue('--frame-padding')) / 100;
+          frameEl.style.setProperty('--frame-padding', `calc(min(912px, 100vw - 112px, 70vh * ${rect.width / rect.height}) * ${inset})`);
+          frameEl.style.setProperty('--frame-ratio', style.getPropertyValue('--frame-ratio'));
+          frameEl.style.setProperty('--frame-sizing-ratio', rect.width / rect.height);
+          frameEl.style.setProperty('--image-width', style.getPropertyValue('--image-width'));
+          frameEl.style.setProperty('--image-radius', getComputedStyle(thumb).borderRadius);
+          frameEl.style.setProperty('--image-shadow', getComputedStyle(thumb).filter);
+        }
         if (!(imageEl instanceof HTMLImageElement)) return;
 
         imageEl.src = src;
@@ -152,7 +191,7 @@
           const caption = trigger.getAttribute('data-lightbox-caption') || '';
 
           if (src) {
-            openLightbox(src, alt, caption);
+            openLightbox(src, alt, caption, trigger);
           }
           return;
         }

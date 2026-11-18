@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ScreenshotImage from '../components/ScreenshotImage.astro';
+import screenshot from '../assets/content/ux/omnigraffle/artboard-layers.png';
+
+if (!import.meta.env.DEV) return Astro.redirect('/404');
+---
+
+<Layout title="Screenshot frame preview">
+  <main>
+    <h1>Screenshot frames</h1>
+    <p>One screenshot, three backgrounds. Click a frame to enlarge the original.</p>
+    <h2>Rust</h2>
+    <ScreenshotImage src={screenshot} alt="OmniGraffle artboard layer diagram" background="rust" caption="Rust · 2% padding · drop shadow" />
+    <h2>Gold</h2>
+    <ScreenshotImage src={screenshot} alt="OmniGraffle artboard layer diagram" background="gold" caption="Gold · 2% padding · drop shadow" />
+    <h2>Plum</h2>
+    <ScreenshotImage src={screenshot} alt="OmniGraffle artboard layer diagram" background="plum" caption="Plum · 2% padding · drop shadow" />
+  </main>
+</Layout>
+
+<style>
+  main { width: min(800px, calc(100% - 40px)); margin: 40px auto; }
+  h1 { margin-bottom: 16px; }
+  h2 { margin: 32px 0 16px; }
+  p { margin-bottom: 24px; }
+</style>
