@@ -1,5 +1,5 @@
 ---
-title: Letterhead
+title: Print
 
 home:
   enable: true
@@ -29,7 +29,12 @@ order: 8
 ---
 
 import LightboxImage from '../../../components/LightboxImage.astro';
+import ScreenshotImage from '../../../components/ScreenshotImage.astro';
 import omniLetterhead from '../../../assets/content/visual/omni-general/omni-letterhead.png';
+import omniGraffleManualCover from '../../../assets/content/visual/omni-general/omnigraffle-manual-cover.png';
+import macworldHandout from '../../../assets/content/visual/omni-general/macworld-marketing-handout.png';
+import omniFocusFeatures from '../../../assets/content/visual/omni-general/macworld-omnifocus-features.png';
+import omniFocusPromotion from '../../../assets/content/visual/omni-general/macworld-omnifocus-promotion.png';
 
 ## The Omni Group Letterhead & Business Card System
 This is a complete letterhead and business card system designed for The Omni Group. The goal was clarity and consistency across everyday communication, using a restrained color palette, strong typographic hierarchy, and a flexible layout that scaled from formal correspondence to personal contact details. It balanced professionalism with the quiet confidence of a product-focused software company.
@@ -41,3 +46,39 @@ This is a complete letterhead and business card system designed for The Omni Gro
     caption="Letterhead and business card system for The Omni Group, designed for day-to-day use across internal and external communication."
   />
 </figure>
+
+## OmniGraffle Manual Cover
+
+<figure>
+  <ScreenshotImage
+    src={omniGraffleManualCover}
+    background="gold"
+    alt="Getting Started with OmniGraffle manual cover, featuring colorful connected nodes on a green background and The Omni Group logo."
+    caption="Cover design for The Omni Group’s Getting Started with OmniGraffle manual."
+  />
+</figure>
+
+## Macworld Marketing Handout
+
+<ScreenshotImage
+  src={macworldHandout}
+  background="rust"
+  alt="Two panels from The Omni Group’s Macworld marketing handout: an OmniWeb 5 feature overview and laboratory-themed artwork titled The Elements of Great Software."
+  caption="Part of a marketing handout for The Omni Group at a Macworld convention, pairing an OmniWeb feature overview with laboratory-themed illustrations."
+/>
+
+## OmniFocus for iPhone Macworld Handouts
+
+<ScreenshotImage
+  src={omniFocusPromotion}
+  background="plum"
+  alt="OmniFocus for iPhone promotional handout with illustrated iPhones, circular interface details, a blue patterned background, and an invitation to visit booth 612."
+  caption="Macworld promotional handout highlighting task capture, location-based lists, and syncing in OmniFocus for iPhone."
+/>
+
+<ScreenshotImage
+  src={omniFocusFeatures}
+  background="plum"
+  alt="OmniFocus for iPhone feature handout with four iPhone screenshots, the purple checkmark app icon, feature descriptions, and press quotes on a pale blue background."
+  caption="Companion handout detailing OmniFocus for iPhone’s mobile task management features, illustrated with application screenshots and press quotes."
+/>
