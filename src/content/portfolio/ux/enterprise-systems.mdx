@@ -32,30 +32,30 @@ order: 5
 import LightboxImage from '../../../components/LightboxImage.astro';
 import enterprise1 from '../../../assets/content/ux/enterprise/enterprise-1.png';
 import enterprise2 from '../../../assets/content/ux/enterprise/enterprise-2.png';
+import researchToDesign from '../../../assets/content/ux/enterprise/research-to-design-draft.svg';
+import reportWorkflow from '../../../assets/content/ux/enterprise/report-workflow-draft.svg';
 
 > _This case study reflects work completed in a consultancy environment. Client names, internal terminology, and visual artifacts have been removed or generalized due to confidentiality agreements. Because this platform was internal to the organization, original UI screens and workflow diagrams are not included. The structural challenges, leadership decisions, and measurable outcomes are accurately represented._
 
-# Reducing Cognitive Load in a Fragmented Regulatory Workflow
+## Overview
 
-## Context
+A transportation company managed compliance reports through separate email queues, existing portals, and several internal systems. Processing a report meant gathering information, checking records, communicating with the submitter, and updating its status across different tools.
 
-A large distributed enterprise company managed regulatory compliance through multiple intake channels, including separate email queues, legacy portals, and manual uploads. Each compliance type had its own specialized team, tools, and conventions.
+We designed a web application that brought this work into a shared workspace. The goal was to help compliance staff receive, review, and manage reports without repeatedly switching applications.
 
-The system functioned, but only through constant human compensation. Processors moved between four to five systems throughout the day. Email acted as the coordination layer. In one observed case, processing a single report required more than twenty discrete interactions across platforms. Critical information lived in separate systems, and much of the integration work happened mentally.
+## My role
 
-Leadership did not experience this friction directly. The processors did, and research made that gap visible.
+I led product design and design strategy, working with the product manager, client stakeholders, and the design team to define the experience.
 
-I led product design for a new web-based platform intended to consolidate and simplify this workflow.
+My responsibilities included guiding research, developing the interaction concept, and coordinating the design work. I also worked with engineering to understand how the application could connect to existing systems while preserving email as a submission and communication channel.
 
-> This case study predates the current wave of AI tooling. The “AI in Context” section at the end explores how AI could support intake, classification, and triage within a fragmented compliance workflow, reducing manual coordination without obscuring decision-making.
+## The challenge
 
----
+Compliance staff regularly moved between four or five applications to process reports. In one observed workflow, a single report required more than twenty separate actions.
 
-## The Structural Problem
+Different report types were handled by specialized teams through separate queues. Staff had to understand each system, find the relevant information, and keep track of the report as they moved between tools.
 
-The issue was not simple inefficiency. The structure reflected historical silos rather than how compliance work actually unfolded.
-
-Separate inboxes reinforced specialization boundaries. Email was being used to manage structured regulatory workflows it was never designed to support. Process state, ownership, and cross-team visibility were distributed across tools instead of embedded in a coherent system.
+Leadership wanted a shared view of compliance work and better coordination across teams. Staff needed that broader visibility without losing the familiar ways they organized their day.
 
 <figure>
   <LightboxImage
@@ -65,29 +65,31 @@ Separate inboxes reinforced specialization boundaries. Email was being used to m
   />
 </figure>
 
-Processors carried the integration burden. They reconciled rule variations, tracked status differences, and navigated fragmented queues manually. Over time, that cognitive load became normalized internally even though it was clearly visible when observed directly.
+## Approach
 
-More volume would not have stabilized the system. It would have amplified fragmentation and increased strain on the people doing the work.
+We conducted onsite research with the people processing reports and spoke with leadership about the business goals behind the new platform.
 
-> **Risk:** scaling volume would multiply fragmentation and cognitive load rather than improve throughput.
+We examined how reports arrived, what information staff needed to review them, and where work crossed between applications. Technical discussions with engineering helped establish what we could retrieve from existing systems and how email could remain part of the process.
 
----
+One finding became central to the design: people were comfortable working from an inbox. The difficulty came from everything they had to do outside it.
 
-## Resistance
+<figure>
+  <LightboxImage
+    src={researchToDesign}
+    alt="Three research findings paired with design responses: familiar email workflows informed an inbox-style workspace, work across multiple tools informed information beside the report, and shared visibility with individual focus informed one queue with focused views."
+    caption="Research findings shaped the inbox-style workspace, information shown alongside reports, and focused views within a shared queue."
+  />
+</figure>
 
-Centralization introduced discomfort. Some stakeholders preferred preserving existing queues and specialization boundaries. Email was familiar, and maintaining the current structure avoided conversations about ownership and operational change. From a distance, the system appeared to function.
+## The work
 
-I advocated for consolidation anyway. The existing structure was placing unnecessary strain on processors and limiting long-term scalability. Preserving familiarity would have protected comfort at the expense of clarity.
+### Building around a familiar inbox
 
-We did not attempt an abrupt overhaul. Intake and triage were unified first, while certain operational distinctions were preserved during transition. Change was sequenced deliberately to reduce disruption while steadily reducing fragmentation.
+I proposed an inbox-style workspace where incoming reports could be reviewed and organized.
 
----
+This gave staff a familiar starting point: see what had arrived, identify what needed attention, and open a report to begin working on it.
 
-## The Model
-
-We introduced a centralized web-based intake platform built around a unified triage model.
-
-All reports entered one system. Processors filtered by type and priority while viewing cross-system data surfaced in context. Communication moved inside the platform rather than remaining dispersed across email threads.
+The concept retained a recognizable interaction model while bringing more of the work into the application.
 
 <figure>
   <LightboxImage
@@ -97,34 +99,40 @@ All reports entered one system. Processors filtered by type and priority while v
   />
 </figure>
 
-The objective was not feature expansion. It was load reduction. Instead of switching between systems, processors worked within a single environment. Instead of remembering rule variations manually, workflows reflected actual process states.
+### Bringing information into the report
 
-> **Shift:** move integration responsibility from people to software.
+Processing a report required information held in several existing systems.
 
----
+We designed the workspace to surface relevant records alongside the report, rather than requiring staff to retrieve them separately. Attachments, submission details, and communication could be accessed in the same working context.
 
-## Outcome
+The aim was to reduce the amount of information people had to carry between applications.
 
-During early rollout, processing time decreased by 18 percent. Manual interaction steps were significantly reduced, and cross-team visibility improved.
+<figure>
+  <LightboxImage
+    src={reportWorkflow}
+    alt="Conceptual workflow comparison: staff switch between an intake channel, other systems, and email before returning to update a report. The proposed workspace keeps relevant records, attachments, submission details, and communication alongside the report."
+    caption="The proposed workspace brings supporting information and communication alongside the report, reducing the need to carry context between applications."
+  />
+</figure>
 
-Processors reported greater clarity in their daily work. The work felt less reactive and less fragmented. The organization moved from siloed intake toward coordinated triage while preserving necessary domain distinctions.
+### Supporting shared and focused views
 
----
+A central queue gave teams a common view of incoming work, but people still needed ways to focus on particular report types and responsibilities.
 
-## Reflection
+We included filtering and configurable queues so staff could organize their work within the shared system. This supported the goal of broader visibility while preserving useful distinctions between compliance activities.
 
-Systems often appear functional because people compensate for their gaps.
+### Keeping communication with the work
 
-Compliance processors had adapted to fragmentation. They developed routines for jumping between tools, tracking details mentally, and using email as connective tissue. That adaptation masked the structural strain embedded in the workflow.
+Email was an established part of the process, and the client wanted to retain it.
 
-Design leadership in this context meant making that invisible load visible and advocating for structural alignment. Centralization was not about uniformity for its own sake. It was about designing a system that matched how the work actually happened and protecting the people doing it from unnecessary friction.
+We worked through how email submissions and related communication could connect to reports in the application. Staff could follow the conversation in the context of the work rather than reconstructing it from separate threads.
 
-## AI in Context
+The proposed experience also supported collaboration when another team member’s input was needed.
 
-If I were approaching this platform today, I would be interested in how AI could support classification, prioritization, and triage while reducing the cognitive burden carried by processors across fragmented operational systems.
+## Results
 
-The original problem was not that the work lacked process. It was that the process was distributed across too many tools, requiring processors to reconcile state, ownership, and priority manually. The software did not hold the workflow together. People did. That meant much of the actual coordination work was happening mentally, which increased strain and made scaling harder.
+The application entered beta with positive initial feedback.
 
-AI could be useful here as a decision-support layer at intake and triage. It could help classify incoming reports, suggest routing based on prior patterns, surface likely ownership, identify missing information, and highlight cases that appear similar to previously resolved issues. In a workflow like this, the value is not novelty. The value is reducing low-level sorting and interpretation work so processors can focus on judgment and resolution.
+Early testing showed an **18% reduction in compliance ticket completion time**. The shared workspace brought report information and communication together, reducing the need to move between separate tools.
 
-The constraint is that AI should not become invisible infrastructure making consequential decisions without review. Compliance environments depend on traceability and confidence. Suggestions need to be legible. Reasoning needs to be reviewable. The goal would be to move integration work from people to software more effectively, while still keeping humans responsible for the decisions that matter.
+These were early results rather than a long-term measure of performance. They provided an encouraging indication that the inbox-based approach could make the workflow easier to manage.

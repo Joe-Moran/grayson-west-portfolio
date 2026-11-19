@@ -37,12 +37,13 @@ import indoorNav2 from '../../../assets/content/ux/indoor-nav/indoor-nav-2.png';
 
 > _This case study reflects work completed in a consultancy environment. Client names, internal terminology, and visual artifacts have been removed or generalized due to confidentiality agreements. Because this platform was internal to the organization, original UI screens and workflow diagrams are not included. The structural challenges, leadership decisions, and measurable outcomes are accurately represented._
 
----
-## Context
+## Overview
 
-I joined a project building a dual-platform accessibility system: a mobile application for visually impaired users navigating complex indoor environments, supported by a web-based mapping tool used by facilities teams to configure and maintain those spaces.
+This indoor navigation system was designed to help blind and low-vision people navigate buildings. A mobile application provided navigation assistance, while a web application allowed facilities teams to configure the building information and routes behind that experience.
 
-The ambition was meaningful and technically complex. The mobile experience depended entirely on the integrity of the web platform that defined routes, floors, landmarks, and behavioral rules. As feature work accelerated, the web system began to strain under its own execution.
+I joined to lead product design for the web application. Early designs were in place, but important interactions remained unresolved. As the team explored additional requirements, those designs became difficult to extend.
+
+The work focused on making the mapping workspace easier to use and establishing an interaction model that design and engineering could develop together.
 
 <figure>
   <LightboxImage
@@ -52,17 +53,27 @@ The ambition was meaningful and technically complex. The mobile experience depen
   />
 </figure>
 
-Development slowed. Integrating new capabilities required increasing coordination. Architectural decisions were becoming reactive. I was brought in to lead product design on the web platform and stabilize the system before fragility became embedded in its foundation.
+## My role
 
-> This case study predates the current wave of AI tooling. The “AI in Context” section at the end explores how AI could assist in modeling complex environments and route logic, reducing manual setup while maintaining accuracy and accessibility requirements.
+I led product design, UX design, and design strategy for the web application.
 
----
+I reviewed the existing designs, researched facilities managers’ responsibilities, and worked with engineering to rethink the mapping and editing experience. Much of my contribution involved low-fidelity exploration: making proposed behavior tangible, identifying technical constraints, and resolving questions before investing in detailed interface design.
 
-## Diagnosis
+## The challenge
 
-The system was shipping, but at growing cost. Each new feature required backend refactoring and UI adjustment that should not have been necessary. Engineers were repeatedly modifying underlying logic to accommodate interface decisions that had never been grounded in a durable interaction model.
+Facilities teams needed to upload floor plans, define locations, and connect them into navigable routes. They also needed to maintain that information as buildings changed.
 
-Core behaviors—multi-floor mapping, route configuration, conditional logic, and state management—had not been fully defined before higher-fidelity UI decisions were made. As functionality expanded, new requirements were forced into structures that were not designed to support them. Velocity declined. Rework increased. Architectural clarity eroded.
+The existing designs approached much of this work through mobile-style interactions. Frequently used tools were hidden behind menus and a floating action button. Some edits required leaving the mapping workspace, and contextual menus could obscure nearby map elements.
+
+There were also unresolved questions about how the system would support more complex buildings and connections between floors. We needed to work through those behaviors without treating the existing screen designs as fixed constraints.
+
+## Approach
+
+I began by reviewing the designs with the development team and identifying where interaction decisions were creating usability or implementation problems.
+
+Access to representative users was limited. I researched facilities managers’ day-to-day responsibilities and used the client’s input and discussions with our own facilities manager to inform the work. This helped us consider how mapping tasks would fit around their other responsibilities, while recognizing the limits of what we had validated.
+
+I advocated returning to low-fidelity wireframes. Working at that level made it easier to explore alternatives, invite engineering input, and change direction as we learned more.
 
 <figure>
   <LightboxImage
@@ -72,64 +83,42 @@ Core behaviors—multi-floor mapping, route configuration, conditional logic, an
   />
 </figure>
 
-The risk was not immediate failure. The risk was long-term brittleness. Extensibility would shrink. Delivery timelines would lengthen. Confidence across design and engineering would continue to erode.
+## The work
 
-> **Risk:** continued feature growth would compound structural debt and reduce extensibility.
+### Keeping the map at the center
 
----
+The map was the main workspace, but several interactions took users away from it.
 
-## Intervention
+I proposed keeping floor controls directly within the mapping interface so people could move between levels without leaving their work. A supporting list of map elements also provided another way to find and select items.
 
-Stabilizing the platform required more than incremental adjustment. It required re-establishing the system’s structural logic.
+The aim was to keep the information needed for an editing decision visible together.
 
-I worked with the team to pause additional feature layering and redirect effort toward defining how the platform needed to behave across floors, routes, user roles, and configuration states. We stepped back from partially implemented UI work and clarified the underlying interaction model first.
+### Making frequently used tools visible
 
-Engineers shifted to functionality-first exploration, building and validating working logic without visual polish. Whiteboard sessions replaced presentation artifacts. Conversations centered on state management, edge cases, and long-term extensibility rather than screen refinement.
+Creating map elements required accessing tools through a floating action button.
 
-The reset was financially and politically sensitive. Time had already been invested. Stakeholders needed confidence that the pause would reduce downstream rework rather than delay delivery unnecessarily. The rationale was direct: continuing on the current path would multiply structural compromises. Clarifying the model would reduce them.
+For this desktop workspace, I proposed a visible toolbar above the map. This gave frequently used tools a consistent location and reduced the need to open a menu before beginning an action.
 
-> **Shift:** define interaction logic before refining interface.
+### Editing without covering the workspace
 
----
+Contextual editing menus could cover other elements on the map, making it harder to understand the surrounding layout.
 
-## What Changed
+I proposed moving editing controls into an inspector beside the map. Its contents changed with the selected element, bringing the relevant information and controls into one place.
 
-Once the interaction model was clearly articulated, feature integration stabilized.
+This let users inspect an item’s properties while retaining a view of the map around it.
 
-New capabilities could be introduced without destabilizing backend logic. Refactoring decreased. Engineering discussions moved from reactive adjustments to intentional architectural planning. Design decisions were anchored in system behavior rather than layout constraints.
+### Working through connections between floors
 
-Collaboration improved as a result of structural clarity. Engineers were no longer compensating for ambiguous assumptions. Design exploration was informed by validated logic. Stakeholders observed forward progress instead of cyclical rework.
+A building’s navigation network needed to extend beyond a single floor plan.
 
-Most importantly, the platform regained extensibility. Future features had space to exist without forcing compromise into the core architecture.
-Collaboration improved as a direct consequence of structural clarity. Engineers were no longer implementing against unstable assumptions. Design exploration was informed by real logic rather than guesswork. Stakeholders saw steady forward motion instead of cycles of reversal.
+I worked with engineering on how users would connect locations across levels. We explored selection-based controls that presented likely connections alongside alternatives, giving users a starting point while allowing them to correct the choice.
 
-Most importantly, the platform regained extensibility. Future features had room to exist without forcing structural compromise.
+This was one example of why we needed to define behavior together before refining the interface.
 
-> **Impact:**
-> - Reduced backend refactoring cycles  
-> - Improved feature integration velocity  
-> - Stabilized architectural extensibility  
-> - Restored stakeholder confidence in platform direction
+## Results
 
----
-## Reflection
-When structural decisions are deferred, the cost does not disappear. It compounds. Refactoring increases. Velocity slows. Teams lose confidence in the system they are building.
+Internal testing with our facilities manager provided encouraging feedback on the revised interactions.
 
-Calling for a reset was not a comfortable move. It required asking people to walk away from work that had already consumed time and money. It required absorbing political tension and accepting that if the reset failed, credibility would be affected.
+The low-fidelity approach also gave design and engineering a more productive way to work through unresolved requirements. We could compare alternatives and discuss implementation constraints before committing to detailed screens.
 
-But the alternative was worse. Continuing forward would have locked the platform into fragile foundations that would be harder and more expensive to unwind later.
-
-Once the interaction model was clarified and engineering had room to build against stable assumptions, the product regained momentum. New features integrated without destabilizing prior work. Conversations shifted from patching to extending. The system became something we could build on rather than work around.
-
-The lesson was not about polish or even collaboration. It was about structural responsibility. Design leadership sometimes means stepping in early enough to prevent architectural debt from becoming permanent.
-
-In this case, intervening when we did protected the long-term health of the platform.
-
-## AI in Context
-If I were approaching this system today, I would be interested in where AI could reduce the configuration burden on facilities teams without obscuring the structural logic of the platform itself.
-
-The core challenge in this product was not simply map creation. It was the need to define routes, landmarks, floor transitions, and behavioral rules in a way that remained accurate, extensible, and stable as buildings became more complex. That work carried a high manual cost. Facilities teams were not just entering content. They were effectively modeling an environment and encoding navigation behavior through the platform.
-
-AI could be valuable here as an assistive layer during configuration. It could help identify likely route relationships, suggest landmark metadata, flag inconsistencies in wayfinding logic, or propose floor-linking structures based on patterns already present in the system. That would not remove the need for human judgment, especially in accessibility contexts where precision matters, but it could reduce repetitive setup work and help teams move more quickly through high-friction parts of the configuration process.
-
-The important constraint is that AI should not become a black box inside a system like this. Facilities teams would need to understand what the system is proposing and why. In this context, the role of AI would be to support structured environment modeling, not replace it. The goal would be to reduce manual effort while preserving clarity, control, and trust in the underlying navigation system.
+Development was later paused because of funding constraints. The project did not reach a broader release during my involvement, so the available feedback reflects internal evaluation rather than demonstrated outcomes for the wider user population.

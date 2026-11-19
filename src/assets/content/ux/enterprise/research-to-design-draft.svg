@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="990" viewBox="0 0 1440 990" role="img" aria-labelledby="title desc">
+  <title id="title">From research to design decisions</title>
+  <desc id="desc">Comfort with email informed an inbox-style workspace. Switching between tools informed bringing records and communication alongside reports. The need for shared visibility and individual focus informed a central queue with filters and configurable views.</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="m2 2 8 4-8 4" fill="none" stroke="#f7c163" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+  <rect width="1440" height="990" rx="24" fill="#281f2c"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="72" y="100" fill="#f7c163" font-size="44" font-weight="700">From research to design decisions</text>
+    <text x="72" y="148" fill="#d6d9e0" font-size="25">How the observed workflow shaped the proposed experience</text>
+    <text x="104" y="223" fill="#d6d9e0" font-size="22" font-weight="700" letter-spacing="2">RESEARCH FINDING</text>
+    <text x="800" y="223" fill="#f7c163" font-size="22" font-weight="700" letter-spacing="2">DESIGN RESPONSE</text>
+    <g fill="#352c3a" stroke="#887b8a" stroke-width="1.5">
+      <rect x="72" y="252" width="568" height="188" rx="16"/>
+      <rect x="72" y="474" width="568" height="188" rx="16"/>
+      <rect x="72" y="696" width="568" height="222" rx="16"/>
+    </g>
+    <g fill="#4d444e" stroke="#f7c163" stroke-width="2">
+      <rect x="768" y="252" width="600" height="188" rx="16"/>
+      <rect x="768" y="474" width="600" height="188" rx="16"/>
+      <rect x="768" y="696" width="600" height="222" rx="16"/>
+    </g>
+    <g fill="none" stroke="#f7c163" stroke-width="3" marker-end="url(#arrow)">
+      <path d="M658 346h92"/>
+      <path d="M658 568h92"/>
+      <path d="M658 807h92"/>
+    </g>
+    <g fill="#fff" font-size="29" font-weight="700">
+      <text x="104" y="307">Email was familiar</text>
+      <text x="800" y="307">An inbox-style workspace</text>
+      <text x="104" y="529">Work crossed multiple tools</text>
+      <text x="800" y="529">Information beside the report</text>
+      <text x="104" y="751">Teams needed a shared view</text>
+      <text x="104" y="789">and individual focus</text>
+      <text x="800" y="751">One queue, focused views</text>
+    </g>
+    <g fill="#d6d9e0" font-size="25">
+      <text x="104" y="358">Staff were comfortable receiving</text>
+      <text x="104" y="394">and organizing work through email.</text>
+      <text x="800" y="358">Retain a recognizable starting point</text>
+      <text x="800" y="394">for reviewing incoming work.</text>
+      <text x="104" y="580">Processing required finding records</text>
+      <text x="104" y="616">and communicating across applications.</text>
+      <text x="800" y="580">Bring relevant records, attachments,</text>
+      <text x="800" y="616">and communication into context.</text>
+      <text x="104" y="841">Leadership wanted visibility; staff</text>
+      <text x="104" y="877">needed to manage their responsibilities.</text>
+      <text x="800" y="806">Combine centralized intake with filters</text>
+      <text x="800" y="842">and configurable queues for different</text>
+      <text x="800" y="878">types of work.</text>
+    </g>
+  </g>
+</svg>

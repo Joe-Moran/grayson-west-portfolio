@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">A focused first release</title>
+  <desc id="desc">The initial release focused on one degree program, an iOS application, and core learning tools: course content, assessments, and progress tracking. Additional degree programs, Android, and in-app community were deferred.</desc>
+  <rect width="1440" height="900" rx="24" fill="#281f2c"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="72" y="100" fill="#f7c163" font-size="44" font-weight="700">A focused first release</text>
+    <text x="72" y="148" fill="#d6d9e0" font-size="25">Concentrating effort on a complete mobile learning experience</text>
+    <rect x="72" y="202" width="1296" height="330" rx="20" fill="#352c3a" stroke="#746778" stroke-width="2"/>
+    <text x="108" y="251" fill="#f7c163" font-size="22" font-weight="700" letter-spacing="2">INITIAL RELEASE</text>
+    <g fill="#4d444e" stroke="#887b8a" stroke-width="1.5">
+      <rect x="108" y="284" width="384" height="206" rx="14"/>
+      <rect x="528" y="284" width="384" height="206" rx="14"/>
+      <rect x="948" y="284" width="384" height="206" rx="14"/>
+    </g>
+    <g fill="#f7c163" font-size="22" font-weight="700">
+      <text x="140" y="329">PROGRAM</text>
+      <text x="560" y="329">PLATFORM</text>
+      <text x="980" y="329">EXPERIENCE</text>
+    </g>
+    <g fill="#fff" font-size="29" font-weight="700">
+      <text x="140" y="384">One degree program</text>
+      <text x="560" y="384">iOS first</text>
+      <text x="980" y="384">Core learning tools</text>
+    </g>
+    <g fill="#d6d9e0" font-size="23">
+      <text x="140" y="428">Focus content production</text>
+      <text x="140" y="460">on a single program</text>
+      <text x="560" y="428">Concentrate design and</text>
+      <text x="560" y="460">development on one platform</text>
+      <text x="980" y="428">Content, assessments,</text>
+      <text x="980" y="460">and progress tracking</text>
+    </g>
+    <rect x="72" y="578" width="1296" height="290" rx="20" fill="#302631" stroke="#a95248" stroke-width="2" stroke-dasharray="10 8"/>
+    <text x="108" y="627" fill="#e8b3aa" font-size="22" font-weight="700" letter-spacing="2">DEFERRED</text>
+    <g fill="#fff" font-size="27" font-weight="700">
+      <text x="140" y="695">Additional degrees</text>
+      <text x="560" y="695">Android application</text>
+      <text x="980" y="695">In-app community</text>
+    </g>
+    <g fill="#d6d9e0" font-size="23">
+      <text x="140" y="742">Broader program coverage</text>
+      <text x="140" y="775">beyond the initial release</text>
+      <text x="560" y="742">Expansion to another</text>
+      <text x="560" y="775">mobile platform</text>
+      <text x="980" y="742">Additional social and</text>
+      <text x="980" y="775">collaborative features</text>
+    </g>
+  </g>
+</svg>

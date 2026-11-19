@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="880" viewBox="0 0 1440 880" role="img" aria-labelledby="title desc">
+  <title id="title">A clear path through learning</title>
+  <desc id="desc">An illustrative student journey connecting course content, completing an assessment, reviewing results, understanding progress, and continuing to the next activity.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="m1 1 7 4-7 4" fill="none" stroke="#f7c163" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="1440" height="880" rx="24" fill="#281f2c"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="72" y="100" fill="#f7c163" font-size="44" font-weight="700">A clear path through learning</text>
+    <text x="72" y="148" fill="#d6d9e0" font-size="25">Connecting each activity to the student’s next step</text>
+    <g fill="#4d444e" stroke="#887b8a" stroke-width="1.5">
+      <rect x="72" y="210" width="384" height="240" rx="16"/>
+      <rect x="528" y="210" width="384" height="240" rx="16"/>
+      <rect x="984" y="210" width="384" height="240" rx="16"/>
+      <rect x="984" y="570" width="384" height="240" rx="16"/>
+      <rect x="528" y="570" width="384" height="240" rx="16"/>
+    </g>
+    <g fill="none" stroke="#f7c163" stroke-width="3" marker-end="url(#arrow)">
+      <path d="M468 330h48"/>
+      <path d="M924 330h48"/>
+      <path d="M1176 462v96"/>
+      <path d="M972 690h-48"/>
+    </g>
+    <g fill="#f7c163" font-size="23" font-weight="700" letter-spacing="2">
+      <text x="104" y="261">01 / LEARN</text>
+      <text x="560" y="261">02 / COMPLETE</text>
+      <text x="1016" y="261">03 / REVIEW</text>
+      <text x="1016" y="621">04 / UNDERSTAND</text>
+      <text x="560" y="621">05 / CONTINUE</text>
+    </g>
+    <g fill="#fff" font-size="29" font-weight="700">
+      <text x="104" y="322">Course content</text>
+      <text x="560" y="322">Assessment</text>
+      <text x="1016" y="322">Results</text>
+      <text x="1016" y="682">Progress</text>
+      <text x="560" y="682">Next activity</text>
+    </g>
+    <g fill="#d6d9e0" font-size="24">
+      <text x="104" y="373">Access the material</text>
+      <text x="104" y="409">for the current activity</text>
+      <text x="560" y="373">Complete the work</text>
+      <text x="560" y="409">required for evaluation</text>
+      <text x="1016" y="373">Review grades</text>
+      <text x="1016" y="409">and feedback</text>
+      <text x="1016" y="733">See what is complete</text>
+      <text x="1016" y="769">and what remains</text>
+      <text x="560" y="733">Understand where</text>
+      <text x="560" y="769">to go next</text>
+    </g>
+    <text x="72" y="629" fill="#bfb5c3" font-size="24">Design focus</text>
+    <text x="72" y="677" fill="#fff" font-size="27" font-weight="700">Make each step clear.</text>
+    <text x="72" y="719" fill="#d6d9e0" font-size="24">Keep the next step visible.</text>
+  </g>
+</svg>
