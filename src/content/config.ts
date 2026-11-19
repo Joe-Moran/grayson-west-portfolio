@@ -39,7 +39,11 @@ const portfolio = defineCollection({
   schema: ({ image }) =>
     z.object({
       ...content(image),
-      screenshot: z.object({ image: image(), altText: z.string() }).optional(),
+      screenshot: z.object({
+        image: image(),
+        altText: z.string(),
+        frameColor: z.enum(['rust', 'gold', 'plum']).optional(),
+      }).optional(),
       platforms: z.string().array(),
       disciplines: z.array(z.string()).optional(),
     }),

@@ -1,0 +1,19 @@
+<div class="prototype-comparison" role="group" aria-label="Prototype layouts across orientation and multitasking configurations">
+  <slot />
+</div>
+
+<style>
+  .prototype-comparison {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+    margin-block: 24px;
+  }
+
+  @media (width <= 720px) {
+    .prototype-comparison {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

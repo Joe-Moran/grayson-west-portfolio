@@ -1,0 +1,188 @@
+---
+title: 'OmniFocus 3: Three-Pane Layout'
+
+home:
+  enable: false
+  grid:
+    rows: 1
+    columns: 1
+
+preview:
+  enable: true
+  grid:
+    rows: 1
+    columns: 1
+
+screenshot:
+  image: '../../../assets/content/ux/omnifocus/three-pane-card.png'
+  altText: 'OmniFocus showing project navigation, a task outline, and an action inspector side by side.'
+  frameColor: plum
+
+background: '../../../assets/content/backgrounds/17.jpg'
+icon: '../../../assets/content/SVGs/29.svg'
+
+platforms:
+  - Flexible navigation, tasks, and editing on iPad
+
+disciplines:
+  - ux
+
+order: 2.5
+---
+
+import ScreenshotImage from '../../../components/ScreenshotImage.astro';
+import threePaneCard from '../../../assets/content/ux/omnifocus/three-pane-card.png';
+import CaseStudyVideo from '../../../components/CaseStudyVideo.astro';
+import PrototypeComparison from '../../../components/PrototypeComparison.astro';
+import landscapeFull from '../../../assets/content/ux/omnifocus/three-pane-prototype/landscape-full.png';
+import portraitFull from '../../../assets/content/ux/omnifocus/three-pane-prototype/portrait-full.png';
+import landscapeHalf from '../../../assets/content/ux/omnifocus/three-pane-prototype/landscape-half.png';
+import portraitTwoThirds from '../../../assets/content/ux/omnifocus/three-pane-prototype/portrait-two-thirds.png';
+import landscapeOverlay from '../../../assets/content/ux/omnifocus/three-pane-prototype/landscape-overlay.png';
+
+<ScreenshotImage
+  src={threePaneCard}
+  background="rust"
+  alt="OmniFocus showing project navigation on the left, a task outline in the center, and the selected action’s inspector on the right."
+  caption="OmniFocus with navigation, the task outline, and the action inspector visible side by side."
+/>
+
+## Overview
+
+OmniFocus users wanted an iPad experience that offered more of the visibility and control they had on the Mac. Moving between navigation, tasks, and editing controls required too many taps and made it difficult to keep the surrounding context in view.
+
+We designed a flexible three-pane layout that could show navigation, the task outline, and the inspector together. The layout adapted to different iPad sizes, device orientations, and multitasking configurations.
+
+## My role
+
+I developed the layout concept and interaction framework in collaboration with a senior engineer. I led research, interaction design, and UI design for the project.
+
+Throughout development, I worked directly with the CEO, CTO, project manager, and QA team. Close collaboration with engineering was central to exploring the behavior and making sure the custom layout could be maintained over time.
+
+## The challenge
+
+A more Mac-like experience was the most frequently requested improvement for OmniFocus on iOS. People wanted to see more of their work at once and reach frequently used controls without repeatedly moving between screens.
+
+The challenge was making that experience work within the changing space available on an iPad. A layout that accommodated three panes in landscape might not fit in portrait or alongside another application.
+
+We also needed to consider maintenance. The engineering team generally favored Apple’s standard interface frameworks and was concerned that a custom layout could require substantial repairs after operating-system updates.
+
+## Approach
+
+We began by working through what was technically possible and maintainable with engineering.
+
+An early prototype used colored, horizontally resizable panes. Dragging their boundaries let us explore how much space navigation, the outline, and the inspector each needed across different iPad sizes.
+
+Once we had initial dimensions, the lead engineer built a working prototype. This helped us evaluate the interactions and exposed questions that static layouts could not answer: how people would discover the panes, how they would keep them open, and what should happen when the available width changed.
+
+We used repeated prototyping and testing to refine those behaviors before settling on the framework.
+
+The engineer and I built this prototype to test pane widths, visibility, and layout behavior before applying the framework to OmniFocus. Colored regions isolated each pane so we could evaluate the structure independently of the finished interface. Blue represented navigation, red the task outline, and green the inspector.
+
+<ScreenshotImage
+  src={landscapeFull}
+  background="gold"
+  alt="Landscape prototype showing all three panes: blue navigation on the left, a wider red task outline in the center, and a green inspector on the right, with pane-width readouts."
+  caption="Landscape, full screen: the working prototype displays all three panes and their widths to help evaluate the balance between navigation, the task outline, and the inspector."
+/>
+
+## The work
+
+### Establishing a flexible three-pane layout
+
+The framework supported one, two, or three visible panes, depending on the available space and what the user wanted to keep open.
+
+The task outline remained the central workspace. Navigation appeared on the left, and the inspector appeared on the right. Showing these together let people move through their work and edit task details without losing sight of the outline.
+
+The resizable prototype helped us establish practical pane widths for the first implementation. It also gave design and engineering a shared way to evaluate the balance between useful context and sufficient working space.
+
+<CaseStudyVideo
+  src="/media/omnifocus-three-pane/editing-demo.mp4"
+  poster="/media/omnifocus-three-pane/editing-demo-poster.jpg"
+  title="Editing task details in OmniFocus for iPad"
+  description="The finished iPad interface in use, showing task-editing controls while navigation remains visible."
+  width={960}
+  height={720}
+/>
+
+### Making the controls discoverable
+
+We initially planned to use gestures to reveal the side panes. The working prototype raised concerns about whether people would discover those interactions.
+
+We introduced visible toolbar controls instead. Tapping a control brought the corresponding pane in from the left or right.
+
+A pane could appear temporarily, allowing someone to navigate or inspect an item before returning to the outline. Tapping the outline dismissed the temporary pane.
+
+This gave people access to supporting information without requiring them to keep every pane open.
+
+### Letting people pin panes in place
+
+Temporary panes supported quick interactions, but people also needed a way to keep navigation or task details visible while they worked.
+
+We added pinning through the same pane controls. Once pinned, a pane stayed alongside the outline until the user dismissed it or the available space required the layout to change.
+
+People could keep either side pane open, or both when space allowed. This made the layout useful for sustained work as well as quick task updates.
+
+<CaseStudyVideo
+  src="/media/omnifocus-three-pane/pane-controls-demo.mp4"
+  poster="/media/omnifocus-three-pane/pane-controls-demo-poster.jpg"
+  title="Showing and hiding panes in OmniFocus for iPad"
+  description="The finished pane controls in action, revealing and dismissing navigation and the inspector around the task outline."
+  width={960}
+  height={720}
+/>
+
+### Defining behavior as the screen changed
+
+Rotation and multitasking required clear rules. If all three panes were visible and the application became narrower, we needed to decide what remained on screen.
+
+We prioritized the task outline and reduced the surrounding panes in sequence:
+
+- The right-hand inspector was dismissed first because it supported more temporary editing tasks.
+- The left navigation pane was dismissed next as the available width decreased.
+- The outline adjusted to the remaining space.
+
+<PrototypeComparison>
+  <ScreenshotImage
+    src={portraitFull}
+    background="rust"
+    alt="Portrait prototype with the red primary workspace and green secondary pane side by side, without the blue navigation pane."
+    caption="Portrait, full screen: two panes remain visible within the narrower layout."
+  />
+  <ScreenshotImage
+    src={landscapeHalf}
+    background="plum"
+    alt="Landscape iPad multitasking view with the red prototype workspace occupying the left half and Safari on the right."
+    caption="Landscape, half screen: the primary workspace fits alongside Safari."
+  />
+  <ScreenshotImage
+    src={portraitTwoThirds}
+    background="gold"
+    alt="Portrait multitasking view with a red prototype workspace on the left and Safari in the narrower right-hand area."
+    caption="Portrait, two-thirds screen: the primary workspace remains visible as available width decreases."
+  />
+  <ScreenshotImage
+    src={landscapeOverlay}
+    background="rust"
+    alt="A narrow red prototype pane overlays Safari at the right edge of the iPad screen, with a displayed width of 375 points."
+    caption="Landscape, narrow overlay: a single pane remains accessible over another application."
+  />
+</PrototypeComparison>
+
+Both side panes remained accessible through their toolbar controls, even when there was not enough room to keep them alongside the outline.
+
+These rules made the transitions predictable while preserving access to navigation and editing.
+
+## Results
+
+Customer and media feedback on the three-pane layout was positive. Users described being able to do more substantial work in OmniFocus on their iPads, with more context visible and fewer trips between views.
+
+The custom framework also held up through the next two iOS updates with virtually no technical fallout, addressing an important engineering concern.
+
+For the broader OmniFocus 3 for iOS release:
+
+- Daily active users increased by **17%**.
+- The application spent **six weeks as a top-25 grossing app** on the App Store.
+- Sales and active-user numbers exceeded OmniFocus 2 for iOS.
+
+These figures reflect the full release, which included the three-pane layout alongside other improvements.

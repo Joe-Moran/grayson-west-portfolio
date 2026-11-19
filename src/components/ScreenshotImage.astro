@@ -1,5 +1,6 @@
 ---
 import type { ImageMetadata } from 'astro';
+import { screenshotColors, screenshotShadow } from '../lib/screenshotStyles.js';
 
 interface Props {
   src: ImageMetadata | string;
@@ -18,7 +19,7 @@ const {
   src, alt, caption, background = 'rust', padding = 'medium',
   aspectRatio = 'auto', imageWidth = 100, rounded = false, shadow = true, device,
 } = Astro.props;
-const colors = { rust: '#a95248', gold: '#f7c163', plum: '#4d444e' };
+
 const spacing = {
   small: '1%',
   medium: '2%',
@@ -33,7 +34,8 @@ const resolvedSrc = typeof src === 'string' ? src : src.src;
     type="button"
     class="screenshot-frame"
     style={{
-      '--frame-color': colors[background],
+      '--frame-color': screenshotColors[background],
+      '--screenshot-shadow': screenshotShadow,
       '--frame-padding': spacing[padding],
       '--frame-ratio': aspectRatio,
       '--frame-inset': parseFloat(spacing[padding]),
@@ -111,7 +113,7 @@ const resolvedSrc = typeof src === 'string' ? src : src.src;
   }
 
   .screenshot-frame .shadow {
-    filter: drop-shadow(0 8px 12px rgb(0 0 0 / 45%));
+    filter: var(--screenshot-shadow);
   }
 
   .screenshot figcaption {

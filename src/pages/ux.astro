@@ -10,10 +10,6 @@ const portfolioCollection = await getCollection('portfolio', ({ data }) =>
   !data.disciplines || data.disciplines.includes('ux')
 );
 
-const pages = portfolioCollection.map((item) => ({
-  title: item.data.title,
-  path: `/the-work/${item.slug}`,
-}));
 ---
 
 <Layout title="UX" currentDiscipline="ux">
@@ -57,6 +53,9 @@ const pages = portfolioCollection.map((item) => ({
                   href={`/the-work/${item.slug}`}
                   background={background}
                   image={screenshot}
+                  imageAlt={item.data.screenshot?.altText}
+                  frameColor={item.data.screenshot?.frameColor}
+                  imageRatio={item.data.screenshot ? item.data.screenshot.image.width / item.data.screenshot.image.height : undefined}
                   label={label}
                 />
               );
@@ -85,12 +84,9 @@ const pages = portfolioCollection.map((item) => ({
     }
   }
 
-  /* Taller UX cards + control screenshot sizing / position */
+  /* Image and text occupy separate rows so wrapped titles remain visible. */
   .discipline-section-ux .work-card {
     min-height: 480px;
 
-    --screenshot-max-width: 88%;
-    --screenshot-max-height: 60%;
-    --screenshot-translate-y: -60%;
   }
 </style>

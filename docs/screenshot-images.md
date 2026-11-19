@@ -31,3 +31,11 @@ existing lightbox. The surround is rendered by CSS, not baked into the original 
 
 Run the development server and visit `/screenshot-preview` to compare the three
 presets. That preview redirects to `/404` outside development.
+
+## UX case study cards
+
+For a raw screenshot on a card, add `frameColor: rust`, `gold`, or `plum` alongside
+`screenshot.image` and `screenshot.altText` in the case study frontmatter. The UX
+card draws the colored surround and shadow in CSS using the same palette and
+shadow as ScreenshotImage. Omit frameColor for images with an exported background.
+The whole card remains a single link to the case study.
