@@ -1,6 +1,6 @@
 ---
 title: ""
-greeting: Welcome! I work across UX and product design, as well as visual, motion, photography, and sound. This site gathers that work in one place.
+greeting: Welcome! I’m Grayson, a designer working across digital products and creative media.
 ---
 
-This site is a collection of work across product design, visual projects, photography, motion, sound, and music. Some of it is client work, some of it is personal or experimental. Together, it reflects how I think and make things.
+Here you’ll find client projects and personal work spanning visual design, photography, motion, sound, and music, including collaborations, commissioned pieces, and experiments developed over the years.
