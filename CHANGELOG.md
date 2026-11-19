@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.83](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.82...v0.0.83) (2026-11-19)
+
+
+### Features
+
+* add OmniFocus iPad three-pane case study and responsive cards ([92b1936](https://github.com/Joe-Moran/grayson-west-portfolio/commit/92b1936a28a5ae8ab9cd13829ff1feaf6a9ff583))
+
 ## [0.0.82](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.81...v0.0.82) (2026-11-18)
 
 
