@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.84](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.83...v0.0.84) (2026-11-19)
+
+
+### Features
+
+* add personas and screen classes to three-pane case study ([582e1c6](https://github.com/Joe-Moran/grayson-west-portfolio/commit/582e1c64b30a4be2485cc23ad4d208ddce2b5fb5))
+
 ## [0.0.83](https://github.com/Joe-Moran/grayson-west-portfolio/compare/v0.0.82...v0.0.83) (2026-11-19)
 
 
