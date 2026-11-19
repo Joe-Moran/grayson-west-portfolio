@@ -31,6 +31,9 @@ order: 2.5
 ---
 
 import ScreenshotImage from '../../../components/ScreenshotImage.astro';
+import LightboxImage from '../../../components/LightboxImage.astro';
+import panePersonas from '../../../assets/content/ux/omnifocus/personas/omnifocus-pane-persona.png';
+import screenClasses from '../../../assets/content/ux/omnifocus/three-pane-prototype/screen-classes.png';
 import threePaneCard from '../../../assets/content/ux/omnifocus/three-pane-card.png';
 import CaseStudyVideo from '../../../components/CaseStudyVideo.astro';
 import PrototypeComparison from '../../../components/PrototypeComparison.astro';
@@ -65,9 +68,23 @@ A more Mac-like experience was the most frequently requested improvement for Omn
 
 The challenge was making that experience work within the changing space available on an iPad. A layout that accommodated three panes in landscape might not fit in portrait or alongside another application.
 
+<LightboxImage
+  src={screenClasses}
+  alt="A matrix of iPhone and iPad device sizes in portrait and landscape, including iPad multitasking configurations with different available widths."
+  caption="Device sizes, orientations, and multitasking configurations considered when defining the pane system’s layout behavior."
+/>
+
 We also needed to consider maintenance. The engineering team generally favored Apple’s standard interface frameworks and was concerned that a custom layout could require substantial repairs after operating-system updates.
 
 ## Approach
+
+We used two personas to balance quick, straightforward task management with the needs of people who wanted multiple panes and greater control over their workspace.
+
+<LightboxImage
+  src={panePersonas}
+  alt="Two OmniFocus personas: Alex, a university student who needs quick and simple task management, and Dr. Thompson, a power user who needs multiple panes and a customizable workspace."
+  caption="Two personas helped us evaluate the layout against different needs: quick task management and sustained work across multiple panes."
+/>
 
 We began by working through what was technically possible and maintainable with engineering.
 
